@@ -1,0 +1,79 @@
+/* MyConnectome Styling */
+
+body {
+  background: #ffffff;
+}
+
+#navbar {
+  border-bottom: 0px;
+}
+
+#networkCtrl {
+  vertical-align: top;
+  padding-left: 20px;
+  padding-right:30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: left;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  margin-top: 30px;
+  margin-left: 20px;
+  border-radius: 15px;
+  background: #cccccc;
+  filter:alpha(opacity=70);
+			opacity: 0.7;
+			-moz-opacity: 0.7;
+			-khtml-opacity:0.7;
+  z-index: 2;
+}
+
+#imageBox {
+  vertical-align: top;
+  padding-left: 20px;
+  padding-right:20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: right;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 40px;
+  border-radius: 15px;
+  background: #cccccc;
+  filter:alpha(opacity=70);
+			opacity: 0.7;
+			-moz-opacity: 0.7;
+			-khtml-opacity:0.7;
+  z-index: 5;
+  top: 50px;
+  right: 25px;
+  
+}
+
+#titleBox {
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right:15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 40px;
+  border-radius: 15px;
+  color: #666666;
+  z-index: 6;
+  top: 50px;
+  right: 20%;
+  
+}
+
+
+#fullNetwork {
+  display: inline;
+  z-index: 1;
+}
+
+#subNetwork {
+  display: inline;
+}
