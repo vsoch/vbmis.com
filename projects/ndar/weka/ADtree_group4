@@ -1,0 +1,65 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.ADTree -B 10 -E -3
+Relation:     brain_ndar_eyegaze_group4-weka.filters.unsupervised.attribute.Remove-R1,278-279,283-284
+Instances:    58
+Attributes:   279
+[list of attributes omitted]
+Test mode:evaluate on training data
+
+=== Classifier model (full training set) ===
+
+Alternating decision tree:
+
+: 0.506
+|  (1)lh_insula_volume < 0.251: -0.319
+|  |  (2)rh_transversetemporal_volume < 0.518: 0.275
+|  |  |  (3)rh_postcentral_volume < 0.371: 0.728
+|  |  |  (3)rh_postcentral_volume >= 0.371: -0.535
+|  |  |  (4)lh_bankssts_area < 0.308: -0.978
+|  |  |  (4)lh_bankssts_area >= 0.308: 0.435
+|  |  |  |  (5)rh_precentral_volume < 0.568: 0.572
+|  |  |  |  |  (7)rh_paracentral_thickness < 0.544: 0.861
+|  |  |  |  |  (7)rh_paracentral_thickness >= 0.544: -0.416
+|  |  |  |  (5)rh_precentral_volume >= 0.568: -0.834
+|  |  (2)rh_transversetemporal_volume >= 0.518: -1.122
+|  |  (6)rh_caudalanteriorcingulate_area < 0.426: -0.673
+|  |  |  (10)rh_lateraloccipital_thickness < 0.363: 0.258
+|  |  |  (10)rh_lateraloccipital_thickness >= 0.363: -0.55
+|  |  (6)rh_caudalanteriorcingulate_area >= 0.426: 0.405
+|  (1)lh_insula_volume >= 0.251: 1.329
+|  (8)rh_insula_volume < 0.641: -0.384
+|  (8)rh_insula_volume >= 0.641: 0.7
+|  (9)lh_isthmuscingulate_area < 0.43: -0.321
+|  (9)lh_isthmuscingulate_area >= 0.43: 0.514
+Legend: -ve = 1, +ve = 2
+Tree size (total number of nodes): 31
+Leaves (number of predictor nodes): 21
+
+Time taken to build model: 0.05 seconds
+
+=== Evaluation on training set ===
+=== Summary ===
+
+Correctly Classified Instances          58              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.0814
+Root mean squared error                  0.0934
+Relative absolute error                 21.004  %
+Root relative squared error             21.333  %
+Total Number of Instances               58     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0          1         1         1          1        1
+                 1         0          1         1         1          1        2
+Weighted Avg.    1         0          1         1         1          1    
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 15  0 |  a = 1
+  0 43 |  b = 2
+

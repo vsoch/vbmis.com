@@ -1,0 +1,77 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.ADTree -B 10 -E -3
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R286-287-weka.filters.unsupervised.attribute.Remove-V-R26,45,148,150,185,250,273,280,282,284-286-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    400
+Attributes:   12
+              lh_rostralmiddlefrontal_area
+              rh_lateraloccipital_area
+              rh_lateraloccipital_thickness
+              rh_lingual_thickness
+              lh_lingual_thickness
+              lh_inferiortemporal_meancurv
+              lh_frontalpole_meancurv
+              Vineland_TOTAL
+              ADI_TOTAL_BV
+              ADOS_TOTAL_A
+              ADOS_TOTAL_B
+              RXStr
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Alternating decision tree:
+
+: 0.151
+|  (1)ADOS_TOTAL_A < 0.056: -0.123
+|  (1)ADOS_TOTAL_A >= 0.056: 1.508
+|  |  (8)rh_lateraloccipital_area < 0.508: -0.671
+|  |  (8)rh_lateraloccipital_area >= 0.508: 0.73
+|  (2)rh_lateraloccipital_area < 0.488: 0.96
+|  (2)rh_lateraloccipital_area >= 0.488: -0.319
+|  (3)ADI_TOTAL_BV < 0.063: 0.152
+|  (3)ADI_TOTAL_BV >= 0.063: 1.008
+|  |  (6)ADOS_TOTAL_B < 0.948: 1.007
+|  |  (6)ADOS_TOTAL_B >= 0.948: -1.09
+|  (4)rh_lingual_thickness < 0.278: -0.532
+|  |  (7)lh_inferiortemporal_meancurv < 0.183: -0.594
+|  |  |  (9)lh_inferiortemporal_meancurv < 0.156: 0.155
+|  |  |  (9)lh_inferiortemporal_meancurv >= 0.156: -1.092
+|  |  (7)lh_inferiortemporal_meancurv >= 0.183: 0.106
+|  (4)rh_lingual_thickness >= 0.278: 0.042
+|  (5)Vineland_TOTAL < 0.59: 0.243
+|  (5)Vineland_TOTAL >= 0.59: -1.163
+|  (10)rh_lateraloccipital_area < 0.525: 0.382
+|  (10)rh_lateraloccipital_area >= 0.525: -0.174
+Legend: -ve = 0, +ve = 1
+Tree size (total number of nodes): 31
+Leaves (number of predictor nodes): 21
+
+Time taken to build model: 0.04 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         316               79.397  %
+Incorrectly Classified Instances        82               20.603  %
+Kappa statistic                          0.5777
+Mean absolute error                      0.2986
+Root mean squared error                  0.3739
+Relative absolute error                 61.102  %
+Root relative squared error             75.6504 %
+Total Number of Instances              398     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.751     0.175      0.76      0.751     0.756      0.875    0
+                 0.825     0.249      0.818     0.825     0.822      0.875    1
+Weighted Avg.    0.794     0.217      0.794     0.794     0.794      0.875
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 127  42 |   a = 0
+  40 189 |   b = 1
+

@@ -1,0 +1,72 @@
+=== Run information ===
+
+Scheme:weka.clusterers.SimpleKMeans -N 2 -A "weka.core.EuclideanDistance -R first-last" -I 500 -S 10
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R286-287-weka.filters.unsupervised.attribute.Remove-V-R26,45,148,150,185,250,273,280,282,284-286-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    400
+Attributes:   12
+              lh_rostralmiddlefrontal_area
+              rh_lateraloccipital_area
+              rh_lateraloccipital_thickness
+              rh_lingual_thickness
+              lh_lingual_thickness
+              lh_inferiortemporal_meancurv
+              lh_frontalpole_meancurv
+              Vineland_TOTAL
+              ADI_TOTAL_BV
+              ADOS_TOTAL_A
+              ADOS_TOTAL_B
+Ignored:
+              RXStr
+Test mode:Classes to clusters evaluation on training data 
+=== Model and evaluation on training set ===
+
+
+kMeans
+======
+
+Number of iterations: 8
+Within cluster sum of squared errors: 131.93997592695757
+Missing values globally replaced with mean/mode
+
+Cluster centroids:
+                                             Cluster#
+Attribute                        Full Data          0          1
+                                     (400)      (183)      (217)
+================================================================
+lh_rostralmiddlefrontal_area        0.6551     0.6656     0.6463
+rh_lateraloccipital_area            0.6523     0.6632      0.643
+rh_lateraloccipital_thickness       0.4517     0.4912     0.4183
+rh_lingual_thickness                0.3314     0.3852      0.286
+lh_lingual_thickness                 0.469     0.5451     0.4048
+lh_inferiortemporal_meancurv         0.187     0.1863     0.1876
+lh_frontalpole_meancurv             0.2381     0.2394     0.2371
+Vineland_TOTAL                      0.1641     0.3228     0.0302
+ADI_TOTAL_BV                        0.1681     0.3075     0.0505
+ADOS_TOTAL_A                         0.167      0.327     0.0321
+ADOS_TOTAL_B                        0.1985     0.3478     0.0725
+
+
+
+
+Time taken to build model (full training data) : 0.03 seconds
+
+=== Model and evaluation on training set ===
+
+Clustered Instances
+
+0      183 ( 46%)
+1      217 ( 54%)
+
+
+Class attribute: RXStr
+Classes to Clusters:
+
+   0   1  <-- assigned to cluster
+  49 122 | 0
+ 134  95 | 1
+
+Cluster 0 <-- 1
+Cluster 1 <-- 0
+
+Incorrectly clustered instances :	144.0	 36      %
+

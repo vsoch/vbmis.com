@@ -1,0 +1,1554 @@
+#:  7 
+ID:  AGRE_ADOS3_PRE200001_CSB1 
+?:  Unusual Eye Contact 
+opt:  0 :: 2 
+
+#:  8 
+ID:  AGRE_ADOS4_PRE200001_CSB1 
+?:  Unusual Eye Contact 
+opt:  0 :: 2 
+
+#:  9 
+ID:  AGRE_SRS_CHILD_200201_COMMQ16 
+?:  Avoids eye contact or has unusual eye contact. 
+opt:  0;1;2;3 
+
+#:  10 
+ID:  AGRE_SRS_CHILD_200201_MOTIVQ65 
+?:  Stares or gazes off into space. 
+opt:  0;1;2;3 
+
+#:  11 
+ID:  AADOS_M101_OBSERVATION_6A 
+?:  Response to Joint Attention 
+opt:  0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The participant must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so, but s/he does not actually have to catch sight of the target. 1 = Follows the examiner's point by looking at or toward the target. 2 = Examiner was able to get participant's attention to direct it in five attempts, but participant did not follow gaze or point to orient towards the object. 3 = It is not possible to get the participant's attention to the examiner in order to direct it in five attempts. Participant may or may not orient to the object or the examiner once the object is activated. 
+
+#:  12 
+ID:  AADOS_M101_OBSERVATION_6B 
+?:  Response to Name 
+opt:  0 = Looks toward the examiner and makes eye contact immediately on at least one of the first two clear presses made by the examiner (i.e., name only is called) OR responds vocally to one of the first two presses AND makes eye contact on one of the next two presses after the vocal response. 1 = Looks toward the examiner and makes eye contact immediately after the third or fourth press of name only OR responds vocally to the first two presses but does not make eye contact on any of the following four presses in which his/her name is called. 2 = Does not make eye contact with the examiner on any press, but looks towards the examiner without making eye contact OR responds vocally without eye contact to the 3rd, 4th, or 5th press OR only makes eye contact with the examiner after the examiner says something interesting. 3 = Does not look toward or respond vocally to the examiner after any vocal attempt to get attention. 
+
+#:  15 
+ID:  AADOS_M101_CODINGB_UEYE_A 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  16 
+ID:  AADOS_M101_CODINGB_RNAME_A 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  17 
+ID:  AADOS_M101_CODINGB_REQ_A 
+?:  Requesting 
+opt:  0;1;2;3;8;9 
+
+#:  18 
+ID:  AADOS_M101_CODINGB_SHOW_A 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  19 
+ID:  AADOS_M101_CODINGB_SIJNT_A 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  20 
+ID:  AADOS_M101_CODINGB_RJNT_A 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  21 
+ID:  AADOS_M101_RECSOCINT_9B 
+?:  Response to Joint Attention (Accuracy) 
+opt:  0::3 
+
+#:  24 
+ID:  AADOS_M201_OBSERVATION_6A 
+?:  Response to Joint Attention 
+opt:  0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The participant must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so, but s/he does not actually have to catch sight of the target. 1 = Follows the examiner's point by looking at or toward the target. 2 = Examiner was able to get participant's attention to direct it in five attempts, but participant did not follow gaze or point to orient towards the object. 3 = It is not possible to get the participant's attention to the examiner in order to direct it in five attempts. Participant may or may not orient to the object or the examiner once the object is activated. 
+
+#:  25 
+ID:  AADOS_M201_OBSERVATION_6B 
+?:  Response to Name 
+opt:  0 = Looks toward the examiner and makes eye contact immediately on at least one of the first two clear presses made by the examiner (i.e., name only is called) OR responds vocally to one of the first two presses AND makes eye contact on one of the next two presses after the vocal response. 1 = Looks toward the examiner and makes eye contact immediately after the third or fourth press of name only OR responds vocally to the first two presses but does not make eye contact on any of the following four presses in which his/her name is called. 2 = Does not make eye contact with the examiner on any press, but looks towards the examiner without making eye contact OR responds vocally without eye contact to the 3rd, 4th, or 5th press OR only makes eye contact with the examiner after the examiner says something interesting. 3 = Does not look toward or respond vocally to the examiner after any vocal attempt to get attention. 
+
+#:  28 
+ID:  AADOS_M201_CODINGB_UEYE_B 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  29 
+ID:  AADOS_M201_CODINGB_RNAME_B 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  30 
+ID:  AADOS_M201_CODINGB_REQ_A 
+?:  Requesting 
+opt:  0;1;2;3;8;9 
+
+#:  31 
+ID:  AADOS_M201_CODINGB_SHOW_B 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  32 
+ID:  AADOS_M201_CODINGB_SIJNT_B 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  33 
+ID:  AADOS_M201_CODINGB_RJNT_B 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  34 
+ID:  AADOS_M201_RECSOCINT_9B 
+?:  Response to Joint Attention (Accuracy) 
+opt:  0::3 
+
+#:  38 
+ID:  ABCL_MEN_200301_ABCL056D 
+?:  Somatic Complaints - 56d - Eye problems 
+opt:  0 :: 2 
+
+#:  41 
+ID:  ADI_C02_SOCDEV_CGAZE 
+?:  Direct gaze - Current 
+opt:  0;1;2;3;8;9 
+
+#:  42 
+ID:  ADI_C02_SOCDEV_GAZE5 
+?:  Direct gaze - Most Abnormal 
+opt:  0;1;2;3;8;9 
+
+#:  49 
+ID:  ADIR_T_200401_AD047_1B 
+?:  had the skill (maintain eye contact) before 24 months? 
+opt:  0;1;8;9 
+
+#:  50 
+ID:  ADIR_T_200401_AD047_2B 
+?:  stopped using the skill (maintain eye contact) for a month or more before 36 mo. 
+opt:  0;1;8;9 
+
+#:  51 
+ID:  ADIR_T_200401_AD047_3B 
+?:  can do (maintain eye contact) now 
+opt:  0;1;8;9 
+
+#:  52 
+ID:  ADIR_T_200401_AD047_4B 
+?:  never had the skill (maintain eye contact) 
+opt:  0;1;8;9 
+
+#:  54 
+ID:  ADIR_T_200401_AD066CU 
+?:  66. Direct gaze 
+opt:  0;1;2;3;8;9 
+
+#:  60 
+ID:  ADIR_T_200602_AD066CU 
+?:  66. Direct gaze 
+opt:  0;1;2;3;8;9 
+
+#:  61 
+ID:  ADIR_T_200603_AD066CU 
+?:  66. Direct gaze 
+opt:  0;1;2;3;8;9 
+
+#:  62 
+ID:  ADIR_T_200602_AD070N_EVER_2006 
+?:  70. Ever lost direct gaze skill 
+opt:  0;1;2;7;8;9;993;994;995;998;999 
+
+#:  63 
+ID:  ADIR_T_200602_AD070N_AGE_2006 
+?:  70. Age when direct gaze skill regained 
+opt:  993 = Loss still present without recovery of language functions; 994 = Progressive deterioration continuing; 995 = Improving but not at same level before regression; 998 = No loss; 999 = N/K or not asked 
+
+#:  64 
+ID:  ADIR_T_200603_AD070N_EVER_2006 
+?:  70. Ever lost direct gaze skill 
+opt:  0;1;2;7;8;9;993;994;995;998;999 
+
+#:  65 
+ID:  ADIR_T_200603_AD070N_AGE_2006 
+?:  70. Age when direct gaze skill regained 
+opt:  993 = Loss still present without recovery of language functions; 994 = Progressive deterioration continuing; 995 = Improving but not at same level before regression; 998 = No loss; 999 = N/K or not asked 
+
+#:  74 
+ID:  ADI_200304_SOCDEV_CGAZE 
+?:  Direct gaze - Current 
+opt:  0;1;2;3;8;9 
+
+#:  75 
+ID:  ADI_200304_SOCDEV_GAZE5 
+?:  Direct gaze - Most Abnormal 
+opt:  0;1;2;3;8;9 
+
+#:  80 
+ID:  ADI_200304_DBAES_A1GAZE_CODE 
+?:  Direct Gaze - Code 
+opt:  Diagnostic Behavior Algorithm (entered scores) 
+
+#:  81 
+ID:  ADI_200304_DBAES_A1GAZE 
+?:  Direct Gaze - Score 
+opt:  Diagnostic Behavior Algorithm (entered scores) 
+
+#:  82 
+ID:  ADI_200304_CBAES_A1GAZE_CODE 
+?:  Direct Gaze - Code 
+opt:  Current Behavior Algorithm (entered scores) 
+
+#:  83 
+ID:  ADI_200304_CBAES_A1GAZE 
+?:  Direct Gaze - Score 
+opt:  Current Behavior Algorithm (entered scores) 
+
+#:  85 
+ID:  ADOS_T01_ADOSTB01 
+?:  B1. Unusual Eye Contact 
+opt:  0;1;2;3;9;-9 
+
+#:  89 
+ID:  ADOS_T01_ADOSTB05 
+?:  B5. Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  0;1;2;3;9;-9 
+
+#:  90 
+ID:  ADOS_T02_ADOSTB01 
+?:  B1. Unusual Eye Contact 
+opt:  0;1;2;3;9;-9 
+
+#:  93 
+ID:  ADOS_T01_ADOSTB09 
+?:  B9. Requesting 
+opt:  0;1;2;3;-9 
+
+#:  95 
+ID:  ADOS_T02_ADOSTB05 
+?:  B5. Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  0;1;2;3;9;-9 
+
+#:  96 
+ID:  ADOS_T01_ADOSTB12 
+?:  B12. Showing 
+opt:  0;1;2;3;9;-9 
+
+#:  97 
+ID:  ADOS_T01_ADOSTB13 
+?:  B13. Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;3;9;-9 
+
+#:  99 
+ID:  ADOS_T01_ADOSTB14 
+?:  B14. Response to Joint Attention 
+opt:  0;1;2;3;9;-9 
+
+#:  100 
+ID:  ADOS_T02_ADOSTB09 
+?:  B9. Requesting 
+opt:  0;1;2;3;-9 
+
+#:  101 
+ID:  ADOS_T02_ADOSTB12 
+?:  B12. Showing 
+opt:  0;1;2;3;9;-9 
+
+#:  102 
+ID:  ADOS_T02_ADOSTB13 
+?:  B13. Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;3;9;-9 
+
+#:  103 
+ID:  ADOS_T02_ADOSTB14 
+?:  B14. Response to Joint Attention 
+opt:  0;1;2;3;9;-9 
+
+#:  104 
+ID:  ADOS1_200102_OBSERVATION_A_8_5 
+?:  eye contact: 
+opt:  Yes;No 
+
+#:  105 
+ID:  ADOS1_200102_OBSERVATION_A_10_4 
+?:  eye contact 
+opt:  Observation 
+
+#:  108 
+ID:  ADOS1_200102_CODINGB_UEYE_A 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  109 
+ID:  ADOS1_200102_CODINGB_GZSOV_A 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  0;1;2;3;8;9 
+
+#:  110 
+ID:  ADOS1_200102_CODINGB_RNAME_A 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  111 
+ID:  ADOS1_200102_CODINGB_REQ_A 
+?:  Requesting 
+opt:  0;1;2;3;8;9 
+
+#:  112 
+ID:  ADOS1_200102_CODINGB_SHOW_A 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  113 
+ID:  ADOS1_200102_CODINGB_SIJNT_A 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  114 
+ID:  ADOS1_200102_CODINGB_RJNT_A 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  115 
+ID:  ADOS1_200102_SCORESUMM_A_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  116 
+ID:  ADOS1_200701_OBSERVATION_A_8_5 
+?:  eye contact: 
+opt:  Yes;No 
+
+#:  117 
+ID:  ADOS1_200701_OBSERVATION_A_10_4 
+?:  eye contact 
+opt:  Observation 
+
+#:  120 
+ID:  ADOS1_200701_CODINGB_UEYE_A 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  121 
+ID:  ADOS1_200701_CODINGB_GZSOV_A 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  0;1;2;3;8;9 
+
+#:  122 
+ID:  ADOS1_200701_CODINGB_RNAME_A 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  123 
+ID:  ADOS1_200701_CODINGB_REQ_A 
+?:  Requesting 
+opt:  0;1;2;3;8;9 
+
+#:  124 
+ID:  ADOS1_200701_CODINGB_SHOW_A 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  125 
+ID:  ADOS1_200701_CODINGB_SIJNT_A 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  126 
+ID:  ADOS1_200701_CODINGB_RJNT_A 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  127 
+ID:  ADOS1_200701_SCORESUMM_A_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  128 
+ID:  ADOS1_200701_SCORESUMM_A_B4 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Score Summary 
+
+#:  129 
+ID:  ADOS2_200102_OBSERVATION_B_14_5 
+?:  eye contact: 
+opt:  Yes;No 
+
+#:  130 
+ID:  ADOS2_200101_OBSERVATION_B_14_5 
+?:  eye contact: 
+opt:  Yes;No 
+
+#:  133 
+ID:  ADOS2_200101_CODINGB_UEYE_B 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  134 
+ID:  ADOS2_200102_CODINGB_UEYE_B 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  135 
+ID:  ADOS2_200102_CODINGB_RNAME_B 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  136 
+ID:  ADOS2_200101_CODINGB_RNAME_B 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  137 
+ID:  ADOS2_200102_CODINGB_SHOW_B 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  138 
+ID:  ADOS2_200101_CODINGB_SHOW_B 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  139 
+ID:  ADOS2_200102_CODINGB_SIJNT_B 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  140 
+ID:  ADOS2_200101_CODINGB_SIJNT_B 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  141 
+ID:  ADOS2_200101_CODINGB_RJNT_B 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  142 
+ID:  ADOS2_200102_CODINGB_RJNT_B 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  143 
+ID:  ADOS2_200102_SCORESUMM_B_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  144 
+ID:  ADOS2_200101_SCORESUMM_B_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  145 
+ID:  ADOS2_200701_OBSERVATION_B_14_5 
+?:  eye contact: 
+opt:  Yes;No 
+
+#:  147 
+ID:  ADOS2_200701_CODINGB_UEYE_B 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  148 
+ID:  ADOS2_200701_CODINGB_RNAME_B 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  149 
+ID:  ADOS2_200701_CODINGB_SHOW_B 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  150 
+ID:  ADOS2_200701_CODINGB_SIJNT_B 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  151 
+ID:  ADOS2_200701_CODINGB_RJNT_B 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  152 
+ID:  ADOS2_200701_SCORESUMM_B_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  153 
+ID:  ADOS3_200102_CODINGB_UEYE_C 
+?:  Unusual Eye Contact 
+opt:  0;2;8;9 
+
+#:  154 
+ID:  ADOS3_200101_CODINGB_UEYE_C 
+?:  Unusual Eye Contact 
+opt:  0;2;8;9 
+
+#:  157 
+ID:  ADOS3_200102_SCORESUMM_C_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  158 
+ID:  ADOS3_200101_SCORESUMM_C_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  159 
+ID:  ADOS3_200701_CODINGB_UEYE_C 
+?:  Unusual Eye Contact 
+opt:  0;2;8;9 
+
+#:  161 
+ID:  ADOS3_200701_SCORESUMM_C_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  162 
+ID:  ADOS4_200102_CODINGB_UEYE_D 
+?:  Unusual Eye Contact 
+opt:  0;1;2;8;9 
+
+#:  164 
+ID:  ADOS4_200102_SCORESUMM_D_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  167 
+ID:  ADOS1_201201_CODINGB_UEYE_A 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  168 
+ID:  ADOS1_201201_CODINGB_GZSOV_A 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  0;1;2;3;8;9 
+
+#:  169 
+ID:  ADOS1_201201_CODINGB_RNAME_A 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  170 
+ID:  ADOS1_201201_CODINGB_REQ_A 
+?:  Requesting 
+opt:  0;1;2;3;8;9 
+
+#:  171 
+ID:  ADOS1_201201_CODINGB_SHOW_A 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  172 
+ID:  ADOS1_201201_CODINGB_SIJNT_A 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  173 
+ID:  ADOS1_201201_CODINGB_RJNT_A 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  174 
+ID:  ADOS1_201201_SCORESUMM_A_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  175 
+ID:  ADOS1_201201_SCORESUMM_A_B4 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Score Summary 
+
+#:  177 
+ID:  ADOS2_201201_CODINGB_UEYE_B 
+?:  Unusual Eye Contact 
+opt:  0;2;3;8;9 
+
+#:  178 
+ID:  ADOS2_201201_CODINGB_RNAME_B 
+?:  Response to Name 
+opt:  0;1;2;3;8;9 
+
+#:  179 
+ID:  ADOS2_201201_CODINGB_SHOW_B 
+?:  Showing 
+opt:  0;1;2;8;9 
+
+#:  180 
+ID:  ADOS2_201201_CODINGB_SIJNT_B 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;8;9 
+
+#:  181 
+ID:  ADOS2_201201_CODINGB_RJNT_B 
+?:  Response to Joint Attention 
+opt:  0;1;2;3;8;9 
+
+#:  182 
+ID:  ADOS2_201201_SCORESUMM_B_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  183 
+ID:  ADOS3_201201_CODINGB_UEYE_C 
+?:  Unusual Eye Contact 
+opt:  0;2;8;9 
+
+#:  185 
+ID:  ADOS3_201201_SCORESUMM_C_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  186 
+ID:  ADOS4_201201_CODINGB_UEYE_D 
+?:  Unusual Eye Contact 
+opt:  0;1;2;8;9 
+
+#:  188 
+ID:  ADOS4_201201_SCORESUMM_D_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  191 
+ID:  ADOST_201201_ADOSTB01 
+?:  B1. Unusual Eye Contact 
+opt:  0;1;2;3;9;-9 
+
+#:  194 
+ID:  ADOST_201201_ADOSTB05 
+?:  B5. Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  0;1;2;3;9;-9 
+
+#:  196 
+ID:  ADOST_201201_ADOSTB09 
+?:  B9. Requesting 
+opt:  0;1;2;3;-9 
+
+#:  197 
+ID:  ADOST_201201_ADOSTB12 
+?:  B12. Showing 
+opt:  0;1;2;3;9;-9 
+
+#:  198 
+ID:  ADOST_201201_ADOSTB13 
+?:  B13. Spontaneous Initiation of Joint Attention 
+opt:  0;1;2;3;9;-9 
+
+#:  199 
+ID:  ADOST_201201_ADOSTB14 
+?:  B14. Response to Joint Attention 
+opt:  0;1;2;3;9;-9 
+
+#:  200 
+ID:  ADOST_201201_SCORESUMM_T_B1 
+?:  Unusual Eye Contact 
+opt:  Score Summary 
+
+#:  201 
+ID:  ADOST_201201_SCORESUMM_T_B5 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Score Summary 
+
+#:  202 
+ID:  EARLI_AOSI01_AOSI_Q1_VISUALINSTRUCTIONS 
+?:  Visual Tracking Score 
+opt:  0;1;2;8 
+
+#:  210 
+ID:  EARLI_AOSI01_AOSI_Q8_EYECONTACT 
+?:  Eye contact score 
+opt:  0;2;8 
+
+#:  211 
+ID:  EARLI_AOSI01_AOSI_Q8_EYECONTACTNOTES 
+?:  Eye contact Notes 
+opt:  49 
+
+#:  212 
+ID:  EARLI_AOSI01_AOSI_Q10_COORDINATIONEYE 
+?:  Coordination of eye gaze and action score 
+opt:  0;1;2;3;8 
+
+#:  213 
+ID:  EARLI_AOSI01_AOSI_Q10_COORDINATIONEYENOTES 
+?:  Coordination of eye gaze and action. Notes 
+opt:  53 
+
+#:  218 
+ID:  BPASS01_BPASS08 
+?:  8. Non-verbal: Eye Gaze 
+opt:  1;2;3;4;9 
+
+#:  219 
+ID:  CHARGE_MEDICAL_HISTORY02_POSTNATAL_EYECONTACT 
+?:  Eye Contact: 
+opt:  Normal;Difficult to Engage;NK 
+
+#:  220 
+ID:  CHARGE_MEDICAL_HISTORY02_REV_EYEIMPAIR 
+?:  Visual impairments 
+opt:  Yes;No;NK 
+
+#:  222 
+ID:  CHARGE_MEDICAL_HISTORY02_REV_EYEOTER 
+?:  Other/Comments: 
+opt:  Review - Eyes 
+
+#:  247 
+ID:  CHARGE_PHYSICALEXAM01_EYES_COMMENTS 
+?:  Other/Comments 
+opt:  Eyes 
+
+#:  253 
+ID:  CS_ADI_R_1991_TODDLER01_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  254 
+ID:  CS_ADI_R_1991_TODDLER01_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  261 
+ID:  CS_ADI_R_WPS_200302_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  262 
+ID:  CS_ADI_R_WPS_200302_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  269 
+ID:  CS_ADI_R_1993_SHORT03_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  270 
+ID:  CS_ADI_R_1993_SHORT03_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  277 
+ID:  CS_ADI_R_1995_LONG02_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  278 
+ID:  CS_ADI_R_1995_LONG02_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  285 
+ID:  CS_ADI_R_1995_SHORT03_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  286 
+ID:  CS_ADI_R_1995_SHORT03_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  293 
+ID:  CS_ADI_R_1996_SHORT02_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  294 
+ID:  CS_ADI_R_1996_SHORT02_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  301 
+ID:  CS_ADI_R_1997_LONG02_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  302 
+ID:  CS_ADI_R_1997_LONG02_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  309 
+ID:  CS_ADI_R_1997_SHORT02_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  310 
+ID:  CS_ADI_R_1997_SHORT02_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  317 
+ID:  CS_ADI_R_1998_LONG02_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  318 
+ID:  CS_ADI_R_1998_LONG02_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  325 
+ID:  CS_ADI_R_1999_SHORT02_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  326 
+ID:  CS_ADI_R_1999_SHORT02_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  333 
+ID:  CS_ADI_R_200002_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  334 
+ID:  CS_ADI_R_200002_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  340 
+ID:  CS_ADI_R_SHORT01_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  346 
+ID:  CS_ADI_R_1998_SHORT02_ADI_SP_DIRGZ_A 
+?:  Direct gaze:  Current (under 5.0) 
+opt:  0; 1; 2; 3; 8; 9; 999 
+
+#:  347 
+ID:  CS_ADI_R_1998_SHORT02_ADI_SP_DIRGZ_B 
+?:  Direct gaze:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  352 
+ID:  CS_ADOS_G_102_ADOS_RSI_IGOBD 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses eye contact effectively with words or vocalizations or gestures to communicate social intention. 1 = Uses eye contact and other strategies independently of each other to communicate social intention (i.e., uses both eye contact and vocalization at different times, but does not coordinate them with each other). 2 = Uses either eye contact or other strategies (e.g., vocalization, gestures) to communicate social intention. 3 = Uses neither eye contact nor other strategies to communicate social intention, OR no social overtures. 
+
+#:  353 
+ID:  CS_ADOS_G_102_ADOS_RSI_REQST 
+?:  Requesting 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Exhibits appropriate integration of eye contact and at least one behavior (e.g., vocalization, gesture, or handing an object to the examiner or the parent/caregiver) to request bubbles, the remote-controlled toy animal, object routine, or social routine. Must include eye contact and a definite indication of wanting the other person to do or give something (e.g., by persisting in the request if the other person pauses before responding). This does not include physically pulling or placing the examiner's hand on an object or to the child himself or herself. 1 = Uses one or more behavior(s) listed above to request the remote-controlled toy animal, bubbles, and/or a routine, without integrating eye contact and other behavior(s), such as vocalization or gesture. This includes handing an object to the examiner or parent/caregiver without looking at him or her, looking at the other person without another behavior, and brief requests without persistence. It does not include physically pulling the examiner's hand to an object or to himself or herself. 2 = Does not directly request, as specified above for ratings of 0 or 1, but uses some physical means to request at least one action as part of a routine (e.g., pulls the examiner's hand to an object or to himself or herself). 3 = May participate in routine(s) or try to activate an object by vocalizing, banging, or other actions (e.g., bouncing) without looking at another person or vocalizing for help, but does not request, as specified above. 
+
+#:  354 
+ID:  CS_ADOS_G_102_ADOS_RSI_RSPJA 
+?:  Response to Joint Attention 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The child must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so; he/she does not actually have to catch sight of the target. 1 = Responds to the examiner's pointing by looking at or toward the target. 2 = Looks at the target when it is activated or placed directly in front of himlher, but does not make use of the examiner's gaze or pointing in order to locate the target from a distance. 3 = No interest or awareness of the target. If it is not possible to get the child's attention in order to direct it in five attempts, assign this rating. 
+
+#:  355 
+ID:  CS_ADOS_G_102_ADOS_RSI_RSPTN1 
+?:  Response to Name 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Looks toward the examiner and makes eye contact immediately on at least one of the first two presses made by the examiner. 1 = Looks toward the parent/caregiver and makes eye contact after first or second press of name only, OR makes eye contact with the examiner after the examiner's third or fourth press of name only. 2 = Does not immediately make eye contact with either the examiner or the parent/caregiver after his or her name is called in six attempts, but shifts gaze briefly (no eye contact), shifts gaze after a delay, OR looks at least once when an interesting or familiar vocalization or verbalization is made (e.g., tongue clucking, "I'm gonna get you"). 3 = Does not look toward either the examiner or the parent/caregiver after any purely verbal or vocal attempt to get attention. 
+
+#:  356 
+ID:  CS_ADOS_G_102_ADOS_RSI_SHOWG 
+?:  Showing 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Spontaneously shows toys or objects throughout the ADOS evaluation by holding them up or placing them in front of others and using eye contact with or without vocalization. 1 = Shows toys or objects in a partial or inconsistent manner (e.g., holds them up and/or places them in front of others without coordinated eye contact, looks from an object in his/her hands to another person without clearly orienting it toward that person, or shows objects as described above for a rating of 0 on one occasion only). 2 = Does not show objects to another person.  
+
+#:  357 
+ID:  CS_ADOS_G_102_ADOS_RSI_SPIJA 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Uses clearly integrated eye contact to reference an object that is out of reach by looking at the object, then at the examiner or the parent/caregiver, and then back to the object. Eye contact may be coordinated with pointing and/or vocalization. One clear example of an attempt to draw another person's attention to an object (i.e., more than just referencing) is sufficient for this rating. 1 = Partially references an object that is clearly out of reach. May spontaneously look and point to the object and/or vocalize, but does not coordinate either of these with looking at another person, OR may look at an object and then look at or point to the examiner or the parent/caregiver, but not look back at the object. 2 = No approximation of spontaneous initiation of joint attention in order to reference an object that is out of reach. 
+
+#:  358 
+ID:  CS_ADOS_G_102_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  360 
+ID:  CS_ADOS_G_202_ADOS_RSI_RSPJA 
+?:  Response to Joint Attention 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The child must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so; he/she does not actually have to catch sight of the target. 1 = Responds to the examiner's pointing by looking at or toward the target. 2 = Looks at the target when it is activated or placed directly in front of himlher, but does not make use of the examiner's gaze or pointing in order to locate the target from a distance. 3 = No interest or awareness of the target. If it is not possible to get the child's attention in order to direct it in five attempts, assign this rating. 
+
+#:  361 
+ID:  CS_ADOS_G_202_ADOS_RSI_RSPTN2 
+?:  Response to name 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Looks toward the examiner and makes eye contact immediately on at least one of the first two clear presses made by the examiner (i.e., name only is called). 1 = Makes eye contact with the examiner immediately on the examiner's third or fourth press of name only OR looks toward the parent/caregiver and makes eye contact immediately for the first or second press of name only. 2 = Does not make eye contact with either the examiner or the parent/caregiver after his/her name is called in four attempts, but shifts gaze briefly (no eye contact), OR looks at least once when an interesting or familiar vocalization or verbalization is made (e.g., tongue clucking; I'm gonna get you"). 3 = Does not look toward either the examiner or the parent/caregiver after any purely verbal or vocal attempt to get attention. 
+
+#:  362 
+ID:  CS_ADOS_G_202_ADOS_RSI_SHOWG 
+?:  Showing 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Spontaneously shows toys or objects throughout the ADOS evaluation by holding them up or placing them in front of others and using eye contact with or without vocalization. 1 = Shows toys or objects in a partial or inconsistent manner (e.g., holds them up and/or places them in front of others without coordinated eye contact, looks from an object in his/her hands to another person without clearly orienting it toward that person, or shows objects as described above for a rating of 0 on one occasion only). 2 = Does not show objects to another person.  
+
+#:  363 
+ID:  CS_ADOS_G_202_ADOS_RSI_SPIJA 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Uses clearly integrated eye contact to reference an object that is out of reach by looking at the object, then at the examiner or the parent/caregiver, and then back to the object. Eye contact may be coordinated with pointing and/or vocalization. One clear example of an attempt to draw another person's attention to an object (i.e., more than just referencing) is sufficient for this rating. 1 = Partially references an object that is clearly out of reach. May spontaneously look and point to the object and/or vocalize, but does not coordinate either of these with looking at another person, OR may look at an object and then look at or point to the examiner or the parent/caregiver, but not look back at the object. 2 = No approximation of spontaneous initiation of joint attention in order to reference an object that is out of reach. 
+
+#:  364 
+ID:  CS_ADOS_G_202_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  366 
+ID:  CS_ADOS_G_302_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  368 
+ID:  CS_ADOS_G_402_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  371 
+ID:  CS_ADOS_WPS_102_ADOS_RSI_IGOBD 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses eye contact effectively with words or vocalizations or gestures to communicate social intention. 1 = Uses eye contact and other strategies independently of each other to communicate social intention (i.e., uses both eye contact and vocalization at different times, but does not coordinate them with each other). 2 = Uses either eye contact or other strategies (e.g., vocalization, gestures) to communicate social intention. 3 = Uses neither eye contact nor other strategies to communicate social intention, OR no social overtures. 
+
+#:  373 
+ID:  CS_ADOS_WPS_102_ADOS_RSI_REQST 
+?:  Requesting 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Exhibits appropriate integration of eye contact and at least one behavior (e.g., vocalization, gesture, or handing an object to the examiner or the parent/caregiver) to request bubbles, the remote-controlled toy animal, object routine, or social routine. Must include eye contact and a definite indication of wanting the other person to do or give something (e.g., by persisting in the request if the other person pauses before responding). This does not include physically pulling or placing the examiner's hand on an object or to the child himself or herself. 1 = Uses one or more behavior(s) listed above to request the remote-controlled toy animal, bubbles, and/or a routine, without integrating eye contact and other behavior(s), such as vocalization or gesture. This includes handing an object to the examiner or parent/caregiver without looking at him or her, looking at the other person without another behavior, and brief requests without persistence. It does not include physically pulling the examiner's hand to an object or to himself or herself. 2 = Does not directly request, as specified above for ratings of 0 or 1, but uses some physical means to request at least one action as part of a routine (e.g., pulls the examiner's hand to an object or to himself or herself). 3 = May participate in routine(s) or try to activate an object by vocalizing, banging, or other actions (e.g., bouncing) without looking at another person or vocalizing for help, but does not request, as specified above. 
+
+#:  374 
+ID:  CS_ADOS_WPS_102_ADOS_RSI_RSPJA 
+?:  Response to Joint Attention 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The child must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so; he/she does not actually have to catch sight of the target. 1 = Responds to the examiner's pointing by looking at or toward the target. 2 = Looks at the target when it is activated or placed directly in front of himlher, but does not make use of the examiner's gaze or pointing in order to locate the target from a distance. 3 = No interest or awareness of the target. If it is not possible to get the child's attention in order to direct it in five attempts, assign this rating. 
+
+#:  375 
+ID:  CS_ADOS_WPS_102_ADOS_RSI_RSPTN1 
+?:  Response to Name 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Looks toward the examiner and makes eye contact immediately on at least one of the first two presses made by the examiner. 1 = Looks toward the parent/caregiver and makes eye contact after first or second press of name only, OR makes eye contact with the examiner after the examiner's third or fourth press of name only. 2 = Does not immediately make eye contact with either the examiner or the parent/caregiver after his or her name is called in six attempts, but shifts gaze briefly (no eye contact), shifts gaze after a delay, OR looks at least once when an interesting or familiar vocalization or verbalization is made (e.g., tongue clucking, "I'm gonna get you"). 3 = Does not look toward either the examiner or the parent/caregiver after any purely verbal or vocal attempt to get attention. 
+
+#:  376 
+ID:  CS_ADOS_WPS_102_ADOS_RSI_SHOWG 
+?:  Showing 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Spontaneously shows toys or objects throughout the ADOS evaluation by holding them up or placing them in front of others and using eye contact with or without vocalization. 1 = Shows toys or objects in a partial or inconsistent manner (e.g., holds them up and/or places them in front of others without coordinated eye contact, looks from an object in his/her hands to another person without clearly orienting it toward that person, or shows objects as described above for a rating of 0 on one occasion only). 2 = Does not show objects to another person.  
+
+#:  377 
+ID:  CS_ADOS_WPS_102_ADOS_RSI_SPIJA 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Uses clearly integrated eye contact to reference an object that is out of reach by looking at the object, then at the examiner or the parent/caregiver, and then back to the object. Eye contact may be coordinated with pointing and/or vocalization. One clear example of an attempt to draw another person's attention to an object (i.e., more than just referencing) is sufficient for this rating. 1 = Partially references an object that is clearly out of reach. May spontaneously look and point to the object and/or vocalize, but does not coordinate either of these with looking at another person, OR may look at an object and then look at or point to the examiner or the parent/caregiver, but not look back at the object. 2 = No approximation of spontaneous initiation of joint attention in order to reference an object that is out of reach. 
+
+#:  378 
+ID:  CS_ADOS_WPS_102_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  382 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_IGOBD 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses eye contact effectively with words or vocalizations or gestures to communicate social intention. 1 = Uses eye contact and other strategies independently of each other to communicate social intention (i.e., uses both eye contact and vocalization at different times, but does not coordinate them with each other). 2 = Uses either eye contact or other strategies (e.g., vocalization, gestures) to communicate social intention. 3 = Uses neither eye contact nor other strategies to communicate social intention, OR no social overtures. 
+
+#:  384 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_REQST 
+?:  Requesting 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Exhibits appropriate integration of eye contact and at least one behavior (e.g., vocalization, gesture, or handing an object to the examiner or the parent/caregiver) to request bubbles, the remote-controlled toy animal, object routine, or social routine. Must include eye contact and a definite indication of wanting the other person to do or give something (e.g., by persisting in the request if the other person pauses before responding). This does not include physically pulling or placing the examiner's hand on an object or to the child himself or herself. 1 = Uses one or more behavior(s) listed above to request the remote-controlled toy animal, bubbles, and/or a routine, without integrating eye contact and other behavior(s), such as vocalization or gesture. This includes handing an object to the examiner or parent/caregiver without looking at him or her, looking at the other person without another behavior, and brief requests without persistence. It does not include physically pulling the examiner's hand to an object or to himself or herself. 2 = Does not directly request, as specified above for ratings of 0 or 1, but uses some physical means to request at least one action as part of a routine (e.g., pulls the examiner's hand to an object or to himself or herself). 3 = May participate in routine(s) or try to activate an object by vocalizing, banging, or other actions (e.g., bouncing) without looking at another person or vocalizing for help, but does not request, as specified above. 
+
+#:  385 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_RSPJA 
+?:  Response to Joint Attention 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The child must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so; he/she does not actually have to catch sight of the target. 1 = Responds to the examiner's pointing by looking at or toward the target. 2 = Looks at the target when it is activated or placed directly in front of himlher, but does not make use of the examiner's gaze or pointing in order to locate the target from a distance. 3 = No interest or awareness of the target. If it is not possible to get the child's attention in order to direct it in five attempts, assign this rating. 
+
+#:  386 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_RSPTN1 
+?:  Response to Name 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Looks toward the examiner and makes eye contact immediately on at least one of the first two presses made by the examiner. 1 = Looks toward the parent/caregiver and makes eye contact after first or second press of name only, OR makes eye contact with the examiner after the examiner's third or fourth press of name only. 2 = Does not immediately make eye contact with either the examiner or the parent/caregiver after his or her name is called in six attempts, but shifts gaze briefly (no eye contact), shifts gaze after a delay, OR looks at least once when an interesting or familiar vocalization or verbalization is made (e.g., tongue clucking, "I'm gonna get you"). 3 = Does not look toward either the examiner or the parent/caregiver after any purely verbal or vocal attempt to get attention. 
+
+#:  387 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_RSPTN2 
+?:  Response to name 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Looks toward the examiner and makes eye contact immediately on at least one of the first two clear presses made by the examiner (i.e., name only is called). 1 = Makes eye contact with the examiner immediately on the examiner's third or fourth press of name only OR looks toward the parent/caregiver and makes eye contact immediately for the first or second press of name only. 2 = Does not make eye contact with either the examiner or the parent/caregiver after his/her name is called in four attempts, but shifts gaze briefly (no eye contact), OR looks at least once when an interesting or familiar vocalization or verbalization is made (e.g., tongue clucking; I'm gonna get you"). 3 = Does not look toward either the examiner or the parent/caregiver after any purely verbal or vocal attempt to get attention. 
+
+#:  388 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_SHOWG 
+?:  Showing 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Spontaneously shows toys or objects throughout the ADOS evaluation by holding them up or placing them in front of others and using eye contact with or without vocalization. 1 = Shows toys or objects in a partial or inconsistent manner (e.g., holds them up and/or places them in front of others without coordinated eye contact, looks from an object in his/her hands to another person without clearly orienting it toward that person, or shows objects as described above for a rating of 0 on one occasion only). 2 = Does not show objects to another person.  
+
+#:  389 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_SPIJA 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Uses clearly integrated eye contact to reference an object that is out of reach by looking at the object, then at the examiner or the parent/caregiver, and then back to the object. Eye contact may be coordinated with pointing and/or vocalization. One clear example of an attempt to draw another person's attention to an object (i.e., more than just referencing) is sufficient for this rating. 1 = Partially references an object that is clearly out of reach. May spontaneously look and point to the object and/or vocalize, but does not coordinate either of these with looking at another person, OR may look at an object and then look at or point to the examiner or the parent/caregiver, but not look back at the object. 2 = No approximation of spontaneous initiation of joint attention in order to reference an object that is out of reach. 
+
+#:  390 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  392 
+ID:  CS_ADOS_WPS_302_ADOS_RSI_IGOBD 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses eye contact effectively with words or vocalizations or gestures to communicate social intention. 1 = Uses eye contact and other strategies independently of each other to communicate social intention (i.e., uses both eye contact and vocalization at different times, but does not coordinate them with each other). 2 = Uses either eye contact or other strategies (e.g., vocalization, gestures) to communicate social intention. 3 = Uses neither eye contact nor other strategies to communicate social intention, OR no social overtures. 
+
+#:  394 
+ID:  CS_ADOS_WPS_302_ADOS_RSI_REQST 
+?:  Requesting 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Exhibits appropriate integration of eye contact and at least one behavior (e.g., vocalization, gesture, or handing an object to the examiner or the parent/caregiver) to request bubbles, the remote-controlled toy animal, object routine, or social routine. Must include eye contact and a definite indication of wanting the other person to do or give something (e.g., by persisting in the request if the other person pauses before responding). This does not include physically pulling or placing the examiner's hand on an object or to the child himself or herself. 1 = Uses one or more behavior(s) listed above to request the remote-controlled toy animal, bubbles, and/or a routine, without integrating eye contact and other behavior(s), such as vocalization or gesture. This includes handing an object to the examiner or parent/caregiver without looking at him or her, looking at the other person without another behavior, and brief requests without persistence. It does not include physically pulling the examiner's hand to an object or to himself or herself. 2 = Does not directly request, as specified above for ratings of 0 or 1, but uses some physical means to request at least one action as part of a routine (e.g., pulls the examiner's hand to an object or to himself or herself). 3 = May participate in routine(s) or try to activate an object by vocalizing, banging, or other actions (e.g., bouncing) without looking at another person or vocalizing for help, but does not request, as specified above. 
+
+#:  395 
+ID:  CS_ADOS_WPS_302_ADOS_RSI_RSPJA 
+?:  Response to Joint Attention 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The child must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so; he/she does not actually have to catch sight of the target. 1 = Responds to the examiner's pointing by looking at or toward the target. 2 = Looks at the target when it is activated or placed directly in front of himlher, but does not make use of the examiner's gaze or pointing in order to locate the target from a distance. 3 = No interest or awareness of the target. If it is not possible to get the child's attention in order to direct it in five attempts, assign this rating. 
+
+#:  396 
+ID:  CS_ADOS_WPS_302_ADOS_RSI_SHOWG 
+?:  Showing 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Spontaneously shows toys or objects throughout the ADOS evaluation by holding them up or placing them in front of others and using eye contact with or without vocalization. 1 = Shows toys or objects in a partial or inconsistent manner (e.g., holds them up and/or places them in front of others without coordinated eye contact, looks from an object in his/her hands to another person without clearly orienting it toward that person, or shows objects as described above for a rating of 0 on one occasion only). 2 = Does not show objects to another person.  
+
+#:  397 
+ID:  CS_ADOS_WPS_302_ADOS_RSI_SPIJA 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Uses clearly integrated eye contact to reference an object that is out of reach by looking at the object, then at the examiner or the parent/caregiver, and then back to the object. Eye contact may be coordinated with pointing and/or vocalization. One clear example of an attempt to draw another person's attention to an object (i.e., more than just referencing) is sufficient for this rating. 1 = Partially references an object that is clearly out of reach. May spontaneously look and point to the object and/or vocalize, but does not coordinate either of these with looking at another person, OR may look at an object and then look at or point to the examiner or the parent/caregiver, but not look back at the object. 2 = No approximation of spontaneous initiation of joint attention in order to reference an object that is out of reach. 
+
+#:  398 
+ID:  CS_ADOS_WPS_302_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  400 
+ID:  CS_ADOS_WPS_402_ADOS_RSI_IGOBD 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses eye contact effectively with words or vocalizations or gestures to communicate social intention. 1 = Uses eye contact and other strategies independently of each other to communicate social intention (i.e., uses both eye contact and vocalization at different times, but does not coordinate them with each other). 2 = Uses either eye contact or other strategies (e.g., vocalization, gestures) to communicate social intention. 3 = Uses neither eye contact nor other strategies to communicate social intention, OR no social overtures. 
+
+#:  402 
+ID:  CS_ADOS_WPS_402_ADOS_RSI_REQST 
+?:  Requesting 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Exhibits appropriate integration of eye contact and at least one behavior (e.g., vocalization, gesture, or handing an object to the examiner or the parent/caregiver) to request bubbles, the remote-controlled toy animal, object routine, or social routine. Must include eye contact and a definite indication of wanting the other person to do or give something (e.g., by persisting in the request if the other person pauses before responding). This does not include physically pulling or placing the examiner's hand on an object or to the child himself or herself. 1 = Uses one or more behavior(s) listed above to request the remote-controlled toy animal, bubbles, and/or a routine, without integrating eye contact and other behavior(s), such as vocalization or gesture. This includes handing an object to the examiner or parent/caregiver without looking at him or her, looking at the other person without another behavior, and brief requests without persistence. It does not include physically pulling the examiner's hand to an object or to himself or herself. 2 = Does not directly request, as specified above for ratings of 0 or 1, but uses some physical means to request at least one action as part of a routine (e.g., pulls the examiner's hand to an object or to himself or herself). 3 = May participate in routine(s) or try to activate an object by vocalizing, banging, or other actions (e.g., bouncing) without looking at another person or vocalizing for help, but does not request, as specified above. 
+
+#:  403 
+ID:  CS_ADOS_WPS_402_ADOS_RSI_RSPJA 
+?:  Response to Joint Attention 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The child must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so; he/she does not actually have to catch sight of the target. 1 = Responds to the examiner's pointing by looking at or toward the target. 2 = Looks at the target when it is activated or placed directly in front of himlher, but does not make use of the examiner's gaze or pointing in order to locate the target from a distance. 3 = No interest or awareness of the target. If it is not possible to get the child's attention in order to direct it in five attempts, assign this rating. 
+
+#:  404 
+ID:  CS_ADOS_WPS_402_ADOS_RSI_SHOWG 
+?:  Showing 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Spontaneously shows toys or objects throughout the ADOS evaluation by holding them up or placing them in front of others and using eye contact with or without vocalization. 1 = Shows toys or objects in a partial or inconsistent manner (e.g., holds them up and/or places them in front of others without coordinated eye contact, looks from an object in his/her hands to another person without clearly orienting it toward that person, or shows objects as described above for a rating of 0 on one occasion only). 2 = Does not show objects to another person.  
+
+#:  405 
+ID:  CS_ADOS_WPS_402_ADOS_RSI_SPIJA 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Uses clearly integrated eye contact to reference an object that is out of reach by looking at the object, then at the examiner or the parent/caregiver, and then back to the object. Eye contact may be coordinated with pointing and/or vocalization. One clear example of an attempt to draw another person's attention to an object (i.e., more than just referencing) is sufficient for this rating. 1 = Partially references an object that is clearly out of reach. May spontaneously look and point to the object and/or vocalize, but does not coordinate either of these with looking at another person, OR may look at an object and then look at or point to the examiner or the parent/caregiver, but not look back at the object. 2 = No approximation of spontaneous initiation of joint attention in order to reference an object that is out of reach. 
+
+#:  406 
+ID:  CS_ADOS_WPS_402_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  410 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_RSI_IGOBD 
+?:  Integration of Gaze and Other Behaviors During Social Overtures 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses eye contact effectively with words or vocalizations or gestures to communicate social intention. 1 = Uses eye contact and other strategies independently of each other to communicate social intention (i.e., uses both eye contact and vocalization at different times, but does not coordinate them with each other). 2 = Uses either eye contact or other strategies (e.g., vocalization, gestures) to communicate social intention. 3 = Uses neither eye contact nor other strategies to communicate social intention, OR no social overtures. 
+
+#:  412 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_RSI_REQST 
+?:  Requesting 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Exhibits appropriate integration of eye contact and at least one behavior (e.g., vocalization, gesture, or handing an object to the examiner or the parent/caregiver) to request bubbles, the remote-controlled toy animal, object routine, or social routine. Must include eye contact and a definite indication of wanting the other person to do or give something (e.g., by persisting in the request if the other person pauses before responding). This does not include physically pulling or placing the examiner's hand on an object or to the child himself or herself. 1 = Uses one or more behavior(s) listed above to request the remote-controlled toy animal, bubbles, and/or a routine, without integrating eye contact and other behavior(s), such as vocalization or gesture. This includes handing an object to the examiner or parent/caregiver without looking at him or her, looking at the other person without another behavior, and brief requests without persistence. It does not include physically pulling the examiner's hand to an object or to himself or herself. 2 = Does not directly request, as specified above for ratings of 0 or 1, but uses some physical means to request at least one action as part of a routine (e.g., pulls the examiner's hand to an object or to himself or herself). 3 = May participate in routine(s) or try to activate an object by vocalizing, banging, or other actions (e.g., bouncing) without looking at another person or vocalizing for help, but does not request, as specified above. 
+
+#:  413 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_RSI_RSPJA 
+?:  Response to Joint Attention 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Uses the orientation of the examiner's eyes and face alone as a cue to look toward the target, without the need for pointing. The child must follow the examiner's gaze and turn his/her face or eyes in the direction of the target after watching the examiner do so; he/she does not actually have to catch sight of the target. 1 = Responds to the examiner's pointing by looking at or toward the target. 2 = Looks at the target when it is activated or placed directly in front of himlher, but does not make use of the examiner's gaze or pointing in order to locate the target from a distance. 3 = No interest or awareness of the target. If it is not possible to get the child's attention in order to direct it in five attempts, assign this rating. 
+
+#:  414 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_RSI_RSPTN1 
+?:  Response to Name 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Looks toward the examiner and makes eye contact immediately on at least one of the first two presses made by the examiner. 1 = Looks toward the parent/caregiver and makes eye contact after first or second press of name only, OR makes eye contact with the examiner after the examiner's third or fourth press of name only. 2 = Does not immediately make eye contact with either the examiner or the parent/caregiver after his or her name is called in six attempts, but shifts gaze briefly (no eye contact), shifts gaze after a delay, OR looks at least once when an interesting or familiar vocalization or verbalization is made (e.g., tongue clucking, "I'm gonna get you"). 3 = Does not look toward either the examiner or the parent/caregiver after any purely verbal or vocal attempt to get attention. 
+
+#:  415 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_RSI_SHOWG 
+?:  Showing 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Spontaneously shows toys or objects throughout the ADOS evaluation by holding them up or placing them in front of others and using eye contact with or without vocalization. 1 = Shows toys or objects in a partial or inconsistent manner (e.g., holds them up and/or places them in front of others without coordinated eye contact, looks from an object in his/her hands to another person without clearly orienting it toward that person, or shows objects as described above for a rating of 0 on one occasion only). 2 = Does not show objects to another person.  
+
+#:  416 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_RSI_SPIJA 
+?:  Spontaneous Initiation of Joint Attention 
+opt:  Nulled value range of: 0;1;2 to accept outlier data. 0 = Uses clearly integrated eye contact to reference an object that is out of reach by looking at the object, then at the examiner or the parent/caregiver, and then back to the object. Eye contact may be coordinated with pointing and/or vocalization. One clear example of an attempt to draw another person's attention to an object (i.e., more than just referencing) is sufficient for this rating. 1 = Partially references an object that is clearly out of reach. May spontaneously look and point to the object and/or vocalize, but does not coordinate either of these with looking at another person, OR may look at an object and then look at or point to the examiner or the parent/caregiver, but not look back at the object. 2 = No approximation of spontaneous initiation of joint attention in order to reference an object that is out of reach. 
+
+#:  417 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_RSI_UNEYC 
+?:  Unusual Eye Contact 
+opt:  0 = Appropriate gaze with subtle changes meshed with other communication. 2 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction. 3 = Uses poorly modulated eye contact to initiate, terminate, or regulate social interaction AND frequently actively avoids eye contact (e.g., by turning away, pushing away, closing eyes). 
+
+#:  419 
+ID:  CS_MCI_GESTURES02_MCG_VC7_EYE 
+?:  eye 
+opt:  0; 1; 2 
+
+#:  421 
+ID:  CS_MULLEN02_MULL_VR_TMBE 
+?:  Tracks moving bull's-eye 180 degrees (PPr) 
+opt:  0; 1 
+
+#:  422 
+ID:  CS_PDDBI02_PDDBIFEARSWBAWAYFROMOTH 
+?:  Turns eyes, head, or body away from others 
+opt:  0; 1; 2; 3; 4; -7; -8; -9 
+
+#:  423 
+ID:  CS_PDDBI02_PDDBISENSVISUALSTAREHANDS 
+?:  Stares at or looks out of sides of eyes at his/her fingers or hands 
+opt:  0; 1; 2; 3; 4; -7; -8; -9 
+
+#:  424 
+ID:  CS_PDDBI02_PDDBISENSVISUALSTARELIGHTS 
+?:  Stares at or looks out of sides of eyes at lights or shiny objects 
+opt:  0; 1; 2; 3; 4; -7; -8; -9 
+
+#:  425 
+ID:  CS_PDDBI02_PDDBISENSVISUALSTAREOBJ 
+?:  Stares at or looks out of sides of eyes at objects (e.g., toys, strings) 
+opt:  0; 1; 2; 3; 4; -7; -8; -9 
+
+#:  426 
+ID:  CS_PDDBI02_PDDBISENSVISUALSTAREOWNIMG 
+?:  Stares at or looks out of sides of eyes at his/her own image in mirror 
+opt:  0; 1; 2; 3; 4; -7; -8; -9 
+
+#:  427 
+ID:  CS_SRS02_SRS_2005_PARENTREPORT_16 
+?:  Avoids eye contact, or has unusual eye contact 
+opt:  1; 2; 3; 4; -7; -8; -9 
+
+#:  428 
+ID:  CS_SRS02_SRS_2005_PARENTREPORT_65 
+?:  Stares or gazes off into space 
+opt:  1; 2; 3; 4; -7; -8; -9 
+
+#:  429 
+ID:  CS_SENSORY_PROFILE_3_10Y02_SENS_MV_AVDEYE 
+?:  Avoids eye contact 
+opt:  1; 2; 3; 4; 5 
+
+#:  430 
+ID:  CS_SENSORY_PROFILE_3_10Y02_SENS_VP_SQNT 
+?:  Covers eyes or squints to protect eyes from light 
+opt:  1; 2; 3; 4; 5 
+
+#:  431 
+ID:  CS_SENSORY_PROFILE_7_36M02_SENS_MV_AVDEYE 
+?:  Avoids eye contact 
+opt:  1; 2; 3; 4; 5 
+
+#:  432 
+ID:  CS_SENSORY_PROFILE_7_36M02_SENS_VP_EYECT 
+?:  My child avoids eye contact with me. 
+opt:  1; 2; 3; 4; 5 
+
+#:  433 
+ID:  CS_SENSORY_PROFILE_7_36M02_SENS_VP_SQNT 
+?:  Covers eyes or squints to protect eyes from light 
+opt:  1; 2; 3; 4; 5 
+
+#:  436 
+ID:  CS_VINELAND_I02_VINE_MAL_POOREYE 
+?:  Has poor eye contact. 
+opt:  0;1;2;999 
+
+#:  448 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYE_GAZE_WEIGHTED 
+?:  Emotion and Eye Gaze - Weighted raw score 
+opt:  33 
+
+#:  449 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_1 
+?:  Gaze shifts 
+opt:  0::6 
+
+#:  451 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_3 
+?:  Gaze/point following 
+opt:  0::6 
+
+#:  452 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_SCALE1 
+?:  Emotion and Eye Gaze. Weighted raw score scale 1 
+opt:  223 
+
+#:  453 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_SCALE2 
+?:  Emotion and Eye Gaze. Weighted raw score scale 2 
+opt:  224 
+
+#:  454 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_SCALE3 
+?:  Emotion and Eye Gaze. Weighted raw score scale 3 
+opt:  225 
+
+#:  455 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_RS 
+?:  Emotion and Eye Gaze raw score 
+opt:  264 
+
+#:  456 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_SS 
+?:  Emotion and Eye Gaze standard score 
+opt:  265 
+
+#:  457 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_PERC 
+?:  Emotion and Eye Gaze percentile rank 
+opt:  266 
+
+#:  460 
+ID:  CSBS_DP_IT01_EMOTION_EYEGAZE_IT_Q2 
+?:  When your child plays with toys, does he/she look at you to see if you are watching? 
+opt:  Not yet; Sometimes; Often 
+
+#:  462 
+ID:  CSBS_DP_IT01_EMOTION_EYEGAZE_IT_Q4 
+?:  When you look at and point to a toy across the room, does your child look at it? 
+opt:  Not yet; Sometimes; Often 
+
+#:  463 
+ID:  CSBS_DP_IT01_EMOTION_EYEGAZE_RS 
+?:  Emotion and Eye Gaze raw score 
+opt:  36 
+
+#:  464 
+ID:  CBCL1_501_CBCL_EYE 
+?:  Avoid looking others in the eye 
+opt:  0::2 
+
+#:  467 
+ID:  CBRS01_CBRSINIT2 
+?:  CBRS Joint Attention 
+opt:  1 = Very low (The child never attempts to share experiences with the adult. He or she never engages in periods of eye-contact or vocalization or attempts to engage the adult by showing or offering toys.); 2 = Low (The child occasionally attends to the adult by demonstrating eye-contact. For the most part, however, the child does not attempt to share experiences with the adult.); 3 = Moderate (The child attends to the adult approximately half of the time. He or she demonstrates periods of eye-contact or other sharing behaviors, but equally demonstrates periods of inattention. This child may also have extended periods of eye contact but more in response to the adult's behavior than in an attempt to engage the adult.); 4 = High (The child attends to the adult for the majority of the session. He or she is often observed to actively share experiences through eyecontact and vocalization and sometimes attempts to initiate activities with the adult.); 5 = Very high (The child has frequent and lengthy bouts of eye contact with the adult. He or she often vocalizes while looking at the adult or attempts to share experiences by showing or offering toys or materials or otherwise initiating activities with the adult. The child is characterized by his frequent attempts to involve the adult.) 
+
+#:  469 
+ID:  CASI01_CASI_M107 
+?:  Has a peculiar way of relating to others (avoids eye contact, odd facial expressions or gestures, etc.) 
+opt:  0::3;-7;-8;-9 
+
+#:  470 
+ID:  CCA01_CCA14 
+?:  "14. Tends not to look people in the eye during conversations." 
+opt:  0;1;2;3;4;-9 
+
+#:  475 
+ID:  ECBQ01_BQ148 
+?:  148. stay back and avoid eye contact? 
+opt:  0::7; -9 
+
+#:  476 
+ID:  EDI01_EDI28 
+?:  28. Difficult to catch his/her eye? 
+opt:  0;1;2;9 
+
+#:  477 
+ID:  EDI01_EDI38 
+?:  " 38. Poor eye contact, difficult to catch his/her eye?  " 
+opt:  0;1;2;9 
+
+#:  478 
+ID:  EDI01_EDI48 
+?:  " 48. Poor eye contact, difficult to catch his/her eye?  " 
+opt:  0;1;2;9 
+
+#:  479 
+ID:  EDI01_EDI59 
+?:  " 59. Poor eye contact, difficult to catch his/her eye?  " 
+opt:  0;1;2;9 
+
+#:  480 
+ID:  EDI01_EDI71 
+?:  " 71. Poor eye contact, difficult to catch his/her eye?  " 
+opt:  0;1;2;9 
+
+#:  481 
+ID:  EDI01_EDI72 
+?:  72. Failure to follow point/gaze? 
+opt:  0;1;2;9 
+
+#:  482 
+ID:  EDI01_EDI83 
+?:  " 83. Poor eye contact, difficult to catch his/her eye?  " 
+opt:  0;1;2;9 
+
+#:  483 
+ID:  EDQ01_EYE_CONTACT_LOSS 
+?:  Did your child lose direct eye contact during communication 
+opt:  0 :: 1 
+
+#:  486 
+ID:  ESAT01_ESAT06 
+?:  6. Is it easy to make eye contact with your child? 
+opt:  Yes; No; Missing 
+
+#:  488 
+ID:  FADQ01_JAS_4 
+?:  Joint Attention Scale. Children often direct other people's attention by switching their eye contact between the person and an object and back again. How often did your child engage in this type of behavior? 
+opt:  0::4 
+
+#:  489 
+ID:  FYI01_Q_6 
+?:  "FYI: 6. When you and your baby are facing each other, does your baby turn his or her eyes to avoid looking at you?" 
+opt:  1::5 
+
+#:  490 
+ID:  FYI01_Q_37 
+?:  "FYI: 37. Does your baby seem to get stuck on playing with a part of a toy (such as an eyeball, label, wheel or tag), instead of the whole toy?" 
+opt:  1::5 
+
+#:  492 
+ID:  FYI01_Q_46 
+?:  FYI: 46. Does your baby stare at his or her fingers while in front of his or her eyes? 
+opt:  1::5 
+
+#:  493 
+ID:  JASNOT01_JOGAZ1 
+?:  gaze 1 
+opt:  0; 1; 9 
+
+#:  494 
+ID:  LEITER_VR01_LEIT_EX_SB4 
+?:  "Severe Behaviors: Imparied non-verbal communication, i.e. no eye contact" 
+opt:  0;1 
+
+#:  495 
+ID:  M_CHAT02_QUES_LOOKINEYE 
+?:  Does your child look you in the eye for more than a second or two? 
+opt:  Yes;No; not_answered 
+
+#:  496 
+ID:  M_CHAT02_SCORESUMM_LOOKINEYE 
+?:  Does your child look you in the eye for more than a second or two? 
+opt:  0;1 
+
+#:  497 
+ID:  M_CHAT02_SCORESUMM_LOOKINEYE_SCORE 
+?:  Score for question of Does your child look you in the eye for more than a second or two? 
+opt:  Pass;Fail 
+
+#:  505 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_EVERY_DAY 
+?:  Does your child look you in the eyes every day? 
+opt:  Yes;No 
+
+#:  506 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_5_TIMES_DAY 
+?:  "On a day when you are together all day, does he/she look you in the eyes at least 5 times?" 
+opt:  Yes;No 
+
+#:  507 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_SCORE 
+?:  Question 10 child looking at parent in the eye for more than a second or two Score 
+opt:  Pass;Fail 
+
+#:  508 
+ID:  M_CHAT02_FU_Q18_FINGER_WIGGLES_EYES 
+?:  Does child wiggle his/her fingers nears his/her eyes? 
+opt:  Yes;No 
+
+#:  509 
+ID:  M_CHAT02_FU_Q18_HANDS_TO_EYES 
+?:  Does child hold hands up close to eyes? 
+opt:  Yes;No 
+
+#:  510 
+ID:  M_CHAT02_FU_Q18_HANDS_SIDE_EYES 
+?:  Does child hold hands off to the side of his her eyes? 
+opt:  Yes;No 
+
+#:  521 
+ID:  M_CHAT01_QUES_LOOKINEYE 
+?:  Does your child look you in the eye for more than a second or two? 
+opt:  Yes;No; not_answered 
+
+#:  522 
+ID:  M_CHAT01_SCORESUMM_LOOKINEYE 
+?:  Does your child look you in the eye for more than a second or two? 
+opt:  0;1 
+
+#:  523 
+ID:  M_CHAT01_SCORESUMM_LOOKINEYE_SCORE 
+?:  Score for question of Does your child look you in the eye for more than a second or two? 
+opt:  Pass;Fail 
+
+#:  531 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_EVERY_DAY 
+?:  Does your child look you in the eyes every day? 
+opt:  Yes;No 
+
+#:  532 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_5_TIMES_DAY 
+?:  "On a day when you are together all day, does he/she look you in the eyes at least 5 times?" 
+opt:  Yes;No 
+
+#:  533 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_SCORE 
+?:  Question 10 child looking at parent in the eye for more than a second or two Score 
+opt:  Pass;Fail 
+
+#:  534 
+ID:  M_CHAT01_FU_Q18_FINGER_WIGGLES_EYES 
+?:  Does child wiggle his/her fingers nears his/her eyes? 
+opt:  Yes;No 
+
+#:  535 
+ID:  M_CHAT01_FU_Q18_HANDS_TO_EYES 
+?:  Does child hold hands up close to eyes? 
+opt:  Yes;No 
+
+#:  536 
+ID:  M_CHAT01_FU_Q18_HANDS_SIDE_EYES 
+?:  Does child hold hands off to the side of his her eyes? 
+opt:  Yes;No 
+
+#:  537 
+ID:  MULLEN01_SCL2_TRACKBULLEYE 
+?:  3. Tracks moving bull's-eye ISO degrees (PPr) 
+opt:  0;1;9 
+
+#:  538 
+ID:  MULLEN02_SCL2_TRACKBULLEYE 
+?:  3. Tracks moving bull's-eye ISO degrees (PPr) 
+opt:  0;1;9 
+
+#:  539 
+ID:  MULLEN03_SCL2_TRACKBULLEYE 
+?:  3. Tracks moving bull's-eye ISO degrees (PPr) 
+opt:  0;1;9 
+
+#:  540 
+ID:  MULLEN01_SCL2_LOCALBULLEYE 
+?:  6. Localizes bull's-eye near and far (SSit) 
+opt:  0;1;9 
+
+#:  541 
+ID:  MULLEN02_SCL2_LOCALBULLEYE 
+?:  6. Localizes bull's-eye near and far (SSit) 
+opt:  0;1;9 
+
+#:  542 
+ID:  MULLEN03_SCL2_LOCALBULLEYE 
+?:  6. Localizes bull's-eye near and far (SSit) 
+opt:  0;1;9 
+
+#:  558 
+ID:  NCAST02_NCT61 
+?:  61. Child gazes at caregiver's face or task materials after the caregiver has shown verbal or non-ve 
+opt:  Yes; No; missing 
+
+#:  559 
+ID:  NCAST02_NCT62 
+?:  62. Child attempts to engage caregiver in eye-to-eye contact. 
+opt:  Yes; No; missing 
+
+#:  560 
+ID:  NCAST02_NCT63 
+?:  63. The child looks at the caregiver's face or eyes when caregiver attempts to establish eye-to-eye 
+opt:  Yes; No; missing 
+
+#:  574 
+ID:  PEDICAT_ASD01_SC018 
+?:  Follows gaze of another person to look at the same place or object 
+opt:  1 :: 5;999 
+
+#:  632 
+ID:  PLS501_PLS5_EC_13 
+?:  Plays simple games with another while using appropriate eye contact 
+opt:  1;0 
+
+#:  633 
+ID:  PLS501_PLS5_EC_19 
+?:  Participates in a play routine with another person for at least 1 minute while using appropriate eye contact 
+opt:  1;0 
+
+#:  641 
+ID:  QPGS_III_PARENT01_QPGS_B16A_F 
+?:  "During the episode of severe intense pain, did your child have any of the following? EYES SENSITIVE TO LIGHT" 
+opt:  No;Yes 
+
+#:  649 
+ID:  RMET_CV01_CHILD_EYESTOTAL 
+?:  Eyes Total 
+opt:  0 :: 28 
+
+#:  652 
+ID:  RMET_CV01_REVADULT_EYESTOTAL 
+?:  Eyes Total 
+opt:  0 :: 36 
+
+#:  654 
+ID:  SRS201_PARENTREPORT_16 
+?:  16. Avoids eye contact or has unusual eye contact (P/A/S) 
+opt:  1::4; 999 
+
+#:  655 
+ID:  SRS201_PARENTREPORT_65 
+?:  65. Stares or gazes off into space (P/A/S) 
+opt:  1::4; 999 
+
+#:  656 
+ID:  SENSORY_PROFILE_199401_SENS_AVOIDEYECONTACTS 
+?:  Avoids eye contact 
+opt:  1;2;3;4;5 
+
+#:  657 
+ID:  SENS_CAR01_SENSORY_C_15 
+?:  Covers eyes or squints to protect eyes from light 
+opt:  1 :: 5 
+
+#:  658 
+ID:  SENS_CAR01_SENSORY_C_96 
+?:  Avoids eye contact 
+opt:  1 :: 5 
+
+#:  659 
+ID:  SPS01_SENSORY_C_15 
+?:  Covers eyes or squints to protect eyes from light 
+opt:  1 :: 5 
+
+#:  660 
+ID:  SRS02_PARENTREPORT_16 
+?:  16. Avoids eye contact or has unusual eye contact (P/A/S) 
+opt:  1::4; 999 
+
+#:  661 
+ID:  SRS02_PARENTREPORT_65 
+?:  65. Stares or gazes off into space (P/A/S) 
+opt:  1::4; 999 
+
+#:  662 
+ID:  SRS_ADULT03_SRS_2005_ADULTRESEARCH_16 
+?:  16. Avoids eye contact or has unusual eye contact 
+opt:  1;2;3;4 
+
+#:  663 
+ID:  SRS_ADULT03_SRS_2005_ADULTRESEARCH_65 
+?:  65. Stares or gazes off into space 
+opt:  1;2;3;4 
+
+#:  664 
+ID:  SRS_PRESCHOOL_200601_SRSPRS_Q16 
+?:  16. Avoids eye contact or has unusual eye contact 
+opt:  1;2;3;4 
+
+#:  665 
+ID:  SRS_PRESCHOOL_200601_SRSPRS_Q65 
+?:  65. Stares or gazes off into space 
+opt:  1;2;3;4 
+
+#:  670 
+ID:  VINELAND_I01_VINE_MAL_POOREYE 
+?:  Has poor eye contact. 
+opt:  0;1;2;999 
+
+#:  672 
+ID:  VINELANDPARENT_200503_RTOAGE1_2 
+?:  Watches (that is, follows with eyes) someone moving by crib or bed for 5 seconds or more. 
+opt:  0;1;2;DK;D 
+
+#:  673 
+ID:  VINELANDPARENT_200503_PB1SECTIONA_8 
+?:  Has poor eye contact (that is, does not look at or face others when speaking or spoken to). 
+opt:  0;1;2 
+
+#:  675 
+ID:  VINELANDSURVEY_200505_INTERPERSRELATION_2 
+?:  Watches (that is, follows with eyes) someone moving by crib or bed for 5 seconds or more. 
+opt:  0;1;2;D;DK 
+
+#:  676 
+ID:  VINELANDSURVEY_200505_MBIINTERNALIZING_8S 
+?:  "Has poor eye contact (that is, does not look at or face others when speaking or spoken to)." 
+opt:  0;1;2;D;DK 

@@ -1,0 +1,220 @@
+=== Run information ===
+
+Scheme:weka.classifiers.meta.Bagging -P 100 -S 1 -I 10 -W weka.classifiers.trees.REPTree -- -M 2 -V 0.001 -N 3 -S 1 -L -1
+Relation:     brain_ndar_eyegaze_143-weka.filters.unsupervised.attribute.Remove-R1,282-weka.filters.unsupervised.attribute.Remove-R281
+Instances:    143
+Attributes:   281
+[list of attributes omitted]
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+All the base classifiers: 
+
+
+REPTree
+============
+
+lh_parsopercularis_thickness < 0.39 : 5 (35/4) [16/2]
+lh_parsopercularis_thickness >= 0.39
+|   lh_inferiorparietal_volume < 0.66
+|   |   lh_superiortemporal_area < 0.62 : 5 (19/9) [8/3]
+|   |   lh_superiortemporal_area >= 0.62 : 4 (26/0) [15/3]
+|   lh_inferiorparietal_volume >= 0.66
+|   |   lh_lateralorbitofrontal_thickness < 0.49
+|   |   |   rh_inferiortemporal_area < 0.53 : 5 (4/0) [2/1]
+|   |   |   rh_inferiortemporal_area >= 0.53 : 4 (3/0) [4/0]
+|   |   lh_lateralorbitofrontal_thickness >= 0.49
+|   |   |   rh_superiorparietal_area < 0.73 : 3 (4/0) [2/1]
+|   |   |   rh_superiorparietal_area >= 0.73 : 1 (4/1) [1/0]
+
+Size of the tree : 13
+
+
+REPTree
+============
+
+rh_bankssts_thickness < 0.66
+|   lh_parahippocampal_meancurv < 0.26 : 5 (39/1) [18/1]
+|   lh_parahippocampal_meancurv >= 0.26
+|   |   rh_medialorbitofrontal_area < 0.5 : 5 (9/0) [6/0]
+|   |   rh_medialorbitofrontal_area >= 0.5
+|   |   |   rh_lateralorbitofrontal_volume < 0.64 : 5 (5/1) [1/0]
+|   |   |   rh_lateralorbitofrontal_volume >= 0.64 : 4 (9/0) [4/1]
+rh_bankssts_thickness >= 0.66
+|   lh_MeanThickness_thickness < 0.66 : 4 (24/0) [15/0]
+|   lh_MeanThickness_thickness >= 0.66
+|   |   lh_bankssts_area < 0.56 : 5 (5/2) [3/1]
+|   |   lh_bankssts_area >= 0.56 : 1 (4/1) [1/0]
+
+Size of the tree : 13
+
+
+REPTree
+============
+
+rh_bankssts_thickness < 0.66
+|   lh_parstriangularis_area < 0.66
+|   |   rh_paracentral_thickness < 0.4 : 5 (39/0) [13/2]
+|   |   rh_paracentral_thickness >= 0.4 : 4 (4/1) [6/2]
+|   lh_parstriangularis_area >= 0.66
+|   |   lh_medialorbitofrontal_thickness < 0.43 : 4 (11/0) [5/1]
+|   |   lh_medialorbitofrontal_thickness >= 0.43 : 5 (4/1) [6/1]
+rh_bankssts_thickness >= 0.66 : 4 (37/7) [18/5]
+
+Size of the tree : 9
+
+
+REPTree
+============
+
+rh_inferiorparietal_volume < 0.5
+|   lh_paracentral_thickness < 0.49 : 5 (38/0) [19/6]
+|   lh_paracentral_thickness >= 0.49 : 4 (7/2) [3/1]
+rh_inferiorparietal_volume >= 0.5
+|   rh_entorhinal_volume < 0.32 : 5 (24/12) [12/1]
+|   rh_entorhinal_volume >= 0.32 : 4 (26/3) [14/3]
+
+Size of the tree : 7
+
+
+REPTree
+============
+
+lh_precuneus_volume < 0.56 : 5 (55/13) [25/6]
+lh_precuneus_volume >= 0.56 : 4 (40/10) [23/7]
+
+Size of the tree : 3
+
+
+REPTree
+============
+
+lh_lingual_thickness < 0.34
+|   rh_precuneus_thickness < 0.42 : 5 (32/1) [17/2]
+|   rh_precuneus_thickness >= 0.42
+|   |   lh_middletemporal_volume < 0.45 : 5 (4/0) [1/0]
+|   |   lh_middletemporal_volume >= 0.45 : 4 (18/2) [9/0]
+lh_lingual_thickness >= 0.34
+|   lh_lateralorbitofrontal_meancurv < 0.29
+|   |   rh_inferiorparietal_volume < 0.73
+|   |   |   rh_medialorbitofrontal_meancurv < 0.37 : 4 (22/1) [10/2]
+|   |   |   rh_medialorbitofrontal_meancurv >= 0.37 : 3 (3/1) [2/0]
+|   |   rh_inferiorparietal_volume >= 0.73
+|   |   |   lh_inferiortemporal_area < 0.69 : 3 (5/0) [0/0]
+|   |   |   lh_inferiortemporal_area >= 0.69 : 1 (2/0) [2/0]
+|   lh_lateralorbitofrontal_meancurv >= 0.29
+|   |   lh_lateraloccipital_area < 0.54 : 5 (2/0) [3/1]
+|   |   lh_lateraloccipital_area >= 0.54 : 1 (7/0) [4/1]
+
+Size of the tree : 17
+
+
+REPTree
+============
+
+lh_posteriorcingulate_thickness < 0.46
+|   rh_inferiorparietal_volume < 0.54 : 5 (39/1) [20/2]
+|   rh_inferiorparietal_volume >= 0.54 : 4 (8/1) [3/0]
+lh_posteriorcingulate_thickness >= 0.46
+|   rh_lingual_volume < 0.67
+|   |   lh_isthmuscingulate_volume < 0.62
+|   |   |   rh_parsopercularis_volume < 0.44 : 5 (9/4) [7/2]
+|   |   |   rh_parsopercularis_volume >= 0.44 : 4 (22/0) [7/1]
+|   |   lh_isthmuscingulate_volume >= 0.62 : 5 (7/0) [2/0]
+|   rh_lingual_volume >= 0.67
+|   |   lh_parsopercularis_area < 0.54 : 3 (4/0) [4/3]
+|   |   lh_parsopercularis_area >= 0.54
+|   |   |   rh_isthmuscingulate_area < 0.6 : 1 (3/0) [2/2]
+|   |   |   rh_isthmuscingulate_area >= 0.6 : 4 (3/0) [3/0]
+
+Size of the tree : 15
+
+
+REPTree
+============
+
+rh_lingual_volume < 0.71
+|   rh_frontalpole_volume < 0.55
+|   |   rh_parstriangularis_volume < 0.69 : 5 (43/3) [29/9]
+|   |   rh_parstriangularis_volume >= 0.69 : 4 (7/0) [2/0]
+|   rh_frontalpole_volume >= 0.55 : 4 (20/5) [5/0]
+rh_lingual_volume >= 0.71
+|   lh_medialorbitofrontal_thickness < 0.45 : 4 (11/0) [5/2]
+|   lh_medialorbitofrontal_thickness >= 0.45
+|   |   rh_transversetemporal_thickness < 0.65 : 1 (11/2) [5/0]
+|   |   rh_transversetemporal_thickness >= 0.65 : 3 (3/0) [2/0]
+
+Size of the tree : 11
+
+
+REPTree
+============
+
+lh_parsopercularis_thickness < 0.37
+|   rh_parsopercularis_meancurv < 0.46 : 5 (25/0) [12/3]
+|   rh_parsopercularis_meancurv >= 0.46 : 4 (3/1) [1/0]
+lh_parsopercularis_thickness >= 0.37
+|   lh_posteriorcingulate_area < 0.6
+|   |   rh_parahippocampal_volume < 0.51
+|   |   |   rh_supramarginal_volume < 0.5
+|   |   |   |   rh_bankssts_area < 0.38 : 5 (5/0) [2/0]
+|   |   |   |   rh_bankssts_area >= 0.38 : 4 (17/0) [8/3]
+|   |   |   rh_supramarginal_volume >= 0.5
+|   |   |   |   rh_pericalcarine_area < 0.63 : 1 (3/1) [3/2]
+|   |   |   |   rh_pericalcarine_area >= 0.63 : 5 (9/0) [5/0]
+|   |   rh_parahippocampal_volume >= 0.51
+|   |   |   rh_isthmuscingulate_area < 0.39 : 3 (3/0) [2/0]
+|   |   |   rh_isthmuscingulate_area >= 0.39 : 4 (25/0) [12/0]
+|   lh_posteriorcingulate_area >= 0.6 : 1 (5/0) [3/1]
+
+Size of the tree : 17
+
+
+REPTree
+============
+
+lh_precuneus_thickness < 0.31 : 5 (32/0) [19/0]
+lh_precuneus_thickness >= 0.31
+|   rh_isthmuscingulate_volume < 0.48
+|   |   lh_superiortemporal_thickness < 0.59 : 4 (6/1) [1/0]
+|   |   lh_superiortemporal_thickness >= 0.59 : 5 (17/1) [6/2]
+|   rh_isthmuscingulate_volume >= 0.48 : 4 (40/9) [22/6]
+
+Size of the tree : 7
+
+
+
+Time taken to build model: 0.35 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          91               63.6364 %
+Incorrectly Classified Instances        52               36.3636 %
+Kappa statistic                          0.3394
+Mean absolute error                      0.1946
+Root mean squared error                  0.3153
+Relative absolute error                 82.0936 %
+Root relative squared error             92.1588 %
+Total Number of Instances              143     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0         0          0         0         0          0.737    1
+                 0         0          0         0         0          ?        2
+                 0         0.007      0         0         0          0.548    3
+                 0.672     0.353      0.565     0.672     0.614      0.699    4
+                 0.732     0.292      0.712     0.732     0.722      0.785    5
+Weighted Avg.    0.636     0.288      0.583     0.636     0.608      0.736
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+  0  0  0  6  1 |  a = 1
+  0  0  0  0  0 |  b = 2
+  0  0  0  5  2 |  c = 3
+  0  0  1 39 18 |  d = 4
+  0  0  0 19 52 |  e = 5
+

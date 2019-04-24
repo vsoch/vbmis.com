@@ -1,0 +1,1834 @@
+#:  1 
+ID:  ACE_PHYSEXAM01_FACIAL_DYSMORP 
+?:  "Are there dysmorphic facial features (e.g. eyes too closely or widely spaced, ears lowset)?" 
+opt:  Yes;No;NK 
+
+#:  2 
+ID:  ACE_PHYSEXAM01_EYE_CORRECT 
+?:  If yes, is there any correction/what kind?  
+opt:  1;2 
+
+#:  3 
+ID:  ACE_PHYSEXAM01_EYE_MOV 
+?:  Are the eye movements full and symmetric? 
+opt:  Yes;No;NK 
+
+#:  4 
+ID:  ACE_PHYSEXAM01_EYES_STRABISMUS 
+?:  Strabismus 
+opt:  Yes; No; NK (not known/not examined) 
+
+#:  5 
+ID:  ACE_PHYSEXAM01_EYES_NYSTAGMUS 
+?:  Nystagmus 
+opt:  Yes;No;NK 
+
+#:  6 
+ID:  ACE_PHYSEXAM01_EYES_PTOSIS 
+?:  Ptosis 
+opt:  Yes;No;NK 
+
+#:  13 
+ID:  AADOS_M101_CODINGA_POINT_A 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  14 
+ID:  AADOS_M101_CODINGA_UOTHR_A 
+?:  Use of Other's Body to Communicate 
+opt:  0::3;8;9 
+
+#:  22 
+ID:  AADOS_M101_RECSOCINT_10 
+?:  Level of Social Engagement (examiner) 
+opt:  0::3 
+
+#:  23 
+ID:  AADOS_M101_STERBEH_6 
+?:  Tics 
+opt:  0::3 
+
+#:  26 
+ID:  AADOS_M201_CODINGA_POINT_B 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  27 
+ID:  AADOS_M201_CODINGA_UOTHR_A 
+?:  Use of Other's Body to Communicate 
+opt:  0::3;8;9 
+
+#:  35 
+ID:  AADOS_M201_RECSOCINT_10 
+?:  Level of Social Engagement (examiner) 
+opt:  0::3 
+
+#:  36 
+ID:  AADOS_M201_STERBEH_6 
+?:  Tics 
+opt:  0::3 
+
+#:  37 
+ID:  ASI01_ASIE059 
+?:  Makes twitching or jerking movements for no apparent reason (eye blinking, nose twitching, grimacing, lip licking, head jerking, etc.) 
+opt:  0::3;9;-7;-8;-9 
+
+#:  39 
+ID:  ADI_C02_FUNCCOM_CPOINT 
+?:  Pointing to express interest - Current 
+opt:  0;1;2;3;8;9 
+
+#:  40 
+ID:  ADI_C02_FUNCCOM_POINT5 
+?:  Pointing to express interest - Most Abnormal 
+opt:  0;1;2;3;8;9 
+
+#:  43 
+ID:  ADI_C02_SOCDEV_CQUALOV 
+?:  Quality of social overtures - Current 
+opt:  0;1;2;3;8;9 
+
+#:  44 
+ID:  ADI_C02_SOCDEV_QUALOV5 
+?:  Quality of social overtures - Most Abnormal 
+opt:  0;1;2;3;8;9 
+
+#:  45 
+ID:  ADI_C02_GENBEHAV_CSLFINJ 
+?:  Self Injury - Current 
+opt:  0;1;2;3;9 
+
+#:  46 
+ID:  ADI_C02_GENBEHAV_ESLFINJ 
+?:  Self Injury - Ever 
+opt:  0;1;2;3;9 
+
+#:  47 
+ID:  ADI_C02_CSOCANX 
+?:  SOCIAL ANXIETY/AVOIDANCE 
+opt:  0;1;2;7;8;9 
+
+#:  48 
+ID:  ADI_C02_SOCANX5 
+?:  SOCIAL ANXIETY/AVOIDANCE 
+opt:  0;1;2;7;8;9 
+
+#:  53 
+ID:  ADIR_T_200401_AD050CU 
+?:  50. Pointing to express interest 
+opt:  0;1;2;8;9 
+
+#:  55 
+ID:  ADIR_T_200401_AD075CU 
+?:  75. Quality of social overtures 
+opt:  0;1;2;3;8;9 
+
+#:  56 
+ID:  ADIR_T_200401_AD111CU 
+?:  111.  Self-injury (CURRENT) 
+opt:  0;1;2;3;8;9 
+
+#:  57 
+ID:  ADIR_T_200401_AD111EV 
+?:  111.  Self-injury (EVER) 
+opt:  0;1;2;3;8;9 
+
+#:  58 
+ID:  ADIR_T_200602_AD050CU 
+?:  50. Pointing to express interest 
+opt:  0;1;2;8;9 
+
+#:  59 
+ID:  ADIR_T_200603_AD050CU 
+?:  50. Pointing to express interest 
+opt:  0;1;2;8;9 
+
+#:  66 
+ID:  ADIR_T_200602_AD075CU 
+?:  75. Quality of social overtures 
+opt:  0;1;2;3;8;9 
+
+#:  67 
+ID:  ADIR_T_200603_AD075CU 
+?:  75. Quality of social overtures 
+opt:  0;1;2;3;8;9 
+
+#:  68 
+ID:  ADIR_T_200602_AD111CU 
+?:  111.  Self-injury (CURRENT) 
+opt:  0;1;2;3;8;9 
+
+#:  69 
+ID:  ADIR_T_200603_AD111CU 
+?:  111.  Self-injury (CURRENT) 
+opt:  0;1;2;3;8;9 
+
+#:  70 
+ID:  ADIR_T_200602_AD111EV 
+?:  111.  Self-injury (EVER) 
+opt:  0;1;2;3;8;9 
+
+#:  71 
+ID:  ADIR_T_200603_AD111EV 
+?:  111.  Self-injury (EVER) 
+opt:  0;1;2;3;8;9 
+
+#:  72 
+ID:  ADI_200304_FUNCCOM_CPOINT 
+?:  Pointing to express interest - Current 
+opt:  0;1;2;3;8;9 
+
+#:  73 
+ID:  ADI_200304_FUNCCOM_POINT5 
+?:  Pointing to express interest - Most Abnormal 
+opt:  0;1;2;3;8;9 
+
+#:  76 
+ID:  ADI_200304_SOCDEV_CQUALOV 
+?:  Quality of social overtures - Current 
+opt:  0;1;2;3;8;9 
+
+#:  77 
+ID:  ADI_200304_SOCDEV_QUALOV5 
+?:  Quality of social overtures - Most Abnormal 
+opt:  0;1;2;3;8;9 
+
+#:  78 
+ID:  ADI_200304_GENBEHAV_CSLFINJ 
+?:  Self Injury - Current 
+opt:  0;1;2;3;9 
+
+#:  79 
+ID:  ADI_200304_GENBEHAV_ESLFINJ 
+?:  Self Injury - Ever 
+opt:  0;1;2;3;9 
+
+#:  84 
+ID:  ADOS_T01_ADOSTA07 
+?:  A7. Pointing 
+opt:  0;1;2;3;9;-9 
+
+#:  86 
+ID:  ADOS_T01_ADOSTB02 
+?:  B2. Teasing Toy Play 
+opt:  0;1;2;3;8;9;-9 
+
+#:  87 
+ID:  ADOS_T01_ADOSTB03 
+?:  B3. Unable Toy Play 
+opt:  0;1;2;3;8;9;-9 
+
+#:  88 
+ID:  ADOS_T02_ADOSTA07 
+?:  A7. Pointing 
+opt:  0;1;2;3;9;-9 
+
+#:  91 
+ID:  ADOS_T02_ADOSTB02 
+?:  B2. Teasing Toy Play 
+opt:  0;1;2;3;8;9;-9 
+
+#:  92 
+ID:  ADOS_T01_ADOSTB08 
+?:  B8. Ignore 
+opt:  0;1;2;3;-9 
+
+#:  94 
+ID:  ADOS_T02_ADOSTB03 
+?:  B3. Unable Toy Play 
+opt:  0;1;2;3;8;9;-9 
+
+#:  98 
+ID:  ADOS_T02_ADOSTB08 
+?:  B8. Ignore 
+opt:  0;1;2;3;-9 
+
+#:  106 
+ID:  ADOS1_200102_CODINGA_UOTHR_A 
+?:  Use of Other's Body to Communicate 
+opt:  0::3;8;9 
+
+#:  107 
+ID:  ADOS1_200102_CODINGA_POINT_A 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  118 
+ID:  ADOS1_200701_CODINGA_UOTHR_A 
+?:  Use of Other's Body to Communicate 
+opt:  0::3;8;9 
+
+#:  119 
+ID:  ADOS1_200701_CODINGA_POINT_A 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  131 
+ID:  ADOS2_200102_CODINGA_POINT_B 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  132 
+ID:  ADOS2_200101_CODINGA_POINT_B 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  146 
+ID:  ADOS2_200701_CODINGA_POINT_B 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  155 
+ID:  ADOS3_200102_CODINGB_LLNVC_C 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  0;1;2;7;8;9 
+
+#:  156 
+ID:  ADOS3_200101_CODINGB_LLNVC_C 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  0;1;2;7;8;9 
+
+#:  160 
+ID:  ADOS3_200701_CODINGB_LLNVC_C 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  0;1;2;7;8;9 
+
+#:  163 
+ID:  ADOS4_200102_CODINGB_LLNVC_D 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  0;1;2;7;8;9 
+
+#:  165 
+ID:  ADOS1_201201_CODINGA_UAOTHR_A 
+?:  Use of Another's Body 
+opt:  0;1;2;8;9 
+
+#:  166 
+ID:  ADOS1_201201_CODINGA_POINT_A 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  176 
+ID:  ADOS2_201201_CODINGA_POINT_B 
+?:  Pointing 
+opt:  0;1;2;3;8;9 
+
+#:  184 
+ID:  ADOS3_201201_CODINGB_LLNVC_C 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  0;1;2;7;8;9 
+
+#:  187 
+ID:  ADOS4_201201_CODINGB_LLNVC_D 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  0;1;2;7;8;9 
+
+#:  189 
+ID:  ADOST_201201_ADOSTA06_2 
+?:  A6. Use of Another's Body 
+opt:  0;1;2;3;8;9 
+
+#:  190 
+ID:  ADOST_201201_ADOSTA07 
+?:  A7. Pointing 
+opt:  0;1;2;3;9;-9 
+
+#:  192 
+ID:  ADOST_201201_ADOSTB02 
+?:  B2. Teasing Toy Play 
+opt:  0;1;2;3;8;9;-9 
+
+#:  193 
+ID:  ADOST_201201_ADOSTB03 
+?:  B3. Unable Toy Play 
+opt:  0;1;2;3;8;9;-9 
+
+#:  195 
+ID:  ADOST_201201_ADOSTB08 
+?:  B8. Ignore 
+opt:  0;1;2;3;-9 
+
+#:  203 
+ID:  EARLI_AOSI01_AOSI_Q3_ORIENTSNAMEP1T1 
+?:  Orients to name, Press #1, Trial #1 
+opt:  0;1;2;8 
+
+#:  204 
+ID:  EARLI_AOSI01_AOSI_Q3_ORIENTSNAMEP1T2 
+?:  Orients to name, Press #1, Trial #2 
+opt:  0;1;2;8 
+
+#:  205 
+ID:  EARLI_AOSI01_AOSI_Q3_ORIENTSNAMEP2T2 
+?:  Orients to name, Press #2, Trial #1 
+opt:  0;1;2;8 
+
+#:  206 
+ID:  EARLI_AOSI01_AOSI_Q3_ORIENTSNAMEP3T1 
+?:  Orients to name, Press #2, Trial #2 
+opt:  0;1;2;8 
+
+#:  207 
+ID:  EARLI_AOSI01_AOSI_Q3_ORIENTSNAMEP4T1N 
+?:  Orients to name, Press #3, Trial #1 
+opt:  0;1;2;8 
+
+#:  208 
+ID:  EARLI_AOSI01_AOSI_Q3_ORIENTSNAMEP4T2N 
+?:  Orients to name, Press #3, Trial #2 
+opt:  0;1;2;8 
+
+#:  209 
+ID:  EARLI_AOSI01_AOSI_Q3_ORIENTSNAMEINSTRUCT 
+?:  Orients to name score 
+opt:  0;1;2;8 
+
+#:  214 
+ID:  EARLI_AOSI01_AOSI_Q21_SOCIALREF 
+?:  Social Referencing score 
+opt:  0;1;2;8 
+
+#:  215 
+ID:  BRIEF_P01_BRIEF_P41 
+?:  Question 41 
+opt:  1;2;3;9 
+
+#:  216 
+ID:  BRIEF_T01_BRIEF_P41 
+?:  Question 41 
+opt:  1;2;3;9 
+
+#:  217 
+ID:  BSI01_BSI138 
+?:  38. Feeling tense or keyed up 
+opt:  0::4; 9 
+
+#:  221 
+ID:  CHARGE_MEDICAL_HISTORY02_REV_EYESTRABISMUS 
+?:  Strabismus 
+opt:  Yes;No;NK 
+
+#:  223 
+ID:  CHARGE_PHYSICALEXAM01_EYES_INCANTHALCM 
+?:  Inner Canthal Distance - in cm 
+opt:  Eyes 
+
+#:  224 
+ID:  CHARGE_PHYSICALEXAM01_EYES_INCANTHALPERCEN 
+?:  Inner Canthal Distance - in percentage 
+opt:  Eyes 
+
+#:  225 
+ID:  CHARGE_PHYSICALEXAM01_EYES_OUTCANTHALCM 
+?:  Outer Canthal Distance - in cm 
+opt:  Eyes 
+
+#:  226 
+ID:  CHARGE_PHYSICALEXAM01_EYES_OUTCANTHALPERCEN 
+?:  Outer Canthal Distance - in percentage 
+opt:  Eyes 
+
+#:  227 
+ID:  CHARGE_PHYSICALEXAM01_EYES_INTERPUPILLARYCM 
+?:  Interpupillary Distance - in cm 
+opt:  Eyes 
+
+#:  228 
+ID:  CHARGE_PHYSICALEXAM01_EYES_INTERPUPILLARYPERCEN 
+?:  Interpupillary Distance - in percentage 
+opt:  Eyes 
+
+#:  229 
+ID:  CHARGE_PHYSICALEXAM01_EYES_FISSLENRIGHT 
+?:  Palpebral Fissure Length (Right) - in cm 
+opt:  Eyes 
+
+#:  230 
+ID:  CHARGE_PHYSICALEXAM01_EYES_FISSLENLEFT 
+?:  Palpebral Fissure Length (Left) - in cm 
+opt:  Eyes 
+
+#:  231 
+ID:  CHARGE_PHYSICALEXAM01_EYES_FISSLENPERCEN 
+?:  Palpebral Fissure Length - in percentage 
+opt:  Eyes 
+
+#:  232 
+ID:  CHARGE_PHYSICALEXAM01_EYES_FISSSLANT 
+?:  Palpebral Fissure Slant 
+opt:  Up;Down;Normal 
+
+#:  233 
+ID:  CHARGE_PHYSICALEXAM01_EYES_FISSSLANTDEGREE 
+?:  Palpebral Fissure Slant - Approximant Degrees 
+opt:  Eyes 
+
+#:  234 
+ID:  CHARGE_PHYSICALEXAM01_EYES_STRABISMUS 
+?:  Strabismus 
+opt:  Yes; No; NK (not known/not examined) 
+
+#:  235 
+ID:  CHARGE_PHYSICALEXAM01_EYES_NYSTAGMUS 
+?:  Nystagmus 
+opt:  Yes;No;NK 
+
+#:  236 
+ID:  CHARGE_PHYSICALEXAM01_EYES_NYSTAGMUSTYPE 
+?:  Nystagmus - Type 
+opt:  Vertical;Horizontal 
+
+#:  237 
+ID:  CHARGE_PHYSICALEXAM01_EYES_PUPREDREFLEX 
+?:  Pupillary Red Reflex 
+opt:  Yes;No;NE 
+
+#:  238 
+ID:  CHARGE_PHYSICALEXAM01_EYES_EPIFOLD 
+?:  Epicanthal Folds 
+opt:  Yes;No;NE 
+
+#:  239 
+ID:  CHARGE_PHYSICALEXAM01_EYES_PROMINENTEYE 
+?:  Prominent Eyes 
+opt:  Yes;No;NE 
+
+#:  240 
+ID:  CHARGE_PHYSICALEXAM01_EYES_PERIORFULL 
+?:  Periorbital Fullness 
+opt:  Yes;No;NE 
+
+#:  241 
+ID:  CHARGE_PHYSICALEXAM01_EYES_SYNOPHRYS 
+?:  Synophrys 
+opt:  Yes;No;NE 
+
+#:  242 
+ID:  CHARGE_PHYSICALEXAM01_EYES_EYEBROWFLAIR 
+?:  Medial Eyebrow Flair 
+opt:  Yes;No;NE 
+
+#:  243 
+ID:  CHARGE_PHYSICALEXAM01_EYES_PTOSIS 
+?:  Ptosis 
+opt:  Yes;No;NK 
+
+#:  244 
+ID:  CHARGE_PHYSICALEXAM01_EYES_COLOBOMATA 
+?:  Colobomata 
+opt:  Yes;No;NE 
+
+#:  245 
+ID:  CHARGE_PHYSICALEXAM01_EYES_CORNEALOPACITY 
+?:  Corneal Opacity 
+opt:  Yes;No;NE 
+
+#:  246 
+ID:  CHARGE_PHYSICALEXAM01_EYES_IRISPATTERN 
+?:  Iris Patterning 
+opt:  Brushfield Spots;Lisch Nodules;Fine/Porous;Heterochromasia;Stellate;Pale Blue;None;NE 
+
+#:  248 
+ID:  CHARGE_PHYSICALEXAM01_SKIN_ABSNTLASHES 
+?:  Absent Lashes or Eyebrows 
+opt:  Yes;No;NE;_BLANK_ 
+
+#:  249 
+ID:  CS_ADI_R_1991_TODDLER01_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  250 
+ID:  CS_ADI_R_1991_TODDLER01_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  251 
+ID:  CS_ADI_R_1991_TODDLER01_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  252 
+ID:  CS_ADI_R_1991_TODDLER01_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  255 
+ID:  CS_ADI_R_1991_TODDLER01_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  256 
+ID:  CS_ADI_R_1991_TODDLER01_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  257 
+ID:  CS_ADI_R_WPS_200302_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  258 
+ID:  CS_ADI_R_WPS_200302_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  259 
+ID:  CS_ADI_R_WPS_200302_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  260 
+ID:  CS_ADI_R_WPS_200302_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  263 
+ID:  CS_ADI_R_WPS_200302_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  264 
+ID:  CS_ADI_R_WPS_200302_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  265 
+ID:  CS_ADI_R_1993_SHORT03_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  266 
+ID:  CS_ADI_R_1993_SHORT03_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  267 
+ID:  CS_ADI_R_1993_SHORT03_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  268 
+ID:  CS_ADI_R_1993_SHORT03_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  271 
+ID:  CS_ADI_R_1993_SHORT03_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  272 
+ID:  CS_ADI_R_1993_SHORT03_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  273 
+ID:  CS_ADI_R_1995_LONG02_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  274 
+ID:  CS_ADI_R_1995_LONG02_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  275 
+ID:  CS_ADI_R_1995_LONG02_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  276 
+ID:  CS_ADI_R_1995_LONG02_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  279 
+ID:  CS_ADI_R_1995_LONG02_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  280 
+ID:  CS_ADI_R_1995_LONG02_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  281 
+ID:  CS_ADI_R_1995_SHORT03_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  282 
+ID:  CS_ADI_R_1995_SHORT03_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  283 
+ID:  CS_ADI_R_1995_SHORT03_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  284 
+ID:  CS_ADI_R_1995_SHORT03_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  287 
+ID:  CS_ADI_R_1995_SHORT03_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  288 
+ID:  CS_ADI_R_1995_SHORT03_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  289 
+ID:  CS_ADI_R_1996_SHORT02_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  290 
+ID:  CS_ADI_R_1996_SHORT02_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  291 
+ID:  CS_ADI_R_1996_SHORT02_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  292 
+ID:  CS_ADI_R_1996_SHORT02_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  295 
+ID:  CS_ADI_R_1996_SHORT02_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  296 
+ID:  CS_ADI_R_1996_SHORT02_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  297 
+ID:  CS_ADI_R_1997_LONG02_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  298 
+ID:  CS_ADI_R_1997_LONG02_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  299 
+ID:  CS_ADI_R_1997_LONG02_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  300 
+ID:  CS_ADI_R_1997_LONG02_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  303 
+ID:  CS_ADI_R_1997_LONG02_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  304 
+ID:  CS_ADI_R_1997_LONG02_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  305 
+ID:  CS_ADI_R_1997_SHORT02_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  306 
+ID:  CS_ADI_R_1997_SHORT02_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  307 
+ID:  CS_ADI_R_1997_SHORT02_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  308 
+ID:  CS_ADI_R_1997_SHORT02_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  311 
+ID:  CS_ADI_R_1997_SHORT02_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  312 
+ID:  CS_ADI_R_1997_SHORT02_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  313 
+ID:  CS_ADI_R_1998_LONG02_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  314 
+ID:  CS_ADI_R_1998_LONG02_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  315 
+ID:  CS_ADI_R_1998_LONG02_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  316 
+ID:  CS_ADI_R_1998_LONG02_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  319 
+ID:  CS_ADI_R_1998_LONG02_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  320 
+ID:  CS_ADI_R_1998_LONG02_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  321 
+ID:  CS_ADI_R_1999_SHORT02_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  322 
+ID:  CS_ADI_R_1999_SHORT02_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  323 
+ID:  CS_ADI_R_1999_SHORT02_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  324 
+ID:  CS_ADI_R_1999_SHORT02_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  327 
+ID:  CS_ADI_R_1999_SHORT02_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  328 
+ID:  CS_ADI_R_1999_SHORT02_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  329 
+ID:  CS_ADI_R_200002_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  330 
+ID:  CS_ADI_R_200002_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  331 
+ID:  CS_ADI_R_200002_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  332 
+ID:  CS_ADI_R_200002_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  335 
+ID:  CS_ADI_R_200002_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  336 
+ID:  CS_ADI_R_200002_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  337 
+ID:  CS_ADI_R_SHORT01_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  338 
+ID:  CS_ADI_R_SHORT01_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  339 
+ID:  CS_ADI_R_SHORT01_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  341 
+ID:  CS_ADI_R_SHORT01_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  342 
+ID:  CS_ADI_R_1998_SHORT02_ADI_GB_SLFIN_A 
+?:  Self-injury:  Current 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  343 
+ID:  CS_ADI_R_1998_SHORT02_ADI_GB_SLFIN_B 
+?:  Self-injury:  Ever 
+opt:  Nulled value range of: 0; 1; 2; 3; 9 to accept outlier data. 0 = No self-injury; 1 = Slight self-injury (e.g., occasionally bites own hand/arm when annoyed, pulls hair, or slaps face); no substantial tissue damage; 2 = Self-injury definitely present (e.g., actual bruises or calluses, repeated head banging, hair pulling, biting associated with definite tissue damage; do not count picking of spots); 3 = Definite self-injury with serious damage (e.g., skull fracture, eye injury, etc.); 9 = N/K or not asked 
+
+#:  344 
+ID:  CS_ADI_R_1998_SHORT02_ADI_LC_PTEXP_A 
+?:  Pointing to express interest:  Current 
+opt:  0; 1; 2; 8; 9 
+
+#:  345 
+ID:  CS_ADI_R_1998_SHORT02_ADI_LC_PTEXP_B 
+?:  Pointing to express interest:  Most abnormal 
+opt:  0; 1; 2; 8; 9 
+
+#:  348 
+ID:  CS_ADI_R_1998_SHORT02_ADI_SP_QLSCO_A 
+?:  Quality of social overtures:  Current 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  349 
+ID:  CS_ADI_R_1998_SHORT02_ADI_SP_QLSCO_B 
+?:  Quality of social overtures:  Most abnormal 4.0 - 5.0 
+opt:  0; 1; 2; 3; 8; 9 
+
+#:  350 
+ID:  CS_ADOS_G_102_ADOS_LAC_POINT1 
+?:  Pointing_Pointing to Express Interest 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Points with index finger to show visually directed referencing (coordinated gaze to object and person) of distal objects in at least two activities (e.g., points to bubbles and to balloon). 1 = Uses pointing to reference objects, but without sufficient flexibility or frequency to meet criteria for a rating of 0 (e.g., only one instance of pointing that fits the preceding description for a rating of 0, or absence of coordinated gaze with distal pointing, though the child may vocalize); AND/OR produces an approximation of pointing (coordinated with gaze or vocalization) rather than an index finger point; AND/OR coordinates only pointing that includes touching a picture or other nearby objects with gaze or vocalization; AND/OR points with coordination (gaze or vocalization) only to a person or to himself or herself. 2 = Points only when close to or actually touching an object, without coordinated gaze or vocalization. Does not have to be well-formed index finger point. 3 = Does not point as described above 
+
+#:  351 
+ID:  CS_ADOS_G_102_ADOS_LAC_UOBTC 
+?:  Use of Other s Body to Communicate 
+opt:  Nulled value range of: 0;1;2;8 to accept outlier data. 0 = No use of another person's body for a specific goal (e.g., to manipulate an object), except in situations where other strategies have not worked (e.g., when others are conversing and the participant cannot get their attention) and in conjunction with coordinated gaze. 1 = Takes another person's hand and leads him/her places without coordinated gaze, but no placement of hand on objects and no use of another person's body as a tool, to point, or for a specific goal. 2 = Movement of another person's hand when it is holding an object OR pushing examiner's hand away from object without eye contact. 3 = Placement of another person's hand or other body part on object (including placing the balloon or food to the examiner's mouth without coordinated gaze), OR use of his/her hand or other body part as a tool or to gesture "for" the participant (such as pointing). 8 = Little or no spontaneous communication. 
+
+#:  359 
+ID:  CS_ADOS_G_202_ADOS_LAC_POINT2 
+?:  Pointing/Pointing to Express Interest 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Points with index finger to show visually-directed referencing (i.e., coordinated gaze to object and person) of distal object to express interest. 1 = Uses pointing to reference objects to express interest, but without sufficient flexibility to meet criteria for a rating of 0 (e.g., absence of coordinated gaze, though the child may vocalize); OR produces an approximation of pointing rather than an index finger point; OR coordinates only pointing that includes touching a picture or other nearby objects with gaze or vocalization; OR points to request only; OR points to a person only. 2 = Points only when close to or actually touching an object, without coordinated gaze. 3 = Does not point to objects in any way. 
+
+#:  365 
+ID:  CS_ADOS_G_302_ADOS_RSI_LPLNC 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  Nulled value range of: 0;1;2;7;8 to accept outlier data. 0 = Vocalization usually accompanied by subtle and socially appropriate changes in gesture, gaze, and facial expression. 1 = Vocalization accompanied by abnormal, limited, or less than usual frequency and/or range of gesture, gaze, and facial expression, OR use of one modality almost exclusively (e.g., frequent use of gaze, but very limited use of gesture and facial expression). 2 = Little or no nonverbal communication linked with vocalization. 7 = Some avoidance of direct eye gaze, particularly at ihe beginning of the interview, perhaps because of shyness, but shows some modulation and coordination of language and nonverbal behavior. 8 = N/A; no vocalization OR no or minimal use of gesture, facial expression, or socially directed gaze. This code should be assigned automatically if the absence of linking can be accounted for by the limited frequency of unusual eye contact, facial expressions, and/or gestures.  
+
+#:  367 
+ID:  CS_ADOS_G_402_ADOS_RSI_LPLNC 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  Nulled value range of: 0;1;2;7;8 to accept outlier data. 0 = Vocalization usually accompanied by subtle and socially appropriate changes in gesture, gaze, and facial expression. 1 = Vocalization accompanied by abnormal, limited, or less than usual frequency and/or range of gesture, gaze, and facial expression, OR use of one modality almost exclusively (e.g., frequent use of gaze, but very limited use of gesture and facial expression). 2 = Little or no nonverbal communication linked with vocalization. 7 = Some avoidance of direct eye gaze, particularly at ihe beginning of the interview, perhaps because of shyness, but shows some modulation and coordination of language and nonverbal behavior. 8 = N/A; no vocalization OR no or minimal use of gesture, facial expression, or socially directed gaze. This code should be assigned automatically if the absence of linking can be accounted for by the limited frequency of unusual eye contact, facial expressions, and/or gestures.  
+
+#:  369 
+ID:  CS_ADOS_WPS_102_ADOS_LAC_POINT1 
+?:  Pointing_Pointing to Express Interest 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Points with index finger to show visually directed referencing (coordinated gaze to object and person) of distal objects in at least two activities (e.g., points to bubbles and to balloon). 1 = Uses pointing to reference objects, but without sufficient flexibility or frequency to meet criteria for a rating of 0 (e.g., only one instance of pointing that fits the preceding description for a rating of 0, or absence of coordinated gaze with distal pointing, though the child may vocalize); AND/OR produces an approximation of pointing (coordinated with gaze or vocalization) rather than an index finger point; AND/OR coordinates only pointing that includes touching a picture or other nearby objects with gaze or vocalization; AND/OR points with coordination (gaze or vocalization) only to a person or to himself or herself. 2 = Points only when close to or actually touching an object, without coordinated gaze or vocalization. Does not have to be well-formed index finger point. 3 = Does not point as described above 
+
+#:  370 
+ID:  CS_ADOS_WPS_102_ADOS_LAC_UOBTC 
+?:  Use of Other s Body to Communicate 
+opt:  Nulled value range of: 0;1;2;8 to accept outlier data. 0 = No use of another person's body for a specific goal (e.g., to manipulate an object), except in situations where other strategies have not worked (e.g., when others are conversing and the participant cannot get their attention) and in conjunction with coordinated gaze. 1 = Takes another person's hand and leads him/her places without coordinated gaze, but no placement of hand on objects and no use of another person's body as a tool, to point, or for a specific goal. 2 = Movement of another person's hand when it is holding an object OR pushing examiner's hand away from object without eye contact. 3 = Placement of another person's hand or other body part on object (including placing the balloon or food to the examiner's mouth without coordinated gaze), OR use of his/her hand or other body part as a tool or to gesture "for" the participant (such as pointing). 8 = Little or no spontaneous communication. 
+
+#:  372 
+ID:  CS_ADOS_WPS_102_ADOS_RSI_LPLNC 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  Nulled value range of: 0;1;2;7;8 to accept outlier data. 0 = Vocalization usually accompanied by subtle and socially appropriate changes in gesture, gaze, and facial expression. 1 = Vocalization accompanied by abnormal, limited, or less than usual frequency and/or range of gesture, gaze, and facial expression, OR use of one modality almost exclusively (e.g., frequent use of gaze, but very limited use of gesture and facial expression). 2 = Little or no nonverbal communication linked with vocalization. 7 = Some avoidance of direct eye gaze, particularly at ihe beginning of the interview, perhaps because of shyness, but shows some modulation and coordination of language and nonverbal behavior. 8 = N/A; no vocalization OR no or minimal use of gesture, facial expression, or socially directed gaze. This code should be assigned automatically if the absence of linking can be accounted for by the limited frequency of unusual eye contact, facial expressions, and/or gestures.  
+
+#:  379 
+ID:  CS_ADOS_WPS_202_ADOS_LAC_POINT1 
+?:  Pointing_Pointing to Express Interest 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Points with index finger to show visually directed referencing (coordinated gaze to object and person) of distal objects in at least two activities (e.g., points to bubbles and to balloon). 1 = Uses pointing to reference objects, but without sufficient flexibility or frequency to meet criteria for a rating of 0 (e.g., only one instance of pointing that fits the preceding description for a rating of 0, or absence of coordinated gaze with distal pointing, though the child may vocalize); AND/OR produces an approximation of pointing (coordinated with gaze or vocalization) rather than an index finger point; AND/OR coordinates only pointing that includes touching a picture or other nearby objects with gaze or vocalization; AND/OR points with coordination (gaze or vocalization) only to a person or to himself or herself. 2 = Points only when close to or actually touching an object, without coordinated gaze or vocalization. Does not have to be well-formed index finger point. 3 = Does not point as described above 
+
+#:  380 
+ID:  CS_ADOS_WPS_202_ADOS_LAC_POINT2 
+?:  Pointing/Pointing to Express Interest 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Points with index finger to show visually-directed referencing (i.e., coordinated gaze to object and person) of distal object to express interest. 1 = Uses pointing to reference objects to express interest, but without sufficient flexibility to meet criteria for a rating of 0 (e.g., absence of coordinated gaze, though the child may vocalize); OR produces an approximation of pointing rather than an index finger point; OR coordinates only pointing that includes touching a picture or other nearby objects with gaze or vocalization; OR points to request only; OR points to a person only. 2 = Points only when close to or actually touching an object, without coordinated gaze. 3 = Does not point to objects in any way. 
+
+#:  381 
+ID:  CS_ADOS_WPS_202_ADOS_LAC_UOBTC 
+?:  Use of Other s Body to Communicate 
+opt:  Nulled value range of: 0;1;2;8 to accept outlier data. 0 = No use of another person's body for a specific goal (e.g., to manipulate an object), except in situations where other strategies have not worked (e.g., when others are conversing and the participant cannot get their attention) and in conjunction with coordinated gaze. 1 = Takes another person's hand and leads him/her places without coordinated gaze, but no placement of hand on objects and no use of another person's body as a tool, to point, or for a specific goal. 2 = Movement of another person's hand when it is holding an object OR pushing examiner's hand away from object without eye contact. 3 = Placement of another person's hand or other body part on object (including placing the balloon or food to the examiner's mouth without coordinated gaze), OR use of his/her hand or other body part as a tool or to gesture "for" the participant (such as pointing). 8 = Little or no spontaneous communication. 
+
+#:  383 
+ID:  CS_ADOS_WPS_202_ADOS_RSI_LPLNC 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  Nulled value range of: 0;1;2;7;8 to accept outlier data. 0 = Vocalization usually accompanied by subtle and socially appropriate changes in gesture, gaze, and facial expression. 1 = Vocalization accompanied by abnormal, limited, or less than usual frequency and/or range of gesture, gaze, and facial expression, OR use of one modality almost exclusively (e.g., frequent use of gaze, but very limited use of gesture and facial expression). 2 = Little or no nonverbal communication linked with vocalization. 7 = Some avoidance of direct eye gaze, particularly at ihe beginning of the interview, perhaps because of shyness, but shows some modulation and coordination of language and nonverbal behavior. 8 = N/A; no vocalization OR no or minimal use of gesture, facial expression, or socially directed gaze. This code should be assigned automatically if the absence of linking can be accounted for by the limited frequency of unusual eye contact, facial expressions, and/or gestures.  
+
+#:  391 
+ID:  CS_ADOS_WPS_302_ADOS_LAC_UOBTC 
+?:  Use of Other s Body to Communicate 
+opt:  Nulled value range of: 0;1;2;8 to accept outlier data. 0 = No use of another person's body for a specific goal (e.g., to manipulate an object), except in situations where other strategies have not worked (e.g., when others are conversing and the participant cannot get their attention) and in conjunction with coordinated gaze. 1 = Takes another person's hand and leads him/her places without coordinated gaze, but no placement of hand on objects and no use of another person's body as a tool, to point, or for a specific goal. 2 = Movement of another person's hand when it is holding an object OR pushing examiner's hand away from object without eye contact. 3 = Placement of another person's hand or other body part on object (including placing the balloon or food to the examiner's mouth without coordinated gaze), OR use of his/her hand or other body part as a tool or to gesture "for" the participant (such as pointing). 8 = Little or no spontaneous communication. 
+
+#:  393 
+ID:  CS_ADOS_WPS_302_ADOS_RSI_LPLNC 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  Nulled value range of: 0;1;2;7;8 to accept outlier data. 0 = Vocalization usually accompanied by subtle and socially appropriate changes in gesture, gaze, and facial expression. 1 = Vocalization accompanied by abnormal, limited, or less than usual frequency and/or range of gesture, gaze, and facial expression, OR use of one modality almost exclusively (e.g., frequent use of gaze, but very limited use of gesture and facial expression). 2 = Little or no nonverbal communication linked with vocalization. 7 = Some avoidance of direct eye gaze, particularly at ihe beginning of the interview, perhaps because of shyness, but shows some modulation and coordination of language and nonverbal behavior. 8 = N/A; no vocalization OR no or minimal use of gesture, facial expression, or socially directed gaze. This code should be assigned automatically if the absence of linking can be accounted for by the limited frequency of unusual eye contact, facial expressions, and/or gestures.  
+
+#:  399 
+ID:  CS_ADOS_WPS_402_ADOS_LAC_UOBTC 
+?:  Use of Other s Body to Communicate 
+opt:  Nulled value range of: 0;1;2;8 to accept outlier data. 0 = No use of another person's body for a specific goal (e.g., to manipulate an object), except in situations where other strategies have not worked (e.g., when others are conversing and the participant cannot get their attention) and in conjunction with coordinated gaze. 1 = Takes another person's hand and leads him/her places without coordinated gaze, but no placement of hand on objects and no use of another person's body as a tool, to point, or for a specific goal. 2 = Movement of another person's hand when it is holding an object OR pushing examiner's hand away from object without eye contact. 3 = Placement of another person's hand or other body part on object (including placing the balloon or food to the examiner's mouth without coordinated gaze), OR use of his/her hand or other body part as a tool or to gesture "for" the participant (such as pointing). 8 = Little or no spontaneous communication. 
+
+#:  401 
+ID:  CS_ADOS_WPS_402_ADOS_RSI_LPLNC 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  Nulled value range of: 0;1;2;7;8 to accept outlier data. 0 = Vocalization usually accompanied by subtle and socially appropriate changes in gesture, gaze, and facial expression. 1 = Vocalization accompanied by abnormal, limited, or less than usual frequency and/or range of gesture, gaze, and facial expression, OR use of one modality almost exclusively (e.g., frequent use of gaze, but very limited use of gesture and facial expression). 2 = Little or no nonverbal communication linked with vocalization. 7 = Some avoidance of direct eye gaze, particularly at ihe beginning of the interview, perhaps because of shyness, but shows some modulation and coordination of language and nonverbal behavior. 8 = N/A; no vocalization OR no or minimal use of gesture, facial expression, or socially directed gaze. This code should be assigned automatically if the absence of linking can be accounted for by the limited frequency of unusual eye contact, facial expressions, and/or gestures.  
+
+#:  407 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_LAC_POINT1 
+?:  Pointing_Pointing to Express Interest 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Points with index finger to show visually directed referencing (coordinated gaze to object and person) of distal objects in at least two activities (e.g., points to bubbles and to balloon). 1 = Uses pointing to reference objects, but without sufficient flexibility or frequency to meet criteria for a rating of 0 (e.g., only one instance of pointing that fits the preceding description for a rating of 0, or absence of coordinated gaze with distal pointing, though the child may vocalize); AND/OR produces an approximation of pointing (coordinated with gaze or vocalization) rather than an index finger point; AND/OR coordinates only pointing that includes touching a picture or other nearby objects with gaze or vocalization; AND/OR points with coordination (gaze or vocalization) only to a person or to himself or herself. 2 = Points only when close to or actually touching an object, without coordinated gaze or vocalization. Does not have to be well-formed index finger point. 3 = Does not point as described above 
+
+#:  408 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_LAC_POINT2 
+?:  Pointing/Pointing to Express Interest 
+opt:  Nulled value range of: 0;1;2;3 to accept outlier data. 0 = Points with index finger to show visually-directed referencing (i.e., coordinated gaze to object and person) of distal object to express interest. 1 = Uses pointing to reference objects to express interest, but without sufficient flexibility to meet criteria for a rating of 0 (e.g., absence of coordinated gaze, though the child may vocalize); OR produces an approximation of pointing rather than an index finger point; OR coordinates only pointing that includes touching a picture or other nearby objects with gaze or vocalization; OR points to request only; OR points to a person only. 2 = Points only when close to or actually touching an object, without coordinated gaze. 3 = Does not point to objects in any way. 
+
+#:  409 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_LAC_UOBTC 
+?:  Use of Other s Body to Communicate 
+opt:  Nulled value range of: 0;1;2;8 to accept outlier data. 0 = No use of another person's body for a specific goal (e.g., to manipulate an object), except in situations where other strategies have not worked (e.g., when others are conversing and the participant cannot get their attention) and in conjunction with coordinated gaze. 1 = Takes another person's hand and leads him/her places without coordinated gaze, but no placement of hand on objects and no use of another person's body as a tool, to point, or for a specific goal. 2 = Movement of another person's hand when it is holding an object OR pushing examiner's hand away from object without eye contact. 3 = Placement of another person's hand or other body part on object (including placing the balloon or food to the examiner's mouth without coordinated gaze), OR use of his/her hand or other body part as a tool or to gesture "for" the participant (such as pointing). 8 = Little or no spontaneous communication. 
+
+#:  411 
+ID:  CS_ADOS_PRE_PUBLISHED01_ADOS_RSI_LPLNC 
+?:  Language Production and Linked Nonverbal Communication 
+opt:  Nulled value range of: 0;1;2;7;8 to accept outlier data. 0 = Vocalization usually accompanied by subtle and socially appropriate changes in gesture, gaze, and facial expression. 1 = Vocalization accompanied by abnormal, limited, or less than usual frequency and/or range of gesture, gaze, and facial expression, OR use of one modality almost exclusively (e.g., frequent use of gaze, but very limited use of gesture and facial expression). 2 = Little or no nonverbal communication linked with vocalization. 7 = Some avoidance of direct eye gaze, particularly at ihe beginning of the interview, perhaps because of shyness, but shows some modulation and coordination of language and nonverbal behavior. 8 = N/A; no vocalization OR no or minimal use of gesture, facial expression, or socially directed gaze. This code should be assigned automatically if the absence of linking can be accounted for by the limited frequency of unusual eye contact, facial expressions, and/or gestures.  
+
+#:  418 
+ID:  CS_MCI_GESTURES02_MCG_AO_HEAD 
+?:  Lay head on hands and squeeze eyes shut as if sleeping 
+opt:  0; 1; 2 
+
+#:  420 
+ID:  CS_MULLEN02_MULL_VR_LBENAF 
+?:  Localized bull's eye near and far (SSit) 
+opt:  0; 1 
+
+#:  434 
+ID:  CS_STANFORD_BINET_5TH_ED02_SB_RVKN_EYELASH 
+?:  Age 18 and above:  Eyelash 
+opt:  0;1;2 
+
+#:  435 
+ID:  CS_VINELAND_I02_VINE_COM_TRNEYES 
+?:  Turns eyes and head toward sound 
+opt:  0;1;2;999 
+
+#:  437 
+ID:  CS_WAIS_302_WAIS_SML_EYEEAR 
+?:  Eye-ear 
+opt:  0 :: 2 
+
+#:  438 
+ID:  CSBS_DP_BEHAVIOR02_Q1_GAZE_SHIFTS_1 
+?:  1. Gaze shifts - Wind-up Toy 
+opt:  0 = Unchecked; 1 = Checked 
+
+#:  439 
+ID:  CSBS_DP_BEHAVIOR02_Q1_GAZE_SHIFTS_2 
+?:  1. Gaze shifts - Balloon 
+opt:  0 = Unchecked; 1 = Checked 
+
+#:  440 
+ID:  CSBS_DP_BEHAVIOR02_Q1_GAZE_SHIFTS_3 
+?:  1. Gaze shifts - Bubbles 
+opt:  0 = Unchecked; 1 = Checked 
+
+#:  441 
+ID:  CSBS_DP_BEHAVIOR02_Q1_GAZE_SHIFTS_4 
+?:  1. Gaze shifts - jar 
+opt:  0 = Unchecked; 1 = Checked 
+
+#:  442 
+ID:  CSBS_DP_BEHAVIOR02_Q1_GAZE_SHIFTS_5 
+?:  1. Gaze shifts - Books 
+opt:  0 = Unchecked; 1 = Checked 
+
+#:  443 
+ID:  CSBS_DP_BEHAVIOR02_Q1_GAZE_SHIFTS_6 
+?:  1. Gaze shifts - Play 
+opt:  0 = Unchecked; 1 = Checked 
+
+#:  444 
+ID:  CSBS_DP_BEHAVIOR02_Q1_GAZE_SHIFTS_RAW_SCORE 
+?:  1. Gaze shifts - Raw Score 
+opt:  22 
+
+#:  445 
+ID:  CSBS_DP_BEHAVIOR02_Q3_GAZE_POINT_FOLLOWING_2 
+?:  3. Gaze or point following - Balloon 
+opt:  0 = Unchecked; 1 = Checked 
+
+#:  446 
+ID:  CSBS_DP_BEHAVIOR02_Q3_GAZE_POINT_FOLLOWING_5 
+?:  3. Gaze or point following - Books 
+opt:  0 = Unchecked; 1 = Checked 
+
+#:  447 
+ID:  CSBS_DP_BEHAVIOR02_Q3_GAZE_POINT_FOLLOWING_RS 
+?:  3. Gaze or point following - Raw Score 
+opt:  32 
+
+#:  450 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_2 
+?:  Shared positive affect 
+opt:  0::6 
+
+#:  458 
+ID:  CSBS_DP_BEHAVIOR02_EMOTION_EYEGAZE_CONCERN 
+?:  Emotion and Eye Gaze concern 
+opt:  0;1 
+
+#:  459 
+ID:  CSBS_DP_IT01_EMOTION_EYEGAZE_IT_Q1 
+?:  Do you know when your child is happy and when your child is upset? 
+opt:  Not yet; Sometimes; Often 
+
+#:  461 
+ID:  CSBS_DP_IT01_EMOTION_EYEGAZE_IT_Q3 
+?:  Does your child smile or laugh while looking at you? 
+opt:  Not yet; Sometimes; Often 
+
+#:  465 
+ID:  CBCL1_501_CBCL56D 
+?:  Physical problems without known medical cause: Problems with eyes (not if corrected by glasses) 
+opt:  0;1;2 
+
+#:  466 
+ID:  CBCL01_CBCL56D 
+?:  Physical problems without known medical cause: Problems with eyes (not if corrected by glasses) 
+opt:  0;1;2 
+
+#:  468 
+ID:  CASI01_ASIE059 
+?:  Makes twitching or jerking movements for no apparent reason (eye blinking, nose twitching, grimacing, lip licking, head jerking, etc.) 
+opt:  0::3;9;-7;-8;-9 
+
+#:  471 
+ID:  DAS_II_EARLY03_VERBC_QUES1 
+?:  1. Show me teddy's eyes. 
+opt:  0;1 
+
+#:  472 
+ID:  DIAGNOSES_NEUROLOGY01_VISIONPROBLEMS 
+?:  Vision:  Does (did) the subject have Vision/eye problems? 
+opt:  0;1;2 
+
+#:  473 
+ID:  DIAGNOSES_NEUROLOGY01_VSIONPROBLEMCORRECTABLE 
+?:  "If Yes, What the Vision/eye problems correctable?" 
+opt:  0;1;2 
+
+#:  474 
+ID:  DIAGNOSES_NEUROLOGY01_WEAREYEGLASSES 
+?:  Does (did) the Child wear Glasses? 
+opt:  0;1;2 
+
+#:  484 
+ID:  EDQ01_EYE_CONTACT_LOSS_LGTH 
+?:  Length of loss in months 
+opt:  1 :: 4 
+
+#:  485 
+ID:  EDQ01_SOCIAL_LOSSES 
+?:  The number of yes responses between the elements fam_interest_loss, smile_response_loss, reach_parent_loss, eye_contact_loss, game_interest_loss and pretend_play_loss 
+opt:  0::6 
+
+#:  487 
+ID:  EDINBURGH_HAND01_EYE 
+?:  Hand subject uses to do named action 
+opt:  right;left;both 
+
+#:  491 
+ID:  FYI01_Q_40 
+?:  FYI: 40. Do your baby's eyes line up together when looking at an object? 
+opt:  1::5 
+
+#:  498 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_STILLTRUE 
+?:  Question 10 - Parent previously reported that child does not look you in the eye for more than a second or two.  Is this still true? 
+opt:  Yes;No 
+
+#:  499 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_ 
+?:  "If no, then child does look you in the eyes for more than a second or two?" 
+opt:  Yes;No 
+
+#:  500 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_WHEN_NEEDS 
+?:  "If yes, does he/she look you in the eyes when he/she needs something?" 
+opt:  Yes;No 
+
+#:  501 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_WHEN_PLAY 
+?:  "If yes, does he/she look you in the eyes when playing with you?" 
+opt:  Yes;No 
+
+#:  502 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_WHEN_EAT 
+?:  "If yes, does he/she look you in the eyes when during feeding?" 
+opt:  Yes;No 
+
+#:  503 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_WHEN_DIAPER 
+?:  "If yes, does he/she look you in the eyes when during diaper changes?" 
+opt:  Yes;No 
+
+#:  504 
+ID:  M_CHAT02_FU_Q10_EYE_CONTACT_WHEN_READ 
+?:  "If yes, does he/she look you in the eyes when you are reading him/her a story?" 
+opt:  Yes;No 
+
+#:  511 
+ID:  MCI_WORDS_GESTURES01_MCG_VC7_EYE 
+?:  eye 
+opt:  0; 1; 2 
+
+#:  512 
+ID:  MCI_WORDS_GESTURES01_MCG_AO_HEAD 
+?:  Lay head on hands and squeeze eyes shut as if sleeping 
+opt:  0; 1; 2 
+
+#:  513 
+ID:  MCI_SENTENCES01_MCS_VC7_8EYE 
+?:  eye 
+opt:  0::2 
+
+#:  514 
+ID:  MCI_SENTENCES02_MCS_VC7_8EYE 
+?:  eye 
+opt:  0::2 
+
+#:  515 
+ID:  MBRS01_MBRSAFFECT5 
+?:  MBRS Warmth 
+opt:  1 = Very low (Positive affect is lacking. Parent appears cold and reserved, rarely expresses affection through touch, voice.); 2 = Low (Parent occasionally expresses warmth through brief touches and vocal tone suggests low intensity of positive affect.); 3 = Moderate (Pervasive low-intensity positive affect is demonstrated throughout the interaction. Fondness is conveyed through touch and vocal tones.); 4 = High (Affection is expressed frequently through touch and vocal tone. Parent may verbalize terms of endearment.); 5 = Very high (Parent openly expresses love for the child continually and effusively through touch, vocal tone and verbal endearments.) 
+
+#:  516 
+ID:  MEDDEM01_REV_EYEIMPAIR 
+?:  Visual impairments 
+opt:  Yes;No;NK 
+
+#:  517 
+ID:  MED_PROFILE01_EYEDROP_CURRENT 
+?:  taling eye drops presently? 
+opt:  TRUE;FALSE 
+
+#:  518 
+ID:  MED_PROFILE01_EYEDROP_PAST 
+?:  taking Eye drops in the past? 
+opt:  TRUE;FALSE 
+
+#:  519 
+ID:  MED_PROFILE01_EYEDROP_TODAY 
+?:  taking Eye drops on the day of PLR test? 
+opt:  TRUE;FALSE 
+
+#:  520 
+ID:  MED_PROFILE01_EYEDROP_DOSE 
+?:  The brand of Eye drops and the dose 
+opt:  41 
+
+#:  524 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_STILLTRUE 
+?:  Question 10 - Parent previously reported that child does not look you in the eye for more than a second or two.  Is this still true? 
+opt:  Yes;No 
+
+#:  525 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_ 
+?:  "If no, then child does look you in the eyes for more than a second or two?" 
+opt:  Yes;No 
+
+#:  526 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_WHEN_NEEDS 
+?:  "If yes, does he/she look you in the eyes when he/she needs something?" 
+opt:  Yes;No 
+
+#:  527 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_WHEN_PLAY 
+?:  "If yes, does he/she look you in the eyes when playing with you?" 
+opt:  Yes;No 
+
+#:  528 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_WHEN_EAT 
+?:  "If yes, does he/she look you in the eyes when during feeding?" 
+opt:  Yes;No 
+
+#:  529 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_WHEN_DIAPER 
+?:  "If yes, does he/she look you in the eyes when during diaper changes?" 
+opt:  Yes;No 
+
+#:  530 
+ID:  M_CHAT01_FU_Q10_EYE_CONTACT_WHEN_READ 
+?:  "If yes, does he/she look you in the eyes when you are reading him/her a story?" 
+opt:  Yes;No 
+
+#:  543 
+ID:  MULLEN01_SCL2_MTCHSIZE_LARGEYELLOW 
+?:  22. Matches by size, color - large yellow circles 
+opt:  Yes;No 
+
+#:  544 
+ID:  MULLEN03_SCL2_MTCHSIZE_LARGEYELLOW 
+?:  22. Matches by size, color - large yellow circles 
+opt:  Yes;No 
+
+#:  545 
+ID:  MULLEN02_SCL2_MTCHSIZE_LARGEYELLOW 
+?:  22. Matches by size, color - large yellow circles 
+opt:  Yes;No 
+
+#:  546 
+ID:  MULLEN01_SCL4_BODYPART_EYE 
+?:  18. Recognizes body parts (A/V) - eyes 
+opt:  Yes;No 
+
+#:  547 
+ID:  MULLEN02_SCL4_BODYPART_EYE 
+?:  18. Recognizes body parts (A/V) - eyes 
+opt:  Yes;No 
+
+#:  548 
+ID:  MULLEN03_SCL4_BODYPART_EYE 
+?:  18. Recognizes body parts (A/V) - eyes 
+opt:  Yes;No 
+
+#:  549 
+ID:  MULLEN01_SCL4_GENERAL_EYE 
+?:  30. General knowledge - eye: Response 
+opt:  Scale 4. Receptive Language 
+
+#:  550 
+ID:  MULLEN02_SCL4_GENERAL_EYE 
+?:  30. General knowledge - eye: Response 
+opt:  Scale 4. Receptive Language 
+
+#:  551 
+ID:  MULLEN03_SCL4_GENERAL_EYE 
+?:  30. General knowledge - eye: Response 
+opt:  Scale 4. Receptive Language 
+
+#:  552 
+ID:  MULLEN01_SCL4_GENERAL_EYEPOS 
+?:  30. General knowledge - eye (positive or negative) 
+opt:  positive;negative 
+
+#:  553 
+ID:  MULLEN02_SCL4_GENERAL_EYEPOS 
+?:  30. General knowledge - eye (positive or negative) 
+opt:  positive;negative 
+
+#:  554 
+ID:  MULLEN03_SCL4_GENERAL_EYEPOS 
+?:  30. General knowledge - eye (positive or negative) 
+opt:  positive;negative 
+
+#:  555 
+ID:  MASC_P01_MASC_P_5 
+?:  P = My child keeps his/her eyes open for danger. S = I keep my eyes open for danger. 
+opt:  0;1;2;3; 99999 
+
+#:  556 
+ID:  NCAST02_NCT06 
+?:  6. Caregiver positions child so that it is possible for them to have eye-to-eye contact with one ano 
+opt:  Yes; No; missing 
+
+#:  557 
+ID:  NCAST02_NCT52 
+?:  52. Child widens eyes and/or shows postural attention to task situation. 
+opt:  Yes; No; missing 
+
+#:  561 
+ID:  NCAST02_NCTPDAV 
+?:  Maximal Lateral Gaze Aversion 
+opt:  Yes; No; missing 
+
+#:  562 
+ID:  NICHD_BTB02_AGEYEARS 
+?:  Age in years 
+opt:  5 
+
+#:  563 
+ID:  NICHD_BTB02_S158 
+?:  Frozen OTHER TISSUE- Eyes 
+opt:  113 
+
+#:  564 
+ID:  NICHD_BTB02_S58 
+?:  Fixed OTHER TISSUE- Eyes 
+opt:  205 
+
+#:  565 
+ID:  NIMH_MEDICAL_HISTORY_QUES01_MEDPROB_EYE 
+?:  Eyes: Is there any known abnormality in this area 
+opt:  No;Yes;Don't Know 
+
+#:  566 
+ID:  NIMH_MEDICAL_HISTORY_QUES01_MEDPROB_EYESTRUCT 
+?:  If Yes, Was the abnormality Abnormal structure of the eye 
+opt:  Yes;No 
+
+#:  567 
+ID:  NIMH_MEDICAL_HISTORY_QUES01_MEDPROB_EYELAZY 
+?:  If Yes, Was the abnormality Strabismus (lazy eye) 
+opt:  Yes;No 
+
+#:  568 
+ID:  NIMH_MEDICAL_HISTORY_QUES01_MEDPROB_EYECOLORBL 
+?:  If Yes, Was the abnormality Color blindness 
+opt:  Yes;No 
+
+#:  569 
+ID:  NIMH_MEDICAL_HISTORY_QUES01_MEDPROB_EYEPOORVI 
+?:  If Yes, Was the abnormality Poor vision 
+opt:  Yes;No 
+
+#:  570 
+ID:  NIMH_MEDICAL_HISTORY_QUES01_MEDPROB_EYEBLIND 
+?:  If Yes, Was the abnormality Blindness 
+opt:  Yes;No 
+
+#:  571 
+ID:  NIMH_MEDICAL_HISTORY_QUES01_MEDPROB_EYEOTHER_CMT 
+?:  If Yes, Was the abnormality Other 
+opt:  Yes;No 
+
+#:  572 
+ID:  NIMH_MEDICAL_HISTORY_QUES01_MEDPROB_EYEOTHER 
+?:  If Yes, Was the abnormality Other(list) 
+opt:  Medical Problems 
+
+#:  573 
+ID:  CHB_MEDICAL_HISTORY01_VISIONPROBLEMS 
+?:  Vision:  Does (did) the subject have Vision/eye problems? 
+opt:  0;1;2 
+
+#:  575 
+ID:  PARS01_GEN_PAR_21 
+?:  Restlessness or feeling keyed-up or on edge. 
+opt:  1;2 
+
+#:  576 
+ID:  PARS01_GEN_CHILD_21 
+?:  Restlessness or feeling keyed-up or on edge. 
+opt:  1;2 
+
+#:  577 
+ID:  PARS01_GEN_RATER_21 
+?:  Restlessness or feeling keyed-up or on edge. 
+opt:  1;2 
+
+#:  578 
+ID:  PEDS_FULL_PHONE_SCREEN_V101_FS_V1_Q21_SUBJ_STRABISMUS_SVI 
+?:  Full Screener (Visit 1): Q21 history of visual problems requiring more than glasses or history of crossed eyes. Comment field to be added in future release. 
+opt:  Y;N;NA 
+
+#:  579 
+ID:  PEDS_FULL_PHONE_SCREEN_V202_FS_V2_EYE_PROBLEM 
+?:  Full Screener (Visit 2): Significant problem with eyes (crossed eyes or other than conventional glasses)? (Y=Yes; N=No; NA=Not Provided) 
+opt:  Y;N;NA 
+
+#:  580 
+ID:  PEDS_HAND_30_TO_511_PART101_HAND_EYE_USE_SUBTEST 
+?:  Handedness: Eye used to look through a telescope (R=Right; L=Left; NA=Not Available) 
+opt:  R;L;NA 
+
+#:  581 
+ID:  PEDS_HAND_30_TO_511_PART101_HAND_EYE_USE_SUBTEST_EYE_USED 
+?:  Handedness: Score assigned to the eye used to look through a telescope (1=Right Eye; 2=Left Eye) 
+opt:  1;2 
+
+#:  582 
+ID:  PEDS_HAND_30_TO_511_PART201_HAND_EYE_USE_SUBTEST 
+?:  Handedness: Eye used to look through a telescope (R=Right; L=Left; NA=Not Available) 
+opt:  R;L;NA 
+
+#:  583 
+ID:  PEDS_HAND_30_TO_511_PART201_HAND_EYE_USE_SUBTEST_EYE_USED 
+?:  Handedness: Score assigned to the eye used to look through a telescope (1=Right Eye; 2=Left Eye) 
+opt:  1;2 
+
+#:  584 
+ID:  PEDS_NEUROLOGICAL_00_0101_NEURO_Q60_OCULAR_MOT_RIGHT_EYE 
+?:  "Physical/Neurological Examination (0:0 to 0:1 y:m) Question 60 Ocular Motility (CNs III, IV, VI, gaze preference) Right Eye (0=Normal, 1=Abnormal, NA=Not Administered)" 
+opt:  0;1;NA 
+
+#:  585 
+ID:  PEDS_NEUROLOGICAL_00_0101_NEURO_Q61_OCULAR_MOT_LEFT_EYE 
+?:  "Physical/Neurological Examination (0:0 to 0:1 y:m) Question 61 Ocular Motility (CNs III, IV, VI, gaze preference) Left Eye (0=Normal, 1=Abnormal, NA=Not Administered)" 
+opt:  0;1;NA 
+
+#:  586 
+ID:  PEDS_NEUROLOGICAL_00_0101_NEURO_Q63_STRABISMUS_A_RT_EYE 
+?:  "Physical/Neurological Examination (0:0 to 0:1 y:m) Question 63 Strabismus A Right Eye (0=None, 1=Mild esotropia or intermittent esophoria, 2=severe esotropia, NA=Not Administered)" 
+opt:  0;1;2;NA 
+
+#:  587 
+ID:  PEDS_NEUROLOGICAL_00_0101_NEURO_Q64_STRABISMUS_A_LT_EYE 
+?:  "Physical/Neurological Examination (0:0 to 0:1 y:m) Question 64 Strabismus A Left Eye (0=None, 1=Mild esotropia or intermittent esophoria, 2=severe esotropia, NA=Not Administered)" 
+opt:  0;1;2;NA 
+
+#:  588 
+ID:  PEDS_NEUROLOGICAL_00_0101_NEURO_Q65_STRABISMUS_B_RT_EYE 
+?:  "Physical/Neurological Examination (0:0 to 0:1 y:m) Question 65 Strabismus B Right Eye (0=None, 1=Mild exotropia or intermittent exophoria, 2=severe exotropia, NA=Not Administered)" 
+opt:  0;1;2;NA 
+
+#:  589 
+ID:  PEDS_NEUROLOGICAL_00_0101_NEURO_Q66_STRABISMUS_B_LT_EYE 
+?:  "Physical/Neurological Examination (0:0 to 0:1 y:m) Question 66 Strabismus B Left Eye (0=None, 1=Mild exotropia or intermittent exophoria, 2=severe exotropia, NA=Not Administered)" 
+opt:  0;1;2;NA 
+
+#:  590 
+ID:  PEDS_NEUROLOGICAL_00_0101_NEURO_Q67_NYSTAGMUS_RIGHT_EYE 
+?:  "Physical/Neurological Examination (0:0 to 0:1 y:m) Question 67 Nystagmus Right Eye (0=None, 1=Present but mild, 2=Jerk on lateral gaze, 3=Pendular on lateral gaze, 4=Rotatory on lateral gaze, NA=Not Administered)" 
+opt:  0;1;2;3;4;NA 
+
+#:  591 
+ID:  PEDS_NEUROLOGICAL_00_0101_NEURO_Q68_NYSTAGMUS_LEFT_EYE 
+?:  "Physical/Neurological Examination (0:0 to 0:1 y:m) Question 68 Nystagmus Left Eye (0=None, 1=Present but mild, 2=Jerk on lateral gaze, 3=Pendular on lateral gaze, 4=Rotatory on lateral gaze, NA=Not Administered)" 
+opt:  0;1;2;3;4;NA 
+
+#:  592 
+ID:  PEDS_NEUROLOGICAL_02_01101_NEURO_Q58_OCULAR_MOTILITY_RT 
+?:  "Physical/Neurological Examination (0:2 to 0:11 y:m) Question 58 Ocular Motility (CNs III, IV, VI, gaze preference) Right Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  593 
+ID:  PEDS_NEUROLOGICAL_02_01101_NEURO_Q59_OCULAR_MOTILITY_LEFT 
+?:  "Physical/Neurological Examination (0:2 to 0:11 y:m) Question 59 Ocular Motility (CNs III, IV, VI, gaze preference) Left Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  594 
+ID:  PEDS_NEUROLOGICAL_02_01101_NEURO_Q61_STRABISMUS_RIGHT 
+?:  "Physical/Neurological Examination (0:2 to 0:11 y:m) Question 61 Strabismus Right Eye (0=None, 1=Mild estropia, 2=Severe estropia, 3=Mild exotropia or exophoria 4=Severe extropia, NA=Not Available)" 
+opt:  0;1;2;3;4;NA 
+
+#:  595 
+ID:  PEDS_NEUROLOGICAL_02_01101_NEURO_Q62_STRABISMUS_LEFT 
+?:  "Physical/Neurological Examination (0:2 to 0:11 y:m) Question 62 Strabismus Left Eye (0=None, 1=Mild estropia, 2=Severe estropia, 3=Mild exotropia or exophoria 4=Severe extropia, NA=Not Available)" 
+opt:  0;1;2;3;4;NA 
+
+#:  596 
+ID:  PEDS_NEUROLOGICAL_02_01101_NEURO_Q63_NYSTAGMUS_RIGHT 
+?:  "Physical/Neurological Examination (0:2 to 0:11 y:m) Question 63 Nystagmus Right Eye (0=None, 1=Present but mild, 2=Jerk on lateral gaze, 3=Pendular on lateral gaze, 4=Rotatory on lateral gaze, NA=Not Available)" 
+opt:  0;1;2;3;4;NA 
+
+#:  597 
+ID:  PEDS_NEUROLOGICAL_02_01101_NEURO_Q64_NYSTAGMUS_LEFT 
+?:  "Physical/Neurological Examination (0:2 to 0:11 y:m) Question 64 Nystagmus Left Eye (0=None, 1=Present but mild, 2=Jerk on lateral gaze, 3=Pendular on lateral gaze, 4=Rotatory on lateral gaze, NA=Not Available)" 
+opt:  0;1;2;3;4;NA 
+
+#:  598 
+ID:  PEDS_NEUROLOGICAL_10_21101_NEURO_Q58_VIS_FLDS_CONFRONT_RT 
+?:  "Physical/Neurological Examination Question 58 Visual Fields to Confrontation Right Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  599 
+ID:  PEDS_NEUROLOGICAL_10_21101_NEURO_Q59_VIS_FLDS_CONFRONT_LT 
+?:  "Physical/Neurological Examination Question 59 Visual Fields to Confrontation Left Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  600 
+ID:  PEDS_NEUROLOGICAL_10_21101_NEURO_Q60_OCULAR_MOTILITY_RT 
+?:  "Physical/Neurological Examination Question 60 Ocular Motility (CNs III, IV, VI, gaze preference) Right Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  601 
+ID:  PEDS_NEUROLOGICAL_10_21101_NEURO_Q61_OCULAR_MOTILITY_LEFT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 61 Ocular Motility (CNs III, IV, VI, gaze preference) Left Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  602 
+ID:  PEDS_NEUROLOGICAL_10_21101_NEURO_Q63_STRABISMUS_RIGHT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 63 Strabismus Right Eye (0=None, 1=Clearly noticeable esotropia, 2=Clearly noticeable exotropia, NA=Not Available)" 
+opt:  0;1;2;NA 
+
+#:  603 
+ID:  PEDS_NEUROLOGICAL_10_21101_NEURO_Q64_STRABISMUS_LEFT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 64 Strabismus Left Eye (0=None, 1=Clearly noticeable esotropia, 2=Clearly noticeable exotropia, NA=Not Available)" 
+opt:  0;1;2;NA 
+
+#:  604 
+ID:  PEDS_NEUROLOGICAL_10_21101_NEURO_Q65_NYSTAGMUS_RIGHT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 65 Nystagmus Right Eye (0=None, 1=Present but mild, 2=Jerk on lateral gaze, 3=Pendular on lateral gaze, 4=Rotatory on lateral gaze, NA=Not Available)" 
+opt:  0;1;2;3;4;NA 
+
+#:  605 
+ID:  PEDS_NEUROLOGICAL_10_21101_NEURO_Q66_NYSTAGMUS_LEFT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 66 Nystagmus Left Eye (0=None, 1=Present but mild, 2=Jerk on lateral gaze, 3=Pendular on lateral gaze, 4=Rotatory on lateral gaze, NA=Not Available)" 
+opt:  0;1;2;3;4;NA 
+
+#:  606 
+ID:  PEDS_NEUROLOGICAL_30_4501_NEURO_Q58__VIS_FLDS_CONFRON_RT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 58 Visual Fields to Confrontation Right Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  607 
+ID:  PEDS_NEUROLOGICAL_30_4501_NEURO_Q59__VIS_FLDS_CONFRON_LT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 59 Visual Fields to Confrontation Left Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  608 
+ID:  PEDS_NEUROLOGICAL_30_4501_NEURO_Q60_OCULAR_MOTILITY_RT 
+?:  "Physical/Neurological Examination Question 60 Ocular Motility (CNs III, IV, VI, gaze preference) Right Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  609 
+ID:  PEDS_NEUROLOGICAL_30_4501_NEURO_Q61_OCULAR_MOTILITY_LEFT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 61 Ocular Motility (CNs III, IV, VI, gaze preference) Left Eye (0=Normal, 1=Abnormal, NA=Not Available)" 
+opt:  0;1;NA 
+
+#:  610 
+ID:  PEDS_NEUROLOGICAL_30_4501_NEURO_Q63_STRABISMUS_RIGHT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 63 Strabismus Right Eye (0=None, 1=Clearly noticeable esotropia, 2=Clearly noticeable exotropia, NA=Not Available)" 
+opt:  0;1;2;NA 
+
+#:  611 
+ID:  PEDS_NEUROLOGICAL_30_4501_NEURO_Q64_STRABISMUS_LEFT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 64 Strabismus Left Eye (0=None, 1=Clearly noticeable esotropia, 2=Clearly noticeable exotropia, NA=Not Available)" 
+opt:  0;1;2;NA 
+
+#:  612 
+ID:  PEDS_NEUROLOGICAL_30_4501_NEURO_Q65_NYSTAGMUS_RIGHT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 65 Nystagmus Right Eye (0=None, 1=Present but mild, 2=Jerk on lateral gaze, 3=Pendular on lateral gaze, 4=Rotatory on lateral gaze, NA=Not Available)" 
+opt:  0;1;2;3;4;NA 
+
+#:  613 
+ID:  PEDS_NEUROLOGICAL_30_4501_NEURO_Q66_NYSTAGMUS_LEFT 
+?:  "Physical/Neurological Examination (3:0 to 4:5 y:m) Question 66 Nystagmus Left Eye (0=None, 1=Present but mild, 2=Jerk on lateral gaze, 3=Pendular on lateral gaze, 4=Rotatory on lateral gaze, NA=Not Available)" 
+opt:  0;1;2;3;4;NA 
+
+#:  614 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_071_ROMBERG_SIGN 
+?:  "Neurological Exam (4:6+ y:m): Romberg sign - subject stands eyes closed, arms extended perpendicular to sides, feet touching for 20 seconds " 
+opt:  1;2;3;4;NA 
+
+#:  615 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_072_VIS_FLD_CONFRON_REYE 
+?:  "Neurological Exam (4:6+ y:m): Right eye - visual fields to confrontation (0=Normal, 1=Abnormal)" 
+opt:  0;1;NA 
+
+#:  616 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_073_VIS_FLD_CONFRON_LEYE 
+?:  "Neurological Exam (4:6+ y:m): Left eye - visual fields to confrontation (0=Normal, 1=Abnormal)" 
+opt:  0;1;NA 
+
+#:  617 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_074_VISUAL_ACUITY_REYE 
+?:  "Neurological Exam (4:6+ y:m): Right eye - visual acuity with corrective lenses if needed  - tested 20 feet from Snellen chart (0=Normal [20/40 or better], 1=Impaired [worse than 20/40])" 
+opt:  0;1;NA 
+
+#:  618 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_075_VISUAL_ACUITY_LEYE 
+?:  "Neurological Exam (4:6+ y:m): Left eye - visual acuity with corrective lenses if needed - tested 20 feet from Snellen chart (0=Normal [20/40 or better], 1=Impaired [worse than 20/40])" 
+opt:  0;1;NA 
+
+#:  619 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_076_OCULAR_MOTILITY_REYE 
+?:  "Neurological Exam (4:6+ y:m): Right eye - ocular motility (CNS III, IV, VI) tested by asking subject to follow bright red ball with eyes only. Cardinal positions of gaze tested (0=Normal, 1=Abnormal)." 
+opt:  0;1;NA 
+
+#:  620 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_077_OCULAR_MOTILITY_LEYE 
+?:  "Neurological Exam (4:6+ y:m): Left eye - ocular motility (CNS III, IV, VI) tested by asking subject to follow bright red ball with eyes only. Cardinal positions of gaze tested (0=Normal, 1=Abnormal)." 
+opt:  0;1;NA 
+
+#:  621 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_079_STRABISMUS_REYE 
+?:  "Neurological Exam (4:6+ y:m): Right eye - strabismus (0=None, 1=Clearly noticeable esotropia, 2=Clearly noticeable exotropia)" 
+opt:  0;1;2;NA 
+
+#:  622 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_080_STRABISMUS_LEYE 
+?:  "Neurological Exam (4:6+ y:m): Left eye - strabismus (0=None, 1=Clearly noticeable esotropia, 2=Clearly noticeable exotropia)" 
+opt:  0;1;2;NA 
+
+#:  623 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_081_NYSTAGMUS_REYE 
+?:  "Neurological Exam (4:6+ y:m): Right eye - nystagmus (0=None, 1=Present but mild in eye gaze)" 
+opt:  0;1;NA 
+
+#:  624 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_082_NYSTAGMUS_LEYE 
+?:  "Neurological Exam (4:6+ y:m): Left eye - nystagmus (0=None, 1=Present but mild in eye gaze)" 
+opt:  0;1;NA 
+
+#:  625 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_084_FACIAL_MOVE_EE_RFACE 
+?:  "Neurological Exam (4:6+ y:m): Facial movements - eyebrow elevation - Right side of face (0=Normal, 1=Mildly abnormal, 2=Markedly abnormal)" 
+opt:  0;1;2;NA 
+
+#:  626 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_085_FACIAL_MOVE_EE_LFACE 
+?:  "Neurological Exam (4:6+ y:m): Facial Movements - eyebrow elevation - Left side of face (0=Normal, 1=Mildly abnormal, 2=Markedly abnormal)" 
+opt:  0;1;2;NA 
+
+#:  627 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_086_FACE_MOVE_FEC_RFACE 
+?:  "Neurological Exam (4:6+ y:m): Facial movements - Forceful closure of eyes - Right side of face (0=Normal, 1=Mildly abnormal, 2=Markedly abnormal)" 
+opt:  0;1;2;NA 
+
+#:  628 
+ID:  PEDS_NEUROLOGICAL_EXAM01_NEURO_087_FACE_MOVE_FEC_LFACE 
+?:  "Neurological Exam (4:6+ y:m): Facial movements - Forceful closure of eyes - Left side of face (0=Normal, 1=Mildly abnormal, 2=Markedly abnormal)" 
+opt:  0;1;2;NA 
+
+#:  629 
+ID:  PEDS_EXCLUSION_FORM01_EX_VC3_DEV_METAL_FRAG_EYE_FACE 
+?:  "Screening and Exclusion Form (0:0 to 4:5 y:m) Question VC3 Child of Interest (COI) metal fragments in the eye or face (Y=Yes, N=No, NA=Not Available)" 
+opt:  Y;N;NA 
+
+#:  630 
+ID:  PLS501_PLS5_AC_3 
+?:  Reacts to sounds other than voices in the environment 
+opt:  1;0 
+
+#:  631 
+ID:  PLS501_PLS5_AC_9 
+?:  Anticipates what will happen next 
+opt:  1;0 
+
+#:  634 
+ID:  QWB01_CHI_BOTHEYE 
+?:  please indicate if your child has  blindness/eye impairment - both eyes 
+opt:  0; 1 
+
+#:  635 
+ID:  QWB01_CHI_1EYE 
+?:  please indicate if your child has blindness/eye impairment - one eye 
+opt:  0; 1 
+
+#:  636 
+ID:  QWB01_CHI_LENSES 
+?:  does your child have/use eye glasses/contact lenses 
+opt:  0; 1 
+
+#:  637 
+ID:  QWB01_CHI_EYEPAIN_ND 
+?:  "does your child have eye pain, irritation, discharge or excessive sensitivity to light - no days" 
+opt:  0; 1 
+
+#:  638 
+ID:  QWB01_CHI_EYEPAIN_YD 
+?:  "does your child have eye pain, irritation, discharge or excessive sensitivity to light - yesterday" 
+opt:  0; 1 
+
+#:  639 
+ID:  QWB01_CHI_EYEPAIN_2D 
+?:  "does your child have eye pain, irritation, discharge or excessive sensitivity to light - 2 days ago " 
+opt:  0; 1 
+
+#:  640 
+ID:  QWB01_CHI_EYEPAIN_3D 
+?:  "does your child have eye pain, irritation, discharge or excessive sensitivity to light - 3 days ago" 
+opt:  0; 1 
+
+#:  642 
+ID:  RMET_CV01_SUBJECTKEY 
+?:  The NDAR Global Unique Identifier (GUID) for subjects which identifies a subject in NDAR 
+opt:  NDAR* 
+
+#:  643 
+ID:  RMET_CV01_SRC_SUBJECT_ID 
+?:  The site or study's subject identification 
+opt:  2 
+
+#:  644 
+ID:  RMET_CV01_INTERVIEW_DATE 
+?:  Date on which the interview/genetic test/sampling/imaging was completed 
+opt:  Required field 
+
+#:  645 
+ID:  RMET_CV01_INTERVIEW_AGE 
+?:  Age in months at the time of the interview/test/sampling/imaging. 
+opt:  0 :: 1200 
+
+#:  646 
+ID:  RMET_CV01_GENDER 
+?:  Gender 
+opt:  M;F 
+
+#:  647 
+ID:  RMET_CV01_ADOS_MODULE 
+?:  ADOS Module 
+opt:  6 
+
+#:  648 
+ID:  RMET_CV01_CHILD_GENDERTOTAL 
+?:  Gender Total 
+opt:  0 :: 28 
+
+#:  650 
+ID:  RMET_CV01_REVADULT_GENDERTOTAL 
+?:  Gender Total 
+opt:  0 :: 36 
+
+#:  651 
+ID:  RMET_CV01_VERSION 
+?:  Version of assessment 
+opt:  10 
+
+#:  653 
+ID:  REYNELL01_RYNL_VC_9A_49 
+?:  "Section 9A, 49. Biggest pink pig and eyes" 
+opt:  Verbal Comprehension (A Only) 
+
+#:  666 
+ID:  SB_503_SB_RVKN_EYELASH 
+?:  Age 18 and above:  Eyelash 
+opt:  0;1;2 
+
+#:  667 
+ID:  SYMPTOM_CHECKLIST_90R01_SCL57 
+?:  57. feeling tense or keyed up 
+opt:  not at all; a little bit; moderately; quite a bit; extremely; missing 
+
+#:  668 
+ID:  TRF01_TR56D 
+?:  56d. Eye problems (not if corrected by glasses) 
+opt:  0::2;9 
+
+#:  669 
+ID:  VINELAND_I01_VINE_COM_TRNEYES 
+?:  Turns eyes and head toward sound 
+opt:  0;1;2;999 
+
+#:  671 
+ID:  VINELANDPARENT_200503_LAUAGE1_1 
+?:  Turns eyes and head toward sound. 
+opt:  0;1;2;DK;D 
+
+#:  674 
+ID:  VINELANDSURVEY_200505_RECEPTIVE_1 
+?:  Turns eyes and head toward sound. 
+opt:  0;1;2;DK;D 
+
+#:  677 
+ID:  WAIS_III01_WAIS_SML_EYEEAR 
+?:  Eye-ear 
+opt:  0 :: 2 
+
+#:  678 
+ID:  WMTB_C01_LR_SPAN5_SCORE_PEOPLE 
+?:  Listening Recall. Span 5 Score. People have two eyes/vans have wheels/sheep live in fields/fish can talk/the sun is cold 
+opt:  0;1 

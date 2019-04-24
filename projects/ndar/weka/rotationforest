@@ -1,0 +1,667 @@
+=== Run information ===
+
+Scheme:weka.classifiers.meta.RotationForest -G 3 -H 3 -P 50 -F "weka.filters.unsupervised.attribute.PrincipalComponents -R 1.0 -A 5 -M -1" -S 1 -I 10 -W weka.classifiers.trees.J48 -- -C 0.25 -M 2
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R287-288-weka.filters.unsupervised.attribute.Remove-R1
+Instances:    400
+Attributes:   286
+[list of attributes omitted]
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+All the base classifiers: 
+
+J48 pruned tree
+------------------
+
+-0.899ADOS_Total_2-0.431rh_caudalmiddlefrontal_thickness_1-0.084rh_fusiform_volume_0_6 <= -1.215901
+|   -0.612lh_superiortemporal_volume_0-0.595lh_precuneus_thickness_1+0.521rh_precuneus_meancurv_2_53 <= 0.962027: 1 (121.0/1.0)
+|   -0.612lh_superiortemporal_volume_0-0.595lh_precuneus_thickness_1+0.521rh_precuneus_meancurv_2_53 > 0.962027
+|   |   0.653rh_lingual_meancurv_2+0.607lh_lingual_meancurv_1+0.453rh_parahippocampal_meancurv_0_8 <= 0.476205
+|   |   |   -0.674lh_rostralmiddlefrontal_volume_1-0.673rh_superiortemporal_area_0+0.304lh_parstriangularis_meancurv_2_24 <= 0.682067: 1 (3.0)
+|   |   |   -0.674lh_rostralmiddlefrontal_volume_1-0.673rh_superiortemporal_area_0+0.304lh_parstriangularis_meancurv_2_24 > 0.682067: 0 (8.0)
+|   |   0.653rh_lingual_meancurv_2+0.607lh_lingual_meancurv_1+0.453rh_parahippocampal_meancurv_0_8 > 0.476205: 1 (13.0)
+-0.899ADOS_Total_2-0.431rh_caudalmiddlefrontal_thickness_1-0.084rh_fusiform_volume_0_6 > -1.215901
+|   0.992ADI_TOTAL_A_1-0.092rh_transversetemporal_area_2+0.091lh_pericalcarine_area_0_16 <= -0.21663
+|   |   0.767lh_parsorbitalis_thickness_0-0.63rh_parstriangularis_thickness_1-0.124rh_lateralorbitofrontal_thickness_2_94 <= -0.946325: 1 (14.0)
+|   |   0.767lh_parsorbitalis_thickness_0-0.63rh_parstriangularis_thickness_1-0.124rh_lateralorbitofrontal_thickness_2_94 > -0.946325
+|   |   |   -0.841rh_postcentral_volume_0-0.509lh_superiorparietal_meancurv_2+0.185rh_inferiortemporal_thickness_1_17 <= -0.47868
+|   |   |   |   -0.709rh_pericalcarine_volume_0+0.706lh_pericalcarine_volume_2+0.009rh_medialorbitofrontal_volume_1_27 <= 0.328077: 0 (21.0)
+|   |   |   |   -0.709rh_pericalcarine_volume_0+0.706lh_pericalcarine_volume_2+0.009rh_medialorbitofrontal_volume_1_27 > 0.328077: 1 (4.0/1.0)
+|   |   |   -0.841rh_postcentral_volume_0-0.509lh_superiorparietal_meancurv_2+0.185rh_inferiortemporal_thickness_1_17 > -0.47868
+|   |   |   |   -0.843lh_transversetemporal_thickness_0+0.486rh_superiorfrontal_volume_2-0.228lh_bankssts_meancurv_1_57 <= -1.149159: 0 (6.0)
+|   |   |   |   -0.843lh_transversetemporal_thickness_0+0.486rh_superiorfrontal_volume_2-0.228lh_bankssts_meancurv_1_57 > -1.149159
+|   |   |   |   |   -0.75rh_pericalcarine_area_2-0.661lh_entorhinal_thickness_0-0.02lh_posteriorcingulate_thickness_1_80 <= -0.442311: 1 (21.0/1.0)
+|   |   |   |   |   -0.75rh_pericalcarine_area_2-0.661lh_entorhinal_thickness_0-0.02lh_posteriorcingulate_thickness_1_80 > -0.442311
+|   |   |   |   |   |   0.985lh_insula_volume_1+0.174lh_lateralorbitofrontal_thickness_0-0.01rh_rostralmiddlefrontal_thickness_2_61 <= 0.267079
+|   |   |   |   |   |   |   -0.636lh_lateraloccipital_meancurv_0+0.555rh_superiortemporal_thickness_2+0.536lh_parahippocampal_area_1_29 <= 0.425338
+|   |   |   |   |   |   |   |   -0.707lh_pericalcarine_area_0-0.707rh_transversetemporal_area_2-0.001ADI_TOTAL_A_1_16 <= 0.879574
+|   |   |   |   |   |   |   |   |   -0.917rh_posteriorcingulate_meancurv_1-0.291lh_temporalpole_thickness_2-0.273rh_temporalpole_volume_0_25 <= -1.480823: 1 (3.0)
+|   |   |   |   |   |   |   |   |   -0.917rh_posteriorcingulate_meancurv_1-0.291lh_temporalpole_thickness_2-0.273rh_temporalpole_volume_0_25 > -1.480823: 0 (19.0/1.0)
+|   |   |   |   |   |   |   |   -0.707lh_pericalcarine_area_0-0.707rh_transversetemporal_area_2-0.001ADI_TOTAL_A_1_16 > 0.879574
+|   |   |   |   |   |   |   |   |   -0.713rh_parsopercularis_volume_2+0.695lh_supramarginal_area_1+0.089lh_medialorbitofrontal_volume_0_51 <= -1.225736: 0 (3.0)
+|   |   |   |   |   |   |   |   |   -0.713rh_parsopercularis_volume_2+0.695lh_supramarginal_area_1+0.089lh_medialorbitofrontal_volume_0_51 > -1.225736: 1 (17.0/1.0)
+|   |   |   |   |   |   |   -0.636lh_lateraloccipital_meancurv_0+0.555rh_superiortemporal_thickness_2+0.536lh_parahippocampal_area_1_29 > 0.425338: 1 (16.0/1.0)
+|   |   |   |   |   |   0.985lh_insula_volume_1+0.174lh_lateralorbitofrontal_thickness_0-0.01rh_rostralmiddlefrontal_thickness_2_61 > 0.267079: 0 (9.0)
+|   0.992ADI_TOTAL_A_1-0.092rh_transversetemporal_area_2+0.091lh_pericalcarine_area_0_16 > -0.21663
+|   |   -0.645rh_middletemporal_meancurv_1-0.616lh_precuneus_meancurv_0+0.452lh_parahippocampal_thickness_2_15 <= -1.48527: 1 (10.0)
+|   |   -0.645rh_middletemporal_meancurv_1-0.616lh_precuneus_meancurv_0+0.452lh_parahippocampal_thickness_2_15 > -1.48527
+|   |   |   -1ADI_TOTAL_C_2+0.014rh_WhiteSurfArea_area_1+0.002rh_posteriorcingulate_area_0_12 <= -1.314496: 1 (6.0/1.0)
+|   |   |   -1ADI_TOTAL_C_2+0.014rh_WhiteSurfArea_area_1+0.002rh_posteriorcingulate_area_0_12 > -1.314496
+|   |   |   |   -0.816lh_insula_meancurv_2+0.408lh_parstriangularis_volume_1+0.408lh_parsopercularis_volume_0_32 <= 2.930138
+|   |   |   |   |   -0.799rh_lateralorbitofrontal_thickness_2+0.522rh_parstriangularis_thickness_1+0.3  lh_parsorbitalis_thickness_0_94 <= -0.719489
+|   |   |   |   |   |   -0.577lh_caudalmiddlefrontal_thickness_2-0.577rh_supramarginal_thickness_0+0.577rh_frontalpole_area_1_0 <= -0.70429: 1 (2.0)
+|   |   |   |   |   |   -0.577lh_caudalmiddlefrontal_thickness_2-0.577rh_supramarginal_thickness_0+0.577rh_frontalpole_area_1_0 > -0.70429: 0 (3.0)
+|   |   |   |   |   -0.799rh_lateralorbitofrontal_thickness_2+0.522rh_parstriangularis_thickness_1+0.3  lh_parsorbitalis_thickness_0_94 > -0.719489: 0 (90.0)
+|   |   |   |   -0.816lh_insula_meancurv_2+0.408lh_parstriangularis_volume_1+0.408lh_parsopercularis_volume_0_32 > 2.930138
+|   |   |   |   |   0.865lh_temporalpole_area_1-0.461rh_superiorfrontal_area_2-0.196rh_inferiorparietal_area_0_41 <= 0.530416: 1 (4.0)
+|   |   |   |   |   0.865lh_temporalpole_area_1-0.461rh_superiorfrontal_area_2-0.196rh_inferiorparietal_area_0_41 > 0.530416: 0 (5.0)
+
+Number of Leaves  : 	22
+
+Size of the tree : 	43
+
+
+J48 pruned tree
+------------------
+
+0.685ADOS_Total_0+0.546lh_lingual_meancurv_1+0.482ADOS_TOTAL_A_2_35 <= 0.675832
+|   0.987Vineland_TOTAL_2-0.155lh_caudalmiddlefrontal_area_1-0.039lh_caudalmiddlefrontal_volume_0_56 <= -0.411459
+|   |   -0.708lh_paracentral_volume_1-0.701ADOS_TOTAL_B_2+0.085lh_insula_meancurv_0_70 <= -0.466247
+|   |   |   -0.718rh_superiortemporal_volume_2+0.59 lh_lateraloccipital_area_0+0.37 lh_parahippocampal_thickness_1_7 <= -0.907782: 0 (2.0)
+|   |   |   -0.718rh_superiortemporal_volume_2+0.59 lh_lateraloccipital_area_0+0.37 lh_parahippocampal_thickness_1_7 > -0.907782: 1 (26.0)
+|   |   -0.708lh_paracentral_volume_1-0.701ADOS_TOTAL_B_2+0.085lh_insula_meancurv_0_70 > -0.466247
+|   |   |   -0.714rh_lateralorbitofrontal_thickness_2-0.689rh_bankssts_volume_0+0.126lh_lateralorbitofrontal_meancurv_1_20 <= -1.06275
+|   |   |   |   0.707rh_caudalanteriorcingulate_meancurv_0+0.707lh_lingual_thickness_2_92 <= -1.27805: 0 (3.0/1.0)
+|   |   |   |   0.707rh_caudalanteriorcingulate_meancurv_0+0.707lh_lingual_thickness_2_92 > -1.27805: 1 (17.0)
+|   |   |   -0.714rh_lateralorbitofrontal_thickness_2-0.689rh_bankssts_volume_0+0.126lh_lateralorbitofrontal_meancurv_1_20 > -1.06275
+|   |   |   |   -0.628lh_WhiteSurfArea_area_0+0.583lh_inferiorparietal_meancurv_2+0.515lh_medialorbitofrontal_thickness_1_29 <= -1.282031: 0 (12.0)
+|   |   |   |   -0.628lh_WhiteSurfArea_area_0+0.583lh_inferiorparietal_meancurv_2+0.515lh_medialorbitofrontal_thickness_1_29 > -1.282031
+|   |   |   |   |   0.577lh_entorhinal_thickness_2+0.577lh_paracentral_area_0+0.577lh_postcentral_area_1_49 <= -10.866567
+|   |   |   |   |   |   -0.799lh_temporalpole_volume_0-0.573lh_entorhinal_meancurv_2-0.183rh_temporalpole_meancurv_1_93 <= 1.194209
+|   |   |   |   |   |   |   0.577lh_entorhinal_thickness_2+0.577lh_paracentral_area_0+0.577lh_postcentral_area_1_49 <= -20.012582
+|   |   |   |   |   |   |   |   0.71 lh_middletemporal_meancurv_2-0.693lh_temporalpole_thickness_0+0.127rh_lingual_thickness_1_33 <= 2.169708
+|   |   |   |   |   |   |   |   |   0.738lh_posteriorcingulate_volume_1-0.525lh_lingual_area_0-0.423rh_paracentral_volume_2_65 <= -1.140092: 0 (8.0)
+|   |   |   |   |   |   |   |   |   0.738lh_posteriorcingulate_volume_1-0.525lh_lingual_area_0-0.423rh_paracentral_volume_2_65 > -1.140092
+|   |   |   |   |   |   |   |   |   |   0.705rh_cuneus_volume_1+0.702rh_lingual_volume_0+0.101lh_rostralanteriorcingulate_meancurv_2_67 <= 1.102485
+|   |   |   |   |   |   |   |   |   |   |   -0.962rh_insula_thickness_1-0.194lh_temporalpole_meancurv_0-0.193lh_caudalanteriorcingulate_meancurv_2_69 <= -0.866077: 0 (18.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   -0.962rh_insula_thickness_1-0.194lh_temporalpole_meancurv_0-0.193lh_caudalanteriorcingulate_meancurv_2_69 > -0.866077
+|   |   |   |   |   |   |   |   |   |   |   |   -0.755lh_parsopercularis_thickness_0-0.594Age_2+0.277rh_middletemporal_volume_1_24 <= -0.587975: 1 (13.0)
+|   |   |   |   |   |   |   |   |   |   |   |   -0.755lh_parsopercularis_thickness_0-0.594Age_2+0.277rh_middletemporal_volume_1_24 > -0.587975
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.707rh_lateralorbitofrontal_meancurv_2-0.706rh_paracentral_meancurv_1-0.035lh_insula_thickness_0_74 <= 0.257514
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.787rh_frontalpole_area_0+0.597lh_parahippocampal_meancurv_1+0.159rh_precentral_thickness_2_30 <= 0.620174
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.87lh_lateraloccipital_meancurv_1-0.377rh_caudalanteriorcingulate_area_2-0.317rh_inferiorparietal_volume_0_63 <= -0.619796: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.87lh_lateraloccipital_meancurv_1-0.377rh_caudalanteriorcingulate_area_2-0.317rh_inferiorparietal_volume_0_63 > -0.619796
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.712rh_MeanThickness_thickness_0+0.702lh_MeanThickness_thickness_2+0.024rh_temporalpole_volume_1_37 <= 0.120734: 1 (24.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.712rh_MeanThickness_thickness_0+0.702lh_MeanThickness_thickness_2+0.024rh_temporalpole_volume_1_37 > 0.120734: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.787rh_frontalpole_area_0+0.597lh_parahippocampal_meancurv_1+0.159rh_precentral_thickness_2_30 > 0.620174: 0 (11.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.707rh_lateralorbitofrontal_meancurv_2-0.706rh_paracentral_meancurv_1-0.035lh_insula_thickness_0_74 > 0.257514: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   0.705rh_cuneus_volume_1+0.702rh_lingual_volume_0+0.101lh_rostralanteriorcingulate_meancurv_2_67 > 1.102485: 1 (9.0)
+|   |   |   |   |   |   |   |   0.71 lh_middletemporal_meancurv_2-0.693lh_temporalpole_thickness_0+0.127rh_lingual_thickness_1_33 > 2.169708: 1 (8.0)
+|   |   |   |   |   |   |   0.577lh_entorhinal_thickness_2+0.577lh_paracentral_area_0+0.577lh_postcentral_area_1_49 > -20.012582: 1 (10.0)
+|   |   |   |   |   |   -0.799lh_temporalpole_volume_0-0.573lh_entorhinal_meancurv_2-0.183rh_temporalpole_meancurv_1_93 > 1.194209: 0 (8.0)
+|   |   |   |   |   0.577lh_entorhinal_thickness_2+0.577lh_paracentral_area_0+0.577lh_postcentral_area_1_49 > -10.866567: 0 (9.0)
+|   0.987Vineland_TOTAL_2-0.155lh_caudalmiddlefrontal_area_1-0.039lh_caudalmiddlefrontal_volume_0_56 > -0.411459
+|   |   -0.965ADI_TOTAL_BV_1+0.234rh_insula_area_0-0.119rh_postcentral_volume_2_4 <= -0.570998: 1 (8.0)
+|   |   -0.965ADI_TOTAL_BV_1+0.234rh_insula_area_0-0.119rh_postcentral_volume_2_4 > -0.570998
+|   |   |   0.865rh_cuneus_area_0-0.5lh_supramarginal_thickness_1-0.044lh_inferiorparietal_volume_2_51 <= -1.080082
+|   |   |   |   -0.577rh_rostralanteriorcingulate_area_0+0.577lh_frontalpole_thickness_2-0.577rh_posteriorcingulate_area_1_5 <= 0.279385: 0 (2.0)
+|   |   |   |   -0.577rh_rostralanteriorcingulate_area_0+0.577lh_frontalpole_thickness_2-0.577rh_posteriorcingulate_area_1_5 > 0.279385: 1 (6.0)
+|   |   |   0.865rh_cuneus_area_0-0.5lh_supramarginal_thickness_1-0.044lh_inferiorparietal_volume_2_51 > -1.080082
+|   |   |   |   -0.728ADOS_Total_0+0.532lh_lingual_meancurv_1+0.432ADOS_TOTAL_A_2_35 <= -0.414696
+|   |   |   |   |   0.577lh_isthmuscingulate_meancurv_2+0.577lh_superiortemporal_volume_0+0.577rh_paracentral_thickness_1_11 <= -14.570589: 1 (3.0)
+|   |   |   |   |   0.577lh_isthmuscingulate_meancurv_2+0.577lh_superiortemporal_volume_0+0.577rh_paracentral_thickness_1_11 > -14.570589: 0 (5.0)
+|   |   |   |   -0.728ADOS_Total_0+0.532lh_lingual_meancurv_1+0.432ADOS_TOTAL_A_2_35 > -0.414696: 0 (69.0)
+0.685ADOS_Total_0+0.546lh_lingual_meancurv_1+0.482ADOS_TOTAL_A_2_35 > 0.675832
+|   0.987Vineland_TOTAL_2-0.155lh_caudalmiddlefrontal_area_1-0.039lh_caudalmiddlefrontal_volume_0_56 <= 1.660446
+|   |   -0.728ADOS_Total_0+0.532lh_lingual_meancurv_1+0.432ADOS_TOTAL_A_2_35 <= 1.047645: 1 (89.0)
+|   |   -0.728ADOS_Total_0+0.532lh_lingual_meancurv_1+0.432ADOS_TOTAL_A_2_35 > 1.047645
+|   |   |   -0.643rh_superiorparietal_meancurv_0-0.629lh_superiorfrontal_meancurv_1+0.437lh_fusiform_thickness_2_40 <= -0.546511: 1 (12.0)
+|   |   |   -0.643rh_superiorparietal_meancurv_0-0.629lh_superiorfrontal_meancurv_1+0.437lh_fusiform_thickness_2_40 > -0.546511: 0 (4.0)
+|   0.987Vineland_TOTAL_2-0.155lh_caudalmiddlefrontal_area_1-0.039lh_caudalmiddlefrontal_volume_0_56 > 1.660446
+|   |   -0.728ADOS_Total_0+0.532lh_lingual_meancurv_1+0.432ADOS_TOTAL_A_2_35 <= 0.347327: 1 (2.0)
+|   |   -0.728ADOS_Total_0+0.532lh_lingual_meancurv_1+0.432ADOS_TOTAL_A_2_35 > 0.347327: 0 (4.0)
+
+Number of Leaves  : 	29
+
+Size of the tree : 	57
+
+
+J48 pruned tree
+------------------
+
+-0.952ADI_TOTAL_C_2-0.301lh_parahippocampal_meancurv_1-0.047lh_bankssts_thickness_0_87 <= -0.848894
+|   0.71 rh_inferiortemporal_thickness_0-0.704rh_precuneus_thickness_2+0.021rh_superiorparietal_meancurv_1_62 <= 0.811595: 1 (80.0)
+|   0.71 rh_inferiortemporal_thickness_0-0.704rh_precuneus_thickness_2+0.021rh_superiorparietal_meancurv_1_62 > 0.811595
+|   |   -0.758lh_parsorbitalis_area_0+0.555lh_inferiorparietal_volume_1-0.343lh_entorhinal_meancurv_2_1 <= 0.181222: 0 (3.0)
+|   |   -0.758lh_parsorbitalis_area_0+0.555lh_inferiorparietal_volume_1-0.343lh_entorhinal_meancurv_2_1 > 0.181222: 1 (2.0)
+-0.952ADI_TOTAL_C_2-0.301lh_parahippocampal_meancurv_1-0.047lh_bankssts_thickness_0_87 > -0.848894
+|   -0.92ADOS_TOTAL_B_2-0.391rh_rostralanteriorcingulate_area_0-0.042rh_fusiform_meancurv_1_0 <= -4.277095
+|   |   -0.646lh_parsorbitalis_area_0-0.57lh_inferiorparietal_volume_1+0.508lh_entorhinal_meancurv_2_1 <= 1.091597: 1 (35.0)
+|   |   -0.646lh_parsorbitalis_area_0-0.57lh_inferiorparietal_volume_1+0.508lh_entorhinal_meancurv_2_1 > 1.091597: 0 (2.0)
+|   -0.92ADOS_TOTAL_B_2-0.391rh_rostralanteriorcingulate_area_0-0.042rh_fusiform_meancurv_1_0 > -4.277095
+|   |   -0.943ADOS_TOTAL_A_1-0.286rh_superiortemporal_thickness_0-0.168lh_temporalpole_meancurv_2_23 <= -0.586991: 1 (17.0/1.0)
+|   |   -0.943ADOS_TOTAL_A_1-0.286rh_superiortemporal_thickness_0-0.168lh_temporalpole_meancurv_2_23 > -0.586991
+|   |   |   -0.943ADOS_TOTAL_A_1-0.286rh_superiortemporal_thickness_0-0.168lh_temporalpole_meancurv_2_23 <= 0.211633
+|   |   |   |   -0.871ADOS_Total_1+0.463lh_postcentral_area_0+0.167rh_parstriangularis_volume_2_65 <= -0.842631: 1 (5.0)
+|   |   |   |   -0.871ADOS_Total_1+0.463lh_postcentral_area_0+0.167rh_parstriangularis_volume_2_65 > -0.842631
+|   |   |   |   |   0.672rh_entorhinal_meancurv_0+0.645lh_caudalmiddlefrontal_meancurv_2-0.364rh_medialorbitofrontal_thickness_1_59 <= 0.204603: 0 (65.0/1.0)
+|   |   |   |   |   0.672rh_entorhinal_meancurv_0+0.645lh_caudalmiddlefrontal_meancurv_2-0.364rh_medialorbitofrontal_thickness_1_59 > 0.204603
+|   |   |   |   |   |   -0.741lh_parstriangularis_thickness_2-0.575rh_isthmuscingulate_meancurv_0+0.346lh_paracentral_area_1_5 <= -0.337773: 0 (3.0)
+|   |   |   |   |   |   -0.741lh_parstriangularis_thickness_2-0.575rh_isthmuscingulate_meancurv_0+0.346lh_paracentral_area_1_5 > -0.337773: 1 (3.0)
+|   |   |   -0.943ADOS_TOTAL_A_1-0.286rh_superiortemporal_thickness_0-0.168lh_temporalpole_meancurv_2_23 > 0.211633
+|   |   |   |   0.729lh_medialorbitofrontal_meancurv_1-0.669lh_MeanThickness_thickness_0-0.144rh_supramarginal_area_2_72 <= -1.33223: 1 (10.0)
+|   |   |   |   0.729lh_medialorbitofrontal_meancurv_1-0.669lh_MeanThickness_thickness_0-0.144rh_supramarginal_area_2_72 > -1.33223
+|   |   |   |   |   -0.761lh_temporalpole_volume_0-0.485lh_frontalpole_volume_2+0.431rh_pericalcarine_area_1_37 <= 1.400902
+|   |   |   |   |   |   -0.771rh_caudalmiddlefrontal_thickness_0-0.482lh_postcentral_meancurv_2+0.416rh_frontalpole_thickness_1_89 <= 1.473108
+|   |   |   |   |   |   |   -0.713rh_cuneus_volume_2+0.702rh_inferiortemporal_meancurv_1-0.002rh_insula_volume_0_80 <= -1.090272: 1 (11.0)
+|   |   |   |   |   |   |   -0.713rh_cuneus_volume_2+0.702rh_inferiortemporal_meancurv_1-0.002rh_insula_volume_0_80 > -1.090272
+|   |   |   |   |   |   |   |   -0.882rh_lateralorbitofrontal_meancurv_2-0.458rh_parsopercularis_thickness_0-0.113rh_lingual_volume_1_77 <= 1.568728
+|   |   |   |   |   |   |   |   |   0.884rh_parsopercularis_volume_0-0.43lh_inferiorparietal_area_1-0.183lh_rostralmiddlefrontal_area_2_57 <= 0.786795
+|   |   |   |   |   |   |   |   |   |   0.625rh_parsorbitalis_volume_2+0.57 rh_bankssts_thickness_1+0.534rh_pericalcarine_volume_0_7 <= -0.843672
+|   |   |   |   |   |   |   |   |   |   |   -0.766rh_postcentral_thickness_2+0.642lh_temporalpole_area_1+0.031lh_superiortemporal_meancurv_0_11 <= 1.638447
+|   |   |   |   |   |   |   |   |   |   |   |   0.811lh_paracentral_area_1+0.581rh_isthmuscingulate_meancurv_0-0.072lh_parstriangularis_thickness_2_5 <= -0.973183: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   0.811lh_paracentral_area_1+0.581rh_isthmuscingulate_meancurv_0-0.072lh_parstriangularis_thickness_2_5 > -0.973183: 1 (22.0)
+|   |   |   |   |   |   |   |   |   |   |   -0.766rh_postcentral_thickness_2+0.642lh_temporalpole_area_1+0.031lh_superiortemporal_meancurv_0_11 > 1.638447: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   0.625rh_parsorbitalis_volume_2+0.57 rh_bankssts_thickness_1+0.534rh_pericalcarine_volume_0_7 > -0.843672
+|   |   |   |   |   |   |   |   |   |   |   0.702rh_posteriorcingulate_volume_2-0.68rh_middletemporal_area_1-0.211rh_parstriangularis_thickness_0_4 <= 0.180498
+|   |   |   |   |   |   |   |   |   |   |   |   0.685rh_insula_volume_0-0.518rh_inferiortemporal_meancurv_1-0.512rh_cuneus_volume_2_80 <= -0.13226
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.631rh_lateraloccipital_area_2+0.587lh_caudalmiddlefrontal_area_1+0.507rh_parahippocampal_area_0_9 <= -0.823397: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.631rh_lateraloccipital_area_2+0.587lh_caudalmiddlefrontal_area_1+0.507rh_parahippocampal_area_0_9 > -0.823397: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   0.685rh_insula_volume_0-0.518rh_inferiortemporal_meancurv_1-0.512rh_cuneus_volume_2_80 > -0.13226
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.595lh_supramarginal_volume_1+0.594rh_bankssts_area_0+0.541rh_transversetemporal_area_2_31 <= -0.882912: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.595lh_supramarginal_volume_1+0.594rh_bankssts_area_0+0.541rh_transversetemporal_area_2_31 > -0.882912
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.856rh_inferiorparietal_area_1+0.511lh_isthmuscingulate_meancurv_0-0.082rh_lateraloccipital_thickness_2_47 <= -1.270617: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.856rh_inferiorparietal_area_1+0.511lh_isthmuscingulate_meancurv_0-0.082rh_lateraloccipital_thickness_2_47 > -1.270617: 1 (24.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   0.702rh_posteriorcingulate_volume_2-0.68rh_middletemporal_area_1-0.211rh_parstriangularis_thickness_0_4 > 0.180498
+|   |   |   |   |   |   |   |   |   |   |   |   -0.712rh_supramarginal_meancurv_1+0.702rh_paracentral_meancurv_2-0.019rh_parsorbitalis_thickness_0_26 <= -1.060147: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   -0.712rh_supramarginal_meancurv_1+0.702rh_paracentral_meancurv_2-0.019rh_parsorbitalis_thickness_0_26 > -1.060147
+|   |   |   |   |   |   |   |   |   |   |   |   |   -0.712lh_bankssts_thickness_0+0.679lh_parahippocampal_meancurv_1-0.18ADI_TOTAL_C_2_87 <= 1.168593: 0 (24.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   -0.712lh_bankssts_thickness_0+0.679lh_parahippocampal_meancurv_1-0.18ADI_TOTAL_C_2_87 > 1.168593: 1 (3.0/1.0)
+|   |   |   |   |   |   |   |   |   0.884rh_parsopercularis_volume_0-0.43lh_inferiorparietal_area_1-0.183lh_rostralmiddlefrontal_area_2_57 > 0.786795: 0 (10.0)
+|   |   |   |   |   |   |   |   -0.882rh_lateralorbitofrontal_meancurv_2-0.458rh_parsopercularis_thickness_0-0.113rh_lingual_volume_1_77 > 1.568728: 1 (9.0)
+|   |   |   |   |   |   -0.771rh_caudalmiddlefrontal_thickness_0-0.482lh_postcentral_meancurv_2+0.416rh_frontalpole_thickness_1_89 > 1.473108: 0 (8.0)
+|   |   |   |   |   -0.761lh_temporalpole_volume_0-0.485lh_frontalpole_volume_2+0.431rh_pericalcarine_area_1_37 > 1.400902
+|   |   |   |   |   |   -0.741lh_parstriangularis_thickness_2-0.575rh_isthmuscingulate_meancurv_0+0.346lh_paracentral_area_1_5 <= -0.337773: 1 (3.0)
+|   |   |   |   |   |   -0.741lh_parstriangularis_thickness_2-0.575rh_isthmuscingulate_meancurv_0+0.346lh_paracentral_area_1_5 > -0.337773
+|   |   |   |   |   |   |   -0.733rh_lateralorbitofrontal_volume_0+0.484lh_parahippocampal_area_2-0.479rh_inferiorparietal_meancurv_1_94 <= -1.023014: 1 (2.0)
+|   |   |   |   |   |   |   -0.733rh_lateralorbitofrontal_volume_0+0.484lh_parahippocampal_area_2-0.479rh_inferiorparietal_meancurv_1_94 > -1.023014: 0 (30.0)
+
+Number of Leaves  : 	29
+
+Size of the tree : 	57
+
+
+J48 pruned tree
+------------------
+
+0.707rh_isthmuscingulate_thickness_2-0.707ADI_TOTAL_A_1+0.008Vineland_TOTAL_0_24 <= -1.199063
+|   -0.664rh_entorhinal_thickness_0-0.626ADI_TOTAL_C_1+0.409rh_precentral_volume_2_50 <= -1.745178
+|   |   -0.899lh_precentral_area_2-0.34rh_parsopercularis_meancurv_0-0.277lh_parsorbitalis_meancurv_1_1 <= -0.367065: 1 (3.0)
+|   |   -0.899lh_precentral_area_2-0.34rh_parsopercularis_meancurv_0-0.277lh_parsorbitalis_meancurv_1_1 > -0.367065: 0 (2.0)
+|   -0.664rh_entorhinal_thickness_0-0.626ADI_TOTAL_C_1+0.409rh_precentral_volume_2_50 > -1.745178: 1 (88.0)
+0.707rh_isthmuscingulate_thickness_2-0.707ADI_TOTAL_A_1+0.008Vineland_TOTAL_0_24 > -1.199063
+|   0.708ADOS_TOTAL_A_2+0.704ADOS_TOTAL_B_0+0.058rh_precuneus_thickness_1_86 <= 0.078207
+|   |   0.708ADOS_TOTAL_A_2+0.704ADOS_TOTAL_B_0+0.058rh_precuneus_thickness_1_86 <= -0.211258
+|   |   |   -0.716rh_lateralorbitofrontal_thickness_2-0.517rh_insula_area_0-0.47lh_precuneus_meancurv_1_15 <= 1.039024
+|   |   |   |   0.858lh_temporalpole_volume_2-0.439rh_fusiform_area_1-0.266rh_lateralorbitofrontal_volume_0_77 <= -0.581155
+|   |   |   |   |   0.68 rh_insula_volume_0+0.65 rh_posteriorcingulate_area_1+0.339rh_superiorparietal_thickness_2_4 <= -0.829948: 1 (3.0)
+|   |   |   |   |   0.68 rh_insula_volume_0+0.65 rh_posteriorcingulate_area_1+0.339rh_superiorparietal_thickness_2_4 > -0.829948
+|   |   |   |   |   |   0.64 lh_caudalmiddlefrontal_area_1+0.638rh_temporalpole_area_2+0.429lh_transversetemporal_thickness_0_53 <= 1.011049
+|   |   |   |   |   |   |   0.659lh_temporalpole_area_2+0.588lh_cuneus_area_0-0.469lh_fusiform_meancurv_1_2 <= -1.373342
+|   |   |   |   |   |   |   |   0.679rh_caudalmiddlefrontal_thickness_0+0.546lh_frontalpole_thickness_2+0.491lh_precentral_volume_1_0 <= -0.435314: 1 (2.0)
+|   |   |   |   |   |   |   |   0.679rh_caudalmiddlefrontal_thickness_0+0.546lh_frontalpole_thickness_2+0.491lh_precentral_volume_1_0 > -0.435314: 0 (2.0)
+|   |   |   |   |   |   |   0.659lh_temporalpole_area_2+0.588lh_cuneus_area_0-0.469lh_fusiform_meancurv_1_2 > -1.373342: 0 (32.0)
+|   |   |   |   |   |   0.64 lh_caudalmiddlefrontal_area_1+0.638rh_temporalpole_area_2+0.429lh_transversetemporal_thickness_0_53 > 1.011049: 1 (5.0/1.0)
+|   |   |   |   0.858lh_temporalpole_volume_2-0.439rh_fusiform_area_1-0.266rh_lateralorbitofrontal_volume_0_77 > -0.581155
+|   |   |   |   |   -0.891rh_pericalcarine_thickness_0+0.425lh_isthmuscingulate_volume_2+0.161rh_rostralmiddlefrontal_volume_1_13 <= -1.180779: 1 (21.0/1.0)
+|   |   |   |   |   -0.891rh_pericalcarine_thickness_0+0.425lh_isthmuscingulate_volume_2+0.161rh_rostralmiddlefrontal_volume_1_13 > -1.180779
+|   |   |   |   |   |   0.586rh_inferiortemporal_volume_1+0.583lh_parsorbitalis_volume_0+0.563rh_precentral_area_2_28 <= -1.414467: 0 (6.0)
+|   |   |   |   |   |   0.586rh_inferiortemporal_volume_1+0.583lh_parsorbitalis_volume_0+0.563rh_precentral_area_2_28 > -1.414467
+|   |   |   |   |   |   |   0.73 lh_parsopercularis_volume_0-0.654lh_isthmuscingulate_area_2+0.198lh_caudalanteriorcingulate_meancurv_1_93 <= 1.052837
+|   |   |   |   |   |   |   |   0.72 rh_isthmuscingulate_volume_2+0.685lh_pericalcarine_thickness_0+0.113rh_caudalmiddlefrontal_meancurv_1_80 <= 0.661461
+|   |   |   |   |   |   |   |   |   -0.892lh_caudalanteriorcingulate_meancurv_1-0.429lh_isthmuscingulate_area_2-0.143lh_parsopercularis_volume_0_93 <= 1.264717
+|   |   |   |   |   |   |   |   |   |   -0.577rh_precuneus_meancurv_0+0.577lh_bankssts_thickness_1+0.577rh_transversetemporal_volume_2_55 <= -2.61338: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   -0.577rh_precuneus_meancurv_0+0.577lh_bankssts_thickness_1+0.577rh_transversetemporal_volume_2_55 > -2.61338
+|   |   |   |   |   |   |   |   |   |   |   -0.693rh_supramarginal_thickness_1+0.562rh_rostralanteriorcingulate_area_2+0.452rh_fusiform_meancurv_0_43 <= -0.001875: 1 (28.0)
+|   |   |   |   |   |   |   |   |   |   |   -0.693rh_supramarginal_thickness_1+0.562rh_rostralanteriorcingulate_area_2+0.452rh_fusiform_meancurv_0_43 > -0.001875
+|   |   |   |   |   |   |   |   |   |   |   |   -0.78lh_inferiorparietal_meancurv_2-0.625rh_postcentral_volume_0-0.023lh_entorhinal_thickness_1_17 <= 0.626688
+|   |   |   |   |   |   |   |   |   |   |   |   |   -0.713rh_parsorbitalis_volume_1-0.701lh_superiorfrontal_meancurv_2+0.034rh_insula_thickness_0_42 <= 0.966675: 1 (15.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   -0.713rh_parsorbitalis_volume_1-0.701lh_superiorfrontal_meancurv_2+0.034rh_insula_thickness_0_42 > 0.966675: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   -0.78lh_inferiorparietal_meancurv_2-0.625rh_postcentral_volume_0-0.023lh_entorhinal_thickness_1_17 > 0.626688: 0 (4.0)
+|   |   |   |   |   |   |   |   |   -0.892lh_caudalanteriorcingulate_meancurv_1-0.429lh_isthmuscingulate_area_2-0.143lh_parsopercularis_volume_0_93 > 1.264717
+|   |   |   |   |   |   |   |   |   |   -0.945lh_cuneus_meancurv_0-0.309lh_medialorbitofrontal_meancurv_2+0.107lh_rostralmiddlefrontal_meancurv_1_37 <= 0.518654: 0 (7.0)
+|   |   |   |   |   |   |   |   |   |   -0.945lh_cuneus_meancurv_0-0.309lh_medialorbitofrontal_meancurv_2+0.107lh_rostralmiddlefrontal_meancurv_1_37 > 0.518654: 1 (3.0)
+|   |   |   |   |   |   |   |   0.72 rh_isthmuscingulate_volume_2+0.685lh_pericalcarine_thickness_0+0.113rh_caudalmiddlefrontal_meancurv_1_80 > 0.661461
+|   |   |   |   |   |   |   |   |   0.716lh_parsorbitalis_meancurv_1-0.697rh_parsopercularis_meancurv_0+0.043lh_precentral_area_2_1 <= -0.6628: 1 (2.0)
+|   |   |   |   |   |   |   |   |   0.716lh_parsorbitalis_meancurv_1-0.697rh_parsopercularis_meancurv_0+0.043lh_precentral_area_2_1 > -0.6628: 0 (8.0)
+|   |   |   |   |   |   |   0.73 lh_parsopercularis_volume_0-0.654lh_isthmuscingulate_area_2+0.198lh_caudalanteriorcingulate_meancurv_1_93 > 1.052837: 0 (6.0)
+|   |   |   -0.716rh_lateralorbitofrontal_thickness_2-0.517rh_insula_area_0-0.47lh_precuneus_meancurv_1_15 > 1.039024: 0 (16.0)
+|   |   0.708ADOS_TOTAL_A_2+0.704ADOS_TOTAL_B_0+0.058rh_precuneus_thickness_1_86 > -0.211258: 0 (75.0/1.0)
+|   0.708ADOS_TOTAL_A_2+0.704ADOS_TOTAL_B_0+0.058rh_precuneus_thickness_1_86 > 0.078207
+|   |   0.684rh_bankssts_area_0+0.678rh_inferiorparietal_area_1+0.27 lh_postcentral_thickness_2_82 <= -1.189662
+|   |   |   -0.641lh_parsorbitalis_meancurv_1-0.632rh_parsopercularis_meancurv_0+0.436lh_precentral_area_2_1 <= -0.014831: 1 (3.0)
+|   |   |   -0.641lh_parsorbitalis_meancurv_1-0.632rh_parsopercularis_meancurv_0+0.436lh_precentral_area_2_1 > -0.014831: 0 (4.0)
+|   |   0.684rh_bankssts_area_0+0.678rh_inferiorparietal_area_1+0.27 lh_postcentral_thickness_2_82 > -1.189662: 1 (58.0/1.0)
+
+Number of Leaves  : 	25
+
+Size of the tree : 	49
+
+
+J48 pruned tree
+------------------
+
+-0.837ADOS_Total_0-0.537rh_cuneus_meancurv_2+0.107rh_rostralmiddlefrontal_meancurv_1_83 <= -0.608809
+|   0.661rh_rostralmiddlefrontal_meancurv_1-0.59rh_cuneus_meancurv_2+0.463ADOS_Total_0_83 <= -1.178642
+|   |   0.778lh_pericalcarine_volume_1+0.544lh_parsorbitalis_meancurv_2-0.314lh_transversetemporal_thickness_0_2 <= 0.69217: 0 (4.0)
+|   |   0.778lh_pericalcarine_volume_1+0.544lh_parsorbitalis_meancurv_2-0.314lh_transversetemporal_thickness_0_2 > 0.69217: 1 (2.0)
+|   0.661rh_rostralmiddlefrontal_meancurv_1-0.59rh_cuneus_meancurv_2+0.463ADOS_Total_0_83 > -1.178642: 1 (70.0/1.0)
+-0.837ADOS_Total_0-0.537rh_cuneus_meancurv_2+0.107rh_rostralmiddlefrontal_meancurv_1_83 > -0.608809
+|   -0.878ADOS_TOTAL_B_1-0.474rh_inferiortemporal_volume_2-0.063rh_cuneus_thickness_0_87 <= -2.961545
+|   |   0.666lh_parahippocampal_volume_1+0.613lh_posteriorcingulate_volume_2+0.425rh_parstriangularis_area_0_29 <= -1.198187
+|   |   |   0.577rh_inferiorparietal_meancurv_2+0.577lh_parstriangularis_meancurv_0+0.577lh_superiorfrontal_meancurv_1_1 <= 4.606195: 0 (4.0)
+|   |   |   0.577rh_inferiorparietal_meancurv_2+0.577lh_parstriangularis_meancurv_0+0.577lh_superiorfrontal_meancurv_1_1 > 4.606195: 1 (2.0)
+|   |   0.666lh_parahippocampal_volume_1+0.613lh_posteriorcingulate_volume_2+0.425rh_parstriangularis_area_0_29 > -1.198187: 1 (40.0)
+|   -0.878ADOS_TOTAL_B_1-0.474rh_inferiortemporal_volume_2-0.063rh_cuneus_thickness_0_87 > -2.961545
+|   |   0.718lh_pericalcarine_meancurv_1-0.694lh_rostralmiddlefrontal_meancurv_2+0.05 rh_middletemporal_thickness_0_58 <= 1.035005
+|   |   |   0.707rh_isthmuscingulate_meancurv_1+0.707lh_lateraloccipital_thickness_2_60 <= 0.986733
+|   |   |   |   0.672lh_cuneus_meancurv_2-0.548lh_entorhinal_volume_0+0.499ADI_TOTAL_A_1_12 <= 1.002122
+|   |   |   |   |   -0.693lh_middletemporal_volume_1-0.596rh_frontalpole_volume_0+0.405rh_frontalpole_meancurv_2_32 <= 1.386517
+|   |   |   |   |   |   -0.972rh_pericalcarine_meancurv_0+0.168lh_inferiorparietal_area_2+0.164rh_precuneus_area_1_30 <= -0.704247: 0 (14.0)
+|   |   |   |   |   |   -0.972rh_pericalcarine_meancurv_0+0.168lh_inferiorparietal_area_2+0.164rh_precuneus_area_1_30 > -0.704247
+|   |   |   |   |   |   |   -0.737lh_bankssts_volume_2+0.557rh_fusiform_thickness_1+0.382rh_medialorbitofrontal_area_0_70 <= -0.649598: 0 (19.0/1.0)
+|   |   |   |   |   |   |   -0.737lh_bankssts_volume_2+0.557rh_fusiform_thickness_1+0.382rh_medialorbitofrontal_area_0_70 > -0.649598
+|   |   |   |   |   |   |   |   -0.685lh_superiorparietal_volume_0-0.652lh_cuneus_area_1+0.324lh_parsopercularis_meancurv_2_18 <= 0.140231
+|   |   |   |   |   |   |   |   |   -0.742lh_entorhinal_area_0-0.628rh_parsopercularis_meancurv_1+0.235rh_precentral_volume_2_22 <= -1.310605: 1 (5.0)
+|   |   |   |   |   |   |   |   |   -0.742lh_entorhinal_area_0-0.628rh_parsopercularis_meancurv_1+0.235rh_precentral_volume_2_22 > -1.310605
+|   |   |   |   |   |   |   |   |   |   -0.715rh_MeanThickness_thickness_0+0.69 lh_superiorparietal_thickness_2+0.114lh_transversetemporal_volume_1_86 <= 0.39216
+|   |   |   |   |   |   |   |   |   |   |   -0.777rh_parsorbitalis_volume_1+0.48 rh_lateralorbitofrontal_meancurv_2-0.407rh_transversetemporal_volume_0_75 <= -1.698737
+|   |   |   |   |   |   |   |   |   |   |   |   -0.883rh_lateraloccipital_volume_1-0.451lh_medialorbitofrontal_meancurv_2-0.129lh_fusiform_thickness_0_9 <= 0.330247: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   -0.883rh_lateraloccipital_volume_1-0.451lh_medialorbitofrontal_meancurv_2-0.129lh_fusiform_thickness_0_9 > 0.330247: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   -0.777rh_parsorbitalis_volume_1+0.48 rh_lateralorbitofrontal_meancurv_2-0.407rh_transversetemporal_volume_0_75 > -1.698737
+|   |   |   |   |   |   |   |   |   |   |   |   0.577rh_parahippocampal_volume_2-0.577lh_bankssts_area_0+0.577lh_postcentral_area_1_16 <= -19.18957
+|   |   |   |   |   |   |   |   |   |   |   |   |   -0.788rh_rostralmiddlefrontal_volume_0+0.518lh_fusiform_volume_1+0.333lh_lateralorbitofrontal_area_2_27 <= 0.18806
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.666lh_parahippocampal_volume_1+0.613lh_posteriorcingulate_volume_2+0.425rh_parstriangularis_area_0_29 <= 0.383569: 0 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.666lh_parahippocampal_volume_1+0.613lh_posteriorcingulate_volume_2+0.425rh_parstriangularis_area_0_29 > 0.383569: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   -0.788rh_rostralmiddlefrontal_volume_0+0.518lh_fusiform_volume_1+0.333lh_lateralorbitofrontal_area_2_27 > 0.18806: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   0.577rh_parahippocampal_volume_2-0.577lh_bankssts_area_0+0.577lh_postcentral_area_1_16 > -19.18957
+|   |   |   |   |   |   |   |   |   |   |   |   |   -0.696rh_lingual_volume_0+0.586rh_transversetemporal_area_1-0.415lh_precentral_meancurv_2_45 <= -0.847465
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.597lh_superiortemporal_area_2+0.579rh_fusiform_area_1+0.556rh_bankssts_area_0_6 <= 0.316564: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.597lh_superiortemporal_area_2+0.579rh_fusiform_area_1+0.556rh_bankssts_area_0_6 > 0.316564: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   -0.696rh_lingual_volume_0+0.586rh_transversetemporal_area_1-0.415lh_precentral_meancurv_2_45 > -0.847465: 0 (39.0)
+|   |   |   |   |   |   |   |   |   |   -0.715rh_MeanThickness_thickness_0+0.69 lh_superiorparietal_thickness_2+0.114lh_transversetemporal_volume_1_86 > 0.39216
+|   |   |   |   |   |   |   |   |   |   |   0.708rh_isthmuscingulate_area_1-0.706lh_parstriangularis_volume_0+0.007rh_parsorbitalis_meancurv_2_28 <= 1.147172: 1 (10.0)
+|   |   |   |   |   |   |   |   |   |   |   0.708rh_isthmuscingulate_area_1-0.706lh_parstriangularis_volume_0+0.007rh_parsorbitalis_meancurv_2_28 > 1.147172: 0 (4.0)
+|   |   |   |   |   |   |   |   -0.685lh_superiorparietal_volume_0-0.652lh_cuneus_area_1+0.324lh_parsopercularis_meancurv_2_18 > 0.140231
+|   |   |   |   |   |   |   |   |   0.723rh_lingual_thickness_1-0.682rh_postcentral_meancurv_0-0.106lh_parsopercularis_area_2_68 <= -0.46697
+|   |   |   |   |   |   |   |   |   |   -0.937rh_paracentral_meancurv_1-0.344lh_posteriorcingulate_thickness_2-0.055rh_precentral_area_0_42 <= -0.851455: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   -0.937rh_paracentral_meancurv_1-0.344lh_posteriorcingulate_thickness_2-0.055rh_precentral_area_0_42 > -0.851455
+|   |   |   |   |   |   |   |   |   |   |   0.678rh_postcentral_area_2-0.601lh_lingual_area_0-0.423lh_lateralorbitofrontal_volume_1_53 <= -0.501168
+|   |   |   |   |   |   |   |   |   |   |   |   0.867lh_rostralanteriorcingulate_area_2-0.46lh_caudalmiddlefrontal_volume_0-0.189lh_caudalmiddlefrontal_area_1_3 <= 1.056508: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   0.867lh_rostralanteriorcingulate_area_2-0.46lh_caudalmiddlefrontal_volume_0-0.189lh_caudalmiddlefrontal_area_1_3 > 1.056508: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   0.678rh_postcentral_area_2-0.601lh_lingual_area_0-0.423lh_lateralorbitofrontal_volume_1_53 > -0.501168: 0 (13.0)
+|   |   |   |   |   |   |   |   |   0.723rh_lingual_thickness_1-0.682rh_postcentral_meancurv_0-0.106lh_parsopercularis_area_2_68 > -0.46697
+|   |   |   |   |   |   |   |   |   |   0.729rh_transversetemporal_thickness_1-0.68rh_caudalmiddlefrontal_volume_0-0.076rh_frontalpole_thickness_2_14 <= -0.681624: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   0.729rh_transversetemporal_thickness_1-0.68rh_caudalmiddlefrontal_volume_0-0.076rh_frontalpole_thickness_2_14 > -0.681624: 1 (24.0/1.0)
+|   |   |   |   |   -0.693lh_middletemporal_volume_1-0.596rh_frontalpole_volume_0+0.405rh_frontalpole_meancurv_2_32 > 1.386517: 0 (17.0)
+|   |   |   |   0.672lh_cuneus_meancurv_2-0.548lh_entorhinal_volume_0+0.499ADI_TOTAL_A_1_12 > 1.002122
+|   |   |   |   |   0.745rh_superiortemporal_meancurv_2+0.62 lh_superiortemporal_thickness_0+0.247rh_inferiortemporal_area_1_55 <= -0.706338: 0 (3.0)
+|   |   |   |   |   0.745rh_superiortemporal_meancurv_2+0.62 lh_superiortemporal_thickness_0+0.247rh_inferiortemporal_area_1_55 > -0.706338
+|   |   |   |   |   |   0.756ADI_TOTAL_A_1+0.654lh_entorhinal_volume_0-0.029lh_cuneus_meancurv_2_12 <= -1.874667: 0 (2.0)
+|   |   |   |   |   |   0.756ADI_TOTAL_A_1+0.654lh_entorhinal_volume_0-0.029lh_cuneus_meancurv_2_12 > -1.874667: 1 (17.0)
+|   |   |   0.707rh_isthmuscingulate_meancurv_1+0.707lh_lateraloccipital_thickness_2_60 > 0.986733
+|   |   |   |   -0.728lh_paracentral_meancurv_0-0.661lh_frontalpole_thickness_2+0.182rh_caudalanteriorcingulate_area_1_80 <= 0.035598
+|   |   |   |   |   0.886rh_rostralanteriorcingulate_meancurv_2+0.463rh_bankssts_volume_1-0.031lh_temporalpole_thickness_0_93 <= 0.537684
+|   |   |   |   |   |   0.652rh_caudalanteriorcingulate_volume_1-0.617rh_posteriorcingulate_thickness_0+0.442rh_temporalpole_area_2_39 <= -0.797088: 1 (4.0)
+|   |   |   |   |   |   0.652rh_caudalanteriorcingulate_volume_1-0.617rh_posteriorcingulate_thickness_0+0.442rh_temporalpole_area_2_39 > -0.797088: 0 (12.0)
+|   |   |   |   |   0.886rh_rostralanteriorcingulate_meancurv_2+0.463rh_bankssts_volume_1-0.031lh_temporalpole_thickness_0_93 > 0.537684: 1 (9.0)
+|   |   |   |   -0.728lh_paracentral_meancurv_0-0.661lh_frontalpole_thickness_2+0.182rh_caudalanteriorcingulate_area_1_80 > 0.035598: 1 (24.0)
+|   |   0.718lh_pericalcarine_meancurv_1-0.694lh_rostralmiddlefrontal_meancurv_2+0.05 rh_middletemporal_thickness_0_58 > 1.035005: 0 (17.0)
+
+Number of Leaves  : 	34
+
+Size of the tree : 	67
+
+
+J48 pruned tree
+------------------
+
+0.791ADOS_TOTAL_A_1+0.612rh_insula_meancurv_2-0.011rh_bankssts_meancurv_0_66 <= 1.203956
+|   -0.718ADI_TOTAL_BV_0-0.519lh_lingual_area_2+0.464lh_parahippocampal_meancurv_1_55 <= -1.235936: 1 (30.0/1.0)
+|   -0.718ADI_TOTAL_BV_0-0.519lh_lingual_area_2+0.464lh_parahippocampal_meancurv_1_55 > -1.235936
+|   |   -0.919ADI_TOTAL_C_0-0.347lh_rostralanteriorcingulate_volume_1-0.189lh_precuneus_thickness_2_16 <= -0.693739: 1 (15.0)
+|   |   -0.919ADI_TOTAL_C_0-0.347lh_rostralanteriorcingulate_volume_1-0.189lh_precuneus_thickness_2_16 > -0.693739
+|   |   |   -0.968ADOS_TOTAL_B_0-0.18rh_middletemporal_area_1-0.177lh_precentral_area_2_56 <= 0.237476
+|   |   |   |   0.775rh_parsopercularis_thickness_2-0.624lh_insula_thickness_1-0.095lh_medialorbitofrontal_thickness_0_65 <= -0.040209
+|   |   |   |   |   -0.974lh_postcentral_thickness_2+0.163lh_rostralmiddlefrontal_meancurv_0+0.16 rh_temporalpole_volume_1_52 <= 0.473477
+|   |   |   |   |   |   -0.765rh_inferiortemporal_area_0+0.63 lh_transversetemporal_area_2+0.13 lh_pericalcarine_volume_1_33 <= -0.356658: 1 (10.0)
+|   |   |   |   |   |   -0.765rh_inferiortemporal_area_0+0.63 lh_transversetemporal_area_2+0.13 lh_pericalcarine_volume_1_33 > -0.356658
+|   |   |   |   |   |   |   -0.707rh_superiorfrontal_meancurv_1-0.684rh_lateralorbitofrontal_meancurv_0+0.179Vineland_TOTAL_2_0 <= -0.12176: 1 (2.0)
+|   |   |   |   |   |   |   -0.707rh_superiorfrontal_meancurv_1-0.684rh_lateralorbitofrontal_meancurv_0+0.179Vineland_TOTAL_2_0 > -0.12176: 0 (4.0)
+|   |   |   |   |   -0.974lh_postcentral_thickness_2+0.163lh_rostralmiddlefrontal_meancurv_0+0.16 rh_temporalpole_volume_1_52 > 0.473477: 0 (10.0)
+|   |   |   |   0.775rh_parsopercularis_thickness_2-0.624lh_insula_thickness_1-0.095lh_medialorbitofrontal_thickness_0_65 > -0.040209
+|   |   |   |   |   -0.696ADI_TOTAL_BV_0+0.529lh_lingual_area_2-0.485lh_parahippocampal_meancurv_1_55 <= -1.347423: 1 (4.0/1.0)
+|   |   |   |   |   -0.696ADI_TOTAL_BV_0+0.529lh_lingual_area_2-0.485lh_parahippocampal_meancurv_1_55 > -1.347423: 0 (67.0)
+|   |   |   -0.968ADOS_TOTAL_B_0-0.18rh_middletemporal_area_1-0.177lh_precentral_area_2_56 > 0.237476
+|   |   |   |   -0.731rh_temporalpole_area_0-0.614rh_lateraloccipital_area_1-0.3rh_inferiorparietal_thickness_2_21 <= -0.598386
+|   |   |   |   |   0.997rh_lingual_meancurv_0+0.079lh_parsorbitalis_area_2+0.025rh_transversetemporal_area_1_51 <= -1.245225: 0 (2.0)
+|   |   |   |   |   0.997rh_lingual_meancurv_0+0.079lh_parsorbitalis_area_2+0.025rh_transversetemporal_area_1_51 > -1.245225: 1 (25.0/1.0)
+|   |   |   |   -0.731rh_temporalpole_area_0-0.614rh_lateraloccipital_area_1-0.3rh_inferiorparietal_thickness_2_21 > -0.598386
+|   |   |   |   |   0.581lh_pericalcarine_volume_1+0.577lh_transversetemporal_area_2+0.574rh_inferiortemporal_area_0_33 <= -2.129925: 1 (9.0)
+|   |   |   |   |   0.581lh_pericalcarine_volume_1+0.577lh_transversetemporal_area_2+0.574rh_inferiortemporal_area_0_33 > -2.129925
+|   |   |   |   |   |   0.648rh_precuneus_volume_1+0.629lh_superiorfrontal_thickness_2+0.431lh_entorhinal_thickness_0_4 <= 1.470053
+|   |   |   |   |   |   |   -0.984rh_WhiteSurfArea_area_1-0.179rh_bankssts_thickness_2-0.014lh_lateraloccipital_thickness_0_30 <= -0.257243: 0 (17.0)
+|   |   |   |   |   |   |   -0.984rh_WhiteSurfArea_area_1-0.179rh_bankssts_thickness_2-0.014lh_lateraloccipital_thickness_0_30 > -0.257243
+|   |   |   |   |   |   |   |   -0.898lh_entorhinal_thickness_0+0.367lh_superiorfrontal_thickness_2+0.241rh_precuneus_volume_1_4 <= -0.488784
+|   |   |   |   |   |   |   |   |   0.712lh_parstriangularis_area_2+0.644rh_rostralmiddlefrontal_meancurv_1-0.278lh_bankssts_thickness_0_20 <= 1.034633
+|   |   |   |   |   |   |   |   |   |   -0.816lh_bankssts_volume_2+0.408rh_fusiform_area_1-0.408rh_medialorbitofrontal_volume_0_76 <= -0.911073: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   -0.816lh_bankssts_volume_2+0.408rh_fusiform_area_1-0.408rh_medialorbitofrontal_volume_0_76 > -0.911073
+|   |   |   |   |   |   |   |   |   |   |   -0.898lh_entorhinal_thickness_0+0.367lh_superiorfrontal_thickness_2+0.241rh_precuneus_volume_1_4 <= -1.652709: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   -0.898lh_entorhinal_thickness_0+0.367lh_superiorfrontal_thickness_2+0.241rh_precuneus_volume_1_4 > -1.652709: 1 (29.0/1.0)
+|   |   |   |   |   |   |   |   |   0.712lh_parstriangularis_area_2+0.644rh_rostralmiddlefrontal_meancurv_1-0.278lh_bankssts_thickness_0_20 > 1.034633: 0 (4.0)
+|   |   |   |   |   |   |   |   -0.898lh_entorhinal_thickness_0+0.367lh_superiorfrontal_thickness_2+0.241rh_precuneus_volume_1_4 > -0.488784
+|   |   |   |   |   |   |   |   |   -0.707rh_superiorfrontal_meancurv_1-0.684rh_lateralorbitofrontal_meancurv_0+0.179Vineland_TOTAL_2_0 <= 1.474585
+|   |   |   |   |   |   |   |   |   |   -0.696ADI_TOTAL_BV_0+0.529lh_lingual_area_2-0.485lh_parahippocampal_meancurv_1_55 <= -0.913099
+|   |   |   |   |   |   |   |   |   |   |   0.652lh_parahippocampal_thickness_2+0.619rh_parahippocampal_volume_0-0.438lh_paracentral_meancurv_1_7 <= -3.518896: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   0.652lh_parahippocampal_thickness_2+0.619rh_parahippocampal_volume_0-0.438lh_paracentral_meancurv_1_7 > -3.518896: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   -0.696ADI_TOTAL_BV_0+0.529lh_lingual_area_2-0.485lh_parahippocampal_meancurv_1_55 > -0.913099
+|   |   |   |   |   |   |   |   |   |   |   0.771lh_insula_meancurv_1+0.636rh_supramarginal_volume_2-0.027lh_temporalpole_area_0_28 <= -0.346887: 0 (26.0)
+|   |   |   |   |   |   |   |   |   |   |   0.771lh_insula_meancurv_1+0.636rh_supramarginal_volume_2-0.027lh_temporalpole_area_0_28 > -0.346887
+|   |   |   |   |   |   |   |   |   |   |   |   0.886lh_paracentral_meancurv_1+0.419rh_parahippocampal_volume_0+0.198lh_parahippocampal_thickness_2_7 <= -0.409519: 1 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   0.886lh_paracentral_meancurv_1+0.419rh_parahippocampal_volume_0+0.198lh_parahippocampal_thickness_2_7 > -0.409519
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.678rh_temporalpole_area_0-0.6rh_lateraloccipital_area_1-0.424rh_inferiorparietal_thickness_2_21 <= 0.145208: 0 (19.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.678rh_temporalpole_area_0-0.6rh_lateraloccipital_area_1-0.424rh_inferiorparietal_thickness_2_21 > 0.145208: 1 (4.0/1.0)
+|   |   |   |   |   |   |   |   |   -0.707rh_superiorfrontal_meancurv_1-0.684rh_lateralorbitofrontal_meancurv_0+0.179Vineland_TOTAL_2_0 > 1.474585: 1 (5.0)
+|   |   |   |   |   |   0.648rh_precuneus_volume_1+0.629lh_superiorfrontal_thickness_2+0.431lh_entorhinal_thickness_0_4 > 1.470053: 1 (7.0)
+0.791ADOS_TOTAL_A_1+0.612rh_insula_meancurv_2-0.011rh_bankssts_meancurv_0_66 > 1.203956
+|   -0.577rh_superiortemporal_meancurv_2+0.577lh_pericalcarine_meancurv_0+0.577rh_posteriorcingulate_volume_1_39 <= -13.699646
+|   |   -0.727rh_postcentral_thickness_0+0.686rh_cuneus_thickness_2+0.035rh_superiorparietal_thickness_1_24 <= 0.090048: 0 (7.0/1.0)
+|   |   -0.727rh_postcentral_thickness_0+0.686rh_cuneus_thickness_2+0.035rh_superiorparietal_thickness_1_24 > 0.090048: 1 (7.0)
+|   -0.577rh_superiortemporal_meancurv_2+0.577lh_pericalcarine_meancurv_0+0.577rh_posteriorcingulate_volume_1_39 > -13.699646: 1 (77.0/1.0)
+
+Number of Leaves  : 	27
+
+Size of the tree : 	53
+
+
+J48 pruned tree
+------------------
+
+0.7  ADOS_Total_1+0.651ADI_TOTAL_C_2+0.294rh_medialorbitofrontal_area_0_8 <= 0.510478
+|   -0.916ADOS_TOTAL_A_1-0.291lh_caudalanteriorcingulate_thickness_0+0.275rh_posteriorcingulate_area_2_13 <= -0.334355
+|   |   0.788rh_parahippocampal_area_2-0.612lh_inferiortemporal_thickness_0-0.069rh_parsorbitalis_volume_1_38 <= -1.574637: 0 (4.0)
+|   |   0.788rh_parahippocampal_area_2-0.612lh_inferiortemporal_thickness_0-0.069rh_parsorbitalis_volume_1_38 > -1.574637
+|   |   |   -0.758lh_lingual_volume_1+0.621lh_lateralorbitofrontal_volume_2+0.198rh_caudalanteriorcingulate_area_0_52 <= 0.541039: 1 (56.0/1.0)
+|   |   |   -0.758lh_lingual_volume_1+0.621lh_lateralorbitofrontal_volume_2+0.198rh_caudalanteriorcingulate_area_0_52 > 0.541039
+|   |   |   |   0.709rh_posteriorcingulate_area_2+0.705lh_caudalanteriorcingulate_thickness_0-0.011ADOS_TOTAL_A_1_13 <= 0.072838: 0 (6.0)
+|   |   |   |   0.709rh_posteriorcingulate_area_2+0.705lh_caudalanteriorcingulate_thickness_0-0.011ADOS_TOTAL_A_1_13 > 0.072838: 1 (4.0)
+|   -0.916ADOS_TOTAL_A_1-0.291lh_caudalanteriorcingulate_thickness_0+0.275rh_posteriorcingulate_area_2_13 > -0.334355
+|   |   -0.713ADOS_Total_1+0.659ADI_TOTAL_C_2+0.241rh_medialorbitofrontal_area_0_8 <= -0.340434
+|   |   |   0.763lh_postcentral_volume_1-0.633rh_supramarginal_volume_0-0.131rh_middletemporal_volume_2_1 <= 1.009058: 1 (15.0)
+|   |   |   0.763lh_postcentral_volume_1-0.633rh_supramarginal_volume_0-0.131rh_middletemporal_volume_2_1 > 1.009058: 0 (4.0/1.0)
+|   |   -0.713ADOS_Total_1+0.659ADI_TOTAL_C_2+0.241rh_medialorbitofrontal_area_0_8 > -0.340434
+|   |   |   0.7  ADOS_Total_1+0.651ADI_TOTAL_C_2+0.294rh_medialorbitofrontal_area_0_8 <= -0.378519
+|   |   |   |   -0.707rh_postcentral_meancurv_0+0.707lh_temporalpole_volume_2-0.015lh_parahippocampal_area_1_14 <= -0.862777
+|   |   |   |   |   -0.659lh_parsorbitalis_thickness_0+0.551rh_parstriangularis_meancurv_2-0.513lh_superiorparietal_volume_1_11 <= 1.792798
+|   |   |   |   |   |   -0.701rh_superiorparietal_meancurv_0-0.698rh_cuneus_meancurv_1+0.147lh_superiortemporal_area_2_89 <= -1.090512
+|   |   |   |   |   |   |   -0.889lh_precuneus_area_0-0.407rh_pericalcarine_meancurv_2-0.21lh_paracentral_meancurv_1_5 <= -0.5615: 0 (5.0)
+|   |   |   |   |   |   |   -0.889lh_precuneus_area_0-0.407rh_pericalcarine_meancurv_2-0.21lh_paracentral_meancurv_1_5 > -0.5615: 1 (6.0/1.0)
+|   |   |   |   |   |   -0.701rh_superiorparietal_meancurv_0-0.698rh_cuneus_meancurv_1+0.147lh_superiortemporal_area_2_89 > -1.090512: 0 (36.0/1.0)
+|   |   |   |   |   -0.659lh_parsorbitalis_thickness_0+0.551rh_parstriangularis_meancurv_2-0.513lh_superiorparietal_volume_1_11 > 1.792798: 1 (4.0)
+|   |   |   |   -0.707rh_postcentral_meancurv_0+0.707lh_temporalpole_volume_2-0.015lh_parahippocampal_area_1_14 > -0.862777
+|   |   |   |   |   0.771rh_entorhinal_thickness_1-0.452lh_cuneus_volume_0+0.449rh_bankssts_meancurv_2_59 <= 0.969566
+|   |   |   |   |   |   -0.691rh_lateralorbitofrontal_thickness_0-0.535lh_superiorparietal_meancurv_2+0.486rh_precuneus_volume_1_61 <= 1.116296
+|   |   |   |   |   |   |   -0.955rh_parsopercularis_thickness_0+0.257rh_superiorfrontal_area_2-0.147lh_cuneus_meancurv_1_87 <= -0.785767: 1 (8.0)
+|   |   |   |   |   |   |   -0.955rh_parsopercularis_thickness_0+0.257rh_superiorfrontal_area_2-0.147lh_cuneus_meancurv_1_87 > -0.785767
+|   |   |   |   |   |   |   |   -0.721rh_fusiform_area_2+0.667lh_superiorparietal_area_0+0.189rh_inferiortemporal_thickness_1_82 <= 0.626937
+|   |   |   |   |   |   |   |   |   -0.65lh_paracentral_meancurv_1-0.621rh_pericalcarine_meancurv_2+0.438lh_precuneus_area_0_5 <= -0.465141: 1 (8.0)
+|   |   |   |   |   |   |   |   |   -0.65lh_paracentral_meancurv_1-0.621rh_pericalcarine_meancurv_2+0.438lh_precuneus_area_0_5 > -0.465141
+|   |   |   |   |   |   |   |   |   |   -0.714rh_superiorfrontal_meancurv_0+0.669rh_medialorbitofrontal_meancurv_1+0.207rh_caudalanteriorcingulate_volume_2_0 <= 0.406729
+|   |   |   |   |   |   |   |   |   |   |   -0.707rh_rostralmiddlefrontal_area_0-0.706lh_bankssts_area_2-0.045lh_frontalpole_thickness_1_65 <= 1.47979
+|   |   |   |   |   |   |   |   |   |   |   |   -0.708rh_paracentral_thickness_0+0.706rh_caudalmiddlefrontal_thickness_1-0.013lh_medialorbitofrontal_area_2_86 <= 0.45595
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.918lh_isthmuscingulate_thickness_1-0.352rh_bankssts_volume_0-0.183lh_caudalanteriorcingulate_volume_2_53 <= -0.99236: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.918lh_isthmuscingulate_thickness_1-0.352rh_bankssts_volume_0-0.183lh_caudalanteriorcingulate_volume_2_53 > -0.99236
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.761lh_insula_volume_1-0.573lh_parsopercularis_volume_0-0.303lh_bankssts_volume_2_4 <= -0.644105: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.761lh_insula_volume_1-0.573lh_parsopercularis_volume_0-0.303lh_bankssts_volume_2_4 > -0.644105
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.786rh_paracentral_meancurv_0-0.592lh_medialorbitofrontal_meancurv_2+0.176lh_temporalpole_area_1_23 <= 0.627503: 1 (21.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.786rh_paracentral_meancurv_0-0.592lh_medialorbitofrontal_meancurv_2+0.176lh_temporalpole_area_1_23 > 0.627503
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.763lh_postcentral_volume_1-0.633rh_supramarginal_volume_0-0.131rh_middletemporal_volume_2_1 <= 0.220679: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.763lh_postcentral_volume_1-0.633rh_supramarginal_volume_0-0.131rh_middletemporal_volume_2_1 > 0.220679: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   -0.708rh_paracentral_thickness_0+0.706rh_caudalmiddlefrontal_thickness_1-0.013lh_medialorbitofrontal_area_2_86 > 0.45595: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   -0.707rh_rostralmiddlefrontal_area_0-0.706lh_bankssts_area_2-0.045lh_frontalpole_thickness_1_65 > 1.47979: 0 (5.0)
+|   |   |   |   |   |   |   |   |   |   -0.714rh_superiorfrontal_meancurv_0+0.669rh_medialorbitofrontal_meancurv_1+0.207rh_caudalanteriorcingulate_volume_2_0 > 0.406729: 0 (16.0)
+|   |   |   |   |   |   |   |   -0.721rh_fusiform_area_2+0.667lh_superiorparietal_area_0+0.189rh_inferiortemporal_thickness_1_82 > 0.626937: 0 (11.0)
+|   |   |   |   |   |   -0.691rh_lateralorbitofrontal_thickness_0-0.535lh_superiorparietal_meancurv_2+0.486rh_precuneus_volume_1_61 > 1.116296: 1 (9.0)
+|   |   |   |   |   0.771rh_entorhinal_thickness_1-0.452lh_cuneus_volume_0+0.449rh_bankssts_meancurv_2_59 > 0.969566: 1 (14.0)
+|   |   |   0.7  ADOS_Total_1+0.651ADI_TOTAL_C_2+0.294rh_medialorbitofrontal_area_0_8 > -0.378519
+|   |   |   |   0.803ADOS_TOTAL_B_2-0.595lh_superiorfrontal_meancurv_0+0.034rh_isthmuscingulate_area_1_46 <= -0.03756
+|   |   |   |   |   0.88 lh_posteriorcingulate_volume_1-0.397lh_lingual_thickness_2-0.261rh_fusiform_thickness_0_17 <= 0.258676: 1 (7.0)
+|   |   |   |   |   0.88 lh_posteriorcingulate_volume_1-0.397lh_lingual_thickness_2-0.261rh_fusiform_thickness_0_17 > 0.258676: 0 (6.0)
+|   |   |   |   0.803ADOS_TOTAL_B_2-0.595lh_superiorfrontal_meancurv_0+0.034rh_isthmuscingulate_area_1_46 > -0.03756: 0 (63.0)
+0.7  ADOS_Total_1+0.651ADI_TOTAL_C_2+0.294rh_medialorbitofrontal_area_0_8 > 0.510478
+|   -0.836lh_transversetemporal_meancurv_1-0.547rh_paracentral_volume_2+0.041rh_pericalcarine_thickness_0_45 <= 0.976781: 1 (73.0)
+|   -0.836lh_transversetemporal_meancurv_1-0.547rh_paracentral_volume_2+0.041rh_pericalcarine_thickness_0_45 > 0.976781
+|   |   0.698rh_superiorfrontal_meancurv_0+0.658rh_medialorbitofrontal_meancurv_1+0.283rh_caudalanteriorcingulate_volume_2_0 <= -0.483402: 1 (2.0)
+|   |   0.698rh_superiorfrontal_meancurv_0+0.658rh_medialorbitofrontal_meancurv_1+0.283rh_caudalanteriorcingulate_volume_2_0 > -0.483402: 0 (2.0)
+
+Number of Leaves  : 	29
+
+Size of the tree : 	57
+
+
+J48 pruned tree
+------------------
+
+-0.945ADI_TOTAL_A_1+0.325rh_inferiortemporal_thickness_2-0.043lh_MeanThickness_thickness_0_48 <= -0.445976
+|   -0.754lh_lateraloccipital_meancurv_1-0.656lh_caudalanteriorcingulate_area_2-0.031lh_superiortemporal_volume_0_56 <= 1.230165: 1 (77.0)
+|   -0.754lh_lateraloccipital_meancurv_1-0.656lh_caudalanteriorcingulate_area_2-0.031lh_superiortemporal_volume_0_56 > 1.230165
+|   |   0.577rh_superiorparietal_area_0+0.577rh_caudalmiddlefrontal_thickness_1+0.577rh_parstriangularis_volume_2_1 <= -1.188947: 1 (3.0)
+|   |   0.577rh_superiorparietal_area_0+0.577rh_caudalmiddlefrontal_thickness_1+0.577rh_parstriangularis_volume_2_1 > -1.188947: 0 (2.0)
+-0.945ADI_TOTAL_A_1+0.325rh_inferiortemporal_thickness_2-0.043lh_MeanThickness_thickness_0_48 > -0.445976
+|   0.662rh_rostralanteriorcingulate_volume_2-0.596ADOS_TOTAL_A_1-0.454rh_isthmuscingulate_meancurv_0_85 <= -1.882391
+|   |   -0.763rh_bankssts_thickness_1-0.633lh_postcentral_meancurv_0-0.131lh_medialorbitofrontal_area_2_67 <= 2.099352: 1 (46.0/1.0)
+|   |   -0.763rh_bankssts_thickness_1-0.633lh_postcentral_meancurv_0-0.131lh_medialorbitofrontal_area_2_67 > 2.099352: 0 (4.0/1.0)
+|   0.662rh_rostralanteriorcingulate_volume_2-0.596ADOS_TOTAL_A_1-0.454rh_isthmuscingulate_meancurv_0_85 > -1.882391
+|   |   0.754lh_rostralmiddlefrontal_thickness_2-0.648rh_supramarginal_volume_1-0.107rh_superiorparietal_volume_0_41 <= -1.033607: 1 (18.0/1.0)
+|   |   0.754lh_rostralmiddlefrontal_thickness_2-0.648rh_supramarginal_volume_1-0.107rh_superiorparietal_volume_0_41 > -1.033607
+|   |   |   0.708lh_parsorbitalis_thickness_0+0.706Age_2+0.003lh_parsorbitalis_area_1_77 <= 0.752948
+|   |   |   |   0.797rh_posteriorcingulate_thickness_1+0.599rh_superiortemporal_meancurv_0-0.07lh_superiortemporal_thickness_2_55 <= -0.646088
+|   |   |   |   |   -0.906rh_postcentral_meancurv_2-0.419rh_precentral_area_0-0.065lh_caudalmiddlefrontal_volume_1_22 <= 1.627722
+|   |   |   |   |   |   0.701lh_rostralanteriorcingulate_area_2+0.68 lh_superiorparietal_area_1-0.217lh_cuneus_thickness_0_39 <= 2.237157: 0 (51.0)
+|   |   |   |   |   |   0.701lh_rostralanteriorcingulate_area_2+0.68 lh_superiorparietal_area_1-0.217lh_cuneus_thickness_0_39 > 2.237157: 1 (3.0/1.0)
+|   |   |   |   |   -0.906rh_postcentral_meancurv_2-0.419rh_precentral_area_0-0.065lh_caudalmiddlefrontal_volume_1_22 > 1.627722: 1 (3.0)
+|   |   |   |   0.797rh_posteriorcingulate_thickness_1+0.599rh_superiortemporal_meancurv_0-0.07lh_superiortemporal_thickness_2_55 > -0.646088
+|   |   |   |   |   0.896Vineland_TOTAL_0-0.412lh_precentral_area_1+0.168lh_parsorbitalis_meancurv_2_84 <= 1.752206
+|   |   |   |   |   |   -0.775rh_lateralorbitofrontal_volume_0+0.543lh_supramarginal_volume_1+0.324rh_caudalmiddlefrontal_area_2_31 <= 0.950383
+|   |   |   |   |   |   |   0.7  lh_MeanThickness_thickness_0-0.664rh_inferiortemporal_thickness_2-0.261ADI_TOTAL_A_1_48 <= -0.49713
+|   |   |   |   |   |   |   |   -0.857rh_inferiortemporal_volume_1-0.425lh_entorhinal_meancurv_0-0.292lh_middletemporal_meancurv_2_10 <= -1.541866: 0 (2.0)
+|   |   |   |   |   |   |   |   -0.857rh_inferiortemporal_volume_1-0.425lh_entorhinal_meancurv_0-0.292lh_middletemporal_meancurv_2_10 > -1.541866: 1 (13.0)
+|   |   |   |   |   |   |   0.7  lh_MeanThickness_thickness_0-0.664rh_inferiortemporal_thickness_2-0.261ADI_TOTAL_A_1_48 > -0.49713
+|   |   |   |   |   |   |   |   0.712lh_transversetemporal_area_2+0.702ADOS_TOTAL_B_0+0.005rh_parsorbitalis_volume_1_2 <= 0.801919
+|   |   |   |   |   |   |   |   |   0.78 rh_caudalmiddlefrontal_area_2-0.616lh_supramarginal_volume_1-0.106rh_lateralorbitofrontal_volume_0_31 <= -0.768383
+|   |   |   |   |   |   |   |   |   |   -0.774rh_superiorparietal_meancurv_0+0.466lh_frontalpole_meancurv_2-0.429rh_superiortemporal_volume_1_46 <= -0.434731: 0 (5.0/1.0)
+|   |   |   |   |   |   |   |   |   |   -0.774rh_superiorparietal_meancurv_0+0.466lh_frontalpole_meancurv_2-0.429rh_superiortemporal_volume_1_46 > -0.434731: 1 (12.0)
+|   |   |   |   |   |   |   |   |   0.78 rh_caudalmiddlefrontal_area_2-0.616lh_supramarginal_volume_1-0.106rh_lateralorbitofrontal_volume_0_31 > -0.768383
+|   |   |   |   |   |   |   |   |   |   0.708lh_parstriangularis_area_0+0.638lh_caudalmiddlefrontal_area_2-0.302lh_superiorfrontal_thickness_1_91 <= 0.991022
+|   |   |   |   |   |   |   |   |   |   |   0.71 rh_WhiteSurfArea_area_1-0.702lh_posteriorcingulate_area_0-0.062lh_bankssts_thickness_2_9 <= -1.066916: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   0.71 rh_WhiteSurfArea_area_1-0.702lh_posteriorcingulate_area_0-0.062lh_bankssts_thickness_2_9 > -1.066916
+|   |   |   |   |   |   |   |   |   |   |   |   -0.692lh_caudalmiddlefrontal_volume_1-0.635rh_precentral_area_0+0.344rh_postcentral_meancurv_2_22 <= -1.488137: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   -0.692lh_caudalmiddlefrontal_volume_1-0.635rh_precentral_area_0+0.344rh_postcentral_meancurv_2_22 > -1.488137
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.998lh_frontalpole_thickness_1+0.056rh_medialorbitofrontal_area_2+0.039rh_superiorfrontal_area_0_42 <= -1.747528: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.998lh_frontalpole_thickness_1+0.056rh_medialorbitofrontal_area_2+0.039rh_superiorfrontal_area_0_42 > -1.747528
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.754lh_lateraloccipital_meancurv_1-0.656lh_caudalanteriorcingulate_area_2-0.031lh_superiortemporal_volume_0_56 <= 1.588839
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.763rh_bankssts_thickness_1-0.633lh_postcentral_meancurv_0-0.131lh_medialorbitofrontal_area_2_67 <= -0.742228: 0 (25.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.763rh_bankssts_thickness_1-0.633lh_postcentral_meancurv_0-0.131lh_medialorbitofrontal_area_2_67 > -0.742228
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.663rh_temporalpole_volume_2+0.542rh_supramarginal_thickness_0+0.517lh_fusiform_area_1_0 <= 0.749872
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.856lh_caudalanteriorcingulate_thickness_2-0.434rh_precuneus_thickness_0-0.279rh_transversetemporal_thickness_1_78 <= 0.86863
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.722rh_superiortemporal_volume_1-0.692lh_frontalpole_meancurv_2-0.017rh_superiorparietal_meancurv_0_46 <= 1.500738: 0 (30.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.722rh_superiortemporal_volume_1-0.692lh_frontalpole_meancurv_2-0.017rh_superiorparietal_meancurv_0_46 > 1.500738: 1 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.856lh_caudalanteriorcingulate_thickness_2-0.434rh_precuneus_thickness_0-0.279rh_transversetemporal_thickness_1_78 > 0.86863
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.71 rh_WhiteSurfArea_area_1-0.702lh_posteriorcingulate_area_0-0.062lh_bankssts_thickness_2_9 <= 0.560509: 1 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.71 rh_WhiteSurfArea_area_1-0.702lh_posteriorcingulate_area_0-0.062lh_bankssts_thickness_2_9 > 0.560509: 0 (2.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.663rh_temporalpole_volume_2+0.542rh_supramarginal_thickness_0+0.517lh_fusiform_area_1_0 > 0.749872: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.754lh_lateraloccipital_meancurv_1-0.656lh_caudalanteriorcingulate_area_2-0.031lh_superiortemporal_volume_0_56 > 1.588839: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   0.708lh_parstriangularis_area_0+0.638lh_caudalmiddlefrontal_area_2-0.302lh_superiorfrontal_thickness_1_91 > 0.991022: 0 (18.0)
+|   |   |   |   |   |   |   |   0.712lh_transversetemporal_area_2+0.702ADOS_TOTAL_B_0+0.005rh_parsorbitalis_volume_1_2 > 0.801919: 1 (7.0)
+|   |   |   |   |   |   -0.775rh_lateralorbitofrontal_volume_0+0.543lh_supramarginal_volume_1+0.324rh_caudalmiddlefrontal_area_2_31 > 0.950383: 0 (11.0)
+|   |   |   |   |   0.896Vineland_TOTAL_0-0.412lh_precentral_area_1+0.168lh_parsorbitalis_meancurv_2_84 > 1.752206: 0 (15.0)
+|   |   |   0.708lh_parsorbitalis_thickness_0+0.706Age_2+0.003lh_parsorbitalis_area_1_77 > 0.752948
+|   |   |   |   -0.749rh_temporalpole_volume_2+0.498rh_supramarginal_thickness_0+0.437lh_fusiform_area_1_0 <= -1.176527: 0 (3.0)
+|   |   |   |   -0.749rh_temporalpole_volume_2+0.498rh_supramarginal_thickness_0+0.437lh_fusiform_area_1_0 > -1.176527: 1 (17.0/1.0)
+
+Number of Leaves  : 	29
+
+Size of the tree : 	57
+
+
+J48 pruned tree
+------------------
+
+-0.925ADOS_Total_1-0.306rh_isthmuscingulate_volume_0-0.228lh_entorhinal_area_2_16 <= -1.562386
+|   -0.708lh_cuneus_thickness_0-0.621rh_frontalpole_area_1+0.336Age_2_74 <= 0.483365: 1 (104.0)
+|   -0.708lh_cuneus_thickness_0-0.621rh_frontalpole_area_1+0.336Age_2_74 > 0.483365
+|   |   0.713lh_inferiorparietal_meancurv_2-0.698lh_posteriorcingulate_meancurv_0+0.073lh_transversetemporal_thickness_1_48 <= -1.133671: 0 (4.0)
+|   |   0.713lh_inferiorparietal_meancurv_2-0.698lh_posteriorcingulate_meancurv_0+0.073lh_transversetemporal_thickness_1_48 > -1.133671
+|   |   |   0.577lh_precentral_volume_2-0.577lh_parahippocampal_volume_0+0.577rh_superiorparietal_thickness_1_45 <= 24.938401
+|   |   |   |   -0.838Vineland_TOTAL_2+0.545rh_insula_meancurv_0+0.009rh_fusiform_volume_1_42 <= 1.410277: 1 (28.0)
+|   |   |   |   -0.838Vineland_TOTAL_2+0.545rh_insula_meancurv_0+0.009rh_fusiform_volume_1_42 > 1.410277: 0 (3.0/1.0)
+|   |   |   0.577lh_precentral_volume_2-0.577lh_parahippocampal_volume_0+0.577rh_superiorparietal_thickness_1_45 > 24.938401: 0 (2.0)
+-0.925ADOS_Total_1-0.306rh_isthmuscingulate_volume_0-0.228lh_entorhinal_area_2_16 > -1.562386
+|   -0.838Vineland_TOTAL_2+0.545rh_insula_meancurv_0+0.009rh_fusiform_volume_1_42 <= -0.444101: 0 (41.0)
+|   -0.838Vineland_TOTAL_2+0.545rh_insula_meancurv_0+0.009rh_fusiform_volume_1_42 > -0.444101
+|   |   -0.991lh_middletemporal_meancurv_2-0.135rh_lingual_volume_1+0.003lh_precuneus_volume_0_29 <= 1.01877
+|   |   |   0.577rh_supramarginal_meancurv_1+0.577lh_cuneus_volume_0+0.577lh_transversetemporal_area_2_93 <= -6.012563: 1 (12.0)
+|   |   |   0.577rh_supramarginal_meancurv_1+0.577lh_cuneus_volume_0+0.577lh_transversetemporal_area_2_93 > -6.012563
+|   |   |   |   -0.994ADI_TOTAL_A_2+0.108lh_entorhinal_volume_0+0.027lh_cuneus_area_1_53 <= -0.120236: 1 (13.0/1.0)
+|   |   |   |   -0.994ADI_TOTAL_A_2+0.108lh_entorhinal_volume_0+0.027lh_cuneus_area_1_53 > -0.120236
+|   |   |   |   |   -0.994ADI_TOTAL_A_2+0.108lh_entorhinal_volume_0+0.027lh_cuneus_area_1_53 <= 0.241856: 0 (28.0)
+|   |   |   |   |   -0.994ADI_TOTAL_A_2+0.108lh_entorhinal_volume_0+0.027lh_cuneus_area_1_53 > 0.241856
+|   |   |   |   |   |   -0.857rh_superiorparietal_volume_2-0.508lh_insula_meancurv_0-0.088rh_inferiortemporal_meancurv_1_10 <= -0.122517
+|   |   |   |   |   |   |   -0.705lh_fusiform_thickness_1-0.695rh_caudalanteriorcingulate_meancurv_2+0.141lh_transversetemporal_volume_0_13 <= -0.609663
+|   |   |   |   |   |   |   |   -0.693rh_parstriangularis_meancurv_1-0.547lh_lingual_area_2-0.47lh_caudalanteriorcingulate_thickness_0_6 <= -1.288576: 0 (2.0)
+|   |   |   |   |   |   |   |   -0.693rh_parstriangularis_meancurv_1-0.547lh_lingual_area_2-0.47lh_caudalanteriorcingulate_thickness_0_6 > -1.288576: 1 (7.0)
+|   |   |   |   |   |   |   -0.705lh_fusiform_thickness_1-0.695rh_caudalanteriorcingulate_meancurv_2+0.141lh_transversetemporal_volume_0_13 > -0.609663
+|   |   |   |   |   |   |   |   0.709lh_paracentral_area_1-0.704lh_precentral_thickness_0-0.026rh_rostralanteriorcingulate_meancurv_2_26 <= -1.041684: 1 (3.0)
+|   |   |   |   |   |   |   |   0.709lh_paracentral_area_1-0.704lh_precentral_thickness_0-0.026rh_rostralanteriorcingulate_meancurv_2_26 > -1.041684
+|   |   |   |   |   |   |   |   |   -0.754rh_superiorfrontal_area_2+0.577lh_pericalcarine_volume_0+0.313rh_supramarginal_thickness_1_18 <= -0.989286
+|   |   |   |   |   |   |   |   |   |   0.786lh_isthmuscingulate_thickness_1+0.599lh_parsopercularis_area_0+0.154lh_pericalcarine_meancurv_2_0 <= 0.666861: 0 (4.0)
+|   |   |   |   |   |   |   |   |   |   0.786lh_isthmuscingulate_thickness_1+0.599lh_parsopercularis_area_0+0.154lh_pericalcarine_meancurv_2_0 > 0.666861: 1 (3.0)
+|   |   |   |   |   |   |   |   |   -0.754rh_superiorfrontal_area_2+0.577lh_pericalcarine_volume_0+0.313rh_supramarginal_thickness_1_18 > -0.989286: 0 (35.0)
+|   |   |   |   |   |   -0.857rh_superiorparietal_volume_2-0.508lh_insula_meancurv_0-0.088rh_inferiortemporal_meancurv_1_10 > -0.122517
+|   |   |   |   |   |   |   0.987rh_rostralmiddlefrontal_area_1-0.153lh_insula_thickness_2-0.048rh_parahippocampal_thickness_0_12 <= 0.482949
+|   |   |   |   |   |   |   |   -0.751lh_superiortemporal_area_0-0.66rh_paracentral_thickness_1-0.006rh_isthmuscingulate_thickness_2_41 <= -0.825337: 1 (11.0)
+|   |   |   |   |   |   |   |   -0.751lh_superiortemporal_area_0-0.66rh_paracentral_thickness_1-0.006rh_isthmuscingulate_thickness_2_41 > -0.825337
+|   |   |   |   |   |   |   |   |   0.686lh_superiorparietal_volume_1-0.515lh_rostralanteriorcingulate_volume_0-0.514rh_superiorfrontal_thickness_2_5 <= -0.862764: 1 (7.0)
+|   |   |   |   |   |   |   |   |   0.686lh_superiorparietal_volume_1-0.515lh_rostralanteriorcingulate_volume_0-0.514rh_superiorfrontal_thickness_2_5 > -0.862764
+|   |   |   |   |   |   |   |   |   |   -0.715lh_entorhinal_area_2+0.697rh_isthmuscingulate_volume_0-0.054ADOS_Total_1_16 <= 0.997613
+|   |   |   |   |   |   |   |   |   |   |   0.604lh_temporalpole_thickness_2+0.591lh_supramarginal_thickness_1+0.535rh_inferiortemporal_area_0_87 <= 0.999617
+|   |   |   |   |   |   |   |   |   |   |   |   -0.94rh_superiortemporal_meancurv_0-0.338rh_pericalcarine_volume_2-0.042rh_precuneus_volume_1_22 <= -1.585564: 1 (4.0)
+|   |   |   |   |   |   |   |   |   |   |   |   -0.94rh_superiortemporal_meancurv_0-0.338rh_pericalcarine_volume_2-0.042rh_precuneus_volume_1_22 > -1.585564
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.642rh_caudalanteriorcingulate_area_0+0.633lh_frontalpole_area_2-0.432rh_parstriangularis_thickness_1_67 <= 0.571121
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.704lh_caudalmiddlefrontal_thickness_2+0.7  rh_rostralmiddlefrontal_thickness_1+0.118rh_cuneus_area_0_66 <= -0.214522
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.67lh_caudalanteriorcingulate_meancurv_0+0.667rh_superiortemporal_area_2-0.326rh_cuneus_thickness_1_35 <= -1.124799: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   -0.67lh_caudalanteriorcingulate_meancurv_0+0.667rh_superiortemporal_area_2-0.326rh_cuneus_thickness_1_35 > -1.124799
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.755lh_parsopercularis_volume_0-0.653rh_posteriorcingulate_area_1-0.054rh_lateraloccipital_volume_2_44 <= -0.838368: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   |   |   0.755lh_parsopercularis_volume_0-0.653rh_posteriorcingulate_area_1-0.054rh_lateraloccipital_volume_2_44 > -0.838368: 1 (14.0/1.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   |   0.704lh_caudalmiddlefrontal_thickness_2+0.7  rh_rostralmiddlefrontal_thickness_1+0.118rh_cuneus_area_0_66 > -0.214522: 0 (11.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.642rh_caudalanteriorcingulate_area_0+0.633lh_frontalpole_area_2-0.432rh_parstriangularis_thickness_1_67 > 0.571121: 0 (16.0)
+|   |   |   |   |   |   |   |   |   |   |   0.604lh_temporalpole_thickness_2+0.591lh_supramarginal_thickness_1+0.535rh_inferiortemporal_area_0_87 > 0.999617: 1 (5.0)
+|   |   |   |   |   |   |   |   |   |   -0.715lh_entorhinal_area_2+0.697rh_isthmuscingulate_volume_0-0.054ADOS_Total_1_16 > 0.997613: 1 (6.0)
+|   |   |   |   |   |   |   0.987rh_rostralmiddlefrontal_area_1-0.153lh_insula_thickness_2-0.048rh_parahippocampal_thickness_0_12 > 0.482949: 1 (13.0)
+|   |   -0.991lh_middletemporal_meancurv_2-0.135rh_lingual_volume_1+0.003lh_precuneus_volume_0_29 > 1.01877: 0 (13.0)
+
+Number of Leaves  : 	27
+
+Size of the tree : 	53
+
+
+J48 pruned tree
+------------------
+
+-0.897ADOS_Total_2+0.436rh_frontalpole_meancurv_0-0.073rh_fusiform_area_1_70 <= -0.772751
+|   0.958lh_superiortemporal_volume_2-0.246rh_cuneus_thickness_0-0.145rh_lateraloccipital_thickness_1_63 <= -0.962688
+|   |   -0.95Age_0-0.284lh_inferiortemporal_volume_2-0.13rh_superiortemporal_thickness_1_5 <= 0.158854: 0 (7.0/1.0)
+|   |   -0.95Age_0-0.284lh_inferiortemporal_volume_2-0.13rh_superiortemporal_thickness_1_5 > 0.158854: 1 (9.0)
+|   0.958lh_superiortemporal_volume_2-0.246rh_cuneus_thickness_0-0.145rh_lateraloccipital_thickness_1_63 > -0.962688
+|   |   0.609rh_isthmuscingulate_volume_1+0.603lh_middletemporal_volume_2+0.515lh_lingual_thickness_0_17 <= -1.302773
+|   |   |   -0.742rh_parsorbitalis_thickness_1-0.627lh_caudalanteriorcingulate_meancurv_2+0.239lh_cuneus_volume_0_91 <= 0.875437: 1 (7.0)
+|   |   |   -0.742rh_parsorbitalis_thickness_1-0.627lh_caudalanteriorcingulate_meancurv_2+0.239lh_cuneus_volume_0_91 > 0.875437: 0 (3.0)
+|   |   0.609rh_isthmuscingulate_volume_1+0.603lh_middletemporal_volume_2+0.515lh_lingual_thickness_0_17 > -1.302773: 1 (122.0)
+-0.897ADOS_Total_2+0.436rh_frontalpole_meancurv_0-0.073rh_fusiform_area_1_70 > -0.772751
+|   -0.687rh_bankssts_thickness_1-0.673rh_lateraloccipital_area_2+0.274rh_entorhinal_meancurv_0_86 <= 1.744347
+|   |   0.659rh_insula_thickness_1-0.631lh_transversetemporal_volume_0+0.41 ADI_TOTAL_C_2_28 <= 1.076637
+|   |   |   0.984lh_rostralmiddlefrontal_thickness_2+0.169rh_inferiortemporal_meancurv_0-0.063rh_superiorfrontal_meancurv_1_30 <= -1.133373
+|   |   |   |   -0.711lh_paracentral_volume_1+0.703ADI_TOTAL_BV_2+0.017rh_cuneus_area_0_74 <= 0.011828: 1 (14.0)
+|   |   |   |   -0.711lh_paracentral_volume_1+0.703ADI_TOTAL_BV_2+0.017rh_cuneus_area_0_74 > 0.011828
+|   |   |   |   |   -0.744rh_parsorbitalis_meancurv_1+0.51 lh_supramarginal_meancurv_2-0.433rh_lateralorbitofrontal_area_0_64 <= 0.411042: 0 (8.0)
+|   |   |   |   |   -0.744rh_parsorbitalis_meancurv_1+0.51 lh_supramarginal_meancurv_2-0.433rh_lateralorbitofrontal_area_0_64 > 0.411042: 1 (3.0)
+|   |   |   0.984lh_rostralmiddlefrontal_thickness_2+0.169rh_inferiortemporal_meancurv_0-0.063rh_superiorfrontal_meancurv_1_30 > -1.133373
+|   |   |   |   0.984rh_lingual_meancurv_2-0.165lh_superiorfrontal_volume_1+0.063rh_rostralmiddlefrontal_thickness_0_14 <= -0.148742
+|   |   |   |   |   0.928rh_parahippocampal_volume_0-0.34rh_paracentral_thickness_1-0.151rh_parsopercularis_thickness_2_35 <= -1.014182: 1 (6.0)
+|   |   |   |   |   0.928rh_parahippocampal_volume_0-0.34rh_paracentral_thickness_1-0.151rh_parsopercularis_thickness_2_35 > -1.014182
+|   |   |   |   |   |   0.626lh_precuneus_meancurv_1-0.617lh_temporalpole_volume_0+0.477rh_transversetemporal_meancurv_2_61 <= 0.818336
+|   |   |   |   |   |   |   0.903ADI_TOTAL_C_2+0.38 lh_transversetemporal_volume_0-0.199rh_insula_thickness_1_28 <= -0.06616
+|   |   |   |   |   |   |   |   -0.769rh_WhiteSurfArea_area_2+0.575rh_superiorparietal_area_1+0.278rh_parsorbitalis_area_0_58 <= -0.380603: 1 (11.0)
+|   |   |   |   |   |   |   |   -0.769rh_WhiteSurfArea_area_2+0.575rh_superiorparietal_area_1+0.278rh_parsorbitalis_area_0_58 > -0.380603
+|   |   |   |   |   |   |   |   |   0.676lh_insula_volume_1+0.606rh_caudalanteriorcingulate_volume_0+0.42 rh_middletemporal_thickness_2_53 <= 0.324618
+|   |   |   |   |   |   |   |   |   |   0.607rh_superiortemporal_volume_1+0.596lh_precentral_thickness_2-0.525lh_parsorbitalis_meancurv_0_26 <= -1.114738: 0 (8.0)
+|   |   |   |   |   |   |   |   |   |   0.607rh_superiortemporal_volume_1+0.596lh_precentral_thickness_2-0.525lh_parsorbitalis_meancurv_0_26 > -1.114738
+|   |   |   |   |   |   |   |   |   |   |   0.77 rh_middletemporal_meancurv_0+0.635lh_lateraloccipital_area_2+0.064rh_entorhinal_volume_1_21 <= -0.192306
+|   |   |   |   |   |   |   |   |   |   |   |   0.963lh_cuneus_meancurv_1+0.264lh_cuneus_area_0-0.059lh_caudalmiddlefrontal_area_2_59 <= -0.078813
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.726lh_precentral_volume_1-0.594lh_posteriorcingulate_area_2+0.345rh_superiorparietal_meancurv_0_32 <= -0.748907: 0 (3.0)
+|   |   |   |   |   |   |   |   |   |   |   |   |   0.726lh_precentral_volume_1-0.594lh_posteriorcingulate_area_2+0.345rh_superiorparietal_meancurv_0_32 > -0.748907: 1 (7.0)
+|   |   |   |   |   |   |   |   |   |   |   |   0.963lh_cuneus_meancurv_1+0.264lh_cuneus_area_0-0.059lh_caudalmiddlefrontal_area_2_59 > -0.078813: 0 (6.0)
+|   |   |   |   |   |   |   |   |   |   |   0.77 rh_middletemporal_meancurv_0+0.635lh_lateraloccipital_area_2+0.064rh_entorhinal_volume_1_21 > -0.192306: 1 (10.0)
+|   |   |   |   |   |   |   |   |   0.676lh_insula_volume_1+0.606rh_caudalanteriorcingulate_volume_0+0.42 rh_middletemporal_thickness_2_53 > 0.324618: 0 (14.0)
+|   |   |   |   |   |   |   0.903ADI_TOTAL_C_2+0.38 lh_transversetemporal_volume_0-0.199rh_insula_thickness_1_28 > -0.06616: 0 (21.0/1.0)
+|   |   |   |   |   |   0.626lh_precuneus_meancurv_1-0.617lh_temporalpole_volume_0+0.477rh_transversetemporal_meancurv_2_61 > 0.818336: 0 (16.0)
+|   |   |   |   0.984rh_lingual_meancurv_2-0.165lh_superiorfrontal_volume_1+0.063rh_rostralmiddlefrontal_thickness_0_14 > -0.148742
+|   |   |   |   |   -0.717lh_temporalpole_area_2+0.66 rh_precuneus_volume_1-0.225lh_parahippocampal_meancurv_0_19 <= 1.055035: 0 (76.0/1.0)
+|   |   |   |   |   -0.717lh_temporalpole_area_2+0.66 rh_precuneus_volume_1-0.225lh_parahippocampal_meancurv_0_19 > 1.055035
+|   |   |   |   |   |   -0.707rh_lingual_thickness_2+0.698lh_inferiorparietal_thickness_1+0.112rh_inferiortemporal_area_0_3 <= -0.067209: 0 (3.0)
+|   |   |   |   |   |   -0.707rh_lingual_thickness_2+0.698lh_inferiorparietal_thickness_1+0.112rh_inferiortemporal_area_0_3 > -0.067209: 1 (3.0)
+|   |   0.659rh_insula_thickness_1-0.631lh_transversetemporal_volume_0+0.41 ADI_TOTAL_C_2_28 > 1.076637
+|   |   |   -0.726rh_superiorfrontal_area_1-0.514rh_rostralanteriorcingulate_thickness_2-0.458rh_rostralmiddlefrontal_meancurv_0_12 <= 0.146821: 1 (13.0)
+|   |   |   -0.726rh_superiorfrontal_area_1-0.514rh_rostralanteriorcingulate_thickness_2-0.458rh_rostralmiddlefrontal_meancurv_0_12 > 0.146821
+|   |   |   |   -0.946lh_precuneus_thickness_1+0.296lh_parsorbitalis_area_0-0.132lh_parsorbitalis_volume_2_4 <= -0.702605: 0 (4.0)
+|   |   |   |   -0.946lh_precuneus_thickness_1+0.296lh_parsorbitalis_area_0-0.132lh_parsorbitalis_volume_2_4 > -0.702605: 1 (6.0/1.0)
+|   -0.687rh_bankssts_thickness_1-0.673rh_lateraloccipital_area_2+0.274rh_entorhinal_meancurv_0_86 > 1.744347
+|   |   -0.731rh_superiortemporal_volume_1+0.678lh_precentral_thickness_2-0.076lh_parsorbitalis_meancurv_0_26 <= -0.786946: 0 (2.0)
+|   |   -0.731rh_superiortemporal_volume_1+0.678lh_precentral_thickness_2-0.076lh_parsorbitalis_meancurv_0_26 > -0.786946: 1 (16.0)
+
+Number of Leaves  : 	26
+
+Size of the tree : 	51
+
+
+
+
+Time taken to build model: 3.51 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         319               80.1508 %
+Incorrectly Classified Instances        79               19.8492 %
+Kappa statistic                          0.5928
+Mean absolute error                      0.2791
+Root mean squared error                  0.3686
+Relative absolute error                 57.1127 %
+Root relative squared error             74.5701 %
+Total Number of Instances              398     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.757     0.166      0.771     0.757     0.764      0.886    0
+                 0.834     0.243      0.823     0.834     0.829      0.89     1
+Weighted Avg.    0.802     0.21       0.801     0.802     0.801      0.888
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 128  41 |   a = 0
+  38 191 |   b = 1
+

@@ -1,0 +1,86 @@
+=== Run information ===
+
+Scheme:weka.classifiers.functions.Logistic -R 1.0E-8 -M -1
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R286-287-weka.filters.unsupervised.attribute.Remove-V-R26,45,148,150,185,250,273,280,282,284-286-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    400
+Attributes:   12
+              lh_rostralmiddlefrontal_area
+              rh_lateraloccipital_area
+              rh_lateraloccipital_thickness
+              rh_lingual_thickness
+              lh_lingual_thickness
+              lh_inferiortemporal_meancurv
+              lh_frontalpole_meancurv
+              Vineland_TOTAL
+              ADI_TOTAL_BV
+              ADOS_TOTAL_A
+              ADOS_TOTAL_B
+              RXStr
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                   Class
+Variable                               0
+========================================
+lh_rostralmiddlefrontal_area      0.3683
+rh_lateraloccipital_area          1.6001
+rh_lateraloccipital_thickness    -1.8315
+rh_lingual_thickness             -0.2392
+lh_lingual_thickness             -1.2518
+lh_inferiortemporal_meancurv     -3.5377
+lh_frontalpole_meancurv          -1.6915
+Vineland_TOTAL                    3.6605
+ADI_TOTAL_BV                      -6.897
+ADOS_TOTAL_A                     -1.9746
+ADOS_TOTAL_B                     -0.5987
+Intercept                         1.6262
+
+
+Odds Ratios...
+                                   Class
+Variable                               0
+========================================
+lh_rostralmiddlefrontal_area      1.4453
+rh_lateraloccipital_area          4.9535
+rh_lateraloccipital_thickness     0.1602
+rh_lingual_thickness              0.7873
+lh_lingual_thickness               0.286
+lh_inferiortemporal_meancurv      0.0291
+lh_frontalpole_meancurv           0.1842
+Vineland_TOTAL                   38.8804
+ADI_TOTAL_BV                       0.001
+ADOS_TOTAL_A                      0.1388
+ADOS_TOTAL_B                      0.5495
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         287               72.1106 %
+Incorrectly Classified Instances       111               27.8894 %
+Kappa statistic                          0.4323
+Mean absolute error                      0.3487
+Root mean squared error                  0.4226
+Relative absolute error                 71.3614 %
+Root relative squared error             85.4959 %
+Total Number of Instances              398     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.692     0.258      0.665     0.692     0.678      0.8      0
+                 0.742     0.308      0.766     0.742     0.754      0.795    1
+Weighted Avg.    0.721     0.286      0.723     0.721     0.722      0.797
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 117  52 |   a = 0
+  59 170 |   b = 1
+

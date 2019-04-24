@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.ADTree -B 10 -E -3
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R1-277-weka.filters.unsupervised.attribute.Remove-R10-11
+Instances:    400
+Attributes:   10
+              Gender
+              Age
+              ADOS_Total
+              Vineland_TOTAL
+              ADI_TOTAL_A
+              ADI_TOTAL_BV
+              ADI_TOTAL_C
+              ADOS_TOTAL_A
+              ADOS_TOTAL_B
+              RXStr
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Alternating decision tree:
+
+: 0.151
+|  (1)ADOS_TOTAL_A < 3.5: -0.123
+|  |  (10)Age < 176.5: 0.248
+|  |  (10)Age >= 176.5: -0.21
+|  (1)ADOS_TOTAL_A >= 3.5: 1.508
+|  |  (3)Age < 241.5: 1.823
+|  |  (3)Age >= 241.5: -0.78
+|  |  |  (7)Age < 362.5: -0.839
+|  |  |  (7)Age >= 362.5: 0.864
+|  (2)Age < 33.89: -0.679
+|  |  (4)Vineland_TOTAL < 260.5: 1.162
+|  |  (4)Vineland_TOTAL >= 260.5: -0.8
+|  |  (5)Age < 7.825: 0.805
+|  |  (5)Age >= 7.825: -0.778
+|  |  |  (9)Age < 10.72: -0.261
+|  |  |  (9)Age >= 10.72: -0.977
+|  (2)Age >= 33.89: -0.078
+|  (6)ADI_TOTAL_BV < 2.5: -0.023
+|  (6)ADI_TOTAL_BV >= 2.5: 1.008
+|  |  (8)ADI_TOTAL_C < 16.5: 1.133
+|  |  (8)ADI_TOTAL_C >= 16.5: -0.307
+Legend: -ve = 0, +ve = 1
+Tree size (total number of nodes): 31
+Leaves (number of predictor nodes): 21
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         319               80.1508 %
+Incorrectly Classified Instances        79               19.8492 %
+Kappa statistic                          0.5928
+Mean absolute error                      0.2751
+Root mean squared error                  0.3563
+Relative absolute error                 56.2898 %
+Root relative squared error             72.0829 %
+Total Number of Instances              398     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.757     0.166      0.771     0.757     0.764      0.893    0
+                 0.834     0.243      0.823     0.834     0.829      0.891    1
+Weighted Avg.    0.802     0.21       0.801     0.802     0.801      0.892
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 128  41 |   a = 0
+  38 191 |   b = 1
+

@@ -1,0 +1,73 @@
+=== Run information ===
+
+Scheme:weka.classifiers.bayes.BayesNet -D -Q weka.classifiers.bayes.net.search.local.K2 -- -P 1 -S BAYES -E weka.classifiers.bayes.net.estimate.SimpleEstimator -- -A 0.5
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R286-287-weka.filters.unsupervised.attribute.Remove-V-R26,45,148,150,185,250,273,280,282,284-286-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    400
+Attributes:   12
+              lh_rostralmiddlefrontal_area
+              rh_lateraloccipital_area
+              rh_lateraloccipital_thickness
+              rh_lingual_thickness
+              lh_lingual_thickness
+              lh_inferiortemporal_meancurv
+              lh_frontalpole_meancurv
+              Vineland_TOTAL
+              ADI_TOTAL_BV
+              ADOS_TOTAL_A
+              ADOS_TOTAL_B
+              RXStr
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Bayes Network Classifier
+not using ADTree
+#attributes=12 #classindex=11
+Network structure (nodes followed by parents)
+lh_rostralmiddlefrontal_area(1): RXStr 
+rh_lateraloccipital_area(2): RXStr 
+rh_lateraloccipital_thickness(2): RXStr 
+rh_lingual_thickness(2): RXStr 
+lh_lingual_thickness(2): RXStr 
+lh_inferiortemporal_meancurv(2): RXStr 
+lh_frontalpole_meancurv(1): RXStr 
+Vineland_TOTAL(2): RXStr 
+ADI_TOTAL_BV(2): RXStr 
+ADOS_TOTAL_A(2): RXStr 
+ADOS_TOTAL_B(2): RXStr 
+RXStr(2): 
+LogScore Bayes: -1885.3906710381716
+LogScore BDeu: -1900.8517750093688
+LogScore MDL: -1911.0406474401846
+LogScore ENTROPY: -1854.169353389982
+LogScore AIC: -1873.169353389982
+
+
+Time taken to build model: 0.01 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         310               77.8894 %
+Incorrectly Classified Instances        88               22.1106 %
+Kappa statistic                          0.567 
+Mean absolute error                      0.2316
+Root mean squared error                  0.4   
+Relative absolute error                 47.3929 %
+Root relative squared error             80.9164 %
+Total Number of Instances              398     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.911     0.319      0.678     0.911     0.778      0.876    0
+                 0.681     0.089      0.912     0.681     0.78       0.875    1
+Weighted Avg.    0.779     0.186      0.813     0.779     0.779      0.875
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 154  15 |   a = 0
+  73 156 |   b = 1
+

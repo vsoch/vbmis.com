@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.ADTree -B 10 -E -3
+Relation:     brain_ndar_eyegaze_group5-weka.filters.unsupervised.attribute.Remove-R1,278-279,283-284
+Instances:    71
+Attributes:   279
+[list of attributes omitted]
+Test mode:evaluate on training data
+
+=== Classifier model (full training set) ===
+
+Alternating decision tree:
+
+: 0.368
+|  (1)rh_lingual_thickness < 0.219: -0.538
+|  |  (4)lh_paracentral_area < 0.569: -0.813
+|  |  (4)lh_paracentral_area >= 0.569: 0.681
+|  (1)rh_lingual_thickness >= 0.219: 0.388
+|  |  (2)lh_parahippocampal_volume < 0.547: 0.599
+|  |  |  (3)lh_temporalpole_thickness < 0.092: -1.359
+|  |  |  (3)lh_temporalpole_thickness >= 0.092: 1.939
+|  |  (2)lh_parahippocampal_volume >= 0.547: -0.872
+|  (5)rh_posteriorcingulate_volume < 0.52: 0.414
+|  |  (6)rh_transversetemporal_area < 0.381: -0.66
+|  |  (6)rh_transversetemporal_area >= 0.381: 1.005
+|  |  (8)rh_transversetemporal_area < 0.346: -0.501
+|  |  (8)rh_transversetemporal_area >= 0.346: 0.575
+|  (5)rh_posteriorcingulate_volume >= 0.52: -0.655
+|  |  (7)lh_temporalpole_meancurv < 0.451: -0.621
+|  |  (7)lh_temporalpole_meancurv >= 0.451: 0.671
+|  (9)lh_cuneus_volume < 0.603: 0.307
+|  (9)lh_cuneus_volume >= 0.603: -0.512
+Legend: -ve = 1, +ve = 2
+Tree size (total number of nodes): 28
+Leaves (number of predictor nodes): 19
+
+Time taken to build model: 0.06 seconds
+
+=== Evaluation on training set ===
+=== Summary ===
+
+Correctly Classified Instances          69              100      %
+Incorrectly Classified Instances         0                0      %
+Kappa statistic                          1     
+Mean absolute error                      0.1081
+Root mean squared error                  0.1355
+Relative absolute error                 24.7902 %
+Root relative squared error             29.0723 %
+Total Number of Instances               69     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 1         0          1         1         1          0.999    1
+                 1         0          1         1         1          0.991    2
+Weighted Avg.    1         0          1         1         1          0.994
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 22  0 |  a = 1
+  0 47 |  b = 2
+

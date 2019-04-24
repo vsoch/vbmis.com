@@ -1,0 +1,124 @@
+=== Run information ===
+
+Scheme:weka.classifiers.bayes.NaiveBayes 
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R286-287-weka.filters.unsupervised.attribute.Remove-V-R26,45,148,150,185,250,273,280,282,284-286-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    400
+Attributes:   12
+              lh_rostralmiddlefrontal_area
+              rh_lateraloccipital_area
+              rh_lateraloccipital_thickness
+              rh_lingual_thickness
+              lh_lingual_thickness
+              lh_inferiortemporal_meancurv
+              lh_frontalpole_meancurv
+              Vineland_TOTAL
+              ADI_TOTAL_BV
+              ADOS_TOTAL_A
+              ADOS_TOTAL_B
+              RXStr
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Naive Bayes Classifier
+
+                                  Class
+Attribute                             0       1
+                                 (0.43)  (0.57)
+================================================
+lh_rostralmiddlefrontal_area
+  mean                            0.6713  0.6429
+  std. dev.                       0.1172  0.1403
+  weight sum                         169     229
+  precision                       0.0027  0.0027
+
+rh_lateraloccipital_area
+  mean                            0.6663  0.6423
+  std. dev.                       0.1059  0.1255
+  weight sum                         169     229
+  precision                       0.0028  0.0028
+
+rh_lateraloccipital_thickness
+  mean                            0.4053  0.4837
+  std. dev.                       0.1708  0.1783
+  weight sum                         169     229
+  precision                       0.0034  0.0034
+
+rh_lingual_thickness
+  mean                            0.2979  0.3541
+  std. dev.                       0.1551  0.1446
+  weight sum                         169     229
+  precision                       0.0032  0.0032
+
+lh_lingual_thickness
+  mean                            0.4147  0.5066
+  std. dev.                       0.2064   0.205
+  weight sum                         169     229
+  precision                       0.0033  0.0033
+
+lh_inferiortemporal_meancurv
+  mean                            0.1688  0.2021
+  std. dev.                        0.064  0.1047
+  weight sum                         169     229
+  precision                       0.0141  0.0141
+
+lh_frontalpole_meancurv
+  mean                             0.216  0.2533
+  std. dev.                        0.105  0.1239
+  weight sum                         169     229
+  precision                       0.0083  0.0083
+
+Vineland_TOTAL
+  mean                            0.1718  0.1595
+  std. dev.                       0.2989  0.2399
+  weight sum                         127     219
+  precision                       0.0127  0.0127
+
+ADI_TOTAL_BV
+  mean                            0.0132  0.2348
+  std. dev.                       0.0898  0.3143
+  weight sum                          95     221
+  precision                         0.05    0.05
+
+ADOS_TOTAL_A
+  mean                            0.0327  0.2234
+  std. dev.                       0.1508  0.2989
+  weight sum                          95     229
+  precision                       0.0526  0.0526
+
+ADOS_TOTAL_B
+  mean                            0.1099  0.2579
+  std. dev.                       0.1822  0.3245
+  weight sum                          95     229
+  precision                       0.0625  0.0625
+
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         294               73.8693 %
+Incorrectly Classified Instances       104               26.1307 %
+Kappa statistic                          0.4852
+Mean absolute error                      0.2861
+Root mean squared error                  0.4649
+Relative absolute error                 58.5436 %
+Root relative squared error             94.0479 %
+Total Number of Instances              398     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.84      0.336      0.648     0.84      0.732      0.775    0
+                 0.664     0.16       0.849     0.664     0.745      0.771    1
+Weighted Avg.    0.739     0.235      0.764     0.739     0.74       0.773
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 142  27 |   a = 0
+  77 152 |   b = 1
+

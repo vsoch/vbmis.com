@@ -1,0 +1,75 @@
+=== Run information ===
+
+Scheme:weka.classifiers.trees.ADTree -B 10 -E -3
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R1,278-288-weka.filters.unsupervised.attribute.Remove-V-R26,45,148,150,185,207,234,250,273,277
+Instances:    400
+Attributes:   10
+              lh_rostralmiddlefrontal_area
+              rh_lateraloccipital_area
+              rh_lateraloccipital_thickness
+              rh_lingual_thickness
+              lh_lingual_thickness
+              lh_insula_thickness
+              rh_rostralmiddlefrontal_meancurv
+              lh_inferiortemporal_meancurv
+              lh_frontalpole_meancurv
+              RXStr
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Alternating decision tree:
+
+: 0.151
+|  (1)rh_lingual_thickness < 0.351: -0.214
+|  |  (5)lh_frontalpole_meancurv < 0.229: -0.19
+|  |  (5)lh_frontalpole_meancurv >= 0.229: 0.257
+|  |  (8)lh_lingual_thickness < 0.568: 0.058
+|  |  (8)lh_lingual_thickness >= 0.568: -0.799
+|  (1)rh_lingual_thickness >= 0.351: 0.335
+|  |  (9)rh_rostralmiddlefrontal_meancurv < 0.149: -0.386
+|  |  (9)rh_rostralmiddlefrontal_meancurv >= 0.149: 0.139
+|  |  |  (10)lh_rostralmiddlefrontal_area < 0.619: -0.339
+|  |  |  (10)lh_rostralmiddlefrontal_area >= 0.619: 0.289
+|  (2)lh_inferiortemporal_meancurv < 0.283: -0.074
+|  |  (6)rh_lateraloccipital_thickness < 0.302: -0.339
+|  |  (6)rh_lateraloccipital_thickness >= 0.302: 0.108
+|  |  |  (7)rh_lingual_thickness < 0.621: 0.05
+|  |  |  (7)rh_lingual_thickness >= 0.621: -1.019
+|  (2)lh_inferiortemporal_meancurv >= 0.283: 0.826
+|  |  (4)lh_frontalpole_meancurv < 0.343: 1.182
+|  |  (4)lh_frontalpole_meancurv >= 0.343: -0.545
+|  (3)rh_lateraloccipital_area < 0.488: 1.152
+|  (3)rh_lateraloccipital_area >= 0.488: -0.043
+Legend: -ve = 0, +ve = 1
+Tree size (total number of nodes): 31
+Leaves (number of predictor nodes): 21
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         249               62.5628 %
+Incorrectly Classified Instances       149               37.4372 %
+Kappa statistic                          0.2332
+Mean absolute error                      0.4455
+Root mean squared error                  0.4744
+Relative absolute error                 91.1671 %
+Root relative squared error             95.9777 %
+Total Number of Instances              398     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.556     0.323      0.56      0.556     0.558      0.672    0
+                 0.677     0.444      0.674     0.677     0.675      0.667    1
+Weighted Avg.    0.626     0.393      0.625     0.626     0.625      0.669
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+  94  75 |   a = 0
+  74 155 |   b = 1
+

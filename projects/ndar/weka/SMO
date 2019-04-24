@@ -1,0 +1,78 @@
+=== Run information ===
+
+Scheme:weka.classifiers.functions.SMO -C 1.0 -L 0.001 -P 1.0E-12 -N 0 -V -1 -W 1 -K "weka.classifiers.functions.supportVector.PolyKernel -C 250007 -E 1.0"
+Relation:     cortical_thickness-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R286-287-weka.filters.unsupervised.attribute.Remove-V-R26,45,148,150,185,250,273,280,282,284-286-weka.filters.unsupervised.attribute.Normalize-S1.0-T0.0
+Instances:    400
+Attributes:   12
+              lh_rostralmiddlefrontal_area
+              rh_lateraloccipital_area
+              rh_lateraloccipital_thickness
+              rh_lingual_thickness
+              lh_lingual_thickness
+              lh_inferiortemporal_meancurv
+              lh_frontalpole_meancurv
+              Vineland_TOTAL
+              ADI_TOTAL_BV
+              ADOS_TOTAL_A
+              ADOS_TOTAL_B
+              RXStr
+Test mode:10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+SMO
+
+Kernel used:
+  Linear Kernel: K(x,y) = <x,y>
+
+Classifier for classes: 0, 1
+
+BinarySMO
+
+Machine linear: showing attribute weights, not support vectors.
+
+        -0.8705 * (normalized) lh_rostralmiddlefrontal_area
+ +      -0.8299 * (normalized) rh_lateraloccipital_area
+ +       1.4256 * (normalized) rh_lateraloccipital_thickness
+ +       0.5628 * (normalized) rh_lingual_thickness
+ +       0.8236 * (normalized) lh_lingual_thickness
+ +       1.2756 * (normalized) lh_inferiortemporal_meancurv
+ +       1.4176 * (normalized) lh_frontalpole_meancurv
+ +      -1.9402 * (normalized) Vineland_TOTAL
+ +       3.8226 * (normalized) ADI_TOTAL_BV
+ +       1.2335 * (normalized) ADOS_TOTAL_A
+ +       0.7405 * (normalized) ADOS_TOTAL_B
+ -       1.1323
+
+Number of kernel evaluations: 11719 (73.348% cached)
+
+
+
+Time taken to build model: 0.02 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         291               73.1156 %
+Incorrectly Classified Instances       107               26.8844 %
+Kappa statistic                          0.4651
+Mean absolute error                      0.2688
+Root mean squared error                  0.5185
+Relative absolute error                 55.0114 %
+Root relative squared error            104.8976 %
+Total Number of Instances              398     
+Ignored Class Unknown Instances                  2     
+
+=== Detailed Accuracy By Class ===
+
+               TP Rate   FP Rate   Precision   Recall  F-Measure   ROC Area  Class
+                 0.793     0.314      0.65      0.793     0.715      0.741    0
+                 0.686     0.207      0.818     0.686     0.746      0.735    1
+Weighted Avg.    0.731     0.253      0.747     0.731     0.733      0.737
+
+=== Confusion Matrix ===
+
+   a   b   <-- classified as
+ 134  35 |   a = 0
+  72 157 |   b = 1
+
