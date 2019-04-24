@@ -1,0 +1,805 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<title>Connectogram: pybraincompare</title>
+<!-- JQuery for Bootstrap -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+<!-- Bootstrap styling -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap-theme.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/vsoch/pybraincompare/master/pybraincompare/template/js/d3.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/vsoch/pybraincompare/master/pybraincompare/template/js/d3.layout.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/vsoch/pybraincompare/master/pybraincompare/template/js/packages.js"></script>
+<!-- Connectogram Styling -->
+<style>
+body {
+  background: #ffffff;
+}
+
+a:link, a:visited {
+  color: #777;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #666;
+}
+
+blockquote {
+  margin: 0;
+}
+
+blockquote:before {
+  content: "â€œ";
+  position: absolute;
+  left: -.4em;
+}
+
+blockquote:after {
+  content: "â€";
+  position: absolute;
+}
+
+
+.invert {
+  background: #1f1f1f;
+  color: #dcdccc;
+}
+
+.invert h2, .invert h3 {
+  color: #7f9f7f;
+}
+
+.string, .regexp {
+  color: #f39;
+}
+
+.keyword {
+  color: #00c;
+}
+
+.comment {
+  color: #777;
+  font-style: oblique;
+}
+
+.number {
+  color: #369;
+}
+
+.class, .special {
+  color: #1181B8;
+}
+
+
+/* Specific d3 styling */
+
+path.arc {
+  cursor: move;
+  fill: #fff;
+}
+
+.node {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.node:hover {
+  fill: #1f77b4;
+}
+
+.link {
+  fill: none;
+  stroke: #1f77b4;
+  stroke-opacity: 0.4;
+  pointer-events: none;
+}
+
+.link.source, .link.target {
+  stroke-opacity: 1;
+  stroke-width: 2px;
+}
+
+.node.target {
+  /*fill: #d62728 !important;*/
+}
+
+.link.source {
+  /*stroke: #d62728;*/
+}
+
+.node.source {
+  /*fill: #2ca02c;*/
+}
+
+.link.target {
+  /*stroke: #2ca02c;*/
+}
+
+
+/* Network div position */
+#network {
+  position: fixed:
+  top: 75px;
+  left: 100px;
+}
+
+/* Here is the control sliders */
+.control {
+  position:absolute;
+  bottom:20;
+  font-size:18px;"
+  padding-left: 20px;
+  padding-right:30px;
+  padding-top: 5px;
+  padding-bottom: 20px;
+  float: left;
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 15px;
+  /*background: #cccccc;
+  filter:alpha(opacity=80);
+			opacity: 0.8;
+			-moz-opacity: 0.8;
+			-khtml-opacity:0.8;*/
+  z-index: 5;
+}
+
+/* Here is the image box in the top right*/
+#imageBox {
+  vertical-align: top;
+  padding-left: 20px;
+  padding-right:20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  float: right;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 40px;
+  border-radius: 15px;
+  background: #cccccc;
+  filter:alpha(opacity=70);
+			opacity: 0.7;
+			-moz-opacity: 0.7;
+			-khtml-opacity:0.7;
+  z-index: 5;
+  top: 50px;
+  right: 25px;
+  
+}
+
+/* Title box with region name at top*/
+#titleBox {
+  vertical-align: top;
+  padding-left: 15px;
+  padding-right:15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 40px;
+  border-radius: 15px;
+  color: #666666;
+  z-index: 6;
+  top: 75px;
+  right: 15%;
+  
+}
+
+/* Control box in top left*/
+#controlBox {
+  vertical-align: top;
+  width: 250px;
+  height: 200px;
+  padding-top:100px;
+  padding-left:20px;
+  float: left;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 25px;
+  border-radius: 15px;
+  z-index: 5;
+  top: 50px;
+  left: 10px;
+  
+}
+</style>
+<!-- Mobile touch zooming -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+<!--Controls, saving, etc-->
+<div id="controlBox">
+
+<form role="form">
+  <div class="form-group">
+     <input type="checkbox" class="btn btn-success" id="highlight_positive"> Highlight Positive<br>
+  </div>
+  <div class="form-group">
+    <input type="checkbox" class="btn btn-success" id="highlight_negative"> Highlight Negative<br>     
+  </div>
+  <button class="btn btn-success" id="save_as_svg" value="" onclick="save_svg()">Save as SVG</button>
+</form>
+
+</div>
+
+<!--Here is image box
+<div id="imageBox">
+  <img src="img/dummy.png" width="100px" />
+  <h3>X<div id="x">0.0</div></h3>
+  <h3>Y<div id="y">0.0</div></h3>
+  <h3>Z<div id="z">0.0</div></h3>
+</div>-->
+<!--Here is the title-->
+<div id="titleBox">
+      <h3>Connectogram</h3>
+</div>   
+
+<!-- Stick d3 here-->
+<div class="network" id="network">
+<fullNetwork>
+</div>
+
+
+<!-- Insert my connectome javascript! -->
+<script>
+// Here is the size of the canvas, and the radius for the visualization
+var w = 1600,
+    h = 1600,
+    rx = w / 2 - 150,
+    ry = h / 2 - 150,
+    m0,
+    rotate = 0;
+
+var splines = [];
+
+// Here is a function to specify the ordering
+// We compare the "order" varaible between the two nodes
+function comparator(a, b) {
+    return d3.ascending(a.order, b.order);
+}
+
+// The clustering layout will sort the data based on the "order" variable, HOWEVER (this is important!)
+// if you specify groupings (Eg in name R-1.1, R-1 is a group) that break apart this ordering, it will
+// be broken.
+var cluster = d3.layout.cluster()
+    .size([360, ry - 150])
+    .sort(comparator);
+    
+
+var bundle = d3.layout.bundle();
+
+var line = d3.svg.line.radial()
+    .interpolate("bundle")
+    .tension(.85) // this tension determines the spacing and extent of the edges into the circle
+    .radius(function(d) { return d.y; })
+    .angle(function(d) { return d.x / 180 * Math.PI; });
+
+// Chrome 15 bug: <http://code.google.com/p/chromium/issues/detail?id=98951>
+var div = d3.select("fullNetwork").insert("div", "h2")
+    .attr("id","svg-canvas")
+    .style("top", "80px")
+    .style("left", "80px")
+    .style("width", w + "px")
+    .style("height", w + "px")
+    .style("position", "absolute")
+    .style("-webkit-backface-visibility", "hidden");
+
+var svg = div.append("svg:svg")
+    .attr("width", w)
+    .attr("height", w)
+    .attr("xmlns","http://www.w3.org/2000/svg")
+    .attr("version",1.1)
+    .append("svg:g")
+      .attr("transform", "translate(" + rx + "," + ry + ")");
+
+svg.append("svg:path")
+    .attr("class", "arc")
+    .style("fill","#fff")
+    .attr("d", d3.svg.arc().outerRadius(ry - 120).innerRadius(0).startAngle(0).endAngle(2 * Math.PI))
+    .on("mousedown", mousedown);
+
+// Here is a funcion to get variables from the URL - the code script name
+function getUrlVars() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+    });
+    return vars;
+}
+
+classes = [{"name":"L-4.1","strength":"0.675|0.578|0.668|0.55|0.554|0.814|0.607|0.586","x":99,"y":99,"z":99,"image":"#","order":1,"color":"#B5678C","network":"Default","connections":["L-4.6","L-5.44","L-13.94","L-8.150","L-13.157","L-13.162","R-2.220","R-2.259"]},
+{"name":"L-10.2","strength":"0.552|0.57|0.591|0.644|0.615|0.68","x":99,"y":99,"z":99,"image":"#","order":2,"color":"#8E1D33","network":"SMhand","connections":["L-7.22","L-2.31","L-10.35","L-10.50","L-5.91","L-7.163"]},
+{"name":"L-11.3","strength":"0.785|0.588|0.627","x":99,"y":99,"z":99,"image":"#","order":3,"color":"#0AD03F","network":"SMmouth","connections":["L-10.53","L-8.164","R-2.212"]},
+{"name":"L-4.4","strength":"0.581|0.572|0.598|0.547|0.585|0.578","x":99,"y":99,"z":99,"image":"#","order":4,"color":"#B5678C","network":"Default","connections":["L-4.6","L-5.44","L-7.145","L-4.146","L-13.157","L-7.165"]},
+{"name":"L-13.5","strength":"0.563|0.658|0.61|0.672|0.748|0.626|0.561|0.553|0.798|0.605|0.613|0.647|0.844|0.63|0.562|0.585|0.674|0.61|0.633|0.602|0.544|0.669|0.694|0.569|0.627|0.582","x":99,"y":99,"z":99,"image":"#","order":5,"color":"#CC2D35","network":"Visual","connections":["L-13.8","L-8.15","L-9.87","L-12.90","L-3.97","L-5.99","L-6.100","L-4.131","L-7.137","L-7.138","L-7.139","L-7.141","L-4.166","L-2.175","R-1.251","R-12.252","R-12.255","R-1.256","R-2.258","R-6.264","R-12.265","R-6.298","R-5.307","R-13.308","R-13.310","R-5.311"]},
+{"name":"L-4.6","strength":"0.675|0.581|0.581|0.607|0.621|0.69|0.593|0.598|0.56|0.588|0.679|0.582|0.631|0.546","x":99,"y":99,"z":99,"image":"#","order":6,"color":"#B5678C","network":"Default","connections":["L-4.1","L-4.4","L-2.25","L-5.44","L-11.62","L-13.94","L-4.127","L-7.145","L-4.146","L-8.150","L-13.157","L-13.162","R-2.220","R-2.259"]},
+{"name":"L-6.7","x":99,"y":99,"z":99,"image":"#","order":7,"color":"#129502","network":"FrontoParietal"},
+{"name":"L-13.8","strength":"0.563|0.54|0.555","x":99,"y":99,"z":99,"image":"#","order":8,"color":"#CC2D35","network":"Visual","connections":["L-13.5","L-4.131","L-7.137"]},
+{"name":"L-6.9","x":99,"y":99,"z":99,"image":"#","order":9,"color":"#129502","network":"FrontoParietal"},
+{"name":"L-1.10","x":99,"y":99,"z":99,"image":"#","order":10,"color":"#1DF325","network":"Auditory"},
+{"name":"L-7.12","x":99,"y":99,"z":99,"image":"#","order":12,"color":"#73DB51","network":"None"},
+{"name":"L-3.13","strength":"0.547","x":99,"y":99,"z":99,"image":"#","order":13,"color":"#C15D1F","network":"CinguloParietal","connections":["L-4.174"]},
+{"name":"L-8.14","x":99,"y":99,"z":99,"image":"#","order":14,"color":"#773D86","network":"RetrosplenialTemporal"},
+{"name":"L-8.15","strength":"0.658|0.58|0.611|0.697|0.604|0.673|0.607|0.821|0.549|0.574|0.592|0.575|0.541","x":99,"y":99,"z":99,"image":"#","order":15,"color":"#773D86","network":"RetrosplenialTemporal","connections":["L-13.5","L-12.90","L-3.97","L-7.137","L-7.138","L-7.141","L-4.166","L-2.175","R-12.255","R-6.298","R-5.307","R-13.308","R-13.310"]},
+{"name":"L-13.16","x":99,"y":99,"z":99,"image":"#","order":16,"color":"#CC2D35","network":"Visual"},
+{"name":"L-13.17","x":99,"y":99,"z":99,"image":"#","order":17,"color":"#CC2D35","network":"Visual"},
+{"name":"L-13.20","x":99,"y":99,"z":99,"image":"#","order":20,"color":"#CC2D35","network":"Visual"},
+{"name":"L-7.21","strength":"0.602","x":99,"y":99,"z":99,"image":"#","order":21,"color":"#73DB51","network":"None","connections":["L-4.180"]},
+{"name":"L-7.22","strength":"0.552|0.572|0.573|0.541|0.548","x":99,"y":99,"z":99,"image":"#","order":22,"color":"#73DB51","network":"None","connections":["L-10.2","L-6.27","L-10.34","L-4.180","L-12.185"]},
+{"name":"L-13.23","x":99,"y":99,"z":99,"image":"#","order":23,"color":"#CC2D35","network":"Visual"},
+{"name":"L-2.24","strength":"0.56","x":99,"y":99,"z":99,"image":"#","order":24,"color":"#F0F316","network":"CinguloOperc","connections":["L-2.25"]},
+{"name":"L-2.25","strength":"0.581|0.56|0.549|0.568|0.581|0.565","x":99,"y":99,"z":99,"image":"#","order":25,"color":"#F0F316","network":"CinguloOperc","connections":["L-4.6","L-2.24","L-5.44","L-7.145","L-8.150","L-13.157"]},
+{"name":"L-12.26","x":99,"y":99,"z":99,"image":"#","order":26,"color":"#955718","network":"VentralAttn"},
+{"name":"L-6.27","strength":"0.572","x":99,"y":99,"z":99,"image":"#","order":27,"color":"#129502","network":"FrontoParietal","connections":["L-7.22"]},
+{"name":"L-4.28","x":99,"y":99,"z":99,"image":"#","order":28,"color":"#B5678C","network":"Default"},
+{"name":"L-4.29","x":99,"y":99,"z":99,"image":"#","order":29,"color":"#B5678C","network":"Default"},
+{"name":"L-2.30","x":99,"y":99,"z":99,"image":"#","order":30,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-2.31","strength":"0.57|0.573|0.561|0.557|0.668","x":99,"y":99,"z":99,"image":"#","order":31,"color":"#F0F316","network":"CinguloOperc","connections":["L-10.2","L-10.38","L-10.50","L-7.163","R-13.190"]},
+{"name":"L-9.32","strength":"0.574|0.554|0.546","x":99,"y":99,"z":99,"image":"#","order":32,"color":"#038AD4","network":"Salience","connections":["L-10.36","R-6.191","R-13.193"]},
+{"name":"L-10.33","x":99,"y":99,"z":99,"image":"#","order":33,"color":"#8E1D33","network":"SMhand"},
+{"name":"L-10.34","strength":"0.573","x":99,"y":99,"z":99,"image":"#","order":34,"color":"#8E1D33","network":"SMhand","connections":["L-7.22"]},
+{"name":"L-10.35","strength":"0.591|0.543|0.6|0.611","x":99,"y":99,"z":99,"image":"#","order":35,"color":"#8E1D33","network":"SMhand","connections":["L-10.2","L-10.36","L-7.163","R-13.193"]},
+{"name":"L-10.36","strength":"0.574|0.543|0.551|0.687|0.569","x":99,"y":99,"z":99,"image":"#","order":36,"color":"#8E1D33","network":"SMhand","connections":["L-9.32","L-10.35","R-13.190","R-6.191","R-13.193"]},
+{"name":"L-2.37","x":99,"y":99,"z":99,"image":"#","order":37,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-10.38","strength":"0.573|0.705|0.612|0.584|0.562|0.564|0.632|0.657|0.551","x":99,"y":99,"z":99,"image":"#","order":38,"color":"#8E1D33","network":"SMhand","connections":["L-2.31","L-5.45","L-4.47","L-10.50","L-10.53","L-10.57","L-5.58","L-10.59","R-2.216"]},
+{"name":"L-10.39","x":99,"y":99,"z":99,"image":"#","order":39,"color":"#8E1D33","network":"SMhand"},
+{"name":"L-10.40","x":99,"y":99,"z":99,"image":"#","order":40,"color":"#8E1D33","network":"SMhand"},
+{"name":"L-10.41","x":99,"y":99,"z":99,"image":"#","order":41,"color":"#8E1D33","network":"SMhand"},
+{"name":"L-11.42","x":99,"y":99,"z":99,"image":"#","order":42,"color":"#0AD03F","network":"SMmouth"},
+{"name":"L-2.43","x":99,"y":99,"z":99,"image":"#","order":43,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-5.44","strength":"0.578|0.572|0.607|0.549|0.617|0.588|0.562|0.547|0.589|0.563|0.58","x":99,"y":99,"z":99,"image":"#","order":44,"color":"#47CD0B","network":"DorsalAttn","connections":["L-4.1","L-4.4","L-4.6","L-2.25","L-13.94","L-7.145","L-7.154","L-13.156","L-13.157","R-13.200","R-1.315"]},
+{"name":"L-5.45","strength":"0.705|0.58|0.614|0.639","x":99,"y":99,"z":99,"image":"#","order":45,"color":"#47CD0B","network":"DorsalAttn","connections":["L-10.38","L-4.47","L-10.57","L-5.58"]},
+{"name":"L-5.46","strength":"0.544","x":99,"y":99,"z":99,"image":"#","order":46,"color":"#47CD0B","network":"DorsalAttn","connections":["L-10.57"]},
+{"name":"L-4.47","strength":"0.612|0.58","x":99,"y":99,"z":99,"image":"#","order":47,"color":"#B5678C","network":"Default","connections":["L-10.38","L-5.45"]},
+{"name":"L-10.48","x":99,"y":99,"z":99,"image":"#","order":48,"color":"#8E1D33","network":"SMhand"},
+{"name":"L-10.49","x":99,"y":99,"z":99,"image":"#","order":49,"color":"#8E1D33","network":"SMhand"},
+{"name":"L-10.50","strength":"0.644|0.561|0.584|0.554|0.581","x":99,"y":99,"z":99,"image":"#","order":50,"color":"#8E1D33","network":"SMhand","connections":["L-10.2","L-2.31","L-10.38","L-10.57","L-7.163"]},
+{"name":"L-10.51","strength":"0.56|0.663|0.591|0.567|0.552|0.587|0.553","x":99,"y":99,"z":99,"image":"#","order":51,"color":"#8E1D33","network":"SMhand","connections":["L-5.52","L-9.87","L-2.88","L-6.100","R-1.251","R-12.252","R-2.262"]},
+{"name":"L-5.52","strength":"0.56|0.582","x":99,"y":99,"z":99,"image":"#","order":52,"color":"#47CD0B","network":"DorsalAttn","connections":["L-10.51","L-5.96"]},
+{"name":"L-10.53","strength":"0.785|0.562|0.656|0.712","x":99,"y":99,"z":99,"image":"#","order":53,"color":"#8E1D33","network":"SMhand","connections":["L-11.3","L-10.38","L-8.164","R-2.212"]},
+{"name":"L-5.54","strength":"0.546|0.602|0.554|0.568","x":99,"y":99,"z":99,"image":"#","order":54,"color":"#47CD0B","network":"DorsalAttn","connections":["L-5.55","L-11.56","L-5.58","L-2.105"]},
+{"name":"L-5.55","strength":"0.546|0.586|0.666|0.549","x":99,"y":99,"z":99,"image":"#","order":55,"color":"#47CD0B","network":"DorsalAttn","connections":["L-5.54","L-11.56","L-2.105","L-1.106"]},
+{"name":"L-11.56","strength":"0.602|0.586|0.591|0.553|0.553|0.54","x":99,"y":99,"z":99,"image":"#","order":56,"color":"#0AD03F","network":"SMmouth","connections":["L-5.54","L-5.55","L-5.58","L-9.87","L-2.105","R-5.213"]},
+{"name":"L-10.57","strength":"0.564|0.614|0.544|0.554|0.564","x":99,"y":99,"z":99,"image":"#","order":57,"color":"#8E1D33","network":"SMhand","connections":["L-10.38","L-5.45","L-5.46","L-10.50","L-5.58"]},
+{"name":"L-5.58","strength":"0.632|0.639|0.554|0.591|0.564|0.544","x":99,"y":99,"z":99,"image":"#","order":58,"color":"#47CD0B","network":"DorsalAttn","connections":["L-10.38","L-5.45","L-5.54","L-11.56","L-10.57","L-10.59"]},
+{"name":"L-10.59","strength":"0.657|0.544","x":99,"y":99,"z":99,"image":"#","order":59,"color":"#8E1D33","network":"SMhand","connections":["L-10.38","L-5.58"]},
+{"name":"L-10.60","x":99,"y":99,"z":99,"image":"#","order":60,"color":"#8E1D33","network":"SMhand"},
+{"name":"L-10.61","x":99,"y":99,"z":99,"image":"#","order":61,"color":"#8E1D33","network":"SMhand"},
+{"name":"L-11.62","strength":"0.621|0.597","x":99,"y":99,"z":99,"image":"#","order":62,"color":"#0AD03F","network":"SMmouth","connections":["L-4.6","L-4.127"]},
+{"name":"L-12.63","strength":"0.574|0.566","x":99,"y":99,"z":99,"image":"#","order":63,"color":"#955718","network":"VentralAttn","connections":["L-13.103","L-2.105"]},
+{"name":"L-12.64","x":99,"y":99,"z":99,"image":"#","order":64,"color":"#955718","network":"VentralAttn"},
+{"name":"L-12.65","x":99,"y":99,"z":99,"image":"#","order":65,"color":"#955718","network":"VentralAttn"},
+{"name":"L-2.66","strength":"0.581","x":99,"y":99,"z":99,"image":"#","order":66,"color":"#F0F316","network":"CinguloOperc","connections":["L-1.68"]},
+{"name":"L-1.67","strength":"0.552","x":99,"y":99,"z":99,"image":"#","order":67,"color":"#1DF325","network":"Auditory","connections":["L-1.68"]},
+{"name":"L-1.68","strength":"0.581|0.552","x":99,"y":99,"z":99,"image":"#","order":68,"color":"#1DF325","network":"Auditory","connections":["L-2.66","L-1.67"]},
+{"name":"L-1.69","x":99,"y":99,"z":99,"image":"#","order":69,"color":"#1DF325","network":"Auditory"},
+{"name":"L-1.70","x":99,"y":99,"z":99,"image":"#","order":70,"color":"#1DF325","network":"Auditory"},
+{"name":"L-1.71","x":99,"y":99,"z":99,"image":"#","order":71,"color":"#1DF325","network":"Auditory"},
+{"name":"L-1.72","x":99,"y":99,"z":99,"image":"#","order":72,"color":"#1DF325","network":"Auditory"},
+{"name":"L-1.74","strength":"0.551","x":99,"y":99,"z":99,"image":"#","order":74,"color":"#1DF325","network":"Auditory","connections":["L-5.110"]},
+{"name":"L-2.75","x":99,"y":99,"z":99,"image":"#","order":75,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-2.76","x":99,"y":99,"z":99,"image":"#","order":76,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-7.77","x":99,"y":99,"z":99,"image":"#","order":77,"color":"#73DB51","network":"None"},
+{"name":"L-5.78","x":99,"y":99,"z":99,"image":"#","order":78,"color":"#47CD0B","network":"DorsalAttn"},
+{"name":"L-12.79","x":99,"y":99,"z":99,"image":"#","order":79,"color":"#955718","network":"VentralAttn"},
+{"name":"L-2.80","x":99,"y":99,"z":99,"image":"#","order":80,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-1.81","x":99,"y":99,"z":99,"image":"#","order":81,"color":"#1DF325","network":"Auditory"},
+{"name":"L-6.82","x":99,"y":99,"z":99,"image":"#","order":82,"color":"#129502","network":"FrontoParietal"},
+{"name":"L-12.83","x":99,"y":99,"z":99,"image":"#","order":83,"color":"#955718","network":"VentralAttn"},
+{"name":"L-12.84","x":99,"y":99,"z":99,"image":"#","order":84,"color":"#955718","network":"VentralAttn"},
+{"name":"L-2.85","x":99,"y":99,"z":99,"image":"#","order":85,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-2.86","x":99,"y":99,"z":99,"image":"#","order":86,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-9.87","strength":"0.61|0.663|0.553|0.631|0.58|0.583|0.583|0.543|0.563|0.637|0.752|0.565|0.55|0.556","x":99,"y":99,"z":99,"image":"#","order":87,"color":"#038AD4","network":"Salience","connections":["L-13.5","L-10.51","L-11.56","L-2.88","L-5.91","L-3.97","L-6.100","L-4.166","R-4.189","R-1.251","R-12.252","R-12.253","R-2.258","R-2.262"]},
+{"name":"L-2.88","strength":"0.591|0.631|0.595|0.585|0.573|0.57","x":99,"y":99,"z":99,"image":"#","order":88,"color":"#F0F316","network":"CinguloOperc","connections":["L-10.51","L-9.87","L-5.95","L-6.100","R-12.252","R-12.253"]},
+{"name":"L-12.89","strength":"0.565|0.603","x":99,"y":99,"z":99,"image":"#","order":89,"color":"#955718","network":"VentralAttn","connections":["L-3.93","R-1.254"]},
+{"name":"L-12.90","strength":"0.672|0.58|0.658|0.627|0.603|0.667|0.555|0.544|0.602|0.608","x":99,"y":99,"z":99,"image":"#","order":90,"color":"#955718","network":"VentralAttn","connections":["L-13.5","L-8.15","L-7.137","L-4.166","L-2.175","R-12.255","R-6.298","R-5.307","R-13.310","R-5.311"]},
+{"name":"L-5.91","strength":"0.615|0.58|0.624|0.568|0.714|0.547","x":99,"y":99,"z":99,"image":"#","order":91,"color":"#47CD0B","network":"DorsalAttn","connections":["L-10.2","L-9.87","L-5.92","L-7.163","R-4.189","R-12.252"]},
+{"name":"L-5.92","strength":"0.624|0.586","x":99,"y":99,"z":99,"image":"#","order":92,"color":"#47CD0B","network":"DorsalAttn","connections":["L-5.91","R-4.189"]},
+{"name":"L-3.93","strength":"0.565|0.704","x":99,"y":99,"z":99,"image":"#","order":93,"color":"#C15D1F","network":"CinguloParietal","connections":["L-12.89","R-1.254"]},
+{"name":"L-13.94","strength":"0.668|0.69|0.617|0.564|0.545|0.588|0.542|0.561|0.687","x":99,"y":99,"z":99,"image":"#","order":94,"color":"#CC2D35","network":"Visual","connections":["L-4.1","L-4.6","L-5.44","L-5.95","L-13.157","L-13.162","R-13.200","R-2.220","R-2.259"]},
+{"name":"L-5.95","strength":"0.595|0.564","x":99,"y":99,"z":99,"image":"#","order":95,"color":"#47CD0B","network":"DorsalAttn","connections":["L-2.88","L-13.94"]},
+{"name":"L-5.96","strength":"0.582","x":99,"y":99,"z":99,"image":"#","order":96,"color":"#47CD0B","network":"DorsalAttn","connections":["L-5.52"]},
+{"name":"L-3.97","strength":"0.748|0.611|0.583|0.661|0.614|0.578|0.639|0.625|0.662|0.677|0.577|0.587|0.664|0.574|0.552|0.597|0.571","x":99,"y":99,"z":99,"image":"#","order":97,"color":"#C15D1F","network":"CinguloParietal","connections":["L-13.5","L-8.15","L-9.87","L-4.98","L-5.99","L-6.100","L-7.137","L-7.139","L-7.141","L-4.166","L-2.175","R-2.258","R-1.263","R-6.264","R-12.265","R-6.298","R-5.307"]},
+{"name":"L-4.98","strength":"0.661|0.556|0.612|0.548|0.686","x":99,"y":99,"z":99,"image":"#","order":98,"color":"#B5678C","network":"Default","connections":["L-3.97","L-7.139","L-7.140","L-7.141","R-1.263"]},
+{"name":"L-5.99","strength":"0.626|0.614|0.587|0.56|0.582|0.543|0.551|0.576","x":99,"y":99,"z":99,"image":"#","order":99,"color":"#47CD0B","network":"DorsalAttn","connections":["L-13.5","L-3.97","L-6.100","L-7.137","L-7.139","L-7.141","L-4.166","R-6.264"]},
+{"name":"L-6.100","strength":"0.561|0.567|0.583|0.585|0.578|0.587|0.611|0.563","x":99,"y":99,"z":99,"image":"#","order":100,"color":"#129502","network":"FrontoParietal","connections":["L-13.5","L-10.51","L-9.87","L-2.88","L-3.97","L-5.99","L-7.139","R-12.265"]},
+{"name":"L-13.101","x":99,"y":99,"z":99,"image":"#","order":101,"color":"#CC2D35","network":"Visual"},
+{"name":"L-13.102","x":99,"y":99,"z":99,"image":"#","order":102,"color":"#CC2D35","network":"Visual"},
+{"name":"L-13.103","strength":"0.574|0.613|0.636","x":99,"y":99,"z":99,"image":"#","order":103,"color":"#CC2D35","network":"Visual","connections":["L-12.63","L-5.104","L-2.105"]},
+{"name":"L-5.104","strength":"0.613|0.549","x":99,"y":99,"z":99,"image":"#","order":104,"color":"#47CD0B","network":"DorsalAttn","connections":["L-13.103","L-2.105"]},
+{"name":"L-2.105","strength":"0.568|0.666|0.553|0.566|0.636|0.549|0.55|0.544","x":99,"y":99,"z":99,"image":"#","order":105,"color":"#F0F316","network":"CinguloOperc","connections":["L-5.54","L-5.55","L-11.56","L-12.63","L-13.103","L-5.104","L-1.106","L-6.112"]},
+{"name":"L-1.106","strength":"0.549|0.55|0.563","x":99,"y":99,"z":99,"image":"#","order":106,"color":"#1DF325","network":"Auditory","connections":["L-5.55","L-2.105","L-6.112"]},
+{"name":"L-2.107","x":99,"y":99,"z":99,"image":"#","order":107,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-1.108","strength":"0.554","x":99,"y":99,"z":99,"image":"#","order":108,"color":"#1DF325","network":"Auditory","connections":["L-2.109"]},
+{"name":"L-2.109","strength":"0.554","x":99,"y":99,"z":99,"image":"#","order":109,"color":"#F0F316","network":"CinguloOperc","connections":["L-1.108"]},
+{"name":"L-5.110","strength":"0.551","x":99,"y":99,"z":99,"image":"#","order":110,"color":"#47CD0B","network":"DorsalAttn","connections":["L-1.74"]},
+{"name":"L-5.111","x":99,"y":99,"z":99,"image":"#","order":111,"color":"#47CD0B","network":"DorsalAttn"},
+{"name":"L-6.112","strength":"0.544|0.563","x":99,"y":99,"z":99,"image":"#","order":112,"color":"#129502","network":"FrontoParietal","connections":["L-2.105","L-1.106"]},
+{"name":"L-6.113","x":99,"y":99,"z":99,"image":"#","order":113,"color":"#129502","network":"FrontoParietal"},
+{"name":"L-5.114","x":99,"y":99,"z":99,"image":"#","order":114,"color":"#47CD0B","network":"DorsalAttn"},
+{"name":"L-2.116","strength":"0.617|0.574|0.585","x":99,"y":99,"z":99,"image":"#","order":116,"color":"#F0F316","network":"CinguloOperc","connections":["L-8.150","R-3.278","R-13.279"]},
+{"name":"L-2.117","x":99,"y":99,"z":99,"image":"#","order":117,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"L-5.126","x":99,"y":99,"z":99,"image":"#","order":126,"color":"#47CD0B","network":"DorsalAttn"},
+{"name":"L-4.127","strength":"0.593|0.597","x":99,"y":99,"z":99,"image":"#","order":127,"color":"#B5678C","network":"Default","connections":["L-4.6","L-11.62"]},
+{"name":"L-7.130","x":99,"y":99,"z":99,"image":"#","order":130,"color":"#73DB51","network":"None"},
+{"name":"L-4.131","strength":"0.553|0.54","x":99,"y":99,"z":99,"image":"#","order":131,"color":"#B5678C","network":"Default","connections":["L-13.5","L-13.8"]},
+{"name":"L-4.132","strength":"0.539|0.555","x":99,"y":99,"z":99,"image":"#","order":132,"color":"#B5678C","network":"Default","connections":["L-7.139","L-7.141"]},
+{"name":"L-7.136","x":99,"y":99,"z":99,"image":"#","order":136,"color":"#73DB51","network":"None"},
+{"name":"L-7.137","strength":"0.798|0.555|0.697|0.658|0.639|0.56|0.642|0.628|0.78|0.69|0.658|0.629|0.598|0.656|0.735|0.616|0.714|0.605","x":99,"y":99,"z":99,"image":"#","order":137,"color":"#73DB51","network":"None","connections":["L-13.5","L-13.8","L-8.15","L-12.90","L-3.97","L-5.99","L-7.138","L-7.141","L-4.166","L-2.175","R-12.255","R-1.256","R-6.264","R-6.298","R-5.307","R-13.308","R-13.310","R-5.311"]},
+{"name":"L-7.138","strength":"0.605|0.604|0.642|0.553|0.6|0.575|0.56|0.549","x":99,"y":99,"z":99,"image":"#","order":138,"color":"#73DB51","network":"None","connections":["L-13.5","L-8.15","L-7.137","L-7.141","L-4.166","L-2.175","R-5.307","R-13.308"]},
+{"name":"L-7.139","strength":"0.613|0.625|0.556|0.582|0.611|0.539|0.632|0.566","x":99,"y":99,"z":99,"image":"#","order":139,"color":"#73DB51","network":"None","connections":["L-13.5","L-3.97","L-4.98","L-5.99","L-6.100","L-4.132","L-7.141","L-4.166"]},
+{"name":"L-7.140","strength":"0.612|0.646","x":99,"y":99,"z":99,"image":"#","order":140,"color":"#73DB51","network":"None","connections":["L-4.98","R-1.263"]},
+{"name":"L-7.141","strength":"0.647|0.673|0.662|0.548|0.543|0.555|0.628|0.553|0.632|0.611|0.604|0.593|0.561|0.614|0.561|0.583","x":99,"y":99,"z":99,"image":"#","order":141,"color":"#73DB51","network":"None","connections":["L-13.5","L-8.15","L-3.97","L-4.98","L-5.99","L-4.132","L-7.137","L-7.138","L-7.139","L-4.166","L-2.175","R-1.263","R-6.264","R-6.298","R-5.307","R-13.309"]},
+{"name":"L-7.143","x":99,"y":99,"z":99,"image":"#","order":143,"color":"#73DB51","network":"None"},
+{"name":"L-7.145","strength":"0.598|0.598|0.568|0.588|0.631|0.586|0.579|0.543|0.542","x":99,"y":99,"z":99,"image":"#","order":145,"color":"#73DB51","network":"None","connections":["L-4.4","L-4.6","L-2.25","L-5.44","L-4.146","L-8.150","L-13.157","R-5.322","R-6.324"]},
+{"name":"L-4.146","strength":"0.547|0.56|0.631|0.653|0.557|0.595|0.583","x":99,"y":99,"z":99,"image":"#","order":146,"color":"#B5678C","network":"Default","connections":["L-4.4","L-4.6","L-7.145","L-8.150","L-13.151","R-2.321","R-5.322"]},
+{"name":"L-4.147","x":99,"y":99,"z":99,"image":"#","order":147,"color":"#B5678C","network":"Default"},
+{"name":"L-7.148","x":99,"y":99,"z":99,"image":"#","order":148,"color":"#73DB51","network":"None"},
+{"name":"L-7.149","x":99,"y":99,"z":99,"image":"#","order":149,"color":"#73DB51","network":"None"},
+{"name":"L-8.150","strength":"0.55|0.588|0.581|0.617|0.586|0.653|0.658|0.643|0.585|0.675|0.727|0.542|0.55|0.558","x":99,"y":99,"z":99,"image":"#","order":150,"color":"#773D86","network":"RetrosplenialTemporal","connections":["L-4.1","L-4.6","L-2.25","L-2.116","L-7.145","L-4.146","L-13.151","L-13.152","L-1.184","R-2.321","R-5.322","R-6.323","R-6.324","R-4.325"]},
+{"name":"L-13.151","strength":"0.557|0.658|0.585|0.583","x":99,"y":99,"z":99,"image":"#","order":151,"color":"#CC2D35","network":"Visual","connections":["L-4.146","L-8.150","R-2.321","R-5.322"]},
+{"name":"L-13.152","strength":"0.643|0.565|0.588","x":99,"y":99,"z":99,"image":"#","order":152,"color":"#CC2D35","network":"Visual","connections":["L-8.150","L-1.184","R-5.322"]},
+{"name":"L-7.153","strength":"0.574","x":99,"y":99,"z":99,"image":"#","order":153,"color":"#73DB51","network":"None","connections":["R-5.318"]},
+{"name":"L-7.154","strength":"0.562","x":99,"y":99,"z":99,"image":"#","order":154,"color":"#73DB51","network":"None","connections":["L-5.44"]},
+{"name":"L-7.155","x":99,"y":99,"z":99,"image":"#","order":155,"color":"#73DB51","network":"None"},
+{"name":"L-13.156","strength":"0.547","x":99,"y":99,"z":99,"image":"#","order":156,"color":"#CC2D35","network":"Visual","connections":["L-5.44"]},
+{"name":"L-13.157","strength":"0.554|0.585|0.679|0.565|0.589|0.545|0.579|0.577","x":99,"y":99,"z":99,"image":"#","order":157,"color":"#CC2D35","network":"Visual","connections":["L-4.1","L-4.4","L-4.6","L-2.25","L-5.44","L-13.94","L-7.145","L-13.158"]},
+{"name":"L-13.158","strength":"0.577","x":99,"y":99,"z":99,"image":"#","order":158,"color":"#CC2D35","network":"Visual","connections":["L-13.157"]},
+{"name":"L-13.160","x":99,"y":99,"z":99,"image":"#","order":160,"color":"#CC2D35","network":"Visual"},
+{"name":"L-13.161","x":99,"y":99,"z":99,"image":"#","order":161,"color":"#CC2D35","network":"Visual"},
+{"name":"L-13.162","strength":"0.814|0.582|0.588|0.6|0.633|0.544|0.546","x":99,"y":99,"z":99,"image":"#","order":162,"color":"#CC2D35","network":"Visual","connections":["L-4.1","L-4.6","L-13.94","R-2.220","R-2.259","R-1.315","R-5.322"]},
+{"name":"L-7.163","strength":"0.68|0.557|0.6|0.581|0.568|0.558|0.591|0.572|0.581|0.563|0.546","x":99,"y":99,"z":99,"image":"#","order":163,"color":"#73DB51","network":"None","connections":["L-10.2","L-2.31","L-10.35","L-10.50","L-5.91","R-4.189","R-13.190","R-13.193","R-2.209","R-1.251","R-12.252"]},
+{"name":"L-8.164","strength":"0.588|0.656|0.76","x":99,"y":99,"z":99,"image":"#","order":164,"color":"#773D86","network":"RetrosplenialTemporal","connections":["L-11.3","L-10.53","R-2.212"]},
+{"name":"L-7.165","strength":"0.578","x":99,"y":99,"z":99,"image":"#","order":165,"color":"#73DB51","network":"None","connections":["L-4.4"]},
+{"name":"L-4.166","strength":"0.844|0.607|0.543|0.627|0.677|0.551|0.78|0.6|0.566|0.611|0.633|0.564|0.575|0.689|0.645|0.662|0.599|0.685|0.577|0.71|0.755|0.6|0.67|0.586","x":99,"y":99,"z":99,"image":"#","order":166,"color":"#B5678C","network":"Default","connections":["L-13.5","L-8.15","L-9.87","L-12.90","L-3.97","L-5.99","L-7.137","L-7.138","L-7.139","L-7.141","L-2.175","R-1.251","R-12.252","R-12.255","R-1.256","R-2.258","R-1.263","R-6.264","R-12.265","R-6.298","R-5.307","R-13.308","R-13.310","R-5.311"]},
+{"name":"L-4.167","strength":"0.596|0.574|0.549","x":99,"y":99,"z":99,"image":"#","order":167,"color":"#B5678C","network":"Default","connections":["R-2.211","R-10.219","R-5.260"]},
+{"name":"L-2.168","strength":"0.577|0.543","x":99,"y":99,"z":99,"image":"#","order":168,"color":"#F0F316","network":"CinguloOperc","connections":["R-11.236","R-5.318"]},
+{"name":"L-6.169","x":99,"y":99,"z":99,"image":"#","order":169,"color":"#129502","network":"FrontoParietal"},
+{"name":"L-6.170","strength":"0.553","x":99,"y":99,"z":99,"image":"#","order":170,"color":"#129502","network":"FrontoParietal","connections":["R-2.259"]},
+{"name":"L-4.171","x":99,"y":99,"z":99,"image":"#","order":171,"color":"#B5678C","network":"Default"},
+{"name":"L-4.173","x":99,"y":99,"z":99,"image":"#","order":173,"color":"#B5678C","network":"Default"},
+{"name":"L-4.174","strength":"0.547","x":99,"y":99,"z":99,"image":"#","order":174,"color":"#B5678C","network":"Default","connections":["L-3.13"]},
+{"name":"L-2.175","strength":"0.63|0.821|0.603|0.577|0.69|0.575|0.604|0.633|0.596|0.544|0.541|0.602|0.628|0.599|0.609|0.547","x":99,"y":99,"z":99,"image":"#","order":175,"color":"#F0F316","network":"CinguloOperc","connections":["L-13.5","L-8.15","L-12.90","L-3.97","L-7.137","L-7.138","L-7.141","L-4.166","R-12.255","R-1.263","R-6.264","R-6.298","R-5.307","R-13.308","R-13.310","R-5.311"]},
+{"name":"L-4.176","x":99,"y":99,"z":99,"image":"#","order":176,"color":"#B5678C","network":"Default"},
+{"name":"L-5.177","x":99,"y":99,"z":99,"image":"#","order":177,"color":"#47CD0B","network":"DorsalAttn"},
+{"name":"L-4.180","strength":"0.602|0.541","x":99,"y":99,"z":99,"image":"#","order":180,"color":"#B5678C","network":"Default","connections":["L-7.21","L-7.22"]},
+{"name":"L-4.181","x":99,"y":99,"z":99,"image":"#","order":181,"color":"#B5678C","network":"Default"},
+{"name":"L-12.182","x":99,"y":99,"z":99,"image":"#","order":182,"color":"#955718","network":"VentralAttn"},
+{"name":"L-7.183","x":99,"y":99,"z":99,"image":"#","order":183,"color":"#73DB51","network":"None"},
+{"name":"L-1.184","strength":"0.585|0.565|0.54|0.55|0.625","x":99,"y":99,"z":99,"image":"#","order":184,"color":"#1DF325","network":"Auditory","connections":["L-8.150","L-13.152","R-6.319","R-2.321","R-5.322"]},
+{"name":"L-12.185","strength":"0.548","x":99,"y":99,"z":99,"image":"#","order":185,"color":"#955718","network":"VentralAttn","connections":["L-7.22"]},
+{"name":"R-4.186","x":99,"y":99,"z":99,"image":"#","order":186,"color":"#B5678C","network":"Default"},
+{"name":"R-10.187","x":99,"y":99,"z":99,"image":"#","order":187,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-11.188","x":99,"y":99,"z":99,"image":"#","order":188,"color":"#0AD03F","network":"SMmouth"},
+{"name":"R-4.189","strength":"0.563|0.714|0.586|0.558|0.573","x":99,"y":99,"z":99,"image":"#","order":189,"color":"#B5678C","network":"Default","connections":["L-9.87","L-5.91","L-5.92","L-7.163","R-12.252"]},
+{"name":"R-13.190","strength":"0.668|0.551|0.591|0.554|0.54|0.541","x":99,"y":99,"z":99,"image":"#","order":190,"color":"#CC2D35","network":"Visual","connections":["L-2.31","L-10.36","L-7.163","R-6.191","R-13.193","R-2.209"]},
+{"name":"R-6.191","strength":"0.554|0.687|0.554|0.575|0.551","x":99,"y":99,"z":99,"image":"#","order":191,"color":"#129502","network":"FrontoParietal","connections":["L-9.32","L-10.36","R-13.190","R-13.193","R-2.204"]},
+{"name":"R-6.192","x":99,"y":99,"z":99,"image":"#","order":192,"color":"#129502","network":"FrontoParietal"},
+{"name":"R-13.193","strength":"0.546|0.611|0.569|0.572|0.54|0.575","x":99,"y":99,"z":99,"image":"#","order":193,"color":"#CC2D35","network":"Visual","connections":["L-9.32","L-10.35","L-10.36","L-7.163","R-13.190","R-6.191"]},
+{"name":"R-6.194","x":99,"y":99,"z":99,"image":"#","order":194,"color":"#129502","network":"FrontoParietal"},
+{"name":"R-1.195","x":99,"y":99,"z":99,"image":"#","order":195,"color":"#1DF325","network":"Auditory"},
+{"name":"R-7.196","x":99,"y":99,"z":99,"image":"#","order":196,"color":"#73DB51","network":"None"},
+{"name":"R-3.197","x":99,"y":99,"z":99,"image":"#","order":197,"color":"#C15D1F","network":"CinguloParietal"},
+{"name":"R-8.198","x":99,"y":99,"z":99,"image":"#","order":198,"color":"#773D86","network":"RetrosplenialTemporal"},
+{"name":"R-13.199","x":99,"y":99,"z":99,"image":"#","order":199,"color":"#CC2D35","network":"Visual"},
+{"name":"R-13.200","strength":"0.563|0.542|0.557|0.632|0.634|0.547|0.581","x":99,"y":99,"z":99,"image":"#","order":200,"color":"#CC2D35","network":"Visual","connections":["L-5.44","L-13.94","R-2.220","R-2.259","R-1.315","R-4.326","R-7.327"]},
+{"name":"R-13.201","strength":"0.574|0.632|0.594","x":99,"y":99,"z":99,"image":"#","order":201,"color":"#CC2D35","network":"Visual","connections":["R-10.214","R-2.216","R-10.217"]},
+{"name":"R-7.202","strength":"0.552","x":99,"y":99,"z":99,"image":"#","order":202,"color":"#73DB51","network":"None","connections":["R-10.214"]},
+{"name":"R-7.203","x":99,"y":99,"z":99,"image":"#","order":203,"color":"#73DB51","network":"None"},
+{"name":"R-2.204","strength":"0.551","x":99,"y":99,"z":99,"image":"#","order":204,"color":"#F0F316","network":"CinguloOperc","connections":["R-6.191"]},
+{"name":"R-2.205","x":99,"y":99,"z":99,"image":"#","order":205,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"R-6.206","x":99,"y":99,"z":99,"image":"#","order":206,"color":"#129502","network":"FrontoParietal"},
+{"name":"R-9.207","x":99,"y":99,"z":99,"image":"#","order":207,"color":"#038AD4","network":"Salience"},
+{"name":"R-4.208","x":99,"y":99,"z":99,"image":"#","order":208,"color":"#B5678C","network":"Default"},
+{"name":"R-2.209","strength":"0.581|0.541","x":99,"y":99,"z":99,"image":"#","order":209,"color":"#F0F316","network":"CinguloOperc","connections":["L-7.163","R-13.190"]},
+{"name":"R-4.210","x":99,"y":99,"z":99,"image":"#","order":210,"color":"#B5678C","network":"Default"},
+{"name":"R-2.211","strength":"0.596|0.539","x":99,"y":99,"z":99,"image":"#","order":211,"color":"#F0F316","network":"CinguloOperc","connections":["L-4.167","R-2.262"]},
+{"name":"R-2.212","strength":"0.627|0.712|0.76|0.553|0.554","x":99,"y":99,"z":99,"image":"#","order":212,"color":"#F0F316","network":"CinguloOperc","connections":["L-11.3","L-10.53","L-8.164","R-1.268","R-2.269"]},
+{"name":"R-5.213","strength":"0.54|0.565|0.544|0.544|0.634","x":99,"y":99,"z":99,"image":"#","order":213,"color":"#47CD0B","network":"DorsalAttn","connections":["L-11.56","R-10.217","R-6.264","R-12.265","R-2.270"]},
+{"name":"R-10.214","strength":"0.574|0.552","x":99,"y":99,"z":99,"image":"#","order":214,"color":"#8E1D33","network":"SMhand","connections":["R-13.201","R-7.202"]},
+{"name":"R-10.215","strength":"0.603","x":99,"y":99,"z":99,"image":"#","order":215,"color":"#8E1D33","network":"SMhand","connections":["R-10.217"]},
+{"name":"R-2.216","strength":"0.551|0.632|0.587","x":99,"y":99,"z":99,"image":"#","order":216,"color":"#F0F316","network":"CinguloOperc","connections":["L-10.38","R-13.201","R-10.218"]},
+{"name":"R-10.217","strength":"0.594|0.565|0.603","x":99,"y":99,"z":99,"image":"#","order":217,"color":"#8E1D33","network":"SMhand","connections":["R-13.201","R-5.213","R-10.215"]},
+{"name":"R-10.218","strength":"0.587","x":99,"y":99,"z":99,"image":"#","order":218,"color":"#8E1D33","network":"SMhand","connections":["R-2.216"]},
+{"name":"R-10.219","strength":"0.574|0.548|0.557","x":99,"y":99,"z":99,"image":"#","order":219,"color":"#8E1D33","network":"SMhand","connections":["L-4.167","R-5.223","R-5.318"]},
+{"name":"R-2.220","strength":"0.607|0.631|0.561|0.6|0.557|0.709|0.566|0.57|0.626","x":99,"y":99,"z":99,"image":"#","order":220,"color":"#F0F316","network":"CinguloOperc","connections":["L-4.1","L-4.6","L-13.94","L-13.162","R-13.200","R-2.259","R-13.290","R-1.315","R-7.327"]},
+{"name":"R-11.221","x":99,"y":99,"z":99,"image":"#","order":221,"color":"#0AD03F","network":"SMmouth"},
+{"name":"R-2.222","x":99,"y":99,"z":99,"image":"#","order":222,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"R-5.223","strength":"0.548|0.54|0.544|0.549|0.552|0.576|0.559|0.596|0.618","x":99,"y":99,"z":99,"image":"#","order":223,"color":"#47CD0B","network":"DorsalAttn","connections":["R-10.219","R-10.230","R-6.264","R-12.265","R-1.268","R-2.269","R-2.270","R-5.274","R-13.275"]},
+{"name":"R-4.224","x":99,"y":99,"z":99,"image":"#","order":224,"color":"#B5678C","network":"Default"},
+{"name":"R-10.225","x":99,"y":99,"z":99,"image":"#","order":225,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-10.226","x":99,"y":99,"z":99,"image":"#","order":226,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-5.227","strength":"0.618|0.561","x":99,"y":99,"z":99,"image":"#","order":227,"color":"#47CD0B","network":"DorsalAttn","connections":["R-10.233","R-7.330"]},
+{"name":"R-10.228","x":99,"y":99,"z":99,"image":"#","order":228,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-10.229","x":99,"y":99,"z":99,"image":"#","order":229,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-10.230","strength":"0.54","x":99,"y":99,"z":99,"image":"#","order":230,"color":"#8E1D33","network":"SMhand","connections":["R-5.223"]},
+{"name":"R-10.231","x":99,"y":99,"z":99,"image":"#","order":231,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-5.232","x":99,"y":99,"z":99,"image":"#","order":232,"color":"#47CD0B","network":"DorsalAttn"},
+{"name":"R-10.233","strength":"0.618","x":99,"y":99,"z":99,"image":"#","order":233,"color":"#8E1D33","network":"SMhand","connections":["R-5.227"]},
+{"name":"R-10.234","x":99,"y":99,"z":99,"image":"#","order":234,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-5.235","x":99,"y":99,"z":99,"image":"#","order":235,"color":"#47CD0B","network":"DorsalAttn"},
+{"name":"R-11.236","strength":"0.577|0.568|0.612","x":99,"y":99,"z":99,"image":"#","order":236,"color":"#0AD03F","network":"SMmouth","connections":["L-2.168","R-2.273","R-13.275"]},
+{"name":"R-10.237","x":99,"y":99,"z":99,"image":"#","order":237,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-10.238","x":99,"y":99,"z":99,"image":"#","order":238,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-10.239","x":99,"y":99,"z":99,"image":"#","order":239,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-10.240","x":99,"y":99,"z":99,"image":"#","order":240,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-10.241","x":99,"y":99,"z":99,"image":"#","order":241,"color":"#8E1D33","network":"SMhand"},
+{"name":"R-11.242","x":99,"y":99,"z":99,"image":"#","order":242,"color":"#0AD03F","network":"SMmouth"},
+{"name":"R-2.243","x":99,"y":99,"z":99,"image":"#","order":243,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"R-4.244","x":99,"y":99,"z":99,"image":"#","order":244,"color":"#B5678C","network":"Default"},
+{"name":"R-12.245","x":99,"y":99,"z":99,"image":"#","order":245,"color":"#955718","network":"VentralAttn"},
+{"name":"R-12.246","x":99,"y":99,"z":99,"image":"#","order":246,"color":"#955718","network":"VentralAttn"},
+{"name":"R-2.247","x":99,"y":99,"z":99,"image":"#","order":247,"color":"#F0F316","network":"CinguloOperc"},
+{"name":"R-1.248","x":99,"y":99,"z":99,"image":"#","order":248,"color":"#1DF325","network":"Auditory"},
+{"name":"R-4.249","strength":"0.544|0.539","x":99,"y":99,"z":99,"image":"#","order":249,"color":"#B5678C","network":"Default","connections":["R-13.275","R-5.318"]},
+{"name":"R-12.250","x":99,"y":99,"z":99,"image":"#","order":250,"color":"#955718","network":"VentralAttn"},
+{"name":"R-1.251","strength":"0.562|0.552|0.637|0.563|0.564|0.677|0.58|0.539","x":99,"y":99,"z":99,"image":"#","order":251,"color":"#1DF325","network":"Auditory","connections":["L-13.5","L-10.51","L-9.87","L-7.163","L-4.166","R-12.252","R-2.262","R-6.264"]},
+{"name":"R-12.252","strength":"0.585|0.587|0.752|0.573|0.547|0.546|0.575|0.573|0.677|0.623|0.594|0.604","x":99,"y":99,"z":99,"image":"#","order":252,"color":"#955718","network":"VentralAttn","connections":["L-13.5","L-10.51","L-9.87","L-2.88","L-5.91","L-7.163","L-4.166","R-4.189","R-1.251","R-12.253","R-2.258","R-2.262"]},
+{"name":"R-12.253","strength":"0.565|0.57|0.623|0.577","x":99,"y":99,"z":99,"image":"#","order":253,"color":"#955718","network":"VentralAttn","connections":["L-9.87","L-2.88","R-12.252","R-2.258"]},
+{"name":"R-1.254","strength":"0.603|0.704","x":99,"y":99,"z":99,"image":"#","order":254,"color":"#1DF325","network":"Auditory","connections":["L-12.89","L-3.93"]},
+{"name":"R-12.255","strength":"0.674|0.549|0.667|0.658|0.689|0.596|0.573|0.539|0.56|0.562|0.635|0.611","x":99,"y":99,"z":99,"image":"#","order":255,"color":"#955718","network":"VentralAttn","connections":["L-13.5","L-8.15","L-12.90","L-7.137","L-4.166","L-2.175","R-1.256","R-6.264","R-6.298","R-5.307","R-13.310","R-5.311"]},
+{"name":"R-1.256","strength":"0.61|0.629|0.645|0.573|0.552|0.611","x":99,"y":99,"z":99,"image":"#","order":256,"color":"#1DF325","network":"Auditory","connections":["L-13.5","L-7.137","L-4.166","R-12.255","R-5.307","R-13.310"]},
+{"name":"R-1.257","x":99,"y":99,"z":99,"image":"#","order":257,"color":"#1DF325","network":"Auditory"},
+{"name":"R-2.258","strength":"0.633|0.55|0.587|0.662|0.594|0.577|0.545|0.577|0.593","x":99,"y":99,"z":99,"image":"#","order":258,"color":"#F0F316","network":"CinguloOperc","connections":["L-13.5","L-9.87","L-3.97","L-4.166","R-12.252","R-12.253","R-1.263","R-12.265","R-6.298"]},
+{"name":"R-2.259","strength":"0.586|0.546|0.687|0.633|0.553|0.632|0.709|0.59|0.601","x":99,"y":99,"z":99,"image":"#","order":259,"color":"#F0F316","network":"CinguloOperc","connections":["L-4.1","L-4.6","L-13.94","L-13.162","L-6.170","R-13.200","R-2.220","R-1.315","R-7.327"]},
+{"name":"R-5.260","strength":"0.549|0.561","x":99,"y":99,"z":99,"image":"#","order":260,"color":"#47CD0B","network":"DorsalAttn","connections":["L-4.167","R-12.261"]},
+{"name":"R-12.261","strength":"0.561","x":99,"y":99,"z":99,"image":"#","order":261,"color":"#955718","network":"VentralAttn","connections":["R-5.260"]},
+{"name":"R-2.262","strength":"0.553|0.556|0.539|0.58|0.604","x":99,"y":99,"z":99,"image":"#","order":262,"color":"#F0F316","network":"CinguloOperc","connections":["L-10.51","L-9.87","R-2.211","R-1.251","R-12.252"]},
+{"name":"R-1.263","strength":"0.664|0.686|0.646|0.593|0.599|0.544|0.545|0.611|0.585|0.576","x":99,"y":99,"z":99,"image":"#","order":263,"color":"#1DF325","network":"Auditory","connections":["L-3.97","L-4.98","L-7.140","L-7.141","L-4.166","L-2.175","R-2.258","R-6.264","R-12.265","R-13.309"]},
+{"name":"R-6.264","strength":"0.602|0.574|0.576|0.598|0.561|0.685|0.541|0.544|0.544|0.539|0.539|0.611|0.704|0.618|0.655|0.593","x":99,"y":99,"z":99,"image":"#","order":264,"color":"#129502","network":"FrontoParietal","connections":["L-13.5","L-3.97","L-5.99","L-7.137","L-7.141","L-4.166","L-2.175","R-5.213","R-5.223","R-1.251","R-12.255","R-1.263","R-12.265","R-12.267","R-6.298","R-5.307"]},
+{"name":"R-12.265","strength":"0.544|0.552|0.563|0.577|0.544|0.549|0.577|0.585|0.704|0.634|0.557","x":99,"y":99,"z":99,"image":"#","order":265,"color":"#955718","network":"VentralAttn","connections":["L-13.5","L-3.97","L-6.100","L-4.166","R-5.213","R-5.223","R-2.258","R-1.263","R-6.264","R-6.298","R-6.299"]},
+{"name":"R-12.266","x":99,"y":99,"z":99,"image":"#","order":266,"color":"#955718","network":"VentralAttn"},
+{"name":"R-12.267","strength":"0.618","x":99,"y":99,"z":99,"image":"#","order":267,"color":"#955718","network":"VentralAttn","connections":["R-6.264"]},
+{"name":"R-1.268","strength":"0.553|0.552","x":99,"y":99,"z":99,"image":"#","order":268,"color":"#1DF325","network":"Auditory","connections":["R-2.212","R-5.223"]},
+{"name":"R-2.269","strength":"0.554|0.576","x":99,"y":99,"z":99,"image":"#","order":269,"color":"#F0F316","network":"CinguloOperc","connections":["R-2.212","R-5.223"]},
+{"name":"R-2.270","strength":"0.634|0.559","x":99,"y":99,"z":99,"image":"#","order":270,"color":"#F0F316","network":"CinguloOperc","connections":["R-5.213","R-5.223"]},
+{"name":"R-9.271","strength":"0.548","x":99,"y":99,"z":99,"image":"#","order":271,"color":"#038AD4","network":"Salience","connections":["R-13.275"]},
+{"name":"R-2.272","strength":"0.627","x":99,"y":99,"z":99,"image":"#","order":272,"color":"#F0F316","network":"CinguloOperc","connections":["R-7.327"]},
+{"name":"R-2.273","strength":"0.568|0.581","x":99,"y":99,"z":99,"image":"#","order":273,"color":"#F0F316","network":"CinguloOperc","connections":["R-11.236","R-13.275"]},
+{"name":"R-5.274","strength":"0.596","x":99,"y":99,"z":99,"image":"#","order":274,"color":"#47CD0B","network":"DorsalAttn","connections":["R-5.223"]},
+{"name":"R-13.275","strength":"0.618|0.612|0.544|0.548|0.581","x":99,"y":99,"z":99,"image":"#","order":275,"color":"#CC2D35","network":"Visual","connections":["R-5.223","R-11.236","R-4.249","R-9.271","R-2.273"]},
+{"name":"R-5.276","x":99,"y":99,"z":99,"image":"#","order":276,"color":"#47CD0B","network":"DorsalAttn"},
+{"name":"R-5.277","strength":"0.555","x":99,"y":99,"z":99,"image":"#","order":277,"color":"#47CD0B","network":"DorsalAttn","connections":["R-6.319"]},
+{"name":"R-3.278","strength":"0.574|0.552","x":99,"y":99,"z":99,"image":"#","order":278,"color":"#C15D1F","network":"CinguloParietal","connections":["L-2.116","R-5.322"]},
+{"name":"R-13.279","strength":"0.585","x":99,"y":99,"z":99,"image":"#","order":279,"color":"#CC2D35","network":"Visual","connections":["L-2.116"]},
+{"name":"R-13.290","strength":"0.566","x":99,"y":99,"z":99,"image":"#","order":290,"color":"#CC2D35","network":"Visual","connections":["R-2.220"]},
+{"name":"R-4.293","x":99,"y":99,"z":99,"image":"#","order":293,"color":"#B5678C","network":"Default"},
+{"name":"R-13.294","x":99,"y":99,"z":99,"image":"#","order":294,"color":"#CC2D35","network":"Visual"},
+{"name":"R-4.295","x":99,"y":99,"z":99,"image":"#","order":295,"color":"#B5678C","network":"Default"},
+{"name":"R-6.298","strength":"0.669|0.574|0.555|0.597|0.656|0.614|0.71|0.602|0.56|0.593|0.655|0.634|0.567|0.615|0.593|0.559","x":99,"y":99,"z":99,"image":"#","order":298,"color":"#129502","network":"FrontoParietal","connections":["L-13.5","L-8.15","L-12.90","L-3.97","L-7.137","L-7.141","L-4.166","L-2.175","R-12.255","R-2.258","R-6.264","R-12.265","R-6.299","R-5.307","R-13.308","R-13.310"]},
+{"name":"R-6.299","strength":"0.557|0.567","x":99,"y":99,"z":99,"image":"#","order":299,"color":"#129502","network":"FrontoParietal","connections":["R-12.265","R-6.298"]},
+{"name":"R-5.307","strength":"0.694|0.592|0.544|0.571|0.735|0.56|0.561|0.755|0.628|0.562|0.552|0.593|0.615|0.57|0.619","x":99,"y":99,"z":99,"image":"#","order":307,"color":"#47CD0B","network":"DorsalAttn","connections":["L-13.5","L-8.15","L-12.90","L-3.97","L-7.137","L-7.138","L-7.141","L-4.166","L-2.175","R-12.255","R-1.256","R-6.264","R-6.298","R-13.308","R-13.310"]},
+{"name":"R-13.308","strength":"0.569|0.575|0.616|0.549|0.6|0.599|0.593|0.57","x":99,"y":99,"z":99,"image":"#","order":308,"color":"#CC2D35","network":"Visual","connections":["L-13.5","L-8.15","L-7.137","L-7.138","L-4.166","L-2.175","R-6.298","R-5.307"]},
+{"name":"R-13.309","strength":"0.583|0.576","x":99,"y":99,"z":99,"image":"#","order":309,"color":"#CC2D35","network":"Visual","connections":["L-7.141","R-1.263"]},
+{"name":"R-13.310","strength":"0.627|0.541|0.602|0.714|0.67|0.609|0.635|0.611|0.559|0.619|0.594","x":99,"y":99,"z":99,"image":"#","order":310,"color":"#CC2D35","network":"Visual","connections":["L-13.5","L-8.15","L-12.90","L-7.137","L-4.166","L-2.175","R-12.255","R-1.256","R-6.298","R-5.307","R-5.311"]},
+{"name":"R-5.311","strength":"0.582|0.608|0.605|0.586|0.547|0.611|0.594","x":99,"y":99,"z":99,"image":"#","order":311,"color":"#47CD0B","network":"DorsalAttn","connections":["L-13.5","L-12.90","L-7.137","L-4.166","L-2.175","R-12.255","R-13.310"]},
+{"name":"R-13.313","x":99,"y":99,"z":99,"image":"#","order":313,"color":"#CC2D35","network":"Visual"},
+{"name":"R-1.315","strength":"0.58|0.544|0.634|0.57|0.59|0.575|0.552|0.569","x":99,"y":99,"z":99,"image":"#","order":315,"color":"#1DF325","network":"Auditory","connections":["L-5.44","L-13.162","R-13.200","R-2.220","R-2.259","R-1.316","R-2.321","R-5.322"]},
+{"name":"R-1.316","strength":"0.575","x":99,"y":99,"z":99,"image":"#","order":316,"color":"#1DF325","network":"Auditory","connections":["R-1.315"]},
+{"name":"R-10.317","strength":"0.57","x":99,"y":99,"z":99,"image":"#","order":317,"color":"#8E1D33","network":"SMhand","connections":["R-5.318"]},
+{"name":"R-5.318","strength":"0.574|0.543|0.557|0.539|0.57","x":99,"y":99,"z":99,"image":"#","order":318,"color":"#47CD0B","network":"DorsalAttn","connections":["L-7.153","L-2.168","R-10.219","R-4.249","R-10.317"]},
+{"name":"R-6.319","strength":"0.54|0.555|0.587","x":99,"y":99,"z":99,"image":"#","order":319,"color":"#129502","network":"FrontoParietal","connections":["L-1.184","R-5.277","R-2.321"]},
+{"name":"R-6.320","x":99,"y":99,"z":99,"image":"#","order":320,"color":"#129502","network":"FrontoParietal"},
+{"name":"R-2.321","strength":"0.595|0.675|0.585|0.55|0.552|0.587|0.679|0.564","x":99,"y":99,"z":99,"image":"#","order":321,"color":"#F0F316","network":"CinguloOperc","connections":["L-4.146","L-8.150","L-13.151","L-1.184","R-1.315","R-6.319","R-5.322","R-6.324"]},
+{"name":"R-5.322","strength":"0.543|0.583|0.727|0.583|0.588|0.546|0.625|0.552|0.569|0.679|0.556|0.57","x":99,"y":99,"z":99,"image":"#","order":322,"color":"#47CD0B","network":"DorsalAttn","connections":["L-7.145","L-4.146","L-8.150","L-13.151","L-13.152","L-13.162","L-1.184","R-3.278","R-1.315","R-2.321","R-6.323","R-4.325"]},
+{"name":"R-6.323","strength":"0.542|0.556","x":99,"y":99,"z":99,"image":"#","order":323,"color":"#129502","network":"FrontoParietal","connections":["L-8.150","R-5.322"]},
+{"name":"R-6.324","strength":"0.542|0.55|0.564","x":99,"y":99,"z":99,"image":"#","order":324,"color":"#129502","network":"FrontoParietal","connections":["L-7.145","L-8.150","R-2.321"]},
+{"name":"R-4.325","strength":"0.558|0.57","x":99,"y":99,"z":99,"image":"#","order":325,"color":"#B5678C","network":"Default","connections":["L-8.150","R-5.322"]},
+{"name":"R-4.326","strength":"0.547","x":99,"y":99,"z":99,"image":"#","order":326,"color":"#B5678C","network":"Default","connections":["R-13.200"]},
+{"name":"R-7.327","strength":"0.581|0.626|0.601|0.627|0.561","x":99,"y":99,"z":99,"image":"#","order":327,"color":"#73DB51","network":"None","connections":["R-13.200","R-2.220","R-2.259","R-2.272","R-7.328"]},
+{"name":"R-7.328","strength":"0.561","x":99,"y":99,"z":99,"image":"#","order":328,"color":"#73DB51","network":"None","connections":["R-7.327"]},
+{"name":"R-7.329","x":99,"y":99,"z":99,"image":"#","order":329,"color":"#73DB51","network":"None"},
+{"name":"R-7.330","strength":"0.561","x":99,"y":99,"z":99,"image":"#","order":330,"color":"#73DB51","network":"None","connections":["R-5.227"]},
+{"name":"R-7.331","x":99,"y":99,"z":99,"image":"#","order":331,"color":"#73DB51","network":"None"},
+{"name":"R-7.332","x":99,"y":99,"z":99,"image":"#","order":332,"color":"#73DB51","network":"None"},
+{"name":"R-7.333","x":99,"y":99,"z":99,"image":"#","order":333,"color":"#73DB51","network":"None"}];
+
+  var classcounts = packages.count(classes);
+  
+  var nodes = cluster.nodes(packages.root(classes,classcounts.centroids)),
+      // Links will have source, target, and value (strength) of correlation
+      links = packages.connections(nodes),
+      splines = bundle(links);
+         
+  // This variable could determine if the current svg view should
+  // be frozen, which can be done with a click
+  // var freeze = "on";
+
+  var path = svg.selectAll("path.link")
+      .data(links)
+      .enter().append("svg:path")
+        .attr("class", function(d) { 
+         if (d.value > 0) {var direction = "up"}
+         else {var direction = "down"}
+         return "link source-" + d.source.key + " direction-" + direction + " target-" + d.target.key; })
+        .attr("d", function(d, i) { return line(splines[i]); })
+        // These attributes are very important to saving - they must be defined here 
+        // or else saving the shot of the svg will not include them, and you will
+        // create a monster!
+        .style("stroke-opacity",0.2)
+        .style("fill","none")
+        .style("stroke",function(d){
+          // Here we add a variable, "value" to class of node to distinguish if its positive or negative
+          var direction;
+          if (d.value > 0) {return "red";}
+          else {return "#7AA6FE";}
+        })
+     
+
+  // TODO: only print name for first name
+  
+  svg.selectAll("g.node")
+      .data(nodes.filter(function(n) { return !n.children; }))
+        .enter().append("svg:g")
+        .attr("class", "node")
+        .style("font-size",18)
+        .attr("id", function(d) { return "node-" + d.key; })
+        .attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; })
+    .append("svg:text")
+      .attr("dx", function(d) { return d.x < 180 ? 8 : -8; })
+      .attr("dy", ".8em")
+      .attr("fill",function(d) { return d.color; })
+      .attr("text-anchor", function(d) { return d.x < 180 ? "start" : "end"; })
+      .attr("transform", function(d) { return d.x < 180 ? null : "rotate(180)"; })
+      .text(function(d) { return d.network });
+      
+    svg.selectAll("g.node")
+        .append("svg:circle")
+          .attr("r",4)
+          .attr("fill",function(d) {return d.color})   
+      .on("mouseover", mouseover)
+      .on("mouseout", mouseout)
+
+      // Show image of roi when mouse over node
+      .on("mouseover.image",function(node){
+        // Add the image
+        d3.select("#imageBox")
+          .selectAll("img")
+          .attr("src", "img/" + node.image)
+
+          // Add the xyz coordinates
+          d3.select("#x").text(node.xcoord.toFixed(2))
+          d3.select("#y").text(node.ycoord.toFixed(2))
+          d3.select("#z").text(node.z.toFixed(2))
+      })
+      // Show title of network when mouse over node
+      .on("mouseover.title",function(d) { 
+         d3.select("#titleBox")
+          .selectAll("h3")
+          .text(d.network);})
+     
+
+  // Here is slider to adjust the tension   
+  d3.select("input[type=range]").on("change", function() {
+    line.tension(this.value / 100);
+    path.attr("d", function(d, i) { return line(splines[i]); });
+  });
+
+d3.select(window)
+    .on("mousemove", mousemove)
+    .on("mouseup", mouseup);
+
+function mouse(e) {
+  return [e.pageX - rx, e.pageY - ry];
+}
+
+function mousedown() {
+  m0 = mouse(d3.event);
+  d3.event.preventDefault();
+}
+
+function mousemove() {
+  if (m0) {
+    var m1 = mouse(d3.event),
+        dm = Math.atan2(cross(m0, m1), dot(m0, m1)) * 180 / Math.PI;
+    div.style("-webkit-transform", "translateY(" + (ry - rx) + "px)rotateZ(" + dm + "deg)translateY(" + (rx - ry) + "px)");
+  }
+}
+
+function mouseup() {
+  if (m0) {
+    var m1 = mouse(d3.event),
+        dm = Math.atan2(cross(m0, m1), dot(m0, m1)) * 180 / Math.PI;
+
+    rotate += dm;
+    if (rotate > 360) rotate -= 360;
+    else if (rotate < 0) rotate += 360;
+    m0 = null;
+
+    div.style("-webkit-transform", null);
+
+    svg
+      .attr("transform", "translate(" + rx + "," + ry + ")rotate(" + rotate + ")")
+      .selectAll("g.node text")
+        .attr("dx", function(d) { return (d.x + rotate) % 360 < 180 ? 8 : -8; })
+        .attr("text-anchor", function(d) { return (d.x + rotate) % 360 < 180 ? "start" : "end"; })
+        .attr("transform", function(d) { return (d.x + rotate) % 360 < 180 ? null : "rotate(180)"; });
+  }
+}
+// Here is where we should modify the coloring of the nodes!
+function mouseover(d) {
+  svg.selectAll("path.link.target-" + d.key)
+        .attr('stroke-width', 8)
+        .style("stroke-opacity", 1);
+  
+  svg.selectAll("path.link.source-" + d.key)
+      .attr('stroke-width', 8)
+      .style("stroke-opacity", 1);
+      
+}
+
+function mouseout(d) {
+  svg.selectAll("path.link.source-" + d.key)
+             .attr('stroke-width',3)
+             .style("stroke-opacity", 0.2);
+
+  svg.selectAll("path.link.target-" + d.key)
+       .attr('stroke-width',3)
+        .style("stroke-opacity", 0.2);
+
+}
+
+function updateNodes(name, value) {
+  return function(d) {
+    if (value) this.parentNode.appendChild(this);
+    svg.select("#node-" + d[name].key).classed(name, value);
+  };
+}
+
+function cross(a, b) {
+  return a[0] * b[1] - a[1] * b[0];
+}
+
+function dot(a, b) {
+  return a[0] * b[0] + a[1] * b[1];
+}
+
+//Vanessa's Hacky save svg function!
+function save_svg(evt) {
+    var svg = document.getElementsByTagName("svg");
+    var serializer = new XMLSerializer();
+    var svg_blob = new Blob([serializer.serializeToString(svg[0])],
+                            {'type': "image/svg+xml"});
+    var url = URL.createObjectURL(svg_blob);
+    var svg_win = window.open(url, "svg_win");
+}
+
+
+//Highlight all positive node connections
+document.getElementById('highlight_positive').onchange = function() {
+    if ( document.getElementById('highlight_positive').checked === true ) {
+       d3.selectAll("path.link.direction-up")        
+      .attr("stroke-width",8);
+    }
+    else {
+      d3.selectAll("path.link.direction-up")        
+      .attr("stroke-width",3);
+    }
+}
+
+
+document.getElementById('highlight_negative').onchange = function() {
+    if ( document.getElementById('highlight_negative').checked === true ) {
+       d3.selectAll("path.link.direction-down")        
+      .attr("stroke-width",8);
+    }
+    else {
+      d3.selectAll("path.link.direction-down")        
+      .attr("stroke-width",3);
+    }
+
+}
+</script>
+<div class="control">
+<h3 class="navbar-brand" style="margin-bottom:0px;padding-left:5px">tension</h3>
+<input style="padding-left:20px;position:relative;top:3px;" type="range" min="0" max="100" value="85">
+</div>
+    
+</body>
+</html>
