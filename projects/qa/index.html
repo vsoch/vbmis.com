@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>Pybraincompare Quality Analysis Report</title>
+	<meta name="description" content="Pybraincompare Quality Analysis Report">
+	<meta name="author" content="Poldracklab (vsochat@stanford.edu)">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+	
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link id="ie-style" href="css/ie.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!--[if IE 9]>
+		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
+	<![endif]-->
+		
+	<!-- start: Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- end: Favicon -->
+	
+</head>
+
+<body>
+		<!-- start: Header -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+			<a class="brand" href="index.html"><span>quality analysis report</span></a>
+				<!-- start: Header Menu -->
+				<div class="nav-no-collapse header-nav">
+					<ul class="nav pull-right">
+						<li class="dropdown hidden-phone">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-folder-close"></i><span class="badge red">144</span>
+							</a>
+							<ul class="dropdown-menu notifications"><li class="dropdown-menu-title">
+ 							<span>You have 144 images</span><a href="#refresh"><i class="icon-repeat"></i></a></li>	</ul></li></li>
+						
+						<!-- start: User Dropdown -->
+						<li class="dropdown">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="halflings-icon white user"></i> Vanessa<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu"><li class="dropdown-menu-title">
+ 									<span>QA Support</span></li><li><a href="http://www.neurostars.org" target="_blank"><i class="halflings-icon user"></i> Get Help</a></li><li><a href="http://www.nitrc.org" target="_blank"><i class="halflings-icon off"></i> NITRC</a></li>
+							</ul>
+						</li>
+						<!-- end: User Dropdown -->
+					</ul>
+				</div>
+				<!-- end: Header Menu -->
+
+				
+			</div>
+		</div>
+	</div>
+	<!-- start: Header -->
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+				
+			<!-- start: Main Menu -->
+			<div id="sidebar-left" class="span2">
+				<div class="nav-collapse sidebar-nav">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="index.html"><i class="icon-camera"></i><span class="hidden-tablet"> View Images</span></a></li>	
+						<li><a href="histograms.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Histograms</span></a></li>
+						<li><a href="summary.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Summary</span></a></li>
+						<li><a href="alerts.html"><i class="icon-flag"></i><span class="hidden-tablet"> Alerts</span></a></li>
+						
+					</ul>
+				</div>
+			</div>
+			<!-- end: Main Menu -->
+			
+			<noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">Warning!</h4>
+					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+				</div>
+			</noscript>
+			
+			<!-- start: Content -->
+			<div id="content" class="span10">
+			<div class="row-fluid">
+				
+				<div class="span3 statbox purple" onTablet="span6" onDesktop="span3">
+					<div class="boxchart">44,296,1192,2687,4743,6603,8831,13804,19491,23662,23027,17947,16945,16193,15186,12735,11103,9894,8280,6376,4555,2893,1600,748,195</div>
+					<div class="footer">
+						<a href="histograms.html"> view all</a>
+					</div>	
+				</div>
+				<div class="span3 statbox green" onTablet="span6" onDesktop="span3">
+					<div class="number">0</div>
+					<div class="title">number thresholded</div>
+					<div class="footer">
+						<a href="alerts.html"> view full report</a>
+					</div>
+				</div>
+				<div class="span3 statbox blue noMargin" onTablet="span6" onDesktop="span3">
+					<div class="number">0</div>
+					<div class="title">number outliers</div>
+					<div class="footer">
+						<a href="alerts.html"> read full report</a>
+					</div>
+				</div>
+				<div class="span3 statbox yellow" onTablet="span6" onDesktop="span3">
+					<div class="number">144</div>
+					<div class="title">total images</div>
+					<div class="footer">
+						<a href="summary.html"> view summary</a>
+					</div>
+				</div>	
+				
+			</div>		
+
+			<div class="row-fluid">
+				
+<!--TODO: here will be glassbrain images-->
+<div class="box-content"><div class="masonry-gallery">
+<div id="image-0" class="masonry-thumb"><a style="background:url(0/img/glassbrain.png) width=200px" title="000174.nii.gz" href="0/0.html"><img class="grayscale" src="0/img/glassbrain.png" alt="000174.nii.gz"></a></div>
+<div id="image-1" class="masonry-thumb"><a style="background:url(1/img/glassbrain.png) width=200px" title="000116.nii.gz" href="1/1.html"><img class="grayscale" src="1/img/glassbrain.png" alt="000116.nii.gz"></a></div>
+<div id="image-2" class="masonry-thumb"><a style="background:url(2/img/glassbrain.png) width=200px" title="000452.nii.gz" href="2/2.html"><img class="grayscale" src="2/img/glassbrain.png" alt="000452.nii.gz"></a></div>
+<div id="image-3" class="masonry-thumb"><a style="background:url(3/img/glassbrain.png) width=200px" title="000169.nii.gz" href="3/3.html"><img class="grayscale" src="3/img/glassbrain.png" alt="000169.nii.gz"></a></div>
+<div id="image-4" class="masonry-thumb"><a style="background:url(4/img/glassbrain.png) width=200px" title="000546.nii.gz" href="4/4.html"><img class="grayscale" src="4/img/glassbrain.png" alt="000546.nii.gz"></a></div>
+<div id="image-5" class="masonry-thumb"><a style="background:url(5/img/glassbrain.png) width=200px" title="000142.nii.gz" href="5/5.html"><img class="grayscale" src="5/img/glassbrain.png" alt="000142.nii.gz"></a></div>
+<div id="image-6" class="masonry-thumb"><a style="background:url(6/img/glassbrain.png) width=200px" title="000177.nii.gz" href="6/6.html"><img class="grayscale" src="6/img/glassbrain.png" alt="000177.nii.gz"></a></div>
+<div id="image-7" class="masonry-thumb"><a style="background:url(7/img/glassbrain.png) width=200px" title="000162.nii.gz" href="7/7.html"><img class="grayscale" src="7/img/glassbrain.png" alt="000162.nii.gz"></a></div>
+<div id="image-8" class="masonry-thumb"><a style="background:url(8/img/glassbrain.png) width=200px" title="000449.nii.gz" href="8/8.html"><img class="grayscale" src="8/img/glassbrain.png" alt="000449.nii.gz"></a></div>
+<div id="image-9" class="masonry-thumb"><a style="background:url(9/img/glassbrain.png) width=200px" title="000131.nii.gz" href="9/9.html"><img class="grayscale" src="9/img/glassbrain.png" alt="000131.nii.gz"></a></div>
+<div id="image-10" class="masonry-thumb"><a style="background:url(10/img/glassbrain.png) width=200px" title="000170.nii.gz" href="10/10.html"><img class="grayscale" src="10/img/glassbrain.png" alt="000170.nii.gz"></a></div>
+<div id="image-11" class="masonry-thumb"><a style="background:url(11/img/glassbrain.png) width=200px" title="000181.nii.gz" href="11/11.html"><img class="grayscale" src="11/img/glassbrain.png" alt="000181.nii.gz"></a></div>
+<div id="image-12" class="masonry-thumb"><a style="background:url(12/img/glassbrain.png) width=200px" title="000153.nii.gz" href="12/12.html"><img class="grayscale" src="12/img/glassbrain.png" alt="000153.nii.gz"></a></div>
+<div id="image-13" class="masonry-thumb"><a style="background:url(13/img/glassbrain.png) width=200px" title="000305.nii.gz" href="13/13.html"><img class="grayscale" src="13/img/glassbrain.png" alt="000305.nii.gz"></a></div>
+<div id="image-14" class="masonry-thumb"><a style="background:url(14/img/glassbrain.png) width=200px" title="000144.nii.gz" href="14/14.html"><img class="grayscale" src="14/img/glassbrain.png" alt="000144.nii.gz"></a></div>
+<div id="image-15" class="masonry-thumb"><a style="background:url(15/img/glassbrain.png) width=200px" title="000187.nii.gz" href="15/15.html"><img class="grayscale" src="15/img/glassbrain.png" alt="000187.nii.gz"></a></div>
+<div id="image-16" class="masonry-thumb"><a style="background:url(16/img/glassbrain.png) width=200px" title="000311.nii.gz" href="16/16.html"><img class="grayscale" src="16/img/glassbrain.png" alt="000311.nii.gz"></a></div>
+<div id="image-17" class="masonry-thumb"><a style="background:url(17/img/glassbrain.png) width=200px" title="000178.nii.gz" href="17/17.html"><img class="grayscale" src="17/img/glassbrain.png" alt="000178.nii.gz"></a></div>
+<div id="image-18" class="masonry-thumb"><a style="background:url(18/img/glassbrain.png) width=200px" title="000189.nii.gz" href="18/18.html"><img class="grayscale" src="18/img/glassbrain.png" alt="000189.nii.gz"></a></div>
+<div id="image-19" class="masonry-thumb"><a style="background:url(19/img/glassbrain.png) width=200px" title="000139.nii.gz" href="19/19.html"><img class="grayscale" src="19/img/glassbrain.png" alt="000139.nii.gz"></a></div>
+<div id="image-20" class="masonry-thumb"><a style="background:url(20/img/glassbrain.png) width=200px" title="000125.nii.gz" href="20/20.html"><img class="grayscale" src="20/img/glassbrain.png" alt="000125.nii.gz"></a></div>
+<div id="image-21" class="masonry-thumb"><a style="background:url(21/img/glassbrain.png) width=200px" title="000461.nii.gz" href="21/21.html"><img class="grayscale" src="21/img/glassbrain.png" alt="000461.nii.gz"></a></div>
+<div id="image-22" class="masonry-thumb"><a style="background:url(22/img/glassbrain.png) width=200px" title="000466.nii.gz" href="22/22.html"><img class="grayscale" src="22/img/glassbrain.png" alt="000466.nii.gz"></a></div>
+<div id="image-23" class="masonry-thumb"><a style="background:url(23/img/glassbrain.png) width=200px" title="000163.nii.gz" href="23/23.html"><img class="grayscale" src="23/img/glassbrain.png" alt="000163.nii.gz"></a></div>
+<div id="image-24" class="masonry-thumb"><a style="background:url(24/img/glassbrain.png) width=200px" title="000306.nii.gz" href="24/24.html"><img class="grayscale" src="24/img/glassbrain.png" alt="000306.nii.gz"></a></div>
+<div id="image-25" class="masonry-thumb"><a style="background:url(25/img/glassbrain.png) width=200px" title="000121.nii.gz" href="25/25.html"><img class="grayscale" src="25/img/glassbrain.png" alt="000121.nii.gz"></a></div>
+<div id="image-26" class="masonry-thumb"><a style="background:url(26/img/glassbrain.png) width=200px" title="000171.nii.gz" href="26/26.html"><img class="grayscale" src="26/img/glassbrain.png" alt="000171.nii.gz"></a></div>
+<div id="image-27" class="masonry-thumb"><a style="background:url(27/img/glassbrain.png) width=200px" title="000307.nii.gz" href="27/27.html"><img class="grayscale" src="27/img/glassbrain.png" alt="000307.nii.gz"></a></div>
+<div id="image-28" class="masonry-thumb"><a style="background:url(28/img/glassbrain.png) width=200px" title="000454.nii.gz" href="28/28.html"><img class="grayscale" src="28/img/glassbrain.png" alt="000454.nii.gz"></a></div>
+<div id="image-29" class="masonry-thumb"><a style="background:url(29/img/glassbrain.png) width=200px" title="000545.nii.gz" href="29/29.html"><img class="grayscale" src="29/img/glassbrain.png" alt="000545.nii.gz"></a></div>
+<div id="image-30" class="masonry-thumb"><a style="background:url(30/img/glassbrain.png) width=200px" title="000442.nii.gz" href="30/30.html"><img class="grayscale" src="30/img/glassbrain.png" alt="000442.nii.gz"></a></div>
+<div id="image-31" class="masonry-thumb"><a style="background:url(31/img/glassbrain.png) width=200px" title="000150.nii.gz" href="31/31.html"><img class="grayscale" src="31/img/glassbrain.png" alt="000150.nii.gz"></a></div>
+<div id="image-32" class="masonry-thumb"><a style="background:url(32/img/glassbrain.png) width=200px" title="000127.nii.gz" href="32/32.html"><img class="grayscale" src="32/img/glassbrain.png" alt="000127.nii.gz"></a></div>
+<div id="image-33" class="masonry-thumb"><a style="background:url(33/img/glassbrain.png) width=200px" title="000156.nii.gz" href="33/33.html"><img class="grayscale" src="33/img/glassbrain.png" alt="000156.nii.gz"></a></div>
+<div id="image-34" class="masonry-thumb"><a style="background:url(34/img/glassbrain.png) width=200px" title="000440.nii.gz" href="34/34.html"><img class="grayscale" src="34/img/glassbrain.png" alt="000440.nii.gz"></a></div>
+<div id="image-35" class="masonry-thumb"><a style="background:url(35/img/glassbrain.png) width=200px" title="000186.nii.gz" href="35/35.html"><img class="grayscale" src="35/img/glassbrain.png" alt="000186.nii.gz"></a></div>
+<div id="image-36" class="masonry-thumb"><a style="background:url(36/img/glassbrain.png) width=200px" title="000137.nii.gz" href="36/36.html"><img class="grayscale" src="36/img/glassbrain.png" alt="000137.nii.gz"></a></div>
+<div id="image-37" class="masonry-thumb"><a style="background:url(37/img/glassbrain.png) width=200px" title="000190.nii.gz" href="37/37.html"><img class="grayscale" src="37/img/glassbrain.png" alt="000190.nii.gz"></a></div>
+<div id="image-38" class="masonry-thumb"><a style="background:url(38/img/glassbrain.png) width=200px" title="000166.nii.gz" href="38/38.html"><img class="grayscale" src="38/img/glassbrain.png" alt="000166.nii.gz"></a></div>
+<div id="image-39" class="masonry-thumb"><a style="background:url(39/img/glassbrain.png) width=200px" title="000527.nii.gz" href="39/39.html"><img class="grayscale" src="39/img/glassbrain.png" alt="000527.nii.gz"></a></div>
+<div id="image-40" class="masonry-thumb"><a style="background:url(40/img/glassbrain.png) width=200px" title="000308.nii.gz" href="40/40.html"><img class="grayscale" src="40/img/glassbrain.png" alt="000308.nii.gz"></a></div>
+<div id="image-41" class="masonry-thumb"><a style="background:url(41/img/glassbrain.png) width=200px" title="000147.nii.gz" href="41/41.html"><img class="grayscale" src="41/img/glassbrain.png" alt="000147.nii.gz"></a></div>
+<div id="image-42" class="masonry-thumb"><a style="background:url(42/img/glassbrain.png) width=200px" title="000530.nii.gz" href="42/42.html"><img class="grayscale" src="42/img/glassbrain.png" alt="000530.nii.gz"></a></div>
+<div id="image-43" class="masonry-thumb"><a style="background:url(43/img/glassbrain.png) width=200px" title="000179.nii.gz" href="43/43.html"><img class="grayscale" src="43/img/glassbrain.png" alt="000179.nii.gz"></a></div>
+<div id="image-44" class="masonry-thumb"><a style="background:url(44/img/glassbrain.png) width=200px" title="000167.nii.gz" href="44/44.html"><img class="grayscale" src="44/img/glassbrain.png" alt="000167.nii.gz"></a></div>
+<div id="image-45" class="masonry-thumb"><a style="background:url(45/img/glassbrain.png) width=200px" title="000544.nii.gz" href="45/45.html"><img class="grayscale" src="45/img/glassbrain.png" alt="000544.nii.gz"></a></div>
+<div id="image-46" class="masonry-thumb"><a style="background:url(46/img/glassbrain.png) width=200px" title="000535.nii.gz" href="46/46.html"><img class="grayscale" src="46/img/glassbrain.png" alt="000535.nii.gz"></a></div>
+<div id="image-47" class="masonry-thumb"><a style="background:url(47/img/glassbrain.png) width=200px" title="000446.nii.gz" href="47/47.html"><img class="grayscale" src="47/img/glassbrain.png" alt="000446.nii.gz"></a></div>
+<div id="image-48" class="masonry-thumb"><a style="background:url(48/img/glassbrain.png) width=200px" title="000447.nii.gz" href="48/48.html"><img class="grayscale" src="48/img/glassbrain.png" alt="000447.nii.gz"></a></div>
+<div id="image-49" class="masonry-thumb"><a style="background:url(49/img/glassbrain.png) width=200px" title="000122.nii.gz" href="49/49.html"><img class="grayscale" src="49/img/glassbrain.png" alt="000122.nii.gz"></a></div>
+<div id="image-50" class="masonry-thumb"><a style="background:url(50/img/glassbrain.png) width=200px" title="000132.nii.gz" href="50/50.html"><img class="grayscale" src="50/img/glassbrain.png" alt="000132.nii.gz"></a></div>
+<div id="image-51" class="masonry-thumb"><a style="background:url(51/img/glassbrain.png) width=200px" title="000536.nii.gz" href="51/51.html"><img class="grayscale" src="51/img/glassbrain.png" alt="000536.nii.gz"></a></div>
+<div id="image-52" class="masonry-thumb"><a style="background:url(52/img/glassbrain.png) width=200px" title="000159.nii.gz" href="52/52.html"><img class="grayscale" src="52/img/glassbrain.png" alt="000159.nii.gz"></a></div>
+<div id="image-53" class="masonry-thumb"><a style="background:url(53/img/glassbrain.png) width=200px" title="000184.nii.gz" href="53/53.html"><img class="grayscale" src="53/img/glassbrain.png" alt="000184.nii.gz"></a></div>
+<div id="image-54" class="masonry-thumb"><a style="background:url(54/img/glassbrain.png) width=200px" title="000141.nii.gz" href="54/54.html"><img class="grayscale" src="54/img/glassbrain.png" alt="000141.nii.gz"></a></div>
+<div id="image-55" class="masonry-thumb"><a style="background:url(55/img/glassbrain.png) width=200px" title="000457.nii.gz" href="55/55.html"><img class="grayscale" src="55/img/glassbrain.png" alt="000457.nii.gz"></a></div>
+<div id="image-56" class="masonry-thumb"><a style="background:url(56/img/glassbrain.png) width=200px" title="000441.nii.gz" href="56/56.html"><img class="grayscale" src="56/img/glassbrain.png" alt="000441.nii.gz"></a></div>
+<div id="image-57" class="masonry-thumb"><a style="background:url(57/img/glassbrain.png) width=200px" title="000165.nii.gz" href="57/57.html"><img class="grayscale" src="57/img/glassbrain.png" alt="000165.nii.gz"></a></div>
+<div id="image-58" class="masonry-thumb"><a style="background:url(58/img/glassbrain.png) width=200px" title="000460.nii.gz" href="58/58.html"><img class="grayscale" src="58/img/glassbrain.png" alt="000460.nii.gz"></a></div>
+<div id="image-59" class="masonry-thumb"><a style="background:url(59/img/glassbrain.png) width=200px" title="000470.nii.gz" href="59/59.html"><img class="grayscale" src="59/img/glassbrain.png" alt="000470.nii.gz"></a></div>
+<div id="image-60" class="masonry-thumb"><a style="background:url(60/img/glassbrain.png) width=200px" title="000135.nii.gz" href="60/60.html"><img class="grayscale" src="60/img/glassbrain.png" alt="000135.nii.gz"></a></div>
+<div id="image-61" class="masonry-thumb"><a style="background:url(61/img/glassbrain.png) width=200px" title="000302.nii.gz" href="61/61.html"><img class="grayscale" src="61/img/glassbrain.png" alt="000302.nii.gz"></a></div>
+<div id="image-62" class="masonry-thumb"><a style="background:url(62/img/glassbrain.png) width=200px" title="000299.nii.gz" href="62/62.html"><img class="grayscale" src="62/img/glassbrain.png" alt="000299.nii.gz"></a></div>
+<div id="image-63" class="masonry-thumb"><a style="background:url(63/img/glassbrain.png) width=200px" title="000130.nii.gz" href="63/63.html"><img class="grayscale" src="63/img/glassbrain.png" alt="000130.nii.gz"></a></div>
+<div id="image-64" class="masonry-thumb"><a style="background:url(64/img/glassbrain.png) width=200px" title="000134.nii.gz" href="64/64.html"><img class="grayscale" src="64/img/glassbrain.png" alt="000134.nii.gz"></a></div>
+<div id="image-65" class="masonry-thumb"><a style="background:url(65/img/glassbrain.png) width=200px" title="000538.nii.gz" href="65/65.html"><img class="grayscale" src="65/img/glassbrain.png" alt="000538.nii.gz"></a></div>
+<div id="image-66" class="masonry-thumb"><a style="background:url(66/img/glassbrain.png) width=200px" title="000149.nii.gz" href="66/66.html"><img class="grayscale" src="66/img/glassbrain.png" alt="000149.nii.gz"></a></div>
+<div id="image-67" class="masonry-thumb"><a style="background:url(67/img/glassbrain.png) width=200px" title="000126.nii.gz" href="67/67.html"><img class="grayscale" src="67/img/glassbrain.png" alt="000126.nii.gz"></a></div>
+<div id="image-68" class="masonry-thumb"><a style="background:url(68/img/glassbrain.png) width=200px" title="000138.nii.gz" href="68/68.html"><img class="grayscale" src="68/img/glassbrain.png" alt="000138.nii.gz"></a></div>
+<div id="image-69" class="masonry-thumb"><a style="background:url(69/img/glassbrain.png) width=200px" title="000462.nii.gz" href="69/69.html"><img class="grayscale" src="69/img/glassbrain.png" alt="000462.nii.gz"></a></div>
+<div id="image-70" class="masonry-thumb"><a style="background:url(70/img/glassbrain.png) width=200px" title="000543.nii.gz" href="70/70.html"><img class="grayscale" src="70/img/glassbrain.png" alt="000543.nii.gz"></a></div>
+<div id="image-71" class="masonry-thumb"><a style="background:url(71/img/glassbrain.png) width=200px" title="000456.nii.gz" href="71/71.html"><img class="grayscale" src="71/img/glassbrain.png" alt="000456.nii.gz"></a></div>
+<div id="image-72" class="masonry-thumb"><a style="background:url(72/img/glassbrain.png) width=200px" title="000471.nii.gz" href="72/72.html"><img class="grayscale" src="72/img/glassbrain.png" alt="000471.nii.gz"></a></div>
+<div id="image-73" class="masonry-thumb"><a style="background:url(73/img/glassbrain.png) width=200px" title="000459.nii.gz" href="73/73.html"><img class="grayscale" src="73/img/glassbrain.png" alt="000459.nii.gz"></a></div>
+<div id="image-74" class="masonry-thumb"><a style="background:url(74/img/glassbrain.png) width=200px" title="000146.nii.gz" href="74/74.html"><img class="grayscale" src="74/img/glassbrain.png" alt="000146.nii.gz"></a></div>
+<div id="image-75" class="masonry-thumb"><a style="background:url(75/img/glassbrain.png) width=200px" title="000453.nii.gz" href="75/75.html"><img class="grayscale" src="75/img/glassbrain.png" alt="000453.nii.gz"></a></div>
+<div id="image-76" class="masonry-thumb"><a style="background:url(76/img/glassbrain.png) width=200px" title="000133.nii.gz" href="76/76.html"><img class="grayscale" src="76/img/glassbrain.png" alt="000133.nii.gz"></a></div>
+<div id="image-77" class="masonry-thumb"><a style="background:url(77/img/glassbrain.png) width=200px" title="000143.nii.gz" href="77/77.html"><img class="grayscale" src="77/img/glassbrain.png" alt="000143.nii.gz"></a></div>
+<div id="image-78" class="masonry-thumb"><a style="background:url(78/img/glassbrain.png) width=200px" title="000157.nii.gz" href="78/78.html"><img class="grayscale" src="78/img/glassbrain.png" alt="000157.nii.gz"></a></div>
+<div id="image-79" class="masonry-thumb"><a style="background:url(79/img/glassbrain.png) width=200px" title="000528.nii.gz" href="79/79.html"><img class="grayscale" src="79/img/glassbrain.png" alt="000528.nii.gz"></a></div>
+<div id="image-80" class="masonry-thumb"><a style="background:url(80/img/glassbrain.png) width=200px" title="000301.nii.gz" href="80/80.html"><img class="grayscale" src="80/img/glassbrain.png" alt="000301.nii.gz"></a></div>
+<div id="image-81" class="masonry-thumb"><a style="background:url(81/img/glassbrain.png) width=200px" title="000532.nii.gz" href="81/81.html"><img class="grayscale" src="81/img/glassbrain.png" alt="000532.nii.gz"></a></div>
+<div id="image-82" class="masonry-thumb"><a style="background:url(82/img/glassbrain.png) width=200px" title="000183.nii.gz" href="82/82.html"><img class="grayscale" src="82/img/glassbrain.png" alt="000183.nii.gz"></a></div>
+<div id="image-83" class="masonry-thumb"><a style="background:url(83/img/glassbrain.png) width=200px" title="000117.nii.gz" href="83/83.html"><img class="grayscale" src="83/img/glassbrain.png" alt="000117.nii.gz"></a></div>
+<div id="image-84" class="masonry-thumb"><a style="background:url(84/img/glassbrain.png) width=200px" title="000188.nii.gz" href="84/84.html"><img class="grayscale" src="84/img/glassbrain.png" alt="000188.nii.gz"></a></div>
+<div id="image-85" class="masonry-thumb"><a style="background:url(85/img/glassbrain.png) width=200px" title="000120.nii.gz" href="85/85.html"><img class="grayscale" src="85/img/glassbrain.png" alt="000120.nii.gz"></a></div>
+<div id="image-86" class="masonry-thumb"><a style="background:url(86/img/glassbrain.png) width=200px" title="000154.nii.gz" href="86/86.html"><img class="grayscale" src="86/img/glassbrain.png" alt="000154.nii.gz"></a></div>
+<div id="image-87" class="masonry-thumb"><a style="background:url(87/img/glassbrain.png) width=200px" title="000474.nii.gz" href="87/87.html"><img class="grayscale" src="87/img/glassbrain.png" alt="000474.nii.gz"></a></div>
+<div id="image-88" class="masonry-thumb"><a style="background:url(88/img/glassbrain.png) width=200px" title="000140.nii.gz" href="88/88.html"><img class="grayscale" src="88/img/glassbrain.png" alt="000140.nii.gz"></a></div>
+<div id="image-89" class="masonry-thumb"><a style="background:url(89/img/glassbrain.png) width=200px" title="000439.nii.gz" href="89/89.html"><img class="grayscale" src="89/img/glassbrain.png" alt="000439.nii.gz"></a></div>
+<div id="image-90" class="masonry-thumb"><a style="background:url(90/img/glassbrain.png) width=200px" title="000472.nii.gz" href="90/90.html"><img class="grayscale" src="90/img/glassbrain.png" alt="000472.nii.gz"></a></div>
+<div id="image-91" class="masonry-thumb"><a style="background:url(91/img/glassbrain.png) width=200px" title="000300.nii.gz" href="91/91.html"><img class="grayscale" src="91/img/glassbrain.png" alt="000300.nii.gz"></a></div>
+<div id="image-92" class="masonry-thumb"><a style="background:url(92/img/glassbrain.png) width=200px" title="000455.nii.gz" href="92/92.html"><img class="grayscale" src="92/img/glassbrain.png" alt="000455.nii.gz"></a></div>
+<div id="image-93" class="masonry-thumb"><a style="background:url(93/img/glassbrain.png) width=200px" title="000160.nii.gz" href="93/93.html"><img class="grayscale" src="93/img/glassbrain.png" alt="000160.nii.gz"></a></div>
+<div id="image-94" class="masonry-thumb"><a style="background:url(94/img/glassbrain.png) width=200px" title="000119.nii.gz" href="94/94.html"><img class="grayscale" src="94/img/glassbrain.png" alt="000119.nii.gz"></a></div>
+<div id="image-95" class="masonry-thumb"><a style="background:url(95/img/glassbrain.png) width=200px" title="000526.nii.gz" href="95/95.html"><img class="grayscale" src="95/img/glassbrain.png" alt="000526.nii.gz"></a></div>
+<div id="image-96" class="masonry-thumb"><a style="background:url(96/img/glassbrain.png) width=200px" title="000152.nii.gz" href="96/96.html"><img class="grayscale" src="96/img/glassbrain.png" alt="000152.nii.gz"></a></div>
+<div id="image-97" class="masonry-thumb"><a style="background:url(97/img/glassbrain.png) width=200px" title="000115.nii.gz" href="97/97.html"><img class="grayscale" src="97/img/glassbrain.png" alt="000115.nii.gz"></a></div>
+<div id="image-98" class="masonry-thumb"><a style="background:url(98/img/glassbrain.png) width=200px" title="000145.nii.gz" href="98/98.html"><img class="grayscale" src="98/img/glassbrain.png" alt="000145.nii.gz"></a></div>
+<div id="image-99" class="masonry-thumb"><a style="background:url(99/img/glassbrain.png) width=200px" title="000464.nii.gz" href="99/99.html"><img class="grayscale" src="99/img/glassbrain.png" alt="000464.nii.gz"></a></div>
+<div id="image-100" class="masonry-thumb"><a style="background:url(100/img/glassbrain.png) width=200px" title="000540.nii.gz" href="100/100.html"><img class="grayscale" src="100/img/glassbrain.png" alt="000540.nii.gz"></a></div>
+<div id="image-101" class="masonry-thumb"><a style="background:url(101/img/glassbrain.png) width=200px" title="000303.nii.gz" href="101/101.html"><img class="grayscale" src="101/img/glassbrain.png" alt="000303.nii.gz"></a></div>
+<div id="image-102" class="masonry-thumb"><a style="background:url(102/img/glassbrain.png) width=200px" title="000123.nii.gz" href="102/102.html"><img class="grayscale" src="102/img/glassbrain.png" alt="000123.nii.gz"></a></div>
+<div id="image-103" class="masonry-thumb"><a style="background:url(103/img/glassbrain.png) width=200px" title="000448.nii.gz" href="103/103.html"><img class="grayscale" src="103/img/glassbrain.png" alt="000448.nii.gz"></a></div>
+<div id="image-104" class="masonry-thumb"><a style="background:url(104/img/glassbrain.png) width=200px" title="000304.nii.gz" href="104/104.html"><img class="grayscale" src="104/img/glassbrain.png" alt="000304.nii.gz"></a></div>
+<div id="image-105" class="masonry-thumb"><a style="background:url(105/img/glassbrain.png) width=200px" title="000136.nii.gz" href="105/105.html"><img class="grayscale" src="105/img/glassbrain.png" alt="000136.nii.gz"></a></div>
+<div id="image-106" class="masonry-thumb"><a style="background:url(106/img/glassbrain.png) width=200px" title="000436.nii.gz" href="106/106.html"><img class="grayscale" src="106/img/glassbrain.png" alt="000436.nii.gz"></a></div>
+<div id="image-107" class="masonry-thumb"><a style="background:url(107/img/glassbrain.png) width=200px" title="000529.nii.gz" href="107/107.html"><img class="grayscale" src="107/img/glassbrain.png" alt="000529.nii.gz"></a></div>
+<div id="image-108" class="masonry-thumb"><a style="background:url(108/img/glassbrain.png) width=200px" title="000463.nii.gz" href="108/108.html"><img class="grayscale" src="108/img/glassbrain.png" alt="000463.nii.gz"></a></div>
+<div id="image-109" class="masonry-thumb"><a style="background:url(109/img/glassbrain.png) width=200px" title="000164.nii.gz" href="109/109.html"><img class="grayscale" src="109/img/glassbrain.png" alt="000164.nii.gz"></a></div>
+<div id="image-110" class="masonry-thumb"><a style="background:url(110/img/glassbrain.png) width=200px" title="000450.nii.gz" href="110/110.html"><img class="grayscale" src="110/img/glassbrain.png" alt="000450.nii.gz"></a></div>
+<div id="image-111" class="masonry-thumb"><a style="background:url(111/img/glassbrain.png) width=200px" title="000129.nii.gz" href="111/111.html"><img class="grayscale" src="111/img/glassbrain.png" alt="000129.nii.gz"></a></div>
+<div id="image-112" class="masonry-thumb"><a style="background:url(112/img/glassbrain.png) width=200px" title="000531.nii.gz" href="112/112.html"><img class="grayscale" src="112/img/glassbrain.png" alt="000531.nii.gz"></a></div>
+<div id="image-113" class="masonry-thumb"><a style="background:url(113/img/glassbrain.png) width=200px" title="000155.nii.gz" href="113/113.html"><img class="grayscale" src="113/img/glassbrain.png" alt="000155.nii.gz"></a></div>
+<div id="image-114" class="masonry-thumb"><a style="background:url(114/img/glassbrain.png) width=200px" title="000458.nii.gz" href="114/114.html"><img class="grayscale" src="114/img/glassbrain.png" alt="000458.nii.gz"></a></div>
+<div id="image-115" class="masonry-thumb"><a style="background:url(115/img/glassbrain.png) width=200px" title="000534.nii.gz" href="115/115.html"><img class="grayscale" src="115/img/glassbrain.png" alt="000534.nii.gz"></a></div>
+<div id="image-116" class="masonry-thumb"><a style="background:url(116/img/glassbrain.png) width=200px" title="000161.nii.gz" href="116/116.html"><img class="grayscale" src="116/img/glassbrain.png" alt="000161.nii.gz"></a></div>
+<div id="image-117" class="masonry-thumb"><a style="background:url(117/img/glassbrain.png) width=200px" title="000445.nii.gz" href="117/117.html"><img class="grayscale" src="117/img/glassbrain.png" alt="000445.nii.gz"></a></div>
+<div id="image-118" class="masonry-thumb"><a style="background:url(118/img/glassbrain.png) width=200px" title="000124.nii.gz" href="118/118.html"><img class="grayscale" src="118/img/glassbrain.png" alt="000124.nii.gz"></a></div>
+<div id="image-119" class="masonry-thumb"><a style="background:url(119/img/glassbrain.png) width=200px" title="000172.nii.gz" href="119/119.html"><img class="grayscale" src="119/img/glassbrain.png" alt="000172.nii.gz"></a></div>
+<div id="image-120" class="masonry-thumb"><a style="background:url(120/img/glassbrain.png) width=200px" title="000173.nii.gz" href="120/120.html"><img class="grayscale" src="120/img/glassbrain.png" alt="000173.nii.gz"></a></div>
+<div id="image-121" class="masonry-thumb"><a style="background:url(121/img/glassbrain.png) width=200px" title="000468.nii.gz" href="121/121.html"><img class="grayscale" src="121/img/glassbrain.png" alt="000468.nii.gz"></a></div>
+<div id="image-122" class="masonry-thumb"><a style="background:url(122/img/glassbrain.png) width=200px" title="000309.nii.gz" href="122/122.html"><img class="grayscale" src="122/img/glassbrain.png" alt="000309.nii.gz"></a></div>
+<div id="image-123" class="masonry-thumb"><a style="background:url(123/img/glassbrain.png) width=200px" title="000443.nii.gz" href="123/123.html"><img class="grayscale" src="123/img/glassbrain.png" alt="000443.nii.gz"></a></div>
+<div id="image-124" class="masonry-thumb"><a style="background:url(124/img/glassbrain.png) width=200px" title="000180.nii.gz" href="124/124.html"><img class="grayscale" src="124/img/glassbrain.png" alt="000180.nii.gz"></a></div>
+<div id="image-125" class="masonry-thumb"><a style="background:url(125/img/glassbrain.png) width=200px" title="000542.nii.gz" href="125/125.html"><img class="grayscale" src="125/img/glassbrain.png" alt="000542.nii.gz"></a></div>
+<div id="image-126" class="masonry-thumb"><a style="background:url(126/img/glassbrain.png) width=200px" title="000539.nii.gz" href="126/126.html"><img class="grayscale" src="126/img/glassbrain.png" alt="000539.nii.gz"></a></div>
+<div id="image-127" class="masonry-thumb"><a style="background:url(127/img/glassbrain.png) width=200px" title="000469.nii.gz" href="127/127.html"><img class="grayscale" src="127/img/glassbrain.png" alt="000469.nii.gz"></a></div>
+<div id="image-128" class="masonry-thumb"><a style="background:url(128/img/glassbrain.png) width=200px" title="000118.nii.gz" href="128/128.html"><img class="grayscale" src="128/img/glassbrain.png" alt="000118.nii.gz"></a></div>
+<div id="image-129" class="masonry-thumb"><a style="background:url(129/img/glassbrain.png) width=200px" title="000533.nii.gz" href="129/129.html"><img class="grayscale" src="129/img/glassbrain.png" alt="000533.nii.gz"></a></div>
+<div id="image-130" class="masonry-thumb"><a style="background:url(130/img/glassbrain.png) width=200px" title="000310.nii.gz" href="130/130.html"><img class="grayscale" src="130/img/glassbrain.png" alt="000310.nii.gz"></a></div>
+<div id="image-131" class="masonry-thumb"><a style="background:url(131/img/glassbrain.png) width=200px" title="000537.nii.gz" href="131/131.html"><img class="grayscale" src="131/img/glassbrain.png" alt="000537.nii.gz"></a></div>
+<div id="image-132" class="masonry-thumb"><a style="background:url(132/img/glassbrain.png) width=200px" title="000438.nii.gz" href="132/132.html"><img class="grayscale" src="132/img/glassbrain.png" alt="000438.nii.gz"></a></div>
+<div id="image-133" class="masonry-thumb"><a style="background:url(133/img/glassbrain.png) width=200px" title="000451.nii.gz" href="133/133.html"><img class="grayscale" src="133/img/glassbrain.png" alt="000451.nii.gz"></a></div>
+<div id="image-134" class="masonry-thumb"><a style="background:url(134/img/glassbrain.png) width=200px" title="000158.nii.gz" href="134/134.html"><img class="grayscale" src="134/img/glassbrain.png" alt="000158.nii.gz"></a></div>
+<div id="image-135" class="masonry-thumb"><a style="background:url(135/img/glassbrain.png) width=200px" title="000175.nii.gz" href="135/135.html"><img class="grayscale" src="135/img/glassbrain.png" alt="000175.nii.gz"></a></div>
+<div id="image-136" class="masonry-thumb"><a style="background:url(136/img/glassbrain.png) width=200px" title="000444.nii.gz" href="136/136.html"><img class="grayscale" src="136/img/glassbrain.png" alt="000444.nii.gz"></a></div>
+<div id="image-137" class="masonry-thumb"><a style="background:url(137/img/glassbrain.png) width=200px" title="000168.nii.gz" href="137/137.html"><img class="grayscale" src="137/img/glassbrain.png" alt="000168.nii.gz"></a></div>
+<div id="image-138" class="masonry-thumb"><a style="background:url(138/img/glassbrain.png) width=200px" title="000437.nii.gz" href="138/138.html"><img class="grayscale" src="138/img/glassbrain.png" alt="000437.nii.gz"></a></div>
+<div id="image-139" class="masonry-thumb"><a style="background:url(139/img/glassbrain.png) width=200px" title="000465.nii.gz" href="139/139.html"><img class="grayscale" src="139/img/glassbrain.png" alt="000465.nii.gz"></a></div>
+<div id="image-140" class="masonry-thumb"><a style="background:url(140/img/glassbrain.png) width=200px" title="000151.nii.gz" href="140/140.html"><img class="grayscale" src="140/img/glassbrain.png" alt="000151.nii.gz"></a></div>
+<div id="image-141" class="masonry-thumb"><a style="background:url(141/img/glassbrain.png) width=200px" title="000185.nii.gz" href="141/141.html"><img class="grayscale" src="141/img/glassbrain.png" alt="000185.nii.gz"></a></div>
+<div id="image-142" class="masonry-thumb"><a style="background:url(142/img/glassbrain.png) width=200px" title="000148.nii.gz" href="142/142.html"><img class="grayscale" src="142/img/glassbrain.png" alt="000148.nii.gz"></a></div>
+<div id="image-143" class="masonry-thumb"><a style="background:url(143/img/glassbrain.png) width=200px" title="000541.nii.gz" href="143/143.html"><img class="grayscale" src="143/img/glassbrain.png" alt="000541.nii.gz"></a></div>
+</div></div></div>
+                        </div>			
+				
+       
+
+	</div><!--/.fluid-container-->
+	
+			<!-- end: Content -->
+		</div><!--/#content.span10-->
+		</div><!--/fluid-row-->
+		
+	
+	
+	<div class="clearfix"></div>
+	
+	<footer>
+
+		<p>
+			<span style="text-align:left;float:left">&copy; 2015 <a href="http://poldracklab.stanford.edu" alt="Poldracklab">pybraincompare, Poldracklab</a></span>
+			
+		</p>
+
+	</footer>
+	
+	<!-- start: JavaScript-->
+		<script src="js/jquery-1.9.1.min.js"></script>
+         	<script src="js/jquery-migrate-1.0.0.min.js"></script>
+		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+		<script src="js/jquery.ui.touch-punch.js"></script>
+		<script src="js/modernizr.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src='js/fullcalendar.min.js'></script>
+		<script src='js/jquery.dataTables.min.js'></script>
+		<script src="js/excanvas.js"></script>
+         	<script src="js/jquery.flot.js"></script>
+	        <script src="js/jquery.flot.pie.js"></script>
+	        <script src="js/jquery.flot.stack.js"></script>
+	        <script src="js/jquery.flot.resize.min.js"></script>
+		<script src="js/jquery.chosen.min.js"></script>
+		<script src="js/jquery.uniform.min.js"></script>
+		<script src="js/jquery.cleditor.min.js"></script>
+		<script src="js/jquery.noty.js"></script>
+		<script src="js/jquery.elfinder.min.js"></script>
+		<script src="js/jquery.raty.min.js"></script>
+		<script src="js/jquery.iphone.toggle.js"></script>
+		<script src="js/jquery.uploadify-3.1.min.js"></script>
+		<script src="js/jquery.gritter.min.js"></script>
+		<script src="js/jquery.imagesloaded.js"></script>
+		<script src="js/jquery.masonry.min.js"></script>
+		<script src="js/jquery.knob.modified.js"></script>
+		<script src="js/jquery.sparkline.min.js"></script>
+		<script src="js/counter.js"></script>
+		<script src="js/retina.js"></script>
+		<script src="js/custom.js"></script>
+	<!-- end: JavaScript-->
+	
+</body>
+</html>

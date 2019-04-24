@@ -1,0 +1,69 @@
+{
+"name" : "AGRE",
+"size" : 23905,
+"children": [
+{"name" : "arra",
+"size" : 2087,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 37 },
+{"name": "control", "color": "#00CC99","size" : 2050 }
+]
+},
+{"name" : "Sebat",
+"size" : 29,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 29 },
+{"name": "control", "color": "#00CC99","size" : 0 }
+]
+},
+{"name" : "Walsh",
+"size" : 18,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 18 },
+{"name": "control", "color": "#00CC99","size" : 0 }
+]
+},
+{"name" : "chop",
+"size" : 4327,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 4327 },
+{"name": "control", "color": "#00CC99","size" : 0 }
+]
+},
+{"name" : "broad",
+"size" : 2880,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 2880 },
+{"name": "control", "color": "#00CC99","size" : 0 }
+]
+},
+{"name" : "agp.final",
+"size" : 2044,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 0 },
+{"name": "control", "color": "#00CC99","size" : 2044 }
+]
+},
+{"name" : "bgi",
+"size" : 3,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 0 },
+{"name": "control", "color": "#00CC99","size" : 3 }
+]
+},
+{"name" : "karyotype",
+"size" : 5,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 0 },
+{"name": "control", "color": "#00CC99","size" : 5 }
+]
+},
+{"name" : "fragilex",
+"count" : 99,
+"children" : [
+{"name": "autism", "color": "#3333FF","size" : 0 },
+{"name": "control", "color": "#00CC99","size" : 99 }
+]
+}
+]
+}

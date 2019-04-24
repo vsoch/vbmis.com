@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<!-- start: Meta -->
+	<meta charset="utf-8">
+	<title>Pybraincompare Quality Analysis Report</title>
+	<meta name="description" content="Pybraincompare Quality Analysis Report">
+	<meta name="author" content="Poldracklab (vsochat@stanford.edu)">
+	<!-- end: Meta -->
+	
+	<!-- start: Mobile Specific -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- end: Mobile Specific -->
+	
+	<!-- start: CSS -->
+	<link id="bootstrap-style" href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+	<link id="base-style" href="css/style.css" rel="stylesheet">
+	<link id="base-style-responsive" href="css/style-responsive.css" rel="stylesheet">
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+	<!-- end: CSS -->
+	
+	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+	<!--[if lt IE 9]>
+	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<link id="ie-style" href="css/ie.css" rel="stylesheet">
+	<![endif]-->
+	
+	<!--[if IE 9]>
+		<link id="ie9style" href="css/ie9.css" rel="stylesheet">
+	<![endif]-->
+		
+	<!-- start: Favicon -->
+	<link rel="shortcut icon" href="img/favicon.ico">
+	<!-- end: Favicon -->
+	
+</head>
+
+<body>
+		<!-- start: Header -->
+	<div class="navbar">
+		<div class="navbar-inner">
+			<div class="container-fluid">
+				<a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</a>
+				<a class="brand" href="index.html"><span>quality analysis report</span></a>
+				<!-- start: Header Menu -->
+				<div class="nav-no-collapse header-nav">
+					<ul class="nav pull-right">
+						<li class="dropdown hidden-phone">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-folder-close"></i><span class="badge red">144</span>
+							</a>
+							<ul class="dropdown-menu notifications"><li class="dropdown-menu-title">
+ 							<span>You have 144 images</span><a href="#refresh"><i class="icon-repeat"></i></a></li>	</ul></li></li>
+						
+						<!-- start: User Dropdown -->
+						<li class="dropdown">
+							<a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="halflings-icon white user"></i> Vanessa<span class="caret"></span>
+							</a>
+							<ul class="dropdown-menu"><li class="dropdown-menu-title">
+ 									<span>QA Support</span></li><li><a href="http://www.neurostars.org" target="_blank"><i class="halflings-icon user"></i> Get Help</a></li><li><a href="http://www.nitrc.org" target="_blank"><i class="halflings-icon off"></i> NITRC</a></li>
+							</ul>
+						</li>
+						<!-- end: User Dropdown -->
+					</ul>
+				</div>
+				<!-- end: Header Menu -->
+				
+			</div>
+		</div>
+	</div>
+	<!-- start: Header -->
+	
+		<div class="container-fluid-full">
+		<div class="row-fluid">
+				
+			<!-- start: Main Menu -->
+			<div id="sidebar-left" class="span2">
+				<div class="nav-collapse sidebar-nav">
+					<ul class="nav nav-tabs nav-stacked main-menu">
+						<li><a href="index.html"><i class="icon-camera"></i><span class="hidden-tablet"> View Images</span></a></li>	
+						<li><a href="histograms.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Histograms</span></a></li>
+						<li><a href="summary.html"><i class="icon-dashboard"></i><span class="hidden-tablet"> Summary</span></a></li>
+						<li><a href="alerts.html"><i class="icon-flag"></i><span class="hidden-tablet"> Alerts</span></a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- end: Main Menu -->
+			
+			<noscript>
+				<div class="alert alert-block span10">
+					<h4 class="alert-heading">Warning!</h4>
+					<p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+				</div>
+			</noscript>
+			
+			<!-- start: Content -->
+			<div id="content" class="span10">
+			
+			<div class="row-fluid sortable">		
+				<div class="box span12">
+					<div class="box-header" data-original-title>
+						<h2><i class="halflings-icon white user"></i><span class="break"></span>Statistical Maps</h2>
+						<div class="box-icon">
+							<a href="#" class="btn-setting"><i class="halflings-icon white wrench"></i></a>
+							<a href="#" class="btn-minimize"><i class="halflings-icon white chevron-up"></i></a>
+							<a href="#" class="btn-close"><i class="halflings-icon white remove"></i></a>
+						</div>
+					</div>
+					<div class="box-content">
+				<table class="table table-striped table-bordered bootstrap-datatable datatable">
+<thead>
+	<tr>
+	<th>Image Name</th>
+	<th>Report ID</th>
+	<th>Mean</th>
+	<th>Median</th>
+	<th>Variance</th>
+	<th>Standard Deviation</th>
+	<th>Outliers > 6</th>
+	<th>Outliers < 6</th>
+	<th>Flag</th>
+	</tr>
+</thead>   
+<tbody>
+<tr><td>000174.nii.gz</td><td class="center">0</td><td class="center">0.20</td><td class="center">0.00</td><td class="center">2.50</td><td class="center">1.58</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="0/0.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000116.nii.gz</td><td class="center">1</td><td class="center">1.18</td><td class="center">1.16</td><td class="center">2.09</td><td class="center">1.44</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="1/1.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000452.nii.gz</td><td class="center">2</td><td class="center">-0.10</td><td class="center">-0.07</td><td class="center">4.08</td><td class="center">2.02</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="2/2.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000169.nii.gz</td><td class="center">3</td><td class="center">0.18</td><td class="center">0.00</td><td class="center">2.49</td><td class="center">1.58</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="3/3.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000546.nii.gz</td><td class="center">4</td><td class="center">-0.63</td><td class="center">-0.53</td><td class="center">2.71</td><td class="center">1.65</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="4/4.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000142.nii.gz</td><td class="center">5</td><td class="center">-0.39</td><td class="center">-0.46</td><td class="center">2.97</td><td class="center">1.72</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="5/5.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000177.nii.gz</td><td class="center">6</td><td class="center">-2.32</td><td class="center">-2.54</td><td class="center">4.44</td><td class="center">2.11</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="6/6.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000162.nii.gz</td><td class="center">7</td><td class="center">0.71</td><td class="center">0.65</td><td class="center">2.80</td><td class="center">1.67</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="7/7.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000449.nii.gz</td><td class="center">8</td><td class="center">0.14</td><td class="center">-0.00</td><td class="center">1.82</td><td class="center">1.35</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="8/8.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000131.nii.gz</td><td class="center">9</td><td class="center">-0.22</td><td class="center">-0.14</td><td class="center">0.87</td><td class="center">0.93</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="9/9.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000170.nii.gz</td><td class="center">10</td><td class="center">0.18</td><td class="center">0.00</td><td class="center">2.61</td><td class="center">1.62</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="10/10.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000181.nii.gz</td><td class="center">11</td><td class="center">-2.24</td><td class="center">-2.42</td><td class="center">4.49</td><td class="center">2.12</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="11/11.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000153.nii.gz</td><td class="center">12</td><td class="center">0.64</td><td class="center">0.65</td><td class="center">1.31</td><td class="center">1.15</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="12/12.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000305.nii.gz</td><td class="center">13</td><td class="center">0.70</td><td class="center">0.46</td><td class="center">1.33</td><td class="center">1.15</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="13/13.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000144.nii.gz</td><td class="center">14</td><td class="center">-0.48</td><td class="center">-0.57</td><td class="center">2.64</td><td class="center">1.63</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="14/14.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000187.nii.gz</td><td class="center">15</td><td class="center">0.10</td><td class="center">-0.00</td><td class="center">9.16</td><td class="center">3.03</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="15/15.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000311.nii.gz</td><td class="center">16</td><td class="center">0.69</td><td class="center">0.41</td><td class="center">2.02</td><td class="center">1.42</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="16/16.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000178.nii.gz</td><td class="center">17</td><td class="center">0.90</td><td class="center">0.86</td><td class="center">1.36</td><td class="center">1.17</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="17/17.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000189.nii.gz</td><td class="center">18</td><td class="center">-0.32</td><td class="center">-0.00</td><td class="center">9.49</td><td class="center">3.08</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="18/18.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000139.nii.gz</td><td class="center">19</td><td class="center">0.27</td><td class="center">0.10</td><td class="center">4.93</td><td class="center">2.22</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="19/19.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000125.nii.gz</td><td class="center">20</td><td class="center">0.94</td><td class="center">0.95</td><td class="center">1.04</td><td class="center">1.02</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="20/20.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000461.nii.gz</td><td class="center">21</td><td class="center">-0.27</td><td class="center">-0.60</td><td class="center">5.19</td><td class="center">2.28</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="21/21.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000466.nii.gz</td><td class="center">22</td><td class="center">-0.36</td><td class="center">-0.45</td><td class="center">2.82</td><td class="center">1.68</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="22/22.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000163.nii.gz</td><td class="center">23</td><td class="center">-0.71</td><td class="center">-0.96</td><td class="center">2.90</td><td class="center">1.70</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="23/23.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000306.nii.gz</td><td class="center">24</td><td class="center">0.80</td><td class="center">0.49</td><td class="center">3.16</td><td class="center">1.78</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="24/24.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000121.nii.gz</td><td class="center">25</td><td class="center">0.68</td><td class="center">0.67</td><td class="center">1.33</td><td class="center">1.15</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="25/25.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000171.nii.gz</td><td class="center">26</td><td class="center">0.20</td><td class="center">0.12</td><td class="center">0.45</td><td class="center">0.67</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="26/26.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000307.nii.gz</td><td class="center">27</td><td class="center">0.07</td><td class="center">0.00</td><td class="center">2.46</td><td class="center">1.57</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="27/27.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000454.nii.gz</td><td class="center">28</td><td class="center">0.12</td><td class="center">0.00</td><td class="center">3.44</td><td class="center">1.85</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="28/28.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000545.nii.gz</td><td class="center">29</td><td class="center">-0.45</td><td class="center">-0.36</td><td class="center">0.84</td><td class="center">0.92</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="29/29.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000442.nii.gz</td><td class="center">30</td><td class="center">0.76</td><td class="center">0.71</td><td class="center">4.09</td><td class="center">2.02</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="30/30.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000150.nii.gz</td><td class="center">31</td><td class="center">0.32</td><td class="center">0.33</td><td class="center">0.68</td><td class="center">0.82</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="31/31.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000127.nii.gz</td><td class="center">32</td><td class="center">0.22</td><td class="center">0.14</td><td class="center">0.87</td><td class="center">0.93</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="32/32.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000156.nii.gz</td><td class="center">33</td><td class="center">1.31</td><td class="center">1.49</td><td class="center">3.79</td><td class="center">1.95</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="33/33.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000440.nii.gz</td><td class="center">34</td><td class="center">0.39</td><td class="center">0.05</td><td class="center">4.66</td><td class="center">2.16</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="34/34.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000186.nii.gz</td><td class="center">35</td><td class="center">-0.54</td><td class="center">-0.00</td><td class="center">6.73</td><td class="center">2.59</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="35/35.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000137.nii.gz</td><td class="center">36</td><td class="center">0.47</td><td class="center">0.40</td><td class="center">5.75</td><td class="center">2.40</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="36/36.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000190.nii.gz</td><td class="center">37</td><td class="center">-0.31</td><td class="center">-0.00</td><td class="center">11.17</td><td class="center">3.34</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="37/37.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000166.nii.gz</td><td class="center">38</td><td class="center">-0.17</td><td class="center">-0.25</td><td class="center">5.46</td><td class="center">2.34</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="38/38.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000527.nii.gz</td><td class="center">39</td><td class="center">-0.45</td><td class="center">-0.31</td><td class="center">1.91</td><td class="center">1.38</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="39/39.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000308.nii.gz</td><td class="center">40</td><td class="center">0.25</td><td class="center">0.00</td><td class="center">3.17</td><td class="center">1.78</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="40/40.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000147.nii.gz</td><td class="center">41</td><td class="center">0.65</td><td class="center">0.60</td><td class="center">2.89</td><td class="center">1.70</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="41/41.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000530.nii.gz</td><td class="center">42</td><td class="center">-1.06</td><td class="center">-1.18</td><td class="center">2.66</td><td class="center">1.63</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="42/42.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000179.nii.gz</td><td class="center">43</td><td class="center">2.20</td><td class="center">2.44</td><td class="center">5.11</td><td class="center">2.26</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="43/43.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000167.nii.gz</td><td class="center">44</td><td class="center">-0.43</td><td class="center">-0.65</td><td class="center">3.12</td><td class="center">1.77</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="44/44.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000544.nii.gz</td><td class="center">45</td><td class="center">1.51</td><td class="center">1.50</td><td class="center">2.61</td><td class="center">1.62</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="45/45.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000535.nii.gz</td><td class="center">46</td><td class="center">-0.68</td><td class="center">-0.60</td><td class="center">2.43</td><td class="center">1.56</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="46/46.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000446.nii.gz</td><td class="center">47</td><td class="center">-0.30</td><td class="center">-0.27</td><td class="center">0.64</td><td class="center">0.80</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="47/47.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000447.nii.gz</td><td class="center">48</td><td class="center">1.24</td><td class="center">1.14</td><td class="center">2.36</td><td class="center">1.54</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="48/48.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000122.nii.gz</td><td class="center">49</td><td class="center">0.52</td><td class="center">0.46</td><td class="center">1.77</td><td class="center">1.33</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="49/49.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000132.nii.gz</td><td class="center">50</td><td class="center">-0.34</td><td class="center">-0.37</td><td class="center">3.00</td><td class="center">1.73</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="50/50.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000536.nii.gz</td><td class="center">51</td><td class="center">-0.93</td><td class="center">-0.86</td><td class="center">1.81</td><td class="center">1.35</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="51/51.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000159.nii.gz</td><td class="center">52</td><td class="center">-0.59</td><td class="center">-0.62</td><td class="center">2.76</td><td class="center">1.66</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="52/52.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000184.nii.gz</td><td class="center">53</td><td class="center">-0.86</td><td class="center">-0.00</td><td class="center">6.31</td><td class="center">2.51</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="53/53.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000141.nii.gz</td><td class="center">54</td><td class="center">0.19</td><td class="center">0.04</td><td class="center">6.45</td><td class="center">2.54</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="54/54.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000457.nii.gz</td><td class="center">55</td><td class="center">1.84</td><td class="center">1.82</td><td class="center">3.25</td><td class="center">1.80</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="55/55.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000441.nii.gz</td><td class="center">56</td><td class="center">0.23</td><td class="center">0.00</td><td class="center">4.90</td><td class="center">2.21</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="56/56.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000165.nii.gz</td><td class="center">57</td><td class="center">-0.57</td><td class="center">-0.75</td><td class="center">5.39</td><td class="center">2.32</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="57/57.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000460.nii.gz</td><td class="center">58</td><td class="center">0.64</td><td class="center">0.60</td><td class="center">1.69</td><td class="center">1.30</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="58/58.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000470.nii.gz</td><td class="center">59</td><td class="center">-0.34</td><td class="center">-0.39</td><td class="center">2.04</td><td class="center">1.43</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="59/59.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000135.nii.gz</td><td class="center">60</td><td class="center">0.15</td><td class="center">0.00</td><td class="center">7.11</td><td class="center">2.67</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="60/60.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000302.nii.gz</td><td class="center">61</td><td class="center">-0.03</td><td class="center">-0.00</td><td class="center">2.38</td><td class="center">1.54</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="61/61.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000299.nii.gz</td><td class="center">62</td><td class="center">0.29</td><td class="center">0.00</td><td class="center">2.32</td><td class="center">1.52</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="62/62.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000130.nii.gz</td><td class="center">63</td><td class="center">-0.78</td><td class="center">-0.84</td><td class="center">1.31</td><td class="center">1.14</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="63/63.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000134.nii.gz</td><td class="center">64</td><td class="center">0.49</td><td class="center">0.45</td><td class="center">5.51</td><td class="center">2.35</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="64/64.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000538.nii.gz</td><td class="center">65</td><td class="center">1.46</td><td class="center">1.44</td><td class="center">3.34</td><td class="center">1.83</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="65/65.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000149.nii.gz</td><td class="center">66</td><td class="center">-0.05</td><td class="center">-0.08</td><td class="center">3.47</td><td class="center">1.86</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="66/66.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000126.nii.gz</td><td class="center">67</td><td class="center">0.34</td><td class="center">0.37</td><td class="center">3.00</td><td class="center">1.73</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="67/67.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000138.nii.gz</td><td class="center">68</td><td class="center">0.81</td><td class="center">0.84</td><td class="center">1.57</td><td class="center">1.25</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="68/68.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000462.nii.gz</td><td class="center">69</td><td class="center">0.41</td><td class="center">0.40</td><td class="center">0.64</td><td class="center">0.80</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="69/69.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000543.nii.gz</td><td class="center">70</td><td class="center">1.19</td><td class="center">1.05</td><td class="center">2.35</td><td class="center">1.53</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="70/70.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000456.nii.gz</td><td class="center">71</td><td class="center">1.56</td><td class="center">1.51</td><td class="center">2.55</td><td class="center">1.60</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="71/71.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000471.nii.gz</td><td class="center">72</td><td class="center">0.44</td><td class="center">0.44</td><td class="center">0.80</td><td class="center">0.89</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="72/72.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000459.nii.gz</td><td class="center">73</td><td class="center">1.74</td><td class="center">1.74</td><td class="center">3.07</td><td class="center">1.75</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="73/73.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000146.nii.gz</td><td class="center">74</td><td class="center">0.09</td><td class="center">0.00</td><td class="center">3.21</td><td class="center">1.79</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="74/74.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000453.nii.gz</td><td class="center">75</td><td class="center">-1.85</td><td class="center">-1.86</td><td class="center">3.54</td><td class="center">1.88</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="75/75.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000133.nii.gz</td><td class="center">76</td><td class="center">0.33</td><td class="center">0.20</td><td class="center">4.79</td><td class="center">2.19</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="76/76.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000143.nii.gz</td><td class="center">77</td><td class="center">0.30</td><td class="center">0.24</td><td class="center">2.37</td><td class="center">1.54</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="77/77.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000157.nii.gz</td><td class="center">78</td><td class="center">1.72</td><td class="center">1.88</td><td class="center">2.66</td><td class="center">1.63</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="78/78.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000528.nii.gz</td><td class="center">79</td><td class="center">0.61</td><td class="center">0.59</td><td class="center">1.63</td><td class="center">1.28</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="79/79.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000301.nii.gz</td><td class="center">80</td><td class="center">0.55</td><td class="center">0.27</td><td class="center">1.88</td><td class="center">1.37</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="80/80.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000532.nii.gz</td><td class="center">81</td><td class="center">1.84</td><td class="center">1.95</td><td class="center">2.42</td><td class="center">1.56</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="81/81.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000183.nii.gz</td><td class="center">82</td><td class="center">1.97</td><td class="center">2.11</td><td class="center">4.21</td><td class="center">2.05</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="82/82.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000117.nii.gz</td><td class="center">83</td><td class="center">0.87</td><td class="center">0.78</td><td class="center">1.38</td><td class="center">1.17</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="83/83.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000188.nii.gz</td><td class="center">84</td><td class="center">-0.67</td><td class="center">-0.00</td><td class="center">7.02</td><td class="center">2.65</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="84/84.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000120.nii.gz</td><td class="center">85</td><td class="center">-0.14</td><td class="center">-0.02</td><td class="center">4.37</td><td class="center">2.09</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="85/85.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000154.nii.gz</td><td class="center">86</td><td class="center">0.16</td><td class="center">0.08</td><td class="center">3.46</td><td class="center">1.86</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="86/86.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000474.nii.gz</td><td class="center">87</td><td class="center">-0.22</td><td class="center">-0.36</td><td class="center">2.87</td><td class="center">1.70</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="87/87.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000140.nii.gz</td><td class="center">88</td><td class="center">0.39</td><td class="center">0.28</td><td class="center">4.31</td><td class="center">2.08</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="88/88.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000439.nii.gz</td><td class="center">89</td><td class="center">0.42</td><td class="center">0.18</td><td class="center">3.17</td><td class="center">1.78</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="89/89.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000472.nii.gz</td><td class="center">90</td><td class="center">0.68</td><td class="center">0.71</td><td class="center">1.42</td><td class="center">1.19</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="90/90.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000300.nii.gz</td><td class="center">91</td><td class="center">0.79</td><td class="center">0.43</td><td class="center">3.39</td><td class="center">1.84</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="91/91.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000455.nii.gz</td><td class="center">92</td><td class="center">1.12</td><td class="center">0.94</td><td class="center">3.89</td><td class="center">1.97</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="92/92.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000160.nii.gz</td><td class="center">93</td><td class="center">-0.53</td><td class="center">-0.81</td><td class="center">3.20</td><td class="center">1.79</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="93/93.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000119.nii.gz</td><td class="center">94</td><td class="center">1.08</td><td class="center">0.94</td><td class="center">2.72</td><td class="center">1.65</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="94/94.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000526.nii.gz</td><td class="center">95</td><td class="center">0.89</td><td class="center">0.78</td><td class="center">1.48</td><td class="center">1.22</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="95/95.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000152.nii.gz</td><td class="center">96</td><td class="center">0.49</td><td class="center">0.47</td><td class="center">2.66</td><td class="center">1.63</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="96/96.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000115.nii.gz</td><td class="center">97</td><td class="center">-0.38</td><td class="center">-0.38</td><td class="center">1.51</td><td class="center">1.23</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="97/97.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000145.nii.gz</td><td class="center">98</td><td class="center">-0.79</td><td class="center">-0.81</td><td class="center">1.29</td><td class="center">1.14</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="98/98.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000464.nii.gz</td><td class="center">99</td><td class="center">-0.30</td><td class="center">-0.66</td><td class="center">7.33</td><td class="center">2.71</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="99/99.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000540.nii.gz</td><td class="center">100</td><td class="center">0.87</td><td class="center">0.80</td><td class="center">1.13</td><td class="center">1.06</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="100/100.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000303.nii.gz</td><td class="center">101</td><td class="center">0.67</td><td class="center">0.51</td><td class="center">1.17</td><td class="center">1.08</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="101/101.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000123.nii.gz</td><td class="center">102</td><td class="center">-0.38</td><td class="center">-0.42</td><td class="center">2.28</td><td class="center">1.51</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="102/102.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000448.nii.gz</td><td class="center">103</td><td class="center">0.50</td><td class="center">0.37</td><td class="center">3.17</td><td class="center">1.78</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="103/103.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000304.nii.gz</td><td class="center">104</td><td class="center">0.49</td><td class="center">0.21</td><td class="center">1.73</td><td class="center">1.31</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="104/104.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000136.nii.gz</td><td class="center">105</td><td class="center">0.76</td><td class="center">0.84</td><td class="center">1.46</td><td class="center">1.21</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="105/105.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000436.nii.gz</td><td class="center">106</td><td class="center">0.46</td><td class="center">0.28</td><td class="center">4.75</td><td class="center">2.18</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="106/106.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000529.nii.gz</td><td class="center">107</td><td class="center">-0.87</td><td class="center">-0.80</td><td class="center">1.13</td><td class="center">1.06</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="107/107.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000463.nii.gz</td><td class="center">108</td><td class="center">0.28</td><td class="center">0.27</td><td class="center">2.21</td><td class="center">1.49</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="108/108.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000164.nii.gz</td><td class="center">109</td><td class="center">1.18</td><td class="center">1.19</td><td class="center">2.80</td><td class="center">1.67</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="109/109.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000450.nii.gz</td><td class="center">110</td><td class="center">0.89</td><td class="center">0.61</td><td class="center">4.08</td><td class="center">2.02</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="110/110.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000129.nii.gz</td><td class="center">111</td><td class="center">1.66</td><td class="center">1.65</td><td class="center">3.03</td><td class="center">1.74</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="111/111.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000531.nii.gz</td><td class="center">112</td><td class="center">0.45</td><td class="center">0.36</td><td class="center">0.84</td><td class="center">0.92</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="112/112.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000155.nii.gz</td><td class="center">113</td><td class="center">-0.13</td><td class="center">-0.15</td><td class="center">3.50</td><td class="center">1.87</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="113/113.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000458.nii.gz</td><td class="center">114</td><td class="center">0.21</td><td class="center">0.15</td><td class="center">0.95</td><td class="center">0.97</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="114/114.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000534.nii.gz</td><td class="center">115</td><td class="center">0.30</td><td class="center">0.05</td><td class="center">1.81</td><td class="center">1.34</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="115/115.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000161.nii.gz</td><td class="center">116</td><td class="center">0.69</td><td class="center">0.64</td><td class="center">3.03</td><td class="center">1.74</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="116/116.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000445.nii.gz</td><td class="center">117</td><td class="center">0.28</td><td class="center">0.04</td><td class="center">2.95</td><td class="center">1.72</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="117/117.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000124.nii.gz</td><td class="center">118</td><td class="center">0.38</td><td class="center">0.38</td><td class="center">1.51</td><td class="center">1.23</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="118/118.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000172.nii.gz</td><td class="center">119</td><td class="center">0.61</td><td class="center">0.41</td><td class="center">3.41</td><td class="center">1.85</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="119/119.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000173.nii.gz</td><td class="center">120</td><td class="center">0.73</td><td class="center">0.52</td><td class="center">3.27</td><td class="center">1.81</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="120/120.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000468.nii.gz</td><td class="center">121</td><td class="center">0.49</td><td class="center">0.47</td><td class="center">1.29</td><td class="center">1.13</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="121/121.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000309.nii.gz</td><td class="center">122</td><td class="center">0.71</td><td class="center">0.58</td><td class="center">1.92</td><td class="center">1.39</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="122/122.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000443.nii.gz</td><td class="center">123</td><td class="center">-0.19</td><td class="center">-0.15</td><td class="center">0.99</td><td class="center">1.00</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="123/123.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000180.nii.gz</td><td class="center">124</td><td class="center">0.59</td><td class="center">0.54</td><td class="center">1.46</td><td class="center">1.21</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="124/124.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000542.nii.gz</td><td class="center">125</td><td class="center">1.79</td><td class="center">1.86</td><td class="center">2.37</td><td class="center">1.54</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="125/125.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000539.nii.gz</td><td class="center">126</td><td class="center">1.45</td><td class="center">1.42</td><td class="center">2.87</td><td class="center">1.70</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="126/126.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000469.nii.gz</td><td class="center">127</td><td class="center">-0.09</td><td class="center">-0.09</td><td class="center">0.71</td><td class="center">0.84</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="127/127.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000118.nii.gz</td><td class="center">128</td><td class="center">2.21</td><td class="center">2.27</td><td class="center">2.79</td><td class="center">1.67</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="128/128.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000533.nii.gz</td><td class="center">129</td><td class="center">-0.61</td><td class="center">-0.59</td><td class="center">1.63</td><td class="center">1.28</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="129/129.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000310.nii.gz</td><td class="center">130</td><td class="center">-0.65</td><td class="center">-0.52</td><td class="center">2.56</td><td class="center">1.60</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="130/130.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000537.nii.gz</td><td class="center">131</td><td class="center">-0.42</td><td class="center">-0.30</td><td class="center">2.64</td><td class="center">1.63</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="131/131.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000438.nii.gz</td><td class="center">132</td><td class="center">1.04</td><td class="center">1.06</td><td class="center">0.85</td><td class="center">0.92</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="132/132.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000451.nii.gz</td><td class="center">133</td><td class="center">-0.29</td><td class="center">-0.66</td><td class="center">6.94</td><td class="center">2.63</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="133/133.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000158.nii.gz</td><td class="center">134</td><td class="center">1.12</td><td class="center">1.09</td><td class="center">1.81</td><td class="center">1.34</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="134/134.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000175.nii.gz</td><td class="center">135</td><td class="center">2.44</td><td class="center">2.72</td><td class="center">5.29</td><td class="center">2.30</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="135/135.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000444.nii.gz</td><td class="center">136</td><td class="center">0.71</td><td class="center">0.71</td><td class="center">0.86</td><td class="center">0.93</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="136/136.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000168.nii.gz</td><td class="center">137</td><td class="center">0.68</td><td class="center">0.49</td><td class="center">3.47</td><td class="center">1.86</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="137/137.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000437.nii.gz</td><td class="center">138</td><td class="center">0.44</td><td class="center">0.28</td><td class="center">3.63</td><td class="center">1.90</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="138/138.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000465.nii.gz</td><td class="center">139</td><td class="center">0.44</td><td class="center">0.30</td><td class="center">3.68</td><td class="center">1.92</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="139/139.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000151.nii.gz</td><td class="center">140</td><td class="center">0.65</td><td class="center">0.55</td><td class="center">2.66</td><td class="center">1.63</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="140/140.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000185.nii.gz</td><td class="center">141</td><td class="center">-0.02</td><td class="center">0.00</td><td class="center">8.94</td><td class="center">2.99</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="141/141.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000148.nii.gz</td><td class="center">142</td><td class="center">-0.30</td><td class="center">-0.36</td><td class="center">3.23</td><td class="center">1.80</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="142/142.html"><i class="icon-check zoom-in"></i></a></td></tr>
+<tr><td>000541.nii.gz</td><td class="center">143</td><td class="center">-0.33</td><td class="center">-0.16</td><td class="center">2.41</td><td class="center">1.55</td><td class="center">0.00</td><td class="center">0.00</td><td class="center"><a class="btn btn-success" href="143/143.html"><i class="icon-check zoom-in"></i></a></td></tr>
+</tbody>
+</table>  
+						 <div class="pagination pagination-centered">
+						  <ul>
+							<li><a href="#">Prev</a></li>
+							<li class="active">
+							  <a href="#">1</a>
+							</li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">Next</a></li>
+						  </ul>
+						</div>     
+					</div>
+				</div><!--/span-->
+				
+			</div><!--/row-->
+    
+
+	</div><!--/.fluid-container-->
+	
+			<!-- end: Content -->
+		</div><!--/#content.span10-->
+		</div><!--/fluid-row-->
+		
+	<div class="clearfix"></div>
+	
+	<footer>
+
+		<p>
+			<span style="text-align:left;float:left">&copy; 2015 <a href="http://poldracklab.stanford.edu" alt="Poldracklab">pybraincompare, Poldracklab</a></span>
+			
+		</p>
+
+	</footer>
+	
+	<!-- start: JavaScript-->
+		<script src="js/jquery-1.9.1.min.js"></script>
+         	<script src="js/jquery-migrate-1.0.0.min.js"></script>
+		<script src="js/jquery-ui-1.10.0.custom.min.js"></script>
+		<script src="js/jquery.ui.touch-punch.js"></script>
+		<script src="js/modernizr.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script src='js/fullcalendar.min.js'></script>
+		<script src='js/jquery.dataTables.min.js'></script>
+		<script src="js/excanvas.js"></script>
+         	<script src="js/jquery.flot.js"></script>
+	        <script src="js/jquery.flot.pie.js"></script>
+	        <script src="js/jquery.flot.stack.js"></script>
+	        <script src="js/jquery.flot.resize.min.js"></script>
+		<script src="js/jquery.chosen.min.js"></script>
+		<script src="js/jquery.uniform.min.js"></script>
+		<script src="js/jquery.cleditor.min.js"></script>
+		<script src="js/jquery.noty.js"></script>
+		<script src="js/jquery.elfinder.min.js"></script>
+		<script src="js/jquery.raty.min.js"></script>
+		<script src="js/jquery.iphone.toggle.js"></script>
+		<script src="js/jquery.uploadify-3.1.min.js"></script>
+		<script src="js/jquery.gritter.min.js"></script>
+		<script src="js/jquery.imagesloaded.js"></script>
+		<script src="js/jquery.masonry.min.js"></script>
+		<script src="js/jquery.knob.modified.js"></script>
+		<script src="js/jquery.sparkline.min.js"></script>
+		<script src="js/counter.js"></script>
+		<script src="js/retina.js"></script>
+		<script src="js/custom.js"></script>
+	<!-- end: JavaScript-->
+	
+</body>
+</html>

@@ -1,0 +1,11 @@
+group	dataset	count
+father	ssc	862
+mother	ssc	862
+proband	ssc	867
+sib/control	ssc	723
+other	ssc	0
+father	agre	0
+mother	agre	0
+proband	agre	 12863
+sib/control	agre	314
+other	agre	 10728

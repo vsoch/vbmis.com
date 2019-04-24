@@ -1,0 +1,158 @@
+{
+"name" : "AUTISM DATA",
+"size" : 27328,
+"children": [
+{
+"name" : "AGRE",
+"size" : 23915,
+"children": [
+{"name" : "arra",
+"size" : 2097,
+"children" : [
+{"name" : "",
+"size" : 2087,
+"children" : [
+{"name": "", "color": "#3333FF","size" : 37 },
+{"name": "", "color": "#3333FF","size" : 2050 }
+]
+}]
+},
+{"name" : "Sebat",
+"size" : 39,
+"children" : [
+{"name" : "",
+"size" : 29,
+"children" : [
+{"name": "", "color": "#FF6666","size" : 29 },
+{"name": "", "color": "#FF6666","size" : 0 }
+]
+}]
+},
+{"name" : "Walsh",
+"size" : 28,
+"children" : [
+{"name" : "",
+"size" : 18,
+"children" : [
+{"name": "", "color": "#3333FF","size" : 18 },
+{"name": "", "color": "#3333FF","size" : 0 }
+]
+}]
+},
+{"name" : "chop",
+"size" : 4337,
+"children" : [
+{"name" : "",
+"size" : 4327,
+"children" : [
+{"name": "", "color": "#00CC99","size" : 4327 },
+{"name": "", "color": "#00CC99","size" : 0 }
+]
+}]
+},
+{"name" : "broad",
+"size" : 2890,
+"children" : [
+{"name" : "",
+"size" : 2880,
+"children" : [
+{"name": "", "color": "#00CC99","size" : 2880 },
+{"name": "", "color": "#00CC99","size" : 0 }
+]
+}]
+},
+{"name" : "agp.final",
+"size" : 2054,
+"children" : [
+{"name" : "",
+"size" : 2044,
+"children" : [
+{"name": "", "color": "#00CC99","size" : 0 },
+{"name": "", "color": "#00CC99","size" : 2044 }
+]
+}]
+},
+{"name" : "bgi",
+"size" : 13,
+"children" : [
+{"name" : "",
+"size" : 3,
+"children" : [
+{"name": "", "color": "#FF6666","size" : 0 },
+{"name": "", "color": "#FF6666","size" : 3 }
+]
+}]
+},
+{"name" : "karyotype",
+"size" : 15,
+"children" : [
+{"name" : "",
+"size" : 5,
+"children" : [
+{"name": "", "color": "#00CC99","size" : 0 },
+{"name": "", "color": "#00CC99","size" : 5 }
+]
+}]
+},
+{"name" : "fragilex",
+"count" : 109,
+"children" : [
+{"name" : "",
+"size" : 99,
+"children" : [
+{"name": "", "color": "#00CC99","size" : 0 },
+{"name": "", "color": "#00CC99","size" : 99 }
+]
+}
+]
+}
+]
+},{
+"name" : "SSC",
+"size" : 3413,
+"children": [
+{"name" : "father",
+"size" : 862,
+"children" : [
+{"name" : "",
+"size" : 862,
+"color" : "#00CC99"
+}]
+},
+{"name" : "mother",
+"size" : 862,
+"children" : [
+{"name" : "",
+"size" : 862,
+"color" : "#00CC99"
+}]
+},
+{"name" : "proband",
+"size" : 867,
+"children" : [
+{"name" : "",
+"size" : 867,
+"color" : "#00CC99"
+}]
+},
+{"name" : "sibling",
+"size" : 723,
+"children" : [
+{"name" : "",
+"size" : 723,
+"color" : "#00CC99"
+}]
+},
+{"name" : "other",
+"count" : 99,
+"children" : [
+{"name" : "",
+"size" : 99,
+"color" : "#00CC99"
+}
+]
+}
+]
+}
+]
+}
