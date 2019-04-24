@@ -1,0 +1,71 @@
+Mask:
+Dimensions                    = 77x96x79
+Number of within-brain voxels = 264227
+Mask Size                     = Less Conservative (Larger)
+
+Foci:
+Coordinate System             = MNI
+File of foci coordinates      = gm_wm_input.txt
+Number of foci                = 77
+Number of experiments         = 13
+Total number of subjects      = 937
+
+ALE - Random Effects, Eickhoff 2009:
+File of ALE voxels            = gm_wm_input_ale.nii
+FWHM minimum value            = 8.470932643759031
+FWHM median value             = 8.816254484132923
+FWHM maximum value            = 9.203418613972946
+Minimum ALE score             = 1.3E-44
+Maximum ALE score             = 0.027770476
+
+P Values: (Eickhoff Analytical)
+File of P values              = gm_wm_input_pval.nii
+
+Thresholding:
+False Discovery Rate (q)      = 0.05
+pID                           = 0.0116553735
+Voxels > pID                  = 3107
+Percent of voxels > pID       = 1.17588%
+Recommended min. cluster size = 1248.0 mm^3
+pN                            = 9.2978025E-4
+Voxels > pN                   = 241
+Percent of voxels > pN        = 0.09121%
+Recommended min. cluster size = 104.0 mm^3
+Chosen P value threshold      = 9.2978025E-4
+Chosen min. cluster size      = 200 mm^3
+Thresholded ALE image         = gm_wm_input_p05.nii
+
+Cluster Analysis:
+ #1: 1624 mm^3 from (-30,-40,60) to (-14,-16,74) centered at (-23.5,-24.24,67.49)
+   Extrema: (Labels are within +/-5mm)
+     0.027770476 at (-24,-20,70)	Left Cerebrum.Frontal Lobe.Precentral Gyrus.Gray Matter.Brodmann area 4
+     0.018035918 at (-24,-28,64)	Left Cerebrum.Parietal Lobe.Postcentral Gyrus.Gray Matter.Brodmann area 3
+     0.0135961175 at (-18,-38,62)	Left Cerebrum.Frontal Lobe.Paracentral Lobule.Gray Matter.Brodmann area 5
+   Labels: (Nearest gray within +/-5mm)
+     712mm Left Cerebrum.Frontal Lobe.Precentral Gyrus.Gray Matter.Brodmann area 4
+     640mm Left Cerebrum.Parietal Lobe.Postcentral Gyrus.Gray Matter.Brodmann area 3
+     104mm Left Cerebrum.Frontal Lobe.Paracentral Lobule.Gray Matter.Brodmann area 5
+     64mm Left Cerebrum.Parietal Lobe.Sub-Gyral.Gray Matter.Brodmann area 40
+     32mm Left Cerebrum.Parietal Lobe.Precuneus.Gray Matter.Brodmann area 7
+     32mm Left Cerebrum.Parietal Lobe.Postcentral Gyrus.Gray Matter.Brodmann area 5
+     24mm Left Cerebrum.Parietal Lobe.Superior Parietal Lobule.Gray Matter.Brodmann area 5
+     8mm Left Cerebrum.Frontal Lobe.Precuneus.Gray Matter.Brodmann area 5
+     8mm Left Cerebrum.Parietal Lobe.Postcentral Gyrus.Gray Matter.Brodmann area 2
+
+ #2: 256 mm^3 from (26,28,-18) to (34,34,-12) centered at (29.71,30,-14.39)
+   Extrema: (Labels are within +/-5mm)
+     0.016289186 at (30,30,-14)	Right Cerebrum.Frontal Lobe.Inferior Frontal Gyrus.Gray Matter.Brodmann area 47
+   Labels: (Nearest gray within +/-5mm)
+     256mm Right Cerebrum.Frontal Lobe.Inferior Frontal Gyrus.Gray Matter.Brodmann area 47
+
+
+Experiment Table:
+[ 0 0 0 0 7 0 0 0 0 0 0 1 0 ]
+[ 0 0 0 0 2 0 0 0 0 0 0 0 0 ]
+
+Contributors to cluster #1
+7 foci from Experiment gm33-49 
+1 foci from Experiment gm95-109 
+
+Contributors to cluster #2
+2 foci from Experiment gm33-49 
