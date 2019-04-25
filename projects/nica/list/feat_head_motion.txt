@@ -1,0 +1,76 @@
+ans = 
+
+    'Percent_total_activation_skull'
+    'Percentage_activation_voxels_LR_symmetric'
+    'Hpsd_bin_2_freq0_to_pi_0.038312'
+    'Percent_total_activation_MNI152_all_edges'
+    'Avg_distance_btw_10_local_max'
+    'power_band_0.0_to_0.008_Hz'
+    'Hpsd_bin_1_freq0_to_pi_0'
+    'Percent_total_activation_in_CSF'
+    'four_lag_auto_correlation'
+    'kurtosis_measure_how_outlier-prone_ts'
+    'three_lag_auto_correlation'
+    'one_lag_auto_correlation'
+    'biggest_jump_maxmin'
+    'avg_jump_max_min'
+    'two_lag_auto_correlation'
+    'five_lag_auto_correlation'
+    'power_band_0.008_to_0.02_Hz'
+    'Hpsd_bin_57_freq0_to_pi_2.1455'
+    'Hpsd_bin_52_freq0_to_pi_1.9539'
+    'Parietal_Sup_R'
+    'Precuneus_L'
+    'ParaHippocampal_L'
+    'Hpsd_bin_56_freq0_to_pi_2.1072'
+    'Hpsd_bin_53_freq0_to_pi_1.9922'
+    'Precuneus_R'
+    'Hpsd_bin_55_freq0_to_pi_2.0689'
+    'Hpsd_bin_54_freq0_to_pi_2.0305'
+    'Occipital_Sup_R'
+    'Precentral_R'
+    'Percent_total_activation_in_cerebellum'
+    'SupraMarginal_R'
+    'Olfactory_R'
+    'Occipital_Inf_L'
+    'SupraMarginal_L'
+    'Cuneus_R'
+    'Paracentral_Lobule_L'
+    'Parietal_Sup_L'
+    'Cingulum_Mid_R'
+    'Cerebelum_3_R'
+    'Occipital_Inf_R'
+    'Fusiform_L'
+    'Cingulum_Post_L'
+    'Heschl_R'
+    'Occipital_Mid_L'
+    'Paracentral_Lobule_R'
+    'Occipital_Sup_L'
+    'Percent_total_activation_spinal_cord'
+    'Perfect_total_activation_in_GM'
+    'Angular_L'
+    'Cerebelum_3_L'
+    'Cingulum_Post_R'
+    'Olfactory_L'
+    'Amygdala_L'
+    'Amygdala_R'
+    'Percent_total_activation_in_WM'
+
+
+ans =
+
+    0.9801
+
+
+RESULT = 
+
+       fit_opt: [1x1 struct]
+          wopt: [241x1 double]
+     opt_alpha: 0.1000
+      best_cva: 0.9801
+       cum_cva: [91x11 double]
+    opt_lambda: 0.0625
+           auc: 0.9887
+             p: NaN
+             h: NaN
+            ci: [2x1 double]

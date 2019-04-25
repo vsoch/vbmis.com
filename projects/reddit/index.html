@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+  <head>
+    <title>Reddit Behavioral Co-Occurrence</title>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="http://d3js.org/d3.v3.js"></script>
+    <script src="tipsy.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <style>
+ 
+      body {
+          font-family: 'Roboto', sans-serif;
+      }
+      rect.bordered {
+        stroke: #E6E6E6;
+        stroke-width:2px;   
+      }
+
+      text.mono {
+        font-size: 9pt;
+        font-family: 'Roboto', sans-serif lower-case;
+        fill: #aaa;
+      }
+
+      text.yaxis {
+        fill: #000;
+      }
+
+      text.xaxis {
+        fill: #000;
+      }
+
+      footer {
+          padding-left:20px;
+          padding-bottom:10px;
+      }
+      .d3-tip {
+         line-height: 1;
+         font-weight: bold;
+         padding: 12px;
+         background: rgba(0, 0, 0, 0.8);
+         color: #fff;
+         border-radius: 2px;
+       }
+
+       /* Creates a small triangle extender for the tooltip */
+       .d3-tip:after {
+         box-sizing: border-box;
+         display: inline;
+         font-size: 10px;
+         width: 100%;
+         line-height: 1;
+         color: rgba(0, 0, 0, 0.8);
+         content: "\25BC";
+         position: absolute;
+         text-align: center;
+        }
+
+        /* Style northward tooltips differently */
+        .d3-tip.n:after {
+          margin: -1px 0 0 0;
+          top: 100%;
+          left: 0;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="row" style="margin-top:20px;margin-left:40px">
+
+    <a href="?data=Alzheimers"><button class="btn btn-default" type="button">Alzheimer's</button></a>
+    <a href="?data=amnesia"><button class="btn btn-default" type="button">Amnesia</button></a>
+    <a href="?data=anxiety"><button class="btn btn-default" type="button">Anxiety</button></a>
+    <a href="?data=autism"><button class="btn btn-default" type="button">Autism</button></a>
+    <a href="?data=BipolarReddit"><button class="btn btn-default" type="button">Bipolar</button></a>
+    <a href="?data=depression"><button class="btn btn-default" type="button">Depression</button></a>
+    <a href="?data=EatingDisorders"><button class="btn btn-default" type="button">Eating Disorder</button></a>
+    <a href="?data=narcissism"><button class="btn btn-default" type="button">Narcissism</button></a>
+    <a href="?data=OCD"><button class="btn btn-default" type="button">OCD</button></a>
+    <a href="?data=phobia"><button class="btn btn-default" type="button">Phobia</button></a>
+    <a href="?data=PTSD"><button class="btn btn-default" type="button">PTSD</button></a>
+    <a href="?data=schizophrenia"><button class="btn btn-default" type="button">Schizophrenia</button></a>
+    <a href="?data=stress"><button class="btn btn-default" type="button">Stress</button></a>
+    <a href="http://www.reddit.com" target="_blank" class="reddit-button"><button class="btn btn-success" type="button">REDDIT</button></a>
+                   
+    </div>
+
+    <div class="row" style="margin-top:20px;margin-left:20px">
+        <div class="col-md-12">
+            <h1 class="reddit">Reddit Behavioral Co-Occurrence</h1>
+	    <h6>Terms missing a "1" on the diagonal were not found in the corpus sample (some boards do not have a large # of posts)</h6>
+            <div id="chart"></div>
+        </div>
+    </div>
+
+    <script>
+
+    // Here is a funcion to get variables from the URL - the subreddit name
+    function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+            vars[key] = value;
+        });
+        return vars;
+     }
+
+     //Get json name from the browser url
+     var tsv_data = getUrlVars()
+
+     if (typeof tsv_data["data"] == 'undefined'){ tsv_data = "Alzheimers";}
+     else { tsv_data = tsv_data["data"].replace("/",""); }
+
+     document.getElementsByClassName("reddit")[0].textContent = "Reddit Behavioral Co-Occurrence: " + tsv_data
+     document.getElementsByClassName("reddit-button")[0].href = "http://www.reddit.com/r/" + tsv_data
+
+     var margin = { top: 20, right: 0, bottom: 20, left: 100 },
+          width = 1600 - margin.left - margin.right,
+          height = 1600 - margin.top - margin.bottom,
+          gridSize = Math.floor(width / 163),
+          legendElementWidth = gridSize*2,
+          buckets = 9,
+          colors = ["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"] // alternatively colorbrewer.YlGnBu[9]       
+          labels = ["hypochondriac","obsessive-compuls","disquiet","schizophren","insight","diffid","sleepi","brood","tire","sensit","activ","deliri","self-destruct","sympathet","decis","comprehens","persuas","unretent","letharg","gloomi","punctual","express","clang","hardwork","tens","expediti","arous","ambiti","adventur","cranki","strang","apathet","organ","realist","hostil","abash","accommod","reactiv","perfectionist","heed","popular","alogia","quick-wit","hallucin","studiou","restless","meticul","invinc","dead","slowdown","crave","respons","aloof","reserv","agit","nocturn","patholog","constip","amus","reclus","consecut","careless","impuls","famish","egotist","individualist","aggress","backach","ration","weak","ad-lib","eclect","nervou","care","pushov","decept","alon","contented","drug","honest","paranoid","hopeless","social","healthi","caprici","routin","curiou","emot","apt","creativ","hyperact","weather","resili","blank","better","worthless","breathless","faint","bizarr","happi","pleaser","stuck","gaze","averag","autonom","nauseat","compuls","listen","frenzi","relax","repetit","cautiou","impati","eat","present","religi","indrawn","target","procrastin","distract","optimist","misunderstood","control","prompt","contempl","recept","frighten","delusion","grandios","sad","fail","critic","anhedonia","unreli","coher","empath","dereal","imagin","confus","anxiou","econom","scholarli","incoher","exhaust","product","energet","brokenheart","blame","hazard","intrus","intens","plan","fickl","retard","practic","guilti","self-assur","moral","thought","inform","digress","clean","idiosyncrasi","law-abid"]
+          
+
+      // Tooltips
+      var tip = d3.tip()
+       .attr('class', 'd3-tip')
+       .offset([-10,10])
+       .html(function(d) {
+           return "<div class='row' style='margin-left:14px; margin-right:14px'><strong>P(" + d.predicted + "|" + d.actual + ") = " + Math.round(d.value * 100) / 100 +"</div>";
+       })
+
+      d3.tsv(tsv_data + "_co-occurrence.tsv",
+        function(d) {
+          return {
+            actual: d.probof,
+            predicted: d.given,
+            x: +d.x,
+            y: +d.y,
+            value: +d.prob
+          };
+        },
+
+        function(error, data) {
+          var colorScale = d3.scale.quantile()
+              .domain([0, buckets - 1, d3.max(data, function (d) { return d.value; })])
+              .range(colors);
+
+          var svg = d3.select("#chart").append("svg")
+              .attr("width", width + margin.left + margin.right)
+              .attr("height", height + margin.top + margin.bottom)
+              .append("g")
+              .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+          // Call tooltips function
+          svg.call(tip);
+
+          var xLabels = svg.selectAll(".xLabel")
+              .data(labels)
+              .enter().append("text")
+                .text(function (d) { return d.toLowerCase(); })
+                .attr("x", 0)
+                .attr("y", function (d, i) { return i * gridSize; })
+                .style("text-anchor", "end")
+                .attr("transform", "translate(-6," + gridSize / 1.5 + ")")
+                .attr("class", function (d, i) { return ((i >= 0 && i <= 4) ? "xLabel mono axis yaxis" : "xLabel mono axis"); });
+
+          var heatMap = svg.selectAll(".count")
+              .data(data)
+              .enter().append("rect")
+              .attr("x", function(d) { return (d.y - 1) * gridSize; })
+              .attr("y", function(d) { return (d.x - 1) * gridSize; })
+              .attr("rx", 4)
+              .attr("ry", 4)
+              .attr("class", "count bordered")
+              .attr("width", gridSize)
+              .attr("height", gridSize)
+              .style("fill", colors[0])
+              .on('mouseout.tip', tip.hide)
+              .on('mouseover.tip', tip.show);
+
+          heatMap.transition().duration(1000)
+              .style("fill", function(d) { return colorScale(d.value); });
+
+          heatMap.append("title").text(function(d) { return d.value; });
+              
+          var legend = svg.selectAll(".legend")
+              .data([0].concat(colorScale.quantiles()), function(d) { return d; })
+              .enter().append("g")
+              .attr("x",0)
+              .attr("y",-1000)
+              .attr("class", "legend");
+
+          legend.append("rect")
+            .attr("x", function(d, i) { return legendElementWidth * i; })
+            .attr("y", height)
+            .attr("width", legendElementWidth)
+            .attr("height", gridSize / 2)
+            .style("fill", function(d, i) { return colors[i]; });
+
+          legend.append("text")
+            .attr("class", "mono")
+            .text(function(d) { return " ≥ " + Math.round(d); })
+            .attr("x", function(d, i) { return legendElementWidth * i; })
+            .attr("y", height + gridSize);
+      });
+    </script>
+  </body>
+<footer>
+</footer>
+</html>

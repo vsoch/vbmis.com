@@ -1,0 +1,283 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nidm.app &mdash; nidm 1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="nidm 1.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> nidm
+          
+
+          
+            
+            <img src="../../_static/nidm.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">nidm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/incf-nidash/nidm-api">Github repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/incf-nidash/nidm-query">nidm-query</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/vsoch/nidmviewer">nidm-viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">nidm</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>nidm.app</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for nidm.app</h1><div class="highlight"><pre>
+<span class="kn">from</span> <span class="nn">nidm.query</span> <span class="kn">import</span> <span class="n">get_query_directory</span><span class="p">,</span> <span class="n">validate_queries</span><span class="p">,</span> <span class="n">make_lookup</span><span class="p">,</span> <span class="n">do_query</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span><span class="p">,</span> <span class="n">request</span>
+<span class="kn">from</span> <span class="nn">flask_restful</span> <span class="kn">import</span> <span class="n">Resource</span><span class="p">,</span> <span class="n">Api</span>
+<span class="kn">from</span> <span class="nn">werkzeug</span> <span class="kn">import</span> <span class="n">secure_filename</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">random</span>
+<span class="kn">import</span> <span class="nn">os</span>
+
+
+<span class="c"># SERVER CONFIGURATION ##############################################</span>
+<div class="viewcode-block" id="NIDMServer"><a class="viewcode-back" href="../../nidm.html#nidm.app.NIDMServer">[docs]</a><span class="k">class</span> <span class="nc">NIDMServer</span><span class="p">(</span><span class="n">Flask</span><span class="p">):</span>
+
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="nb">super</span><span class="p">(</span><span class="n">NIDMServer</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+            <span class="c"># update queries on start of application</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">query_dir</span> <span class="o">=</span> <span class="n">get_query_directory</span><span class="p">()</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">query_json</span> <span class="o">=</span> <span class="n">validate_queries</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">query_dir</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">query_dict</span> <span class="o">=</span> <span class="n">make_lookup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">query_json</span><span class="p">,</span><span class="n">key_field</span><span class="o">=</span><span class="s">&quot;uid&quot;</span><span class="p">)</span>
+</div>
+<span class="n">app</span> <span class="o">=</span> <span class="n">NIDMServer</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+<span class="n">api</span> <span class="o">=</span> <span class="n">Api</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>    
+
+<span class="c"># API VIEWS #########################################################</span>
+<div class="viewcode-block" id="apiIndex"><a class="viewcode-back" href="../../nidm.html#nidm.app.apiIndex">[docs]</a><span class="k">class</span> <span class="nc">apiIndex</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;apiIndex</span>
+<span class="sd">    Main view for REST API to display all available queries</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="apiIndex.get"><a class="viewcode-back" href="../../nidm.html#nidm.app.apiIndex.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">query_json</span> <span class="o">=</span> <span class="n">app</span><span class="o">.</span><span class="n">query_json</span>
+        <span class="k">return</span> <span class="n">query_json</span>
+</div></div>
+<div class="viewcode-block" id="apiQueryMeta"><a class="viewcode-back" href="../../nidm.html#nidm.app.apiQueryMeta">[docs]</a><span class="k">class</span> <span class="nc">apiQueryMeta</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;apiQueryMeta</span>
+<span class="sd">    return complete meta data for specific query</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="apiQueryMeta.get"><a class="viewcode-back" href="../../nidm.html#nidm.app.apiQueryMeta.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qid</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{</span><span class="n">qid</span><span class="p">:</span> <span class="n">app</span><span class="o">.</span><span class="n">query_dict</span><span class="p">[</span><span class="n">qid</span><span class="p">]}</span>
+</div></div>
+<div class="viewcode-block" id="apiDoQuery"><a class="viewcode-back" href="../../nidm.html#nidm.app.apiDoQuery">[docs]</a><span class="k">class</span> <span class="nc">apiDoQuery</span><span class="p">(</span><span class="n">Resource</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;apiDoQuery</span>
+<span class="sd">    return result of query on ttl file</span>
+<span class="sd">    Paramters</span>
+<span class="sd">    =========</span>
+<span class="sd">    qid: str</span>
+<span class="sd">        the uid associated with the query</span>
+<span class="sd">    ttl: str</span>
+<span class="sd">        the url of the turtle file</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="apiDoQuery.get"><a class="viewcode-back" href="../../nidm.html#nidm.app.apiDoQuery.get">[docs]</a>    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">qid</span><span class="p">,</span> <span class="n">output_format</span><span class="p">):</span>
+        <span class="n">ttl</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">args</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s">&#39;ttl&#39;</span><span class="p">)</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">do_query</span><span class="p">(</span><span class="n">ttl_file</span><span class="o">=</span><span class="n">ttl</span><span class="p">,</span>
+                     <span class="n">query</span><span class="o">=</span><span class="n">app</span><span class="o">.</span><span class="n">query_dict</span><span class="p">[</span><span class="n">qid</span><span class="p">][</span><span class="s">&quot;sparql&quot;</span><span class="p">])</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s">&quot;records&quot;</span><span class="p">)</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s">&quot;uid&quot;</span><span class="p">:</span> <span class="n">qid</span><span class="p">,</span>
+                <span class="s">&quot;result&quot;</span><span class="p">:</span> <span class="n">result</span><span class="p">}</span>
+        <span class="k">except</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span><span class="s">&quot;message&quot;</span><span class="p">:</span> <span class="s">&quot;invalid input for query type.&quot;</span><span class="p">,</span>
+                    <span class="n">qid</span><span class="p">:</span> <span class="n">app</span><span class="o">.</span><span class="n">query_dict</span><span class="p">[</span><span class="n">qid</span><span class="p">]}</span>
+
+              
+<span class="c"># Add all resources</span></div></div>
+<span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">apiIndex</span><span class="p">,</span><span class="s">&#39;/&#39;</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">apiQueryMeta</span><span class="p">,</span><span class="s">&#39;/api/&lt;string:qid&gt;&#39;</span><span class="p">)</span>
+<span class="n">api</span><span class="o">.</span><span class="n">add_resource</span><span class="p">(</span><span class="n">apiDoQuery</span><span class="p">,</span><span class="s">&#39;/api/&lt;string:output_format&gt;/&lt;string:qid&gt;&#39;</span><span class="p">)</span>
+
+<span class="c"># WEB INTERFACE VIEWS ##############################################</span>
+
+<span class="c">#TODO will write</span>
+
+<span class="c"># RUNNING ##########################################################</span>
+
+
+<span class="c"># This is how the command line version will run</span>
+<div class="viewcode-block" id="start"><a class="viewcode-back" href="../../nidm.html#nidm.app.start">[docs]</a><span class="k">def</span> <span class="nf">start</span><span class="p">(</span><span class="n">port</span><span class="o">=</span><span class="mi">8088</span><span class="p">):</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&quot;0.0.0.0&quot;</span><span class="p">,</span><span class="n">debug</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span><span class="n">port</span><span class="o">=</span><span class="n">port</span><span class="p">)</span>
+    </div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">debug</span> <span class="o">=</span> <span class="bp">True</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s">&#39;0.0.0.0&#39;</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, NIDASH Working Group.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

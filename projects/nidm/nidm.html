@@ -1,0 +1,647 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nidm package &mdash; nidm 1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="nidm 1.0 documentation" href="index.html"/>
+        <link rel="up" title="nidm" href="modules.html"/>
+        <link rel="next" title="nidm.script package" href="nidm.script.html"/>
+        <link rel="prev" title="nidm" href="modules.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> nidm
+          
+
+          
+            
+            <img src="_static/nidm.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started.html">Getting Started</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">nidm</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="">nidm package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="nidm.script.html">nidm.script package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="nidm.templates.html">nidm.templates package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-nidm.app">nidm.app module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-nidm.experiment">nidm.experiment module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-nidm.query">nidm.query module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-nidm.results">nidm.results module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-nidm.scripts">nidm.scripts module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-nidm.utils">nidm.utils module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-nidm.workflow">nidm.workflow module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-nidm">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/incf-nidash/nidm-api">Github repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/incf-nidash/nidm-query">nidm-query</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/vsoch/nidmviewer">nidm-viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">nidm</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="modules.html">nidm</a> &raquo;</li>
+      
+    <li>nidm package</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/nidm.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nidm-package">
+<h1>nidm package<a class="headerlink" href="#nidm-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nidm.script.html">nidm.script package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nidm.script.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nidm.script.html#module-nidm.script.post_install">nidm.script.post_install module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nidm.script.html#module-nidm.script">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nidm.templates.html">nidm.templates package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nidm.templates.html#module-nidm.templates">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-nidm.app">
+<span id="nidm-app-module"></span><h2>nidm.app module<a class="headerlink" href="#module-nidm.app" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="nidm.app.NIDMServer">
+<em class="property">class </em><code class="descclassname">nidm.app.</code><code class="descname">NIDMServer</code><span class="sig-paren">(</span><em>*args</em>, <em>**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/app.html#NIDMServer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.app.NIDMServer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask.app.Flask</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="nidm.app.apiDoQuery">
+<em class="property">class </em><code class="descclassname">nidm.app.</code><code class="descname">apiDoQuery</code><a class="reference internal" href="_modules/nidm/app.html#apiDoQuery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.app.apiDoQuery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_restful.Resource</span></code></p>
+<p>return result of query on ttl file
+Paramters
+=========
+qid: str</p>
+<blockquote>
+<div>the uid associated with the query</div></blockquote>
+<dl class="docutils">
+<dt>ttl: str</dt>
+<dd>the url of the turtle file</dd>
+</dl>
+<dl class="attribute">
+<dt id="nidm.app.apiDoQuery.endpoint">
+<code class="descname">endpoint</code><em class="property"> = 'apidoquery'</em><a class="headerlink" href="#nidm.app.apiDoQuery.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nidm.app.apiDoQuery.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>qid</em>, <em>output_format</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/app.html#apiDoQuery.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.app.apiDoQuery.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nidm.app.apiDoQuery.mediatypes">
+<code class="descname">mediatypes</code><span class="sig-paren">(</span><em>resource_cls</em><span class="sig-paren">)</span><a class="headerlink" href="#nidm.app.apiDoQuery.mediatypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="nidm.app.apiDoQuery.methods">
+<code class="descname">methods</code><em class="property"> = ['GET']</em><a class="headerlink" href="#nidm.app.apiDoQuery.methods" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nidm.app.apiIndex">
+<em class="property">class </em><code class="descclassname">nidm.app.</code><code class="descname">apiIndex</code><a class="reference internal" href="_modules/nidm/app.html#apiIndex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.app.apiIndex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_restful.Resource</span></code></p>
+<p>Main view for REST API to display all available queries</p>
+<dl class="attribute">
+<dt id="nidm.app.apiIndex.endpoint">
+<code class="descname">endpoint</code><em class="property"> = 'apiindex'</em><a class="headerlink" href="#nidm.app.apiIndex.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nidm.app.apiIndex.get">
+<code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/app.html#apiIndex.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.app.apiIndex.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nidm.app.apiIndex.mediatypes">
+<code class="descname">mediatypes</code><span class="sig-paren">(</span><em>resource_cls</em><span class="sig-paren">)</span><a class="headerlink" href="#nidm.app.apiIndex.mediatypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="nidm.app.apiIndex.methods">
+<code class="descname">methods</code><em class="property"> = ['GET']</em><a class="headerlink" href="#nidm.app.apiIndex.methods" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="nidm.app.apiQueryMeta">
+<em class="property">class </em><code class="descclassname">nidm.app.</code><code class="descname">apiQueryMeta</code><a class="reference internal" href="_modules/nidm/app.html#apiQueryMeta"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.app.apiQueryMeta" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">flask_restful.Resource</span></code></p>
+<p>return complete meta data for specific query</p>
+<dl class="attribute">
+<dt id="nidm.app.apiQueryMeta.endpoint">
+<code class="descname">endpoint</code><em class="property"> = 'apiquerymeta'</em><a class="headerlink" href="#nidm.app.apiQueryMeta.endpoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nidm.app.apiQueryMeta.get">
+<code class="descname">get</code><span class="sig-paren">(</span><em>qid</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/app.html#apiQueryMeta.get"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.app.apiQueryMeta.get" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="nidm.app.apiQueryMeta.mediatypes">
+<code class="descname">mediatypes</code><span class="sig-paren">(</span><em>resource_cls</em><span class="sig-paren">)</span><a class="headerlink" href="#nidm.app.apiQueryMeta.mediatypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="nidm.app.apiQueryMeta.methods">
+<code class="descname">methods</code><em class="property"> = ['GET']</em><a class="headerlink" href="#nidm.app.apiQueryMeta.methods" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.app.start">
+<code class="descclassname">nidm.app.</code><code class="descname">start</code><span class="sig-paren">(</span><em>port=8088</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/app.html#start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.app.start" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-nidm.experiment">
+<span id="nidm-experiment-module"></span><h2>nidm.experiment module<a class="headerlink" href="#module-nidm.experiment" title="Permalink to this headline">¶</a></h2>
+<p>experiment: part of the nidm-api
+functions for working with nidm experiment</p>
+</div>
+<div class="section" id="module-nidm.query">
+<span id="nidm-query-module"></span><h2>nidm.query module<a class="headerlink" href="#module-nidm.query" title="Permalink to this headline">¶</a></h2>
+<p>query: part of the nidm-api
+general functions to work with query
+data structures for nidm-queries</p>
+<dl class="function">
+<dt id="nidm.query.do_query">
+<code class="descclassname">nidm.query.</code><code class="descname">do_query</code><span class="sig-paren">(</span><em>ttl_file</em>, <em>query</em>, <em>rdf_format='turtle'</em>, <em>serialize_format='csv'</em>, <em>output_df=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#do_query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.do_query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nidm.query.download_queries">
+<code class="descclassname">nidm.query.</code><code class="descname">download_queries</code><span class="sig-paren">(</span><em>destination</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#download_queries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.download_queries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Download queries repo to a destination
+Parameters
+==========
+destination:</p>
+<blockquote>
+<div>the full path to download the repo to</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.query.find_queries">
+<code class="descclassname">nidm.query.</code><code class="descname">find_queries</code><span class="sig-paren">(</span><em>query_folders</em>, <em>search_pattern='*.json'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#find_queries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.find_queries" title="Permalink to this definition">¶</a></dt>
+<dd><p>searches one or more folders for valid queries, meaning
+json files. In the case of multiple directories, will
+append the folder name as a variable to indicate the type
+Parameters
+==========
+query_folders: list or str</p>
+<blockquote>
+<div>one or more full paths to directories with json objects</div></blockquote>
+<dl class="docutils">
+<dt>search_pattern: str</dt>
+<dd>pattern for glob to use to find query objects
+default is &#8220;<a href="#id1"><span class="problematic" id="id2">*</span></a>.json&#8221;</dd>
+</dl>
+<dl class="docutils">
+<dt>queries: list</dt>
+<dd>a list of full paths to query object files</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.query.generate_query_template">
+<code class="descclassname">nidm.query.</code><code class="descname">generate_query_template</code><span class="sig-paren">(</span><em>output_dir=None</em>, <em>template_path=None</em>, <em>fields=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#generate_query_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.generate_query_template" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="docutils">
+<dt>output_dir: str</dt>
+<dd>full path to output directory for json data structure.
+if none specified, will not save the data structure</dd>
+<dt>template_path: str</dt>
+<dd>path to json file to use as a template. Only should be
+specified if the user has reason to use a custom template
+default is the standard provided by nidm-api.</dd>
+<dt>fields: dict (optional)</dt>
+<dd>a dictionary with fields that correspond to template keys.
+if provided, template will be filled with keys. Possible values
+include</dd>
+</dl>
+<dl class="docutils">
+<dt>template: json (dict)</dt>
+<dd>A python dictionary (json) that can be filled with
+new query information</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.query.get_query_directory">
+<code class="descclassname">nidm.query.</code><code class="descname">get_query_directory</code><span class="sig-paren">(</span><em>tmpdir=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#get_query_directory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.get_query_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>get_query_directory:
+Download queries repo to tmp directory
+Parameters
+==========
+tmpdir: str</p>
+<blockquote>
+<div>path to directory to download queries to</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.query.make_lookup">
+<code class="descclassname">nidm.query.</code><code class="descname">make_lookup</code><span class="sig-paren">(</span><em>query_list</em>, <em>key_field</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#make_lookup"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.make_lookup" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns dict object to quickly look up query based on uid
+Parameters
+==========
+query_list: list</p>
+<blockquote>
+<div>a list of query (dict objects)</div></blockquote>
+<dl class="docutils">
+<dt>key_field: str</dt>
+<dd>the key in the dictionary to base the lookup key</dd>
+</dl>
+<dl class="docutils">
+<dt>query_dict: dict</dt>
+<dd>dict (json) with key as &#8220;key_field&#8221; from query_list</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.query.read_queries">
+<code class="descclassname">nidm.query.</code><code class="descname">read_queries</code><span class="sig-paren">(</span><em>query_paths</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#read_queries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.read_queries" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read in a list of query (json) objects.
+Parameters
+==========
+query_paths: list
+a list of full paths to query objects to read
+Returns
+=======
+<a href="#id3"><span class="problematic" id="id4">queries_</span></a>: list</p>
+<blockquote>
+<div>dict to be served as json describing queries available
+a &#8220;type&#8221; variable is added to indicate folder query was found in</div></blockquote>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.query.save_query_template">
+<code class="descclassname">nidm.query.</code><code class="descname">save_query_template</code><span class="sig-paren">(</span><em>template</em>, <em>output_dir</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#save_query_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.save_query_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>generate_query_template
+Parameters
+==========
+output_dir: string path</p>
+<blockquote>
+<div>full path to output directory for json data structure.
+the template filename is generated from the uid variable</div></blockquote>
+<dl class="docutils">
+<dt>success: boolean</dt>
+<dd>True if save was successful, false otherwise</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.query.validate_queries">
+<code class="descclassname">nidm.query.</code><code class="descname">validate_queries</code><span class="sig-paren">(</span><em>query_dir</em>, <em>queries=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/query.html#validate_queries"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.query.validate_queries" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns json object with query data structures, and
+a field &#8216;valid&#8217; to describe if query was valid
+Parameters
+==========
+queries: list</p>
+<blockquote>
+<div>a list of full paths to json files, each a query</div></blockquote>
+<dl class="docutils">
+<dt>query_dir: str</dt>
+<dd>full path to a nidm-query repo</dd>
+</dl>
+<dl class="docutils">
+<dt>queries: json</dt>
+<dd>dict (json) with all read in queries available</dd>
+</dl>
+<p>from nidm-query, provided by API</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-nidm.results">
+<span id="nidm-results-module"></span><h2>nidm.results module<a class="headerlink" href="#module-nidm.results" title="Permalink to this headline">¶</a></h2>
+<p>results: part of the nidm-api
+functions for working with nidm results</p>
+</div>
+<div class="section" id="module-nidm.scripts">
+<span id="nidm-scripts-module"></span><h2>nidm.scripts module<a class="headerlink" href="#module-nidm.scripts" title="Permalink to this headline">¶</a></h2>
+<p>script.py: part of nidmapi package
+Runtime executable</p>
+<dl class="function">
+<dt id="nidm.scripts.main">
+<code class="descclassname">nidm.scripts.</code><code class="descname">main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/scripts.html#main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.scripts.main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-nidm.utils">
+<span id="nidm-utils-module"></span><h2>nidm.utils module<a class="headerlink" href="#module-nidm.utils" title="Permalink to this headline">¶</a></h2>
+<p>utils: part of the nidm-api
+general functions for the api</p>
+<dl class="function">
+<dt id="nidm.utils.clean_fields">
+<code class="descclassname">nidm.utils.</code><code class="descname">clean_fields</code><span class="sig-paren">(</span><em>mydict</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#clean_fields"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.clean_fields" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensures that keys and values of dictionary are in utf-8
+so rendering in javascript is clean.
+Paramters
+=========
+mydict: dict</p>
+<blockquote>
+<div>dictionary to clean</div></blockquote>
+<dl class="docutils">
+<dt>newdict: dict</dt>
+<dd>dictionary with all fields encoded in utf-8</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.copy_directory">
+<code class="descclassname">nidm.utils.</code><code class="descname">copy_directory</code><span class="sig-paren">(</span><em>src</em>, <em>dest</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#copy_directory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.copy_directory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Copy an entire directory recursively</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.find_directories">
+<code class="descclassname">nidm.utils.</code><code class="descname">find_directories</code><span class="sig-paren">(</span><em>root</em>, <em>fullpath=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#find_directories"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.find_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return directories at one level specified by user
+(not recursive)</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.find_subdirectories">
+<code class="descclassname">nidm.utils.</code><code class="descname">find_subdirectories</code><span class="sig-paren">(</span><em>basepath</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#find_subdirectories"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.find_subdirectories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return directories (and sub) starting from a base</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.get_installdir">
+<code class="descclassname">nidm.utils.</code><code class="descname">get_installdir</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#get_installdir"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.get_installdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns installation directory of nidm-api</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.get_query_template">
+<code class="descclassname">nidm.utils.</code><code class="descname">get_query_template</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#get_query_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.get_query_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>get_standard_template
+returns the full path to the standard template for queries</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.get_template">
+<code class="descclassname">nidm.utils.</code><code class="descname">get_template</code><span class="sig-paren">(</span><em>template_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#get_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.get_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>get_template: read in and return a template file</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.has_internet_connectivity">
+<code class="descclassname">nidm.utils.</code><code class="descname">has_internet_connectivity</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#has_internet_connectivity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.has_internet_connectivity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Checks for internet connectivity by way of trying to
+retrieve google IP address. Returns True/False</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.is_type">
+<code class="descclassname">nidm.utils.</code><code class="descname">is_type</code><span class="sig-paren">(</span><em>var, types=[&lt;type 'int'&gt;, &lt;type 'float'&gt;, &lt;type 'list'&gt;]</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#is_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.is_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check type</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.load_json">
+<code class="descclassname">nidm.utils.</code><code class="descname">load_json</code><span class="sig-paren">(</span><em>json_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#load_json"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.load_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>returns a loaded json file
+Parameters
+==========
+json_path: str</p>
+<blockquote>
+<div>full path to json file to load</div></blockquote>
+<dl class="docutils">
+<dt>thejson: json (dict)</dt>
+<dd>loaded json (dict)</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.remove_unicode_dict">
+<code class="descclassname">nidm.utils.</code><code class="descname">remove_unicode_dict</code><span class="sig-paren">(</span><em>input_dict</em>, <em>encoding='utf-8'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#remove_unicode_dict"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.remove_unicode_dict" title="Permalink to this definition">¶</a></dt>
+<dd><p>remove unicode keys and values from dict, encoding in utf8</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.save_template">
+<code class="descclassname">nidm.utils.</code><code class="descname">save_template</code><span class="sig-paren">(</span><em>output_file</em>, <em>html_snippet</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#save_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.save_template" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.set_permissions">
+<code class="descclassname">nidm.utils.</code><code class="descname">set_permissions</code><span class="sig-paren">(</span><em>path</em>, <em>permission=128</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#set_permissions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.set_permissions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="nidm.utils.sub_template">
+<code class="descclassname">nidm.utils.</code><code class="descname">sub_template</code><span class="sig-paren">(</span><em>template</em>, <em>template_tag</em>, <em>substitution</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/nidm/utils.html#sub_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nidm.utils.sub_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>make a substitution for a template_tag in a template</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-nidm.workflow">
+<span id="nidm-workflow-module"></span><h2>nidm.workflow module<a class="headerlink" href="#module-nidm.workflow" title="Permalink to this headline">¶</a></h2>
+<p>workflow: part of the nidm-api
+functions for working with nidm workflow</p>
+</div>
+<div class="section" id="module-nidm">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-nidm" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="nidm.script.html" class="btn btn-neutral float-right" title="nidm.script package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="modules.html" class="btn btn-neutral" title="nidm" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, NIDASH Working Group.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

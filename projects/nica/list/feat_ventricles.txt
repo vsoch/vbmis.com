@@ -1,0 +1,72 @@
+ans = 
+
+    'Percent_total_activation_ventricles'
+    'Percent_total_activation_in_WM'
+    'Caudate_R'
+    'Cingulum_Post_R'
+    'Caudate_L'
+    'Thalamus_L'
+    'Thalamus_R'
+    'Max_cluster_size_10_local_max_region_growing_thresh_2.5_<_.5_overlap'
+    'power_band_0.05_to_0.1_Hz'
+    'Cingulum_Post_L'
+    'Lingual_R'
+    'Vermis_4_5'
+    'high_frequency_noise_percentage'
+    'Percent_total_activation_midbrain'
+    'num_local_mins_div_by_timepoints'
+    'Hpsd_bin_17_freq0_to_pi_0.61299'
+    'Hpsd_bin_46_freq0_to_pi_1.724'
+    'Hpsd_bin_45_freq0_to_pi_1.6857'
+    'Hpsd_bin_47_freq0_to_pi_1.7624'
+    'Hpsd_bin_48_freq0_to_pi_1.8007'
+    'Mean_cluster_size_10_local_max_region_growing_thresh_2.5_<_.5_overlap'
+    'Hpsd_bin_49_freq0_to_pi_1.839'
+    'Hpsd_bin_43_freq0_to_pi_1.6091'
+    'Hpsd_bin_26_freq0_to_pi_0.9578'
+    'Hpsd_bin_50_freq0_to_pi_1.8773'
+    'Vermis_3'
+    'Hpsd_bin_44_freq0_to_pi_1.6474'
+    'Hpsd_bin_51_freq0_to_pi_1.9156'
+    'avg_amplitude'
+    'Lingual_L'
+    'Hpsd_bin_38_freq0_to_pi_1.4175'
+    'Hpsd_bin_42_freq0_to_pi_1.5708'
+    'Hpsd_bin_52_freq0_to_pi_1.9539'
+    'power_band_0.02_to_0.05_Hz'
+    'Temporal_Pole_Sup_L'
+    'Cingulum_Ant_R'
+    'Frontal_Inf_Orb_R'
+    'Temporal_Sup_R'
+    'avg_jump_max_min'
+    'Hpsd_bin_16_freq0_to_pi_0.57468'
+    'three_lag_auto_correlation'
+    'avg_distance_between_min_peaks'
+    'two_lag_auto_correlation'
+    'Frontal_Inf_Orb_L'
+    'Frontal_Med_Orb_R'
+    'Temporal_Inf_R'
+    'Frontal_Med_Orb_L'
+    'one_lag_auto_correlation'
+    'Cingulum_Ant_L'
+    'Avg_distance_btw_10_local_max'
+    'Perfect_total_activation_in_GM'
+
+
+ans =
+
+    0.9675
+
+
+RESULT = 
+
+       fit_opt: [1x1 struct]
+          wopt: [241x1 double]
+     opt_alpha: 0.1000
+      best_cva: 0.9675
+       cum_cva: [91x11 double]
+    opt_lambda: 0.0625
+           auc: 0.9796
+             p: NaN
+             h: NaN
+            ci: [2x1 double]

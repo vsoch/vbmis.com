@@ -1,0 +1,22 @@
+ans = 
+
+   Empty cell array: 0-by-1
+
+
+ans =
+
+    0.9834
+
+
+RESULT = 
+
+       fit_opt: [1x1 struct]
+          wopt: [241x1 double]
+     opt_alpha: 1
+      best_cva: 0.9834
+       cum_cva: [91x11 double]
+    opt_lambda: 32
+           auc: 0.4521
+             p: NaN
+             h: NaN
+            ci: [2x1 double]

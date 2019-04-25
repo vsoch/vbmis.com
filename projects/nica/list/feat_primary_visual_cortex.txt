@@ -1,0 +1,70 @@
+ans = 
+
+    'Calcarine_R'
+    'Calcarine_L'
+    'Cuneus_L'
+    'Lingual_L'
+    'Cuneus_R'
+    'Max_cluster_size_10_local_max_region_growing_thresh_2.5_<_.5_overlap'
+    'Lingual_R'
+    'Mean_cluster_size_10_local_max_region_growing_thresh_2.5_<_.5_overlap'
+    'Skewness of IC distribution'
+    'Kurtosis of IC distribution'
+    'Perfect_total_activation_in_GM'
+    'Hpsd_bin_17_freq0_to_pi_0.61299'
+    'Frontal_Sup_L'
+    'Parietal_Inf_L'
+    'Frontal_Inf_Tri_R'
+    'Hpsd_bin_3_freq0_to_pi_0.076624'
+    'Amygdala_L'
+    'Pallidum_L'
+    'Rolandic_Oper_L'
+    'Heschl_L'
+    'Paracentral_Lobule_R'
+    'Frontal_Sup_Medial_L'
+    'Temporal_Sup_R'
+    'Cingulum_Ant_R'
+    'Frontal_Mid_Orb_L'
+    'Temporal_Inf_R'
+    'Percent_total_activation_MNI152_all_edges'
+    'Fusiform_L'
+    'Cingulum_Ant_L'
+    'Rolandic_Oper_R'
+    'Occipital_Mid_R'
+    'Frontal_Med_Orb_R'
+    'biggest_jump_maxmin'
+    'Frontal_Mid_Orb_R'
+    'Temporal_Sup_L'
+    'Cingulum_Post_R'
+    'Cingulum_Post_L'
+    'Heschl_R'
+    'Frontal_Sup_Orb_L'
+    'Angular_R'
+    'Frontal_Med_Orb_L'
+    'Rectus_R'
+    'five_lag_auto_correlation'
+    'Precentral_R'
+    'Frontal_Sup_Orb_R'
+    'Occipital_Inf_R'
+    'Occipital_Inf_L'
+    'Olfactory_L'
+    'Olfactory_R'
+
+
+ans =
+
+    0.9788
+
+
+RESULT = 
+
+       fit_opt: [1x1 struct]
+          wopt: [241x1 double]
+     opt_alpha: 0.1300
+      best_cva: 0.9788
+       cum_cva: [91x11 double]
+    opt_lambda: 0.0625
+           auc: 0.3947
+             p: NaN
+             h: NaN
+            ci: [2x1 double]

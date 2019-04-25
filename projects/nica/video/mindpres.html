@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html> 
+<head>
+<title>MIND Institute SZ fMRI Presentation - Vanessa Sochat</title>
+</head>
+<body> 
+
+<div style="text-align:center"> 
+  <button onclick="playPause()">Play/Pause</button> 
+  <button onclick="makeBig()">Big</button>
+  <button onclick="makeSmall()">Small</button>
+  <button onclick="makeNormal()">Normal</button>
+  <br> 
+  <video id="mindpres" width="420" controls="controls">
+    <source src="MIND_Institute_SZ_fMRI_x264.mp4" type="video/mp4"><source src="MIND_Institute_SZ_fMRI_libtheora.ogv" type="video/ogg">Your browser does not support HTML5 video.
+  </video>
+</div> 
+
+<script> 
+var myVideo=document.getElementById("mindpres"); 
+
+function playPause()
+{ 
+if (myVideo.paused) 
+  myVideo.play(); 
+else 
+  myVideo.pause(); 
+} 
+
+function makeBig()
+{ 
+myVideo.width=560; 
+} 
+
+function makeSmall()
+{ 
+myVideo.width=320; 
+} 
+
+function makeNormal()
+{ 
+myVideo.width=420; 
+} 
+</script> 
+<center>
+<h3><a href="http://www.vbmis.com/bmi/project/nica/video/MIND_Institute_SZ_fMRI_x264.mp4">Download MPEG-4</a></h3><h3><a href="http://www.vbmis.com/bmi/project/nica/video/MIND_Institute_SZ_fMRI.wmv">Download WMV</a></h3>
+</center>
+</body> 
+</html>

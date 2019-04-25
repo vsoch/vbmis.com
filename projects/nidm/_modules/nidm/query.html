@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>nidm.query &mdash; nidm 1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="nidm 1.0 documentation" href="../../index.html"/>
+        <link rel="up" title="Module code" href="../index.html"/> 
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> nidm
+          
+
+          
+            
+            <img src="../../_static/nidm.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting-started.html">Getting Started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modules.html">nidm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/incf-nidash/nidm-api">Github repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/incf-nidash/nidm-query">nidm-query</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/vsoch/nidmviewer">nidm-viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">nidm</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+      
+    <li>nidm.query</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for nidm.query</h1><div class="highlight"><pre>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">query: part of the nidm-api</span>
+<span class="sd">general functions to work with query</span>
+<span class="sd">data structures for nidm-queries</span>
+
+<span class="sd">&#39;&#39;&#39;</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">stat</span>
+<span class="kn">import</span> <span class="nn">uuid</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">rdflib</span>
+<span class="kn">import</span> <span class="nn">shutil</span>
+<span class="kn">import</span> <span class="nn">tempfile</span>
+<span class="kn">import</span> <span class="nn">rdfextras</span>
+<span class="n">rdfextras</span><span class="o">.</span><span class="n">registerplugins</span><span class="p">()</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+<span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">version_info</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">StringIO</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">StringIO</span>
+<span class="kn">from</span> <span class="nn">git</span> <span class="kn">import</span> <span class="n">Repo</span>
+<span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="kn">import</span> <span class="n">DataFrame</span>
+<span class="kn">from</span> <span class="nn">nidm.utils</span> <span class="kn">import</span> <span class="n">load_json</span><span class="p">,</span> <span class="n">get_query_template</span><span class="p">,</span> <span class="n">has_internet_connectivity</span><span class="p">,</span> \
+<span class="n">find_directories</span><span class="p">,</span> <span class="n">set_permissions</span>
+
+<div class="viewcode-block" id="generate_query_template"><a class="viewcode-back" href="../../nidm.html#nidm.query.generate_query_template">[docs]</a><span class="k">def</span> <span class="nf">generate_query_template</span><span class="p">(</span><span class="n">output_dir</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">template_path</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span><span class="n">fields</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;generate_query_template</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    output_dir: str</span>
+<span class="sd">        full path to output directory for json data structure.</span>
+<span class="sd">        if none specified, will not save the data structure</span>
+<span class="sd">    template_path: str</span>
+<span class="sd">        path to json file to use as a template. Only should be</span>
+<span class="sd">        specified if the user has reason to use a custom template</span>
+<span class="sd">        default is the standard provided by nidm-api.    </span>
+<span class="sd">    fields: dict (optional)</span>
+<span class="sd">        a dictionary with fields that correspond to template keys.</span>
+<span class="sd">        if provided, template will be filled with keys. Possible values</span>
+<span class="sd">        include </span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    template: json (dict)</span>
+<span class="sd">        A python dictionary (json) that can be filled with</span>
+<span class="sd">        new query information</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">template_path</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">template</span> <span class="o">=</span> <span class="n">get_query_template</span><span class="p">()</span>        
+    <span class="n">template</span> <span class="o">=</span> <span class="n">load_json</span><span class="p">(</span><span class="n">template</span><span class="p">)</span>
+
+    <span class="c"># Each template is given a uid</span>
+    <span class="n">uid</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">uuid</span><span class="o">.</span><span class="n">uuid4</span><span class="p">())</span>   
+    <span class="n">template</span><span class="p">[</span><span class="s">&quot;uid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">uid</span>
+
+    <span class="c"># the user has provided data to fill template</span>
+    <span class="c">#TODO: if a sparql query is provided, we should generate parameters from it</span>
+    <span class="c">#TODO: template validation</span>
+    <span class="k">if</span> <span class="n">fields</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>    
+        <span class="k">for</span> <span class="n">key</span><span class="p">,</span><span class="n">value</span> <span class="ow">in</span> <span class="n">fields</span><span class="o">.</span><span class="n">iteritems</span><span class="p">():</span>
+           <span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">template</span><span class="p">:</span>
+              <span class="n">template</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">value</span>
+
+    <span class="c"># the user wants to save to file</span>
+    <span class="k">if</span> <span class="n">output_dir</span> <span class="o">!=</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">save_query_template</span><span class="p">(</span><span class="n">template</span><span class="p">,</span><span class="n">output_dir</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">template</span>
+
+</div>
+<div class="viewcode-block" id="save_query_template"><a class="viewcode-back" href="../../nidm.html#nidm.query.save_query_template">[docs]</a><span class="k">def</span> <span class="nf">save_query_template</span><span class="p">(</span><span class="n">template</span><span class="p">,</span><span class="n">output_dir</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;generate_query_template</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    output_dir: string path</span>
+<span class="sd">        full path to output directory for json data structure.</span>
+<span class="sd">        the template filename is generated from the uid variable</span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    success: boolean</span>
+<span class="sd">        True if save was successful, false otherwise</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">filepath</span> <span class="o">=</span> <span class="s">&quot;</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">.json&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">output_dir</span><span class="p">,</span><span class="n">template</span><span class="p">[</span><span class="s">&quot;uid&quot;</span><span class="p">])</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">template</span><span class="p">,</span><span class="nb">open</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span><span class="s">&quot;wb&quot;</span><span class="p">))</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">except</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+</div>
+<div class="viewcode-block" id="do_query"><a class="viewcode-back" href="../../nidm.html#nidm.query.do_query">[docs]</a><span class="k">def</span> <span class="nf">do_query</span><span class="p">(</span><span class="n">ttl_file</span><span class="p">,</span><span class="n">query</span><span class="p">,</span><span class="n">rdf_format</span><span class="o">=</span><span class="s">&quot;turtle&quot;</span><span class="p">,</span><span class="n">serialize_format</span><span class="o">=</span><span class="s">&quot;csv&quot;</span><span class="p">,</span><span class="n">output_df</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="n">rdflib</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+    <span class="n">g</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">ttl_file</span><span class="p">,</span><span class="n">format</span><span class="o">=</span><span class="n">rdf_format</span><span class="p">)</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">g</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">query</span><span class="p">)</span>   
+    <span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">serialize</span><span class="p">(</span><span class="n">format</span><span class="o">=</span><span class="n">serialize_format</span><span class="p">)</span>    
+    <span class="k">if</span> <span class="n">output_df</span> <span class="o">==</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">DataFrame</span><span class="o">.</span><span class="n">from_csv</span><span class="p">(</span><span class="n">result</span><span class="p">,</span><span class="n">sep</span><span class="o">=</span><span class="s">&quot;,&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">result</span>
+
+</div>
+<div class="viewcode-block" id="make_lookup"><a class="viewcode-back" href="../../nidm.html#nidm.query.make_lookup">[docs]</a><span class="k">def</span> <span class="nf">make_lookup</span><span class="p">(</span><span class="n">query_list</span><span class="p">,</span><span class="n">key_field</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;make_lookup</span>
+<span class="sd">    returns dict object to quickly look up query based on uid</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    query_list: list </span>
+<span class="sd">        a list of query (dict objects)</span>
+<span class="sd">    key_field: str</span>
+<span class="sd">        the key in the dictionary to base the lookup key</span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    query_dict: dict</span>
+<span class="sd">        dict (json) with key as &quot;key_field&quot; from query_list </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">lookup</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">single_query</span> <span class="ow">in</span> <span class="n">query_list</span><span class="p">:</span>
+        <span class="n">lookup_key</span> <span class="o">=</span> <span class="n">single_query</span><span class="p">[</span><span class="n">key_field</span><span class="p">]</span>
+        <span class="n">lookup</span><span class="p">[</span><span class="n">lookup_key</span><span class="p">]</span> <span class="o">=</span> <span class="n">single_query</span>
+    <span class="k">return</span> <span class="n">lookup</span>
+</div>
+<div class="viewcode-block" id="validate_queries"><a class="viewcode-back" href="../../nidm.html#nidm.query.validate_queries">[docs]</a><span class="k">def</span> <span class="nf">validate_queries</span><span class="p">(</span><span class="n">query_dir</span><span class="p">,</span><span class="n">queries</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;validate_queries</span>
+<span class="sd">    returns json object with query data structures, and</span>
+<span class="sd">    a field &#39;valid&#39; to describe if query was valid</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    queries: list </span>
+<span class="sd">        a list of full paths to json files, each a query</span>
+<span class="sd">    query_dir: str</span>
+<span class="sd">        full path to a nidm-query repo</span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    queries: json</span>
+<span class="sd">        dict (json) with all read in queries available</span>
+<span class="sd">    from nidm-query, provided by API</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="c">#TODO: validation should include testing sparql,</span>
+    <span class="c"># as well as if fields possible to return are</span>
+    <span class="c"># possible given the query. It would be more ideal</span>
+    <span class="c"># to remove these &quot;hard coded&quot; options and have them</span>
+    <span class="c"># derived directly from the query at runtime</span>
+    <span class="k">if</span> <span class="n">queries</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">query_folders</span> <span class="o">=</span> <span class="n">find_directories</span><span class="p">(</span><span class="n">query_dir</span><span class="p">)</span>
+        <span class="n">query_paths</span> <span class="o">=</span> <span class="n">find_queries</span><span class="p">(</span><span class="n">query_folders</span><span class="p">)</span>
+    <span class="n">queries</span> <span class="o">=</span> <span class="n">read_queries</span><span class="p">(</span><span class="n">query_paths</span><span class="p">)</span>
+    <span class="c">#TODO: need to decide how to validate :)</span>
+    <span class="k">return</span> <span class="n">queries</span>
+
+</div>
+<div class="viewcode-block" id="get_query_directory"><a class="viewcode-back" href="../../nidm.html#nidm.query.get_query_directory">[docs]</a><span class="k">def</span> <span class="nf">get_query_directory</span><span class="p">(</span><span class="n">tmpdir</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;get_query_directory:</span>
+<span class="sd">    Download queries repo to tmp directory</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    tmpdir: str</span>
+<span class="sd">        path to directory to download queries to</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">tmpdir</span> <span class="o">==</span> <span class="bp">None</span><span class="p">:</span>
+        <span class="n">tmpdir</span> <span class="o">=</span> <span class="n">tempfile</span><span class="o">.</span><span class="n">mkdtemp</span><span class="p">()</span>
+    <span class="c"># Check for internet connection</span>
+    <span class="k">if</span> <span class="n">has_internet_connectivity</span><span class="p">():</span>
+        <span class="k">print</span> <span class="s">&quot;Updating queries at </span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span>
+        <span class="n">download_queries</span><span class="p">(</span><span class="n">tmpdir</span><span class="p">)</span>  
+    <span class="k">return</span> <span class="n">tmpdir</span>
+</div>
+<div class="viewcode-block" id="find_queries"><a class="viewcode-back" href="../../nidm.html#nidm.query.find_queries">[docs]</a><span class="k">def</span> <span class="nf">find_queries</span><span class="p">(</span><span class="n">query_folders</span><span class="p">,</span><span class="n">search_pattern</span><span class="o">=</span><span class="s">&quot;*.json&quot;</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;find_queries</span>
+<span class="sd">    searches one or more folders for valid queries, meaning</span>
+<span class="sd">    json files. In the case of multiple directories, will</span>
+<span class="sd">    append the folder name as a variable to indicate the type</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    query_folders: list or str</span>
+<span class="sd">        one or more full paths to directories with json objects</span>
+<span class="sd">    search_pattern: str</span>
+<span class="sd">        pattern for glob to use to find query objects</span>
+<span class="sd">        default is &quot;*.json&quot;</span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    queries: list</span>
+<span class="sd">        a list of full paths to query object files</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">queries</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">query_folders</span><span class="p">,</span><span class="nb">str</span><span class="p">):</span>
+        <span class="n">query_folders</span> <span class="o">=</span> <span class="p">[</span><span class="n">query_folders</span><span class="p">]</span>
+    <span class="k">for</span> <span class="n">query_folder</span> <span class="ow">in</span> <span class="n">query_folders</span><span class="p">:</span>
+        <span class="n">queries</span> <span class="o">=</span> <span class="n">queries</span> <span class="o">+</span> <span class="n">glob</span><span class="p">(</span><span class="s">&quot;</span><span class="si">%s</span><span class="s">/</span><span class="si">%s</span><span class="s">&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">query_folder</span><span class="p">,</span><span class="n">search_pattern</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">queries</span>
+
+</div>
+<div class="viewcode-block" id="read_queries"><a class="viewcode-back" href="../../nidm.html#nidm.query.read_queries">[docs]</a><span class="k">def</span> <span class="nf">read_queries</span><span class="p">(</span><span class="n">query_paths</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;read_queries</span>
+<span class="sd">    Read in a list of query (json) objects.</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    query_paths: list</span>
+<span class="sd">    a list of full paths to query objects to read</span>
+<span class="sd">    Returns</span>
+<span class="sd">    =======</span>
+<span class="sd">    queries_: list</span>
+<span class="sd">        dict to be served as json describing queries available</span>
+<span class="sd">        a &quot;type&quot; variable is added to indicate folder query was found in</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">queries</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">query_path</span> <span class="ow">in</span> <span class="n">query_paths</span><span class="p">:</span>
+        <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">query_path</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">ext</span> <span class="o">==</span> <span class="s">&quot;.json&quot;</span><span class="p">:</span>
+            <span class="n">query_type</span> <span class="o">=</span> <span class="n">query_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">uid</span> <span class="o">=</span> <span class="n">query_path</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">ext</span><span class="p">,</span><span class="s">&quot;&quot;</span><span class="p">)</span>
+            <span class="n">tmp</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="nb">open</span><span class="p">(</span><span class="n">query_path</span><span class="p">,</span><span class="s">&quot;rb&quot;</span><span class="p">))</span>
+            <span class="c"># sparql should be joined into single string</span>
+            <span class="n">tmp</span><span class="p">[</span><span class="s">&quot;sparql&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;</span><span class="se">\n</span><span class="s">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">tmp</span><span class="p">[</span><span class="s">&quot;sparql&quot;</span><span class="p">])</span>  
+            <span class="n">tmp</span><span class="p">[</span><span class="s">&quot;type&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">query_type</span>
+            <span class="n">tmp</span><span class="p">[</span><span class="s">&quot;uid&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">uid</span>    
+            <span class="n">queries</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">print</span> <span class="s">&quot;Skipping file </span><span class="si">%s</span><span class="s">, extension is not .json&quot;</span> <span class="o">%</span><span class="p">(</span><span class="n">query_path</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">queries</span>
+
+<span class="c"># Currently hard coded for query repo, if we have more</span>
+<span class="c"># data types can be changed to a variable</span></div>
+<div class="viewcode-block" id="download_queries"><a class="viewcode-back" href="../../nidm.html#nidm.query.download_queries">[docs]</a><span class="k">def</span> <span class="nf">download_queries</span><span class="p">(</span><span class="n">destination</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;download_queries</span>
+<span class="sd">    Download queries repo to a destination</span>
+<span class="sd">    Parameters</span>
+<span class="sd">    ==========</span>
+<span class="sd">    destination:</span>
+<span class="sd">       the full path to download the repo to</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">repo</span> <span class="o">=</span> <span class="n">Repo</span><span class="o">.</span><span class="n">clone_from</span><span class="p">(</span><span class="s">&quot;https://github.com/incf-nidash/nidm-query.git&quot;</span><span class="p">,</span><span class="n">destination</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">repo</span></div>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, NIDASH Working Group.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

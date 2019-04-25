@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Getting Started &mdash; nidm 1.0 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+    <link rel="top" title="nidm 1.0 documentation" href="index.html"/>
+        <link rel="next" title="nidm" href="modules.html"/>
+        <link rel="prev" title="Installation" href="installation.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> nidm
+          
+
+          
+            
+            <img src="_static/nidm.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#local-machine-rest-api">Local Machine REST API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rest-api-on-server">REST API on Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#integration-into-python">Integration into Python</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">nidm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="development.html">Development</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/incf-nidash/nidm-api">Github repository</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/incf-nidash/nidm-query">nidm-query</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/vsoch/nidmviewer">nidm-viewer</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">nidm</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Getting Started</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/getting-started.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>You have three options for using the nidm-api: as a local REST API, a REST API (served to the world on a public server), or as modules (to integrate into your python applications).</p>
+<div class="section" id="local-machine-rest-api">
+<h2>Local Machine REST API<a class="headerlink" href="#local-machine-rest-api" title="Permalink to this headline">¶</a></h2>
+<p>When you install the module, an executable, &#8220;nidm&#8221; is placed into your system or local bin (it will tell you the location upon installation). If this bin is added to your path, you can start the server:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">nidm</span>
+</pre></div>
+</div>
+<p>Then open your browser to localhost:8088. The index view that you see is a complete list of validated queries, for example:</p>
+<img alt="_images/apiQueryMeta.png" src="_images/apiQueryMeta.png" />
+<p>The available queries must pass through validation to be available (not yet implemented). The queries are organized by their uid, which is just the name of the json file that is found in the <a class="reference external" href="https://github.com/incf-nidash/nidm-query">nidm-query</a> repo. You can contribute to this repo if you want to make a new query, and tools will be developed for you to generate these data structures in a graphical interface. The &#8220;type&#8221; variable in the returned json is generated dynamically, and corresponds to the folder name in <a class="reference external" href="https://github.com/incf-nidash/nidm-query">nidm-query</a> repo. We currently support &#8220;results,&#8221; &#8220;experiment,&#8221; and &#8220;workflow,&#8221; as these are the different kinds of NIDM data structures that are being developed.</p>
+<p>The first thing you might want to do is retrieve all the meta data for a single query. This means that we will look at the list in the photo above, and find the uid of one that we like. We can then ask to see a single query:</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:8088/api/7950f524-90e8-4d54-ad6d-7b22af2e895d
+</pre></div>
+</div>
+<img alt="_images/singleQuery.png" src="_images/singleQuery.png" />
+<p>You might then have a turtle file that you want to actually run a query on. For example, if you look in the nidm-api examples directory, we have provided a nidm.ttl file that corresponds to a NIDM-Results folder. We can run the query we just saw above to get coordinates:</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:8088/api/query/7950f524-90e8-4d54-ad6d-7b22af2e895d?ttl=/home/vanessa/Desktop/nidm.ttl
+</pre></div>
+</div>
+<p>The only difference is that we&#8217;ve added the &#8220;query&#8221; to the URL, and specified the ttl file as a variable, indicated by the &#8221;?&#8221; at the end of the URL. We will eventually give you more options to customize your query, for now that&#8217;s it. When you do the query, your result will be returned again in json:</p>
+<img alt="_images/doQuery.png" src="_images/doQuery.png" />
+<p>Note that I gave the REST API a local path on my computer. We can also give it a URL and it will work.</p>
+<div class="highlight-python"><div class="highlight"><pre>http://localhost:8088/api/query/7950f524-90e8-4d54-ad6d-7b22af2e895d?ttl=https://rawgithub.com/incf-nidash/nidm-api/master/example/nidm.ttl
+</pre></div>
+</div>
+<p>Boum.</p>
+<p>If you screw something up, meaning that the query did not work for any reason (e.g., you gave it a wrong file, improperly formatted file, or the query logic has an error), it will tell you:</p>
+<img alt="_images/screwUp.png" src="_images/screwUp.png" />
+<p>Note that the current (tiny) set of queries is currently not being validated, and they need work and contribution.</p>
+</div>
+<div class="section" id="rest-api-on-server">
+<h2>REST API on Server<a class="headerlink" href="#rest-api-on-server" title="Permalink to this headline">¶</a></h2>
+<p>You can use something like gunicorn to run the flask application on a server, for the world to use. More documentation on how to do this will come, as we currently do not have a server to host this. Please be aware that the debug mode in the Flask application is set to True, and you should <a href="#id2"><span class="problematic" id="id3">`read about &lt;http://flask.pocoo.org/docs/0.10/deploying/
+&gt;`_</span></a> the proper way to deploy a flask application before doing something that might compromise the security of your server.</p>
+</div>
+<div class="section" id="integration-into-python">
+<h2>Integration into Python<a class="headerlink" href="#integration-into-python" title="Permalink to this headline">¶</a></h2>
+<p>An example turtle file is provided in the &#8220;example&#8221; directory of the repo, and running a query on this file from within python is shown below:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c">#!/usr/bin/python</span>
+
+<span class="kn">from</span> <span class="nn">nidm.query</span> <span class="kn">import</span> <span class="n">get_query_directory</span><span class="p">,</span> <span class="n">validate_queries</span><span class="p">,</span> <span class="n">make_lookup</span><span class="p">,</span> <span class="n">do_query</span>
+
+<span class="c"># Get updated queries, validate, and generate a lookup dict:</span>
+<span class="n">query_dir</span> <span class="o">=</span> <span class="n">get_query_directory</span><span class="p">()</span>
+<span class="n">query_json</span> <span class="o">=</span> <span class="n">validate_queries</span><span class="p">(</span><span class="n">query_dir</span><span class="p">)</span>
+<span class="n">query_dict</span> <span class="o">=</span> <span class="n">make_lookup</span><span class="p">(</span><span class="n">query_json</span><span class="p">,</span><span class="n">key_field</span><span class="o">=</span><span class="s">&quot;uid&quot;</span><span class="p">)</span>
+
+<span class="c"># Let&#39;s use the query to get coordinates</span>
+<span class="n">qid</span> <span class="o">=</span> <span class="s">&quot;7950f524-90e8-4d54-ad6d-7b22af2e895d&quot;</span>
+
+<span class="c"># Here is a ttl file that I want to query, nidm-results</span>
+<span class="n">ttl_file</span> <span class="o">=</span> <span class="s">&quot;nidm.ttl&quot;</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">do_query</span><span class="p">(</span><span class="n">ttl_file</span><span class="o">=</span><span class="n">ttl_file</span><span class="p">,</span><span class="n">query</span><span class="o">=</span><span class="n">query_dict</span><span class="p">[</span><span class="n">qid</span><span class="p">][</span><span class="s">&quot;sparql&quot;</span><span class="p">])</span>
+
+<span class="c"># The result is a pandas data frame. I can turn it into other things too</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">to_dict</span><span class="p">(</span><span class="n">orient</span><span class="o">=</span><span class="s">&quot;records&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="modules.html" class="btn btn-neutral float-right" title="nidm" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral" title="Installation" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2015, NIDASH Working Group.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

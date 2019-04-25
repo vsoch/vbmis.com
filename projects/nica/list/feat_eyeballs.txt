@@ -1,0 +1,30 @@
+ans = 
+
+    'Percent_total_activation_in_eyeballs'
+    'Spatial Entropy of IC distribution'
+    'Avg_distance_btw_10_local_max'
+    'Skewness of IC distribution'
+    'Percentage_activation_voxels_LR_symmetric'
+    'Rectus_L'
+    'Olfactory_R'
+    'Percent_total_activation_in_WM'
+    'Perfect_total_activation_in_GM'
+
+
+ans =
+
+    0.9834
+
+
+RESULT = 
+
+       fit_opt: [1x1 struct]
+          wopt: [241x1 double]
+     opt_alpha: 0.1400
+      best_cva: 0.9834
+       cum_cva: [91x11 double]
+    opt_lambda: 0.0625
+           auc: 0.9243
+             p: NaN
+             h: NaN
+            ci: [2x1 double]

@@ -1,0 +1,46 @@
+ans = 
+
+    'Occipital_Sup_R'
+    'Occipital_Mid_R'
+    'Parietal_Sup_L'
+    'Percentage_activation_voxels_LR_symmetric'
+    'Occipital_Mid_L'
+    'Occipital_Sup_L'
+    'Parietal_Inf_L'
+    'Parietal_Sup_R'
+    'Occipital_Inf_L'
+    'Parietal_Inf_R'
+    'Temporal_Inf_R'
+    'Hpsd_bin_6_freq0_to_pi_0.19156'
+    'Angular_R'
+    'Cuneus_L'
+    'Frontal_Med_Orb_R'
+    'Frontal_Med_Orb_L'
+    'Cingulum_Post_L'
+    'Rolandic_Oper_L'
+    'Percent_total_activation_in_CSF'
+    'Insula_R'
+    'Amygdala_L'
+    'Calcarine_R'
+    'Olfactory_R'
+    'Olfactory_L'
+    'Calcarine_L'
+
+
+ans =
+
+    0.9695
+
+
+RESULT = 
+
+       fit_opt: [1x1 struct]
+          wopt: [241x1 double]
+     opt_alpha: 0.1600
+      best_cva: 0.9695
+       cum_cva: [91x11 double]
+    opt_lambda: 0.0625
+           auc: 0.9383
+             p: NaN
+             h: NaN
+            ci: [2x1 double]
