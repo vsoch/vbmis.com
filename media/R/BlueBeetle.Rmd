@@ -1,0 +1,386 @@
+---
+title: "Machine Learning in R"
+author: "Vanessa Sochat"
+date: "07/26/2014"
+output: html_document
+---
+
+This tutorial will walk through data visualization, model building (training), feature selection, and finally, testing using a machine learning package called "caret" that serves as a wrapper for pretty much any algorithm that you can think of.
+
+```{r}
+library(caret)
+```
+
+First let's read in our data.  These are ADOS2 Module 3 questions to predict autism diagnosis.
+
+## Testing Data
+
+```{r}
+setwd("/home/vanessa/Documents/Dropbox/Research/Papers/MachineLearning_Weka/ADOS2_m3")
+SSC <- read.csv(file="SSCmod3_ADOS2_AutNot_fillMissing.csv", head=TRUE, sep=",")
+VIP <- read.csv(file="SVIPmod3_updated.csv", head=TRUE, sep=",")
+AC <- read.csv(file="ACmod3_AutNot_edit.csv", head=TRUE, sep=",")
+NDAR <- read.csv(file='ndarMod3_AutNot.csv', head=TRUE, sep=",")
+```
+
+
+## Training data
+
+```{r}
+setwd("/home/vanessa/Documents/Dropbox/Research/Papers/MachineLearning_Weka/ADOS2_m3")
+df = read.csv(file='AGREmod3.csv')
+
+# Here are all the questions
+questions = c("A1","A2","A3","A4","A5","A6","A7","A8","A9","B1","B2","B3","B4","B5","B6","B7","B8","B9","B10","C1","D1","D2","D3","D4","D5","E1","E2","E3")
+df <- subset(df,select = c(questions,"Class"))
+
+# We need to make labels just autism, non-spectrum
+tmp = as.character(df$Class)
+tmp[tmp == "Autism Spectrum"] = "Autism"
+df$Class = as.factor(tmp)
+```
+
+
+# VISUALIZATION
+
+Lets have a little fun with our data before we try anything.  This will give us a sense of the distributions before we do anything, and which questions will be useful
+
+```{r}
+library(AppliedPredictiveModeling)
+featurePlot(x=df[,-29],y=df$Class,plot="density",
+            scales = list(x = list(relation="free"),
+                          y = list(relation="free")),
+            adjust = 1.5,
+            pch = "|",
+            auto.key = list(columns = 2))
+
+
+featurePlot(x = df[,-29],
+            y = df$Class,
+            plot = "box",
+            scales = list(y = list(relation="free"),
+                          x = list(rot = 90)),
+            auto.key = list(columns = 2))            
+```
+
+
+# PREPROCESSING
+
+Do we have any variables with little to no variance
+
+```{r}
+nzv = nearZeroVar(df)
+hist(df[,23],main="This is the variable with piddley variance",xlab="question response")
+filtered = df[, -nzv]
+```
+
+
+Correlated Vars?
+
+```{r}
+corrs = cor(filtered[,-28])
+highcorr = findCorrelation(corrs, cutoff = 0.75)
+filtered = filtered[-highcorr]
+```
+
+
+Linear dependencies? (eg, A1 + A2 = A3)
+
+```{r}
+combos = findLinearCombos(filtered[,-27])
+```
+
+
+Now let's prepare training data for algorithms, first we should scale to have unit variance, 0 mean
+
+```{r}
+preprocess = preProcess(filtered[,-27], method = c("center", "scale"))
+training = predict(preprocess, filtered[,-27])
+```
+
+Take another look.  The awesome thing about these plots is that they make the selected questions SO obvious!  This tells us that it doesn't matter so much what method we use for feature selection - the signal is real in the data and that's why this classifier works so well.
+
+```{r}
+featurePlot(x = training,
+            y = filtered$Class,
+            plot = "box",
+            scales = list(y = list(relation="free"),
+                          x = list(rot = 90)),
+            auto.key = list(columns = 2))            
+```
+
+
+# TRAINING
+
+Take a look at all the models we can choose from!
+
+http://caret.r-forge.r-project.org/modelList.html  (150+!)
+http://caret.r-forge.r-project.org/bytag.html
+
+The great thing about caret is that it's just a wrapper for most Machine Learning libraries in R.  We could even write a function to test all of them - but let's start simple and just do a few.
+
+We already have our training data defined, "training"
+
+```{r}
+training = cbind(training,Class = df$Class)
+```
+
+Let's first set up the kind of resampling we want to do.  There is bootstrap, LOOCV, CV 
+
+Here is a function to calculate sensitivity, specificity, AUC
+```{r}
+head(twoClassSummary)
+```
+
+We can give this function to "trainControl" to tell it to give us those accuracy metrics.  
+
+Here is 10 fold CV, repeated 10 times.  The default are just accuracy and Kappa, but we've changed it to output ROC metrics. This function uses trapezoidal rule to calculate accuracy
+
+```{r}
+fitControl <- trainControl(method = "repeatedcv",number = 10, 
+                           repeats = 10,
+                           classProbs = TRUE,
+                           summaryFunction = twoClassSummary)
+# methods can be "boot", "cv", "LOOCV", "LGOCV", "repeatedcv", "timeslice", "none" and "oob". 
+# number is number of folds in CV
+```
+
+If you want just accuracy, change summaryFunction to defaultSummary, and specify "Accuracy" in metric below.  Or just specify nothing, because the default for classification models is to use accuracy and Kappa for validation.
+
+Now let's train our data - stochastic gradient boosting.  Just a heads up - this is going to spit out a warning about the class labels (having a "-" that is converted to ".").  It should be fixed when you do this for realsies, but it doesn't negatively impact us because we aren't calculating probabilities.
+
+```{r}
+# install.packages('pROC')
+fit.gbm <- train(Class ~ ., data = training,
+                 method = "gbm",
+                 trControl = fitControl,
+                 verbose = FALSE,
+                 metric="ROC")
+```
+
+
+Caret makes it easy to plot how parameter selection influences accuracy.
+
+```{r}
+trellis.par.set(caretTheme())
+ggplot(fit.gbm)
+```
+
+We can also select to plot a particular metric, like sensitivity.
+
+```{r}
+plot(fit.gbm,metric=c("Sens"))
+```
+
+Or how about a density plot?
+
+```{r}
+densityplot(fit.gbm)
+```
+
+By default, the final model gets chosen with top performance, but you can write your own function by specifying the "selectionFunction" in the trainControl function.
+
+Here is how to look at variable importance.  The function automatically scales between 0 and 100, set scale = FALSE to not do that
+
+```{r}
+imp <- varImp(fit.gbm, scale = FALSE)
+plot(imp)
+```
+
+When we write up a model, we can report AUC for each predictor! and see which ones are important for each class, SO COOL.
+
+```{r}
+rocimp <- filterVarImp(x = training[, -ncol(training)], y = training$Class)
+head(rocimp)
+```
+
+
+Now if we want to get the actual predictions, you can specify type = "prob" or type = "class"
+
+```{r}
+prediction = predict(fit.gbm, newdata = training[,-27])
+```
+
+Now lets try models that we care about, here is SVM
+
+```{r}
+fit.svm <- train(Class ~ ., data = training,
+                method = "svmRadial",
+                trControl = fitControl,
+                tuneLength = 8, # this is how many performance metrics to report
+                metric = "ROC")
+
+# Linear descriminant analysis
+fit.lda =  train(Class ~ ., data = training,
+                            method = "lda",
+                            metric = "ROC",
+                            trControl = fitControl)
+```
+
+
+# ASSESSING PERFORMANCE
+We of course would do this for our test data, but let's be lazy and do for training right now
+
+```{r}
+postResample(prediction, training$Class)
+sensitivity(prediction, training$Class)
+confusionMatrix(prediction, training$Class)
+# Shweet!
+```
+
+
+Or just get training performance
+
+```{r}
+getTrainPerf(fit.gbm)
+```
+
+
+We can use the resamps function to compare performance BETWEEN models, and plot
+
+```{r}
+resamps <- resamples(list(GBM = fit.gbm,
+                          SVM = fit.svm,
+                          LDA = fit.lda))
+resamps
+summary(resamps)
+```
+
+We can also produce some nice summary plots.
+
+```{r}
+bwplot(resamps, layout = c(3, 1))
+trellis.par.set(caretTheme())
+dotplot(resamps, metric = "ROC")
+splom(resamps) #scatterplot matrix
+```
+
+
+We can also calculate differences in performance
+
+```{r}
+differences = diff(resamps)
+differences
+bwplot(differences, layout = c(3, 1))
+```
+
+
+# FEATURE SELECTION
+
+Actually, most of these models have build in feature selection, see
+# http://caret.r-forge.r-project.org/featureselection.html
+This means that optimal feature selection is matched to models, very nice.
+
+Here is how to (manually) extract other information from the models:
+
+```{r}
+# str(fit.gbm))# What is there?
+attr(fit.gbm$terms,"variables") # How do I get an attribute?
+```
+
+Here is how we access the features used by best performing models
+
+```{r}
+predictors(fit.svm)
+```
+
+What if we want more fine tuned control? For example, Jack wants to do backward first search with 10 fold CV using SVM.  We can use the function rfe, recursive feature selection,
+
+```{r}
+subsets <- c(1:ncol(training)-1)
+```
+
+Change the "functions" variable to tweak the method used for Feature Selection
+
+```{r}
+ctrl <- rfeControl(functions = rfFuncs,
+                   method = "repeatedcv",
+                   number = 10,
+                   verbose = FALSE)
+```
+
+For example, backward feature selection with 10 fold CV with SVM. If you want to repeat it 5 times, add the "repeats" variable to equal 5.
+
+```{r}
+svmProfile = rfe(training[,-27], y = training$Class, 
+                 sizes = c(1:ncol(training)-1), 
+                 rfeControl = ctrl,
+                 method = "svmRadial")
+svmProfile
+```
+
+We can get features used in the same way as before
+
+```{r}
+predictors(svmProfile)
+```
+
+Or more detailed
+
+```{r}
+svmProfile$fit
+```
+
+
+Here is the plot to show us the number that we should choose
+
+```{r}
+plot(svmProfile, type = c("g", "o"))
+```
+
+
+I'd say we should choose something closer to 12, the additional accuracy probably == overfit! Let's look again at variable importance:
+
+```{r}
+varImp(svmProfile, scale = FALSE)
+```
+
+Actually, after looking at this, I would suspect that a model closer to 8-10 would have higher bias / lower variance, and better extend to test data.  But for now, let's Filter down to 12:
+
+```{r}
+features = c(predictors(svmProfile)[1:12],"Class")
+filtered = df[,features]
+preprocess = preProcess(filtered[,-13],method=c("center","scale"))
+```
+
+And build the final model
+
+```{r}
+fit.svm <- train(Class ~ ., data = filtered,
+                 method = "svmRadial",
+                 trControl = fitControl,
+                 tuneLength = 8,
+                 metric = "ROC")
+```
+
+Extend to test data. I first thought that we would need to filter, normalize, but actually we don't, the functions seem to take care of it.
+
+```{r}
+prediction.SSC = predict(fit.svm, newdata = SSC)
+prediction.VIP = predict(fit.svm, newdata = VIP)
+prediction.NDAR = predict(fit.svm, newdata = NDAR)
+prediction.AC = predict(fit.svm, newdata = AC)
+```
+
+And Performance Metrics
+
+```{r}
+# Fix VIP labels
+VIP$Class = as.character(VIP$Class)
+VIP$Class[which(VIP$Class == "Nonspectrum")] = "Non-spectrum"
+VIP$Class = as.factor(VIP$Class)
+
+confusionMatrix(prediction.VIP, VIP$Class)
+confusionMatrix(prediction.NDAR, NDAR$Class)
+confusionMatrix(prediction.AC, AC$Class)
+```
+
+It won't work for SSC because we only have one class, so here
+is the sensitivity and accuracy:
+
+```{r}
+sensitivity(prediction.SSC, SSC$Class)
+```
+
+Boum! Machine Learning has never been easier!
+
