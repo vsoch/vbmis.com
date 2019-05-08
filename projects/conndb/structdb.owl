@@ -1,0 +1,2735 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.vbmis.com/bmi/ontology/structdb.owl#"
+     xml:base="http://www.vbmis.com/bmi/ontology/structdb.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#Behavioral -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#Behavioral">
+        <rdfs:comment>A Behavioral object is a superclass for anything that reflects behavior (perhaps a measure or behavioral task) As of now, I&#39;ve only encountered measures! (IQ, ADHD Scale, etc).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FA -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FA">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.DTI"/>
+        <rdfs:comment>There is one FA object for each significant reported result, which contains
+- the number of directions and runs for the DTI sequence
+-fa.direction is either &quot;+&quot; or &quot;-&quot; to make it easier to compare groups (eg, ADHD group 1 had significantly increased (+) functional connectivity over group 2)
+- fa.group holds the group identifiers (group.primary and group.secondary) as well as the comparison, if applicable &quot;&lt;&quot; or &quot;&gt;&quot;
+- fa.peak holds the peak voxel coordinate, in a matrix [x y z] as well as the space (mni or tal)
+- fa.atlas holds a string about the atlas used for the roi, if its reported
+- fa.condition holds a condition name, if applicable
+- fa.hemisphere can be &quot;right&quot; &quot;left&quot; or &quot;bilateral&quot;
+- ra.roi holds the name of the roi - at present is how the study reports it, but this should correspond to an ontology (standard) name
+fa.volume holds the volume of the roi used, either in vox or cubic mm</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FA.LOO.group.ID -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FA.LOO.group.ID">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.LOO.group"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.LOO.group.rate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.fmri"/>
+        <rdfs:comment>This is a result report for a fisher discriminative analysis for fMRI data.  
+-fda.condition --&gt; {&#39;ADHD &gt; Control&#39;}
+-fda.direction --&gt; would be either &quot;+&quot; or &quot;-&quot; to say that group 1 had increased/decreased rates compared to group 2
+- fda.model holds model objects, for example ReHo (resting homogeneity) or intensity or morphology.  Each model object has:   
+     -model.type: either struct or func
+     -model.training.rate: is the percentage correct that was obtained by the algorithm when used on the training set
+    -model.LOO - each model holds &quot;LOO&quot; objects, each of which holds rate reports for an individual group or groups done together.
+</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.LOO.group -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.LOO.group">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.LOO"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.LOO.group.rate -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.LOO.group.rate">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.LOO.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.condition -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.condition">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.direction -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.direction">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.group.rate.correct -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.group.rate.correct">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.LOO.group.rate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.LOO -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.LOO">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.rate.correct -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.rate.correct">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.training.rate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.regressor -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.regressor">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.training -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.training">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.training.rate -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.training.rate">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.training"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.type -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.type">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.corr -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.corr">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak.coord -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak.coord">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak.space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak.space -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak.space">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.regressor.analysis -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.regressor.analysis">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.regressor"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.regressor.statistics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.regressor.statistics -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.regressor.statistics">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.regressor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.roi -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.roi">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat.t -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat.t">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat.z"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat.z -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat.z">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume.mm -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume.mm">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume.vox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume.vox -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume.vox">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#Imaging -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#Imaging">
+        <rdfs:comment>Each imaging object corresponds to one overall modality used in a study, for example a study with DTI would have one imaging object, with the method being &quot;DTI,&quot; and under imaging.results, separate groups of results for FA, MD, RD, etc.  If a study reports on fMRI resting BOLD AND DTI, then it would have two imaging objects.  The method variable would be DTI for the first, and fMRI for the second, and the results objects under each would correspond to the methods.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.DTI"/>
+        <rdfs:comment>An MD object is a report for a mean diffusivity result report.  The actual mean results for each group are stored as individual objects under MD.group, and this includes:
+- MD.group.L a 3X3 matrix with each row in format [direction mean SD]
+- MD.group.med: medication state for the group
+- MD.group.name: corresponds to the ID under the Population.group.name variable
+
+MD.comparison then, holds the statistical comparisons between these groups!
+
+the only variables as part of the superclass that are needed are likely
+MD.hemisphere
+MD.roi
+MD.regressor
+MD.volume
+MD.comparison
+MD.group
+
+since the stat and p values are stored under group, and peak/volume isn&#39;t so relevant, but I kept them there just in case :O)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.atlas -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.atlas">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.corr -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.corr">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat.t -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat.t">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat.z"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat.z -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat.z">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.condition -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.condition">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.direction -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.direction">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.directions -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.directions">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.L -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.L">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.med -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.med">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.hemisphere -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.hemisphere">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.corr -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.corr">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak.coord -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak.coord">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak.space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak.space -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak.space">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor.analysis -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor.analysis">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor.statistics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor.statistics -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor.statistics">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.roi -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.roi">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.runs -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.runs">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat.t -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat.t">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat.z"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat.z -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat.z">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume.mm -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume.mm">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume.vox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume.vox -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume.vox">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#Population -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#Population"/>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#Publication -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#Publication">
+        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.DTI"/>
+        <rdfs:comment>An RD object holds a radial diffusivity result report.
+-RD.stat holds reported t and z values
+-RD.dir is the number of directions for the DTI scan
+-RD.rep is equivalent to the number of runs
+-RD.group.id holds a list of IDs that correspond to the Population.group IDs being compared
+-RD.direction holds the direction of the comparison &quot;+&quot; or &quot;-&quot; for increased or decreased
+- RD.roi holds the name, atlas, and hemisphere of any rois used, and
+- RD.tract holds the name(2), hemispheres, and types of the tracts that have significant RD values / connections from the ROI
+- RD.peak holds any reported voxel coordinates / space
+- RD.pattern holds any observed patterns for the tract, such as &#39;&#39;maturation by adolescence&#39;
+- RD.regressor holds regressor used during analysis and statistics</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.connection -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.connection">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.connection.gm -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.connection.gm">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.dir -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.dir">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.direction -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.direction">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.group -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.group">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.group.id -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.group.id">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.corr -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.corr">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.pattern -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.pattern">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+        <rdfs:comment></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak.coord -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak.coord">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak.space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak.space -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak.space">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor.analysis -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor.analysis">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor.statistics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor.statistics -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor.statistics">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.rep -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.rep">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.atlas -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.atlas">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.hemisphere -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.hemisphere">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat.t -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat.t">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat.z"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat.z -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat.z">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.hemisphere -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.hemisphere">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.type -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.type">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume.mm -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume.mm">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume.vox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume.vox -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume.vox">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#age -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#age">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#age.range -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#age.range">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#age"/>
+        <rdfs:comment>a matrix in the format [min max]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#age.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#age.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#age"/>
+        <rdfs:comment>a matrix in the format [mean SD]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.fmri"/>
+        <rdfs:comment>I&#39;m not quite happy with my anova object, but since there were many anovas run specific to a BOLD roi and other behavioral / demographic conditions, I added it here.
+-anova.stat holds the F value and degrees of freedom for the result report
+- anova.peak holds the peak voxel coordinate and space (mni or tal)
+- anova.regressor holds regressors used in analysis or statistics
+- anova.hemisphere --&gt; &quot;right&quot; &quot;left&quot; &quot;bilateral&quot;
+- anova.condition holds condition objects, one for each condition!  Each
+condition object contains:
+   - condition name (eg, age)
+   - condition types (eg, child, adolescent, adult)
+- anova.direction --&gt; &quot;+&quot; or &quot;-&quot; for increased or decreased
+- anova.roi is the name(s) of regions of interest run with the analysis
+- anova.space is either mni or talarach - probably redundant since I have anova.peak.space, but in the case there is no peak voxel report, it would be incorrect to specify the space there.
+- anova.atlas --&gt; the atlas of the roi, if reported
+- anova.contrast --&gt; in the case of a functional task, we might have a specific contrast name here
+- anova.p reported p values (p.val), the comparison (&quot;=&quot;,&quot;&lt;&quot;,&quot;&gt;&quot;), and the correction (fwe or none)
+-anova.volume the cubic mm or voxel volume of the roi used, if reported</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.atlas -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.atlas">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition.types"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition.types -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition.types">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.contrast -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.contrast">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.direction -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.direction">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.hemisphere -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.hemisphere">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.corr -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.corr">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak.coord -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak.coord">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak.space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak.space -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak.space">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor.analysis -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor.analysis">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor.statistics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor.statistics -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor.statistics">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.roi -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.roi">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.space -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.space">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat.dof -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat.dof">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat.f"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat.f -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat.f">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume.mm -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume.mm">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume.vox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume.vox -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume.vox">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#author -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#author">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#dti.analysis -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.analysis">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#dti.preprocess -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.preprocess">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#dti.software -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.software">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.DTI"/>
+        <rdfs:comment>lists of software packages used at each stage of analysis (FSL, SPM2, SPM5, etc)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#dti.statistics -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.statistics">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.atlas -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.atlas">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.condition -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.condition">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.coordinate -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.coordinate">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.peak"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.direction -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.direction">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.directions -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.directions">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.med -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.med">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group"/>
+        <rdfs:comment>holds medication states for groups, if reported/applicable</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.primary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.primary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.secondary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.secondary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.hemisphere -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.hemisphere">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.med.primary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.med.primary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.med"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.med.secondary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.med.secondary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.med.secondary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.med"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.mm -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.mm">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.volume"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.vox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.corr -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.corr">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.peak -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.peak">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.roi -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.roi">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.runs -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.runs">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.space -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.space">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.peak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat.t -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat.t">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat.z"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat.z -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat.z">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.volume -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.volume">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fa.vox -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.vox">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.fmri"/>
+        <rdfs:comment>A functional connectivity result.  Each fc result holds a result report for one fc analysis with specified groups, and as many seed objects as were reported.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.atlas -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.atlas">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.condition -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.condition">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.direction -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.direction">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.hemisphere -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.hemisphere">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+        <rdfs:comment>&quot;bilateral&quot; &quot;right&quot; or &quot;left&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.peak -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.peak">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.volume -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.volume">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc"/>
+        <rdfs:comment>The group variable contains the primary and secondary groups, as well as the comparison (&quot;&lt;&quot; or &quot;&gt;&quot;)
+
+If a study has fc reports for multiple combinations of groups, this is represented by having multiple fc objects.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group.med -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group.med">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group"/>
+        <rdfs:comment>holds medication states for the groups, if reported / applicable</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.med.primary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.med.primary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group.med"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.med.secondary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.med.secondary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.med.secondary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group.med"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.p"/>
+        <rdfs:comment>&quot;=&quot; or &quot;&lt;&quot; or &quot;&gt;&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.corr -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.corr">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.p"/>
+        <rdfs:comment>correction done, either fwe or none</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.p"/>
+        <rdfs:comment>the reported p value</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.peak.coord -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.peak.coord">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.peak"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.peak.space"/>
+        <rdfs:comment>coordinate of max voxel reported, in format of [x y z]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.peak.space -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.peak.space">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.peak"/>
+        <rdfs:comment>mni or tal</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.primary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.primary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor.analysis -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor.analysis">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor.statistics"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor.statistics -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor.statistics">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.secondary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.secondary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc"/>
+        <rdfs:comment>A fc result, pertaining to a specific set of groups, can contain multiple seed reports.  For example, the study might find significant differences in functional connectivity for ADHD &gt; Control for precuneus, prefrontal cortex, and cingulate.
+
+Each seed object contains the atlas the seed roi is from (if applicable), the name, and a nested group of connection objects, each representing one reported connection finding for the seed.  For example,  a study might use the precuneus as a seed, and find significant connections to three other regions, and each one would be its own connection object nested under the overall seed. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed.atlas -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed.atlas">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.stat.t -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.stat.t">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.stat.z"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.stat.z -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.stat.z">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.volume.mm -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.volume.mm">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.volume"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.volume.vox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fc.volume.vox -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.volume.vox">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.analysis -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.analysis">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.preprocess -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.preprocess">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.software -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.software">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.fmri"/>
+        <rdfs:comment>lists of software packages used at each stage of analysis (FSL, SPM2, SPM5, etc)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.statistics -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.statistics">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.software"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#group -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#group">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Population"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.DTI -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.DTI">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Imaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.fmri -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.fmri">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Imaging"/>
+        <rdfs:comment>imaging.results is actually just one object under imaging, but since the method can be either DTI or fMRI, I created two example results that contain the modality specific objects as subclasses</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#journal -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#journal">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#keyword -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#keyword">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#make -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#make">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#scanner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Behavioral"/>
+        <rdfs:comment>A measure object corresponds to one measure (ADHD scale, for example) and contains the version, the cogpo ID, and the name.  Each subscale and group individual and comparison statistical results are stored as individual &quot;measure.results&quot; objects under the measure.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.cogpo -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.cogpo">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.results"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.comparison"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.comparison"/>
+        <rdfs:comment>holds the sign and value for reported p value for a group comparison (for example, if there are tests to show difference between age)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p.val"/>
+        <rdfs:comment>a string value, either &quot;=&quot; or &quot;&lt;&quot; or &quot;&gt;&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p"/>
+        <rdfs:comment>the reported p value for the result</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.comparison"/>
+        <rdfs:comment>any t or z values used to report differences between a group variable, such as age</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.t -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.t">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.z"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.z -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.z">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.results"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.SD -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.SD">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group"/>
+        <rdfs:comment>a group comparison is any report that compares a variable between two groups, such as age.  The comparison.name would contain numbers that correspond to the groups being compared under a measure.group object.  Measure.group.name holds the number ID</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group"/>
+        <rdfs:comment>A number that corresponds to a group ID for a study, to be referenced under measure.group.comparison.name, or from any of the imaging results.  For example, there would be TWO measure.group objects for one study, and one might be the ADHD group, and the second the Control.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.results -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.results">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure"/>
+        <rdfs:comment>A measure results object contains:
+   individual group objects, one for each group tested, with individual group results (mean, standard deviation)
+   comparison objects, each of which is a comparison between any set of groups
+  a subscale variable that gives the name of the subscale that the results object is reporting on.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.subscale -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.subscale">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.results"/>
+        <rdfs:comment>The name of a subscale report for a particular measure.  Each measure object has many &quot;results&quot; objects., each of which can hold a result for a particular subscale corresponding to the measure. </rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#measure.version -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.version">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#med -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#med">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#group"/>
+        <rdfs:comment>representing long term medication status, not necessarily equivalent to scanning conditions.  See each imaging result to see specific scanning conditions.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#method -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#method">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Imaging"/>
+        <rdfs:comment>either &quot;DTI&quot; or &quot;fMRI&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#model -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#model">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#scanner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#n -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#n">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#group"/>
+        <rdfs:comment>a matrix in the format [total males females]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#page -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#page">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Publication"/>
+        <rdfs:comment>a matrix in the format [start end]</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#population.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#population.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Population"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#imaging.results.fmri"/>
+        <rdfs:comment>An ROI object is an fMRI BOLD significant results report
+- roi.volume holds the cubic mm or voxel volume of the ROI
+- roi.p holds the p value, the comparison sign (=,&lt;,&gt;), and the correction (fwe or none)
+- roi.group holds the primary, secondary groups, and the comparison done (&quot;&lt;&quot; or &quot;&gt;&quot;) as well as medication states for both groups
+- roi.hemisphere --&gt; &quot;bilateral&quot; &quot;right&quot; or &quot;left&quot;
+- roi.name is the name of the region --&gt; eg, &quot;amygdala&quot;
+- roi.peak holds the peak coordinate and space reported in (mni or tal)
+- roi.stat holds reported z or t values
+- roi.regressor holds any regressors done with analysis or statistics
+- roi.atlas --&gt; atlas of the roi, if reported</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.atlas -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.atlas">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.condition -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.condition">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.coord -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.coord">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.peak"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.space"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.direction -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.direction">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.primary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.primary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.secondary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.secondary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.hemisphere -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.hemisphere">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med.primary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med.primary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med.secondary"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med.secondary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med.secondary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.mm -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.mm">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.volume"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.vox"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.name -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.name">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.comparison -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.comparison">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.corr -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.corr">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.val -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.val">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.peak -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.peak">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regresor.statistics -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regresor.statistics">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regressor"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regressor.analysis"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regressor -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regressor">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regressor.analysis -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regressor.analysis">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regressor"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.space -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.space">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.peak"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat.t -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat.t">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat"/>
+        <owl:disjointWith rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat.z"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat.z -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat.z">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.volume -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.volume">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#roi.vox -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.vox">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.volume"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#scanner -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#scanner">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Imaging"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#summary -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#summary">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Imaging"/>
+        <rdfs:comment>I wanted to incorporate a more &quot;human readable&quot; variable, in case it was needed, so I added an overall summary variable here, which is just a string summary.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#task -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#task">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Imaging"/>
+        <rdfs:comment>Generally, each imaging report has one &quot;task&quot; type - for example &#39;rest&#39; for an fMRI resting connectivity study.  This variable isn&#39;t so useful because I largely left it empty for DTI reports, and more detailed conditions for a functional task can be put under the results reports.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#telsa -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#telsa">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#scanner"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#title -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#title">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#topic -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#topic">
+        <rdfs:comment>a string describing the topic, as of now all entries are &quot;ADHD&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#volume -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#volume">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.vbmis.com/bmi/ontology/structdb.owl#year -->
+
+    <owl:Class rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#year">
+        <rdfs:subClassOf rdf:resource="http://www.vbmis.com/bmi/ontology/structdb.owl#Publication"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#make"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#model"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#telsa"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#author"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#journal"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#keyword"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#page"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#title"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#volume"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#year"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.name"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison.stat"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.analysis"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.preprocess"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.statistics"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.corr"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.p.val"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.atlas"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.hemisphere"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi.name"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.hemisphere"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.name"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract.type"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.name"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.stat"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.corr"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p.val"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.corr"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p.val"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.primary"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group.secondary"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.atlas"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.condition"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.direction"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.hemisphere"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.name"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.peak"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.regressor"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.stat"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.volume"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.analysis"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.preprocess"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fmri.statistics"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.cogpo"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.name"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.results"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.version"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#med"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#n"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#name"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.atlas"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.condition"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.direction"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.directions"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.hemisphere"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.peak"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.regressor"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.roi"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.runs"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.stat"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.volume"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.condition"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.direction"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.peak"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.roi"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.stat"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.volume"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.LOO"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.name"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.regressor"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.training"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.model.type"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.corr"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.p.val"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.SD"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group.name"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.atlas"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.condition"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.direction"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.directions"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.group"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.hemisphere"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.peak"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.roi"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.runs"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.stat"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.volume"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.primary"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.group.secondary"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#roi.med"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.corr"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FDA.p.val"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.group"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#measure.subscale"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.atlas"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.condition"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.contrast"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.direction"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.hemisphere"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.peak"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.regressor"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.roi"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.space"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.stat"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#anova.volume"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.corr"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fa.p.val"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.connection"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.dir"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.direction"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.group"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.pattern"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.peak"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.regressor"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.rep"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.roi"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.stat"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.tract"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.volume"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.primary"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.secondary"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.corr"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD.p.val"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.atlas"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.condition"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.direction"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.hemisphere"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.name"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.p"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.peak"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.stat"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.connection.volume"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#FA"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#RD"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#dti.software"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.comparison"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.corr"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.comparison.p.val"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.group"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.regressor"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#fc.seed"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.L"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.med"/>
+            <rdf:Description rdf:about="http://www.vbmis.com/bmi/ontology/structdb.owl#MD.group.name"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.2.2.1785) http://owlapi.sourceforge.net -->
+
