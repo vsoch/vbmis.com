@@ -1,0 +1,173 @@
+vanessa@Vanessa:~/Documents/Code/Python/ica+v2$ python pyMatch.py --subs=/home/vanessa/Desktop/NYU10_bp/dr/NYU10/dr_name.txt --template=/home/vanessa/Desktop/next_update/test/gm_wm_input_p05.nii --images=/home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/filter/gica_DR-hpfilter-good.txt --output=/home/vanessa/Desktop/NYU10_bp/match
+Reading input file /home/vanessa/Desktop/NYU10_bp/dr/NYU10/dr_name.txt
+Reading input file /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/filter/gica_DR-hpfilter-good.txt
+Checking for all components images for each output/subject...
+All components for all subjects have been found!  Continuing analysis...
+Reading in data /home/vanessa/Desktop/next_update/test/gm_wm_input_p05.nii...
+Filtering with criteria > 0...
+Computing similarity scores for images in directory /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0000_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0011_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0012_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0013_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0014_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0015_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0017_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0018_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0001_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0020_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0021_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0022_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0023_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0024_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0025_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0026_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0027_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0028_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0002_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0029_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0003_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0004_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0005_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0006_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0007_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYU10_bp/dr/NYU10/result/dr_stage3_ic0008_tfce_corrp_tstat1.nii.gz...
+
+Calculating shared and unshared activation per voxel for each contender image...
+dr_stage3_ic0000_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0000_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0153448505539
+dr_stage3_ic0000_tfce_corrp_tstat1 activation difference score: -0.0153448505539
+dr_stage3_ic0000_tfce_corrp_tstat1 absolute activation difference score: 0.0153448505539
+
+dr_stage3_ic0011_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0011_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.00775768137097
+dr_stage3_ic0011_tfce_corrp_tstat1 activation difference score: -0.00775768137097
+dr_stage3_ic0011_tfce_corrp_tstat1 absolute activation difference score: 0.00775768137097
+
+dr_stage3_ic0012_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0012_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0547619068064
+dr_stage3_ic0012_tfce_corrp_tstat1 activation difference score: -0.0547619068064
+dr_stage3_ic0012_tfce_corrp_tstat1 absolute activation difference score: 0.0547619068064
+
+dr_stage3_ic0013_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0013_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0189336500781
+dr_stage3_ic0013_tfce_corrp_tstat1 activation difference score: -0.0189336500781
+dr_stage3_ic0013_tfce_corrp_tstat1 absolute activation difference score: 0.0189336500781
+
+dr_stage3_ic0014_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0014_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0380698054858
+dr_stage3_ic0014_tfce_corrp_tstat1 activation difference score: -0.0380698054858
+dr_stage3_ic0014_tfce_corrp_tstat1 absolute activation difference score: 0.0380698054858
+
+dr_stage3_ic0015_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0015_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0208750712824
+dr_stage3_ic0015_tfce_corrp_tstat1 activation difference score: -0.0208750712824
+dr_stage3_ic0015_tfce_corrp_tstat1 absolute activation difference score: 0.0208750712824
+
+dr_stage3_ic0017_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0017_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.107230059669
+dr_stage3_ic0017_tfce_corrp_tstat1 activation difference score: -0.107230059669
+dr_stage3_ic0017_tfce_corrp_tstat1 absolute activation difference score: 0.107230059669
+
+dr_stage3_ic0018_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0018_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0427485207507
+dr_stage3_ic0018_tfce_corrp_tstat1 activation difference score: -0.0427485207507
+dr_stage3_ic0018_tfce_corrp_tstat1 absolute activation difference score: 0.0427485207507
+
+dr_stage3_ic0001_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0001_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0394606397098
+dr_stage3_ic0001_tfce_corrp_tstat1 activation difference score: -0.0394606397098
+dr_stage3_ic0001_tfce_corrp_tstat1 absolute activation difference score: 0.0394606397098
+
+dr_stage3_ic0020_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0020_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.12886474255
+dr_stage3_ic0020_tfce_corrp_tstat1 activation difference score: -0.12886474255
+dr_stage3_ic0020_tfce_corrp_tstat1 absolute activation difference score: 0.12886474255
+
+dr_stage3_ic0021_tfce_corrp_tstat1 mean activation/voxel within template is 0.00841543544084
+dr_stage3_ic0021_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0160319567151
+dr_stage3_ic0021_tfce_corrp_tstat1 activation difference score: -0.00761652127425
+dr_stage3_ic0021_tfce_corrp_tstat1 absolute activation difference score: 0.00761652127425
+
+dr_stage3_ic0022_tfce_corrp_tstat1 mean activation/voxel within template is 0.0138730165176
+dr_stage3_ic0022_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.00984797720915
+dr_stage3_ic0022_tfce_corrp_tstat1 activation difference score: 0.00402503930846
+dr_stage3_ic0022_tfce_corrp_tstat1 absolute activation difference score: 0.00402503930846
+
+dr_stage3_ic0023_tfce_corrp_tstat1 mean activation/voxel within template is 0.0251322761178
+dr_stage3_ic0023_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0930793488052
+dr_stage3_ic0023_tfce_corrp_tstat1 activation difference score: -0.0679470726874
+dr_stage3_ic0023_tfce_corrp_tstat1 absolute activation difference score: 0.0679470726874
+
+dr_stage3_ic0024_tfce_corrp_tstat1 mean activation/voxel within template is 0.113307137567
+dr_stage3_ic0024_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.137522575432
+dr_stage3_ic0024_tfce_corrp_tstat1 activation difference score: -0.0242154378648
+dr_stage3_ic0024_tfce_corrp_tstat1 absolute activation difference score: 0.0242154378648
+
+dr_stage3_ic0025_tfce_corrp_tstat1 mean activation/voxel within template is 0.202380955219
+dr_stage3_ic0025_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.155879408173
+dr_stage3_ic0025_tfce_corrp_tstat1 activation difference score: 0.0465015470465
+dr_stage3_ic0025_tfce_corrp_tstat1 absolute activation difference score: 0.0465015470465
+
+dr_stage3_ic0026_tfce_corrp_tstat1 mean activation/voxel within template is 0.00396825419739
+dr_stage3_ic0026_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0124071686598
+dr_stage3_ic0026_tfce_corrp_tstat1 activation difference score: -0.00843891446239
+dr_stage3_ic0026_tfce_corrp_tstat1 absolute activation difference score: 0.00843891446239
+
+dr_stage3_ic0027_tfce_corrp_tstat1 mean activation/voxel within template is 0.0608465628854
+dr_stage3_ic0027_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0895901841324
+dr_stage3_ic0027_tfce_corrp_tstat1 activation difference score: -0.028743621247
+dr_stage3_ic0027_tfce_corrp_tstat1 absolute activation difference score: 0.028743621247
+
+dr_stage3_ic0028_tfce_corrp_tstat1 mean activation/voxel within template is 0.00396825419739
+dr_stage3_ic0028_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0823331650905
+dr_stage3_ic0028_tfce_corrp_tstat1 activation difference score: -0.0783649108931
+dr_stage3_ic0028_tfce_corrp_tstat1 absolute activation difference score: 0.0783649108931
+
+dr_stage3_ic0002_tfce_corrp_tstat1 mean activation/voxel within template is 0.0170344564746
+dr_stage3_ic0002_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.165527147953
+dr_stage3_ic0002_tfce_corrp_tstat1 activation difference score: -0.148492691478
+dr_stage3_ic0002_tfce_corrp_tstat1 absolute activation difference score: 0.148492691478
+
+dr_stage3_ic0029_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0029_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0322420642478
+dr_stage3_ic0029_tfce_corrp_tstat1 activation difference score: -0.0322420642478
+dr_stage3_ic0029_tfce_corrp_tstat1 absolute activation difference score: 0.0322420642478
+
+dr_stage3_ic0003_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0003_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.00765306152226
+dr_stage3_ic0003_tfce_corrp_tstat1 activation difference score: -0.00765306152226
+dr_stage3_ic0003_tfce_corrp_tstat1 absolute activation difference score: 0.00765306152226
+
+dr_stage3_ic0004_tfce_corrp_tstat1 mean activation/voxel within template is 0.0357142873108
+dr_stage3_ic0004_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0282457860111
+dr_stage3_ic0004_tfce_corrp_tstat1 activation difference score: 0.00746850129971
+dr_stage3_ic0004_tfce_corrp_tstat1 absolute activation difference score: 0.00746850129971
+
+dr_stage3_ic0005_tfce_corrp_tstat1 mean activation/voxel within template is 0.296146953882
+dr_stage3_ic0005_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.172104529222
+dr_stage3_ic0005_tfce_corrp_tstat1 activation difference score: 0.12404242466
+dr_stage3_ic0005_tfce_corrp_tstat1 absolute activation difference score: 0.12404242466
+
+dr_stage3_ic0006_tfce_corrp_tstat1 mean activation/voxel within template is 0.0203478557672
+dr_stage3_ic0006_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.14318575526
+dr_stage3_ic0006_tfce_corrp_tstat1 activation difference score: -0.122837899493
+dr_stage3_ic0006_tfce_corrp_tstat1 absolute activation difference score: 0.122837899493
+
+dr_stage3_ic0007_tfce_corrp_tstat1 mean activation/voxel within template is 0.214285716414
+dr_stage3_ic0007_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0434422910473
+dr_stage3_ic0007_tfce_corrp_tstat1 activation difference score: 0.170843425367
+dr_stage3_ic0007_tfce_corrp_tstat1 absolute activation difference score: 0.170843425367
+
+dr_stage3_ic0008_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0008_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0261337875206
+dr_stage3_ic0008_tfce_corrp_tstat1 activation difference score: -0.0261337875206
+dr_stage3_ic0008_tfce_corrp_tstat1 absolute activation difference score: 0.0261337875206
+
+Top matches for /home/vanessa/Desktop/next_update/test/gm_wm_input_p05.nii are:
+    1) dr_stage3_ic0007_tfce_corrp_tstat1.nii.gz
+    2) dr_stage3_ic0002_tfce_corrp_tstat1.nii.gz
+    3) dr_stage3_ic0020_tfce_corrp_tstat1.nii.gz
+
+Full results printed to: /home/vanessa/Desktop/NYU10_bp/match/gm_wm_input_p05_beststats.txt
+Image list printed to: /home/vanessa/Desktop/NYU10_bp/match/gm_wm_input_p05_bestcomps.txt

@@ -1,0 +1,278 @@
+Getting list of images to filter in /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats...
+Found image thresh_zstat1.nii.gz. Added to list.
+Found image thresh_zstat10.nii.gz. Added to list.
+Found image thresh_zstat11.nii.gz. Added to list.
+Found image thresh_zstat12.nii.gz. Added to list.
+Found image thresh_zstat13.nii.gz. Added to list.
+Found image thresh_zstat14.nii.gz. Added to list.
+Found image thresh_zstat15.nii.gz. Added to list.
+Found image thresh_zstat16.nii.gz. Added to list.
+Found image thresh_zstat17.nii.gz. Added to list.
+Found image thresh_zstat18.nii.gz. Added to list.
+Found image thresh_zstat19.nii.gz. Added to list.
+Found image thresh_zstat2.nii.gz. Added to list.
+Found image thresh_zstat20.nii.gz. Added to list.
+Found image thresh_zstat21.nii.gz. Added to list.
+Found image thresh_zstat22.nii.gz. Added to list.
+Found image thresh_zstat23.nii.gz. Added to list.
+Found image thresh_zstat24.nii.gz. Added to list.
+Found image thresh_zstat25.nii.gz. Added to list.
+Found image thresh_zstat26.nii.gz. Added to list.
+Found image thresh_zstat27.nii.gz. Added to list.
+Found image thresh_zstat28.nii.gz. Added to list.
+Found image thresh_zstat29.nii.gz. Added to list.
+Found image thresh_zstat3.nii.gz. Added to list.
+Found image thresh_zstat30.nii.gz. Added to list.
+Found image thresh_zstat4.nii.gz. Added to list.
+Found image thresh_zstat5.nii.gz. Added to list.
+Found image thresh_zstat6.nii.gz. Added to list.
+Found image thresh_zstat7.nii.gz. Added to list.
+Found image thresh_zstat8.nii.gz. Added to list.
+Found image thresh_zstat9.nii.gz. Added to list.
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat1.nii.gz...
+Max value of frequency data is 96.6830813719
+High frequency noise energy is 385.037559367
+Total energy is 15463.025752
+Energy percent is 2.49005314705
+Acceptable is under 50%
+GOOD: thresh_zstat1.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat10.nii.gz...
+Max value of frequency data is 66.8110384936
+High frequency noise energy is 27450.2028154
+Total energy is 54189.7043798
+Energy percent is 50.6557530246
+Acceptable is under 50%
+Noise component found! /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat10.nii.gz will not be used.
+BAD: thresh_zstat10.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat11.nii.gz...
+Max value of frequency data is 91.0269234585
+High frequency noise energy is 21418.6297542
+Total energy is 39029.2350883
+Energy percent is 54.8784256359
+Acceptable is under 50%
+Noise component found! /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat11.nii.gz will not be used.
+BAD: thresh_zstat11.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat12.nii.gz...
+Max value of frequency data is 101.670976311
+High frequency noise energy is 5551.85045426
+Total energy is 39886.777134
+Energy percent is 13.919024933
+Acceptable is under 50%
+GOOD: thresh_zstat12.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat13.nii.gz...
+Max value of frequency data is 116.168748097
+High frequency noise energy is 24835.245458
+Total energy is 61165.9969145
+Energy percent is 40.6030257183
+Acceptable is under 50%
+GOOD: thresh_zstat13.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat14.nii.gz...
+Max value of frequency data is 132.529938633
+High frequency noise energy is 34707.4447913
+Total energy is 106686.791471
+Energy percent is 32.5320916609
+Acceptable is under 50%
+GOOD: thresh_zstat14.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat15.nii.gz...
+Max value of frequency data is 230.358569732
+High frequency noise energy is 62203.0191656
+Total energy is 221782.680997
+Energy percent is 28.0468334525
+Acceptable is under 50%
+GOOD: thresh_zstat15.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat16.nii.gz...
+Max value of frequency data is 262.268661039
+High frequency noise energy is 85431.3795241
+Total energy is 318951.339596
+Energy percent is 26.7850825246
+Acceptable is under 50%
+GOOD: thresh_zstat16.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat17.nii.gz...
+Max value of frequency data is 1495.12163854
+High frequency noise energy is 8398488.33003
+Total energy is 16558462.1873
+Energy percent is 50.7202192753
+Acceptable is under 50%
+Noise component found! /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat17.nii.gz will not be used.
+BAD: thresh_zstat17.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat18.nii.gz...
+Max value of frequency data is 114.734481582
+High frequency noise energy is 12111.0030005
+Total energy is 75817.898125
+Energy percent is 15.9738047347
+Acceptable is under 50%
+GOOD: thresh_zstat18.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat19.nii.gz...
+Max value of frequency data is 127.747578318
+High frequency noise energy is 11271.2832469
+Total energy is 82737.6525967
+Energy percent is 13.6229188201
+Acceptable is under 50%
+GOOD: thresh_zstat19.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat2.nii.gz...
+Max value of frequency data is 96.128375279
+High frequency noise energy is 408.507027587
+Total energy is 15465.4703671
+Energy percent is 2.64141353538
+Acceptable is under 50%
+GOOD: thresh_zstat2.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat20.nii.gz...
+Max value of frequency data is 136.706395146
+High frequency noise energy is 175292.570734
+Total energy is 241504.72615
+Energy percent is 72.5834949605
+Acceptable is under 50%
+Noise component found! /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat20.nii.gz will not be used.
+BAD: thresh_zstat20.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat21.nii.gz...
+Max value of frequency data is 93.4575709336
+High frequency noise energy is 5337.63580372
+Total energy is 26521.2710076
+Energy percent is 20.1258672791
+Acceptable is under 50%
+GOOD: thresh_zstat21.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat22.nii.gz...
+Max value of frequency data is 303.255225657
+High frequency noise energy is 64708.1670292
+Total energy is 491260.126189
+Energy percent is 13.1718744469
+Acceptable is under 50%
+GOOD: thresh_zstat22.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat23.nii.gz...
+Max value of frequency data is 131.532382654
+High frequency noise energy is 18258.0618764
+Total energy is 77721.8609354
+Energy percent is 23.4915397762
+Acceptable is under 50%
+GOOD: thresh_zstat23.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat24.nii.gz...
+Max value of frequency data is 264.293709367
+High frequency noise energy is 189424.347989
+Total energy is 667876.253883
+Energy percent is 28.3621923803
+Acceptable is under 50%
+GOOD: thresh_zstat24.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat25.nii.gz...
+Max value of frequency data is 487.835591123
+High frequency noise energy is 1148522.32163
+Total energy is 2397841.39107
+Energy percent is 47.898177332
+Acceptable is under 50%
+GOOD: thresh_zstat25.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat26.nii.gz...
+Max value of frequency data is 291.234482977
+High frequency noise energy is 118244.670736
+Total energy is 492591.181027
+Energy percent is 24.0046260043
+Acceptable is under 50%
+GOOD: thresh_zstat26.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat27.nii.gz...
+Max value of frequency data is 206.302448514
+High frequency noise energy is 72793.4079445
+Total energy is 284707.929357
+Energy percent is 25.5677487132
+Acceptable is under 50%
+GOOD: thresh_zstat27.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat28.nii.gz...
+Max value of frequency data is 545.21611578
+High frequency noise energy is 1086536.12949
+Total energy is 2531680.73654
+Energy percent is 42.9175809495
+Acceptable is under 50%
+GOOD: thresh_zstat28.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat29.nii.gz...
+Max value of frequency data is 151.770874815
+High frequency noise energy is 5680.26471901
+Total energy is 77107.0831041
+Energy percent is 7.36672234293
+Acceptable is under 50%
+GOOD: thresh_zstat29.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat3.nii.gz...
+Max value of frequency data is 95.9700710439
+High frequency noise energy is 655.291176692
+Total energy is 15645.5486372
+Energy percent is 4.18835537116
+Acceptable is under 50%
+GOOD: thresh_zstat3.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat30.nii.gz...
+Max value of frequency data is 221.771472177
+High frequency noise energy is 100105.914482
+Total energy is 400194.506971
+Energy percent is 25.0143149739
+Acceptable is under 50%
+GOOD: thresh_zstat30.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat4.nii.gz...
+Max value of frequency data is 120.916247882
+High frequency noise energy is 4090.59473659
+Total energy is 23022.8006771
+Energy percent is 17.7675809037
+Acceptable is under 50%
+GOOD: thresh_zstat4.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat5.nii.gz...
+Max value of frequency data is 98.9094166816
+High frequency noise energy is 611.312147618
+Total energy is 16116.0347672
+Energy percent is 3.79319203792
+Acceptable is under 50%
+GOOD: thresh_zstat5.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat6.nii.gz...
+Max value of frequency data is 86.9040685037
+High frequency noise energy is 2446.90875426
+Total energy is 20414.5378418
+Energy percent is 11.9861089838
+Acceptable is under 50%
+GOOD: thresh_zstat6.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat7.nii.gz...
+Max value of frequency data is 85.4412398649
+High frequency noise energy is 890.891866878
+Total energy is 15906.6108753
+Energy percent is 5.60076482579
+Acceptable is under 50%
+GOOD: thresh_zstat7.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat8.nii.gz...
+Max value of frequency data is 106.077097801
+High frequency noise energy is 825.866885477
+Total energy is 18496.9454047
+Energy percent is 4.46488253822
+Acceptable is under 50%
+GOOD: thresh_zstat8.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYU10_bp/gica/NYU10.gica/groupmelodic.ica/stats/thresh_zstat9.nii.gz...
+Max value of frequency data is 1442.05292341
+High frequency noise energy is 1839404.54363
+Total energy is 11157858.5682
+Energy percent is 16.4852828381
+Acceptable is under 50%
+GOOD: thresh_zstat9.nii.gz
+
+Printing results to /home/vanessa/Desktop/NYU10_bp/filter
+Bad components include: ['10', '11', '17', '20']
+Good components include: ['1', '12', '13', '14', '15', '16', '18', '19', '2', '21', '22', '23', '24', '25', '26', '27', '28', '29', '3', '30', '4', '5', '6', '7', '8', '9']

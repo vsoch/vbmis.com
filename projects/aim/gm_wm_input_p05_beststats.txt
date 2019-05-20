@@ -1,0 +1,2 @@
+ID Match1 Score1 Match2 Score2 Match3 Score3
+/home/vanessa/Desktop/NYU10_bp/dr/NYU10/result dr_stage3_ic0007_tfce_corrp_tstat1.nii.gz 0.170843425367 dr_stage3_ic0002_tfce_corrp_tstat1.nii.gz 0.148492691478 dr_stage3_ic0020_tfce_corrp_tstat1.nii.gz 0.12886474255 
