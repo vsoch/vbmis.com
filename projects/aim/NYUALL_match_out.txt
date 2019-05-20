@@ -1,0 +1,407 @@
+Running for NYUALL:
+
+GROUP FILTER WITH MELODIC_HP:
+
+vanessa@Vanessa:~/Documents/Code/Python/ica+v2$ python melodic_hp.py -o /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/filter --name=gica --ts=/home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/report --gica=/home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats
+
+Getting list of images to filter in /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats...
+Found image thresh_zstat1.nii.gz. Added to list.
+Found image thresh_zstat10.nii.gz. Added to list.
+Found image thresh_zstat11.nii.gz. Added to list.
+Found image thresh_zstat12.nii.gz. Added to list.
+Found image thresh_zstat13.nii.gz. Added to list.
+Found image thresh_zstat14.nii.gz. Added to list.
+Found image thresh_zstat15.nii.gz. Added to list.
+Found image thresh_zstat16.nii.gz. Added to list.
+Found image thresh_zstat17.nii.gz. Added to list.
+Found image thresh_zstat18.nii.gz. Added to list.
+Found image thresh_zstat19.nii.gz. Added to list.
+Found image thresh_zstat2.nii.gz. Added to list.
+Found image thresh_zstat20.nii.gz. Added to list.
+Found image thresh_zstat21.nii.gz. Added to list.
+Found image thresh_zstat22.nii.gz. Added to list.
+Found image thresh_zstat23.nii.gz. Added to list.
+Found image thresh_zstat24.nii.gz. Added to list.
+Found image thresh_zstat25.nii.gz. Added to list.
+Found image thresh_zstat3.nii.gz. Added to list.
+Found image thresh_zstat4.nii.gz. Added to list.
+Found image thresh_zstat5.nii.gz. Added to list.
+Found image thresh_zstat6.nii.gz. Added to list.
+Found image thresh_zstat7.nii.gz. Added to list.
+Found image thresh_zstat8.nii.gz. Added to list.
+Found image thresh_zstat9.nii.gz. Added to list.
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat1.nii.gz...
+Max value of frequency data is 97.5049215235
+High frequency noise energy is 308.375609986
+Total energy is 15412.8978885
+Energy percent is 2.00076333611
+Acceptable is under 50%
+GOOD: thresh_zstat1.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat10.nii.gz...
+Max value of frequency data is 491.199187016
+High frequency noise energy is 188620.787163
+Total energy is 1124001.88645
+Energy percent is 16.7811806579
+Acceptable is under 50%
+GOOD: thresh_zstat10.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat11.nii.gz...
+Max value of frequency data is 113.7676748
+High frequency noise energy is 2989.7746942
+Total energy is 23926.0413891
+Energy percent is 12.4959020407
+Acceptable is under 50%
+GOOD: thresh_zstat11.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat12.nii.gz...
+Max value of frequency data is 118.894032393
+High frequency noise energy is 15230.0119169
+Total energy is 62353.3814865
+Energy percent is 24.4253183289
+Acceptable is under 50%
+GOOD: thresh_zstat12.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat13.nii.gz...
+Max value of frequency data is 92.8499866131
+High frequency noise energy is 12137.7053554
+Total energy is 49256.4586372
+Energy percent is 24.641855487
+Acceptable is under 50%
+GOOD: thresh_zstat13.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat14.nii.gz...
+Max value of frequency data is 880.153805473
+High frequency noise energy is 1820212.44335
+Total energy is 5899751.75189
+Energy percent is 30.8523565041
+Acceptable is under 50%
+GOOD: thresh_zstat14.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat15.nii.gz...
+Max value of frequency data is 154.231826727
+High frequency noise energy is 17447.0801606
+Total energy is 99181.4094772
+Energy percent is 17.5910790667
+Acceptable is under 50%
+GOOD: thresh_zstat15.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat16.nii.gz...
+Max value of frequency data is 132.390449107
+High frequency noise energy is 9444.08613485
+Total energy is 57765.1506928
+Energy percent is 16.3491067219
+Acceptable is under 50%
+GOOD: thresh_zstat16.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat17.nii.gz...
+Max value of frequency data is 118.785788878
+High frequency noise energy is 3436.64738367
+Total energy is 25389.5429114
+Energy percent is 13.5356804006
+Acceptable is under 50%
+GOOD: thresh_zstat17.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat18.nii.gz...
+Max value of frequency data is 188.901877758
+High frequency noise energy is 39606.3103877
+Total energy is 137823.15479
+Energy percent is 28.7370510768
+Acceptable is under 50%
+GOOD: thresh_zstat18.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat19.nii.gz...
+Max value of frequency data is 306.590285966
+High frequency noise energy is 1443505.90082
+Total energy is 1908362.59057
+Energy percent is 75.6410709346
+Acceptable is under 50%
+Noise component found! /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat19.nii.gz will not be used.
+BAD: thresh_zstat19.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat2.nii.gz...
+Max value of frequency data is 82.8147575036
+High frequency noise energy is 434.278867511
+Total energy is 16741.6441386
+Energy percent is 2.59400369472
+Acceptable is under 50%
+GOOD: thresh_zstat2.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat20.nii.gz...
+Max value of frequency data is 122.980545729
+High frequency noise energy is 29869.5381508
+Total energy is 133665.732758
+Energy percent is 22.3464440246
+Acceptable is under 50%
+GOOD: thresh_zstat20.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat21.nii.gz...
+Max value of frequency data is 295.126878212
+High frequency noise energy is 70469.6319974
+Total energy is 301336.805662
+Energy percent is 23.3856703441
+Acceptable is under 50%
+GOOD: thresh_zstat21.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat22.nii.gz...
+Max value of frequency data is 1404.8870168
+High frequency noise energy is 602894.98904
+Total energy is 3775612.38913
+Energy percent is 15.9681377987
+Acceptable is under 50%
+GOOD: thresh_zstat22.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat23.nii.gz...
+Max value of frequency data is 226.778479594
+High frequency noise energy is 40569.3258413
+Total energy is 328356.691673
+Energy percent is 12.3552608703
+Acceptable is under 50%
+GOOD: thresh_zstat23.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat24.nii.gz...
+Max value of frequency data is 99.4732183272
+High frequency noise energy is 12096.8455782
+Total energy is 42593.8254166
+Energy percent is 28.4004675793
+Acceptable is under 50%
+GOOD: thresh_zstat24.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat25.nii.gz...
+Max value of frequency data is 399.513849219
+High frequency noise energy is 50131.9245782
+Total energy is 263650.57643
+Energy percent is 19.0145325138
+Acceptable is under 50%
+GOOD: thresh_zstat25.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat3.nii.gz...
+Max value of frequency data is 95.8788050948
+High frequency noise energy is 273.099463948
+Total energy is 15415.2699218
+Energy percent is 1.77161649023
+Acceptable is under 50%
+GOOD: thresh_zstat3.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat4.nii.gz...
+Max value of frequency data is 96.6962995133
+High frequency noise energy is 595.795381182
+Total energy is 16588.3243234
+Energy percent is 3.59165500726
+Acceptable is under 50%
+GOOD: thresh_zstat4.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat5.nii.gz...
+Max value of frequency data is 100.717272656
+High frequency noise energy is 430.033766218
+Total energy is 15850.7897841
+Energy percent is 2.71301160432
+Acceptable is under 50%
+GOOD: thresh_zstat5.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat6.nii.gz...
+Max value of frequency data is 98.6829225365
+High frequency noise energy is 1030.67668551
+Total energy is 21625.1132458
+Energy percent is 4.76611000273
+Acceptable is under 50%
+GOOD: thresh_zstat6.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat7.nii.gz...
+Max value of frequency data is 96.2673542719
+High frequency noise energy is 5230.89645246
+Total energy is 31690.366882
+Energy percent is 16.5062666265
+Acceptable is under 50%
+GOOD: thresh_zstat7.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat8.nii.gz...
+Max value of frequency data is 96.4693502501
+High frequency noise energy is 13008.1275875
+Total energy is 54865.4661816
+Energy percent is 23.709135259
+Acceptable is under 50%
+GOOD: thresh_zstat8.nii.gz
+
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/groupmelodic.ica/stats/thresh_zstat9.nii.gz...
+Max value of frequency data is 107.500539829
+High frequency noise energy is 25105.9283848
+Total energy is 64601.316622
+Energy percent is 38.8628741604
+Acceptable is under 50%
+GOOD: thresh_zstat9.nii.gz
+
+Printing results to /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/filter
+Bad components include: ['19']
+Good components include: ['1', '10', '11', '12', '13', '14', '15', '16', '17', '18', '2', '20', '21', '22', '23', '24', '25', '3', '4', '5', '6', '7', '8', '9']
+
+
+PY_MATCH RUN:
+
+vanessa@Vanessa:~/Documents/Code/Python/ica+v2$ python pyMatch.py --subs=/home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/dr_name.txt --template=/home/vanessa/Desktop/next_update/test/gm_wm_input_p05.nii --images=/home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/filter/gica_DR-hpfilter-good.txt --output=/home/vanessa/Desktop/NYUALL/DATA/match
+Reading input file /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/dr_name.txt
+Reading input file /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/filter/gica_DR-hpfilter-good.txt
+Checking for all components images for each output/subject...
+Cannot find dr_stage3_ic009_tfce_corrp_tstat1.nii.gz for /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/. Exiting!
+vanessa@Vanessa:~/Documents/Code/Python/ica+v2$ python pyMatch.py --subs=/home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/dr_name.txt --template=/home/vanessa/Desktop/next_update/test/gm_wm_input_p05.nii --images=/home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/filter/gica_DR-hpfilter-good.txt --output=/home/vanessa/Desktop/NYUALL/DATA/match
+Reading input file /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/dr_name.txt
+Reading input file /home/vanessa/Desktop/NYUALL/DATA/gica/NYUALL.gica/filter/gica_DR-hpfilter-good.txt
+Checking for all components images for each output/subject...
+All components for all subjects have been found!  Continuing analysis...
+Reading in data /home/vanessa/Desktop/next_update/test/gm_wm_input_p05.nii...
+Filtering with criteria > 0...
+Computing similarity scores for images in directory /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0000_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0009_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0010_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0011_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0012_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0013_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0014_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0015_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0016_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0017_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0001_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0019_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0020_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0021_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0022_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0023_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0024_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0002_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0003_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0004_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0005_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0006_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0007_tfce_corrp_tstat1.nii.gz...
+Reading in data /home/vanessa/Desktop/NYUALL/DATA/dr/NYUALL/result/dr_stage3_ic0008_tfce_corrp_tstat1.nii.gz...
+
+Calculating shared and unshared activation per voxel for each contender image...
+dr_stage3_ic0000_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0000_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.200813255957
+dr_stage3_ic0000_tfce_corrp_tstat1 activation difference score: -0.200813255957
+dr_stage3_ic0000_tfce_corrp_tstat1 absolute activation difference score: 0.200813255957
+
+dr_stage3_ic0009_tfce_corrp_tstat1 mean activation/voxel within template is 0.110660099744
+dr_stage3_ic0009_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.144742678705
+dr_stage3_ic0009_tfce_corrp_tstat1 activation difference score: -0.0340825789608
+dr_stage3_ic0009_tfce_corrp_tstat1 absolute activation difference score: 0.0340825789608
+
+dr_stage3_ic0010_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0010_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.143880952822
+dr_stage3_ic0010_tfce_corrp_tstat1 activation difference score: -0.143880952822
+dr_stage3_ic0010_tfce_corrp_tstat1 absolute activation difference score: 0.143880952822
+
+dr_stage3_ic0011_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0011_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.062341708773
+dr_stage3_ic0011_tfce_corrp_tstat1 activation difference score: -0.062341708773
+dr_stage3_ic0011_tfce_corrp_tstat1 absolute activation difference score: 0.062341708773
+
+dr_stage3_ic0012_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0012_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.100332827223
+dr_stage3_ic0012_tfce_corrp_tstat1 activation difference score: -0.100332827223
+dr_stage3_ic0012_tfce_corrp_tstat1 absolute activation difference score: 0.100332827223
+
+dr_stage3_ic0013_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0013_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0638787885483
+dr_stage3_ic0013_tfce_corrp_tstat1 activation difference score: -0.0638787885483
+dr_stage3_ic0013_tfce_corrp_tstat1 absolute activation difference score: 0.0638787885483
+
+dr_stage3_ic0014_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0014_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0479588161512
+dr_stage3_ic0014_tfce_corrp_tstat1 activation difference score: -0.0479588161512
+dr_stage3_ic0014_tfce_corrp_tstat1 absolute activation difference score: 0.0479588161512
+
+dr_stage3_ic0015_tfce_corrp_tstat1 mean activation/voxel within template is 0.00200000009499
+dr_stage3_ic0015_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0329268682304
+dr_stage3_ic0015_tfce_corrp_tstat1 activation difference score: -0.0309268681354
+dr_stage3_ic0015_tfce_corrp_tstat1 absolute activation difference score: 0.0309268681354
+
+dr_stage3_ic0016_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0016_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.15279381372
+dr_stage3_ic0016_tfce_corrp_tstat1 activation difference score: -0.15279381372
+dr_stage3_ic0016_tfce_corrp_tstat1 absolute activation difference score: 0.15279381372
+
+dr_stage3_ic0017_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0017_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0158059702988
+dr_stage3_ic0017_tfce_corrp_tstat1 activation difference score: -0.0158059702988
+dr_stage3_ic0017_tfce_corrp_tstat1 absolute activation difference score: 0.0158059702988
+
+dr_stage3_ic0001_tfce_corrp_tstat1 mean activation/voxel within template is 0.00559999998659
+dr_stage3_ic0001_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.258957960006
+dr_stage3_ic0001_tfce_corrp_tstat1 activation difference score: -0.25335796002
+dr_stage3_ic0001_tfce_corrp_tstat1 absolute activation difference score: 0.25335796002
+
+dr_stage3_ic0019_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0019_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.09109090947
+dr_stage3_ic0019_tfce_corrp_tstat1 activation difference score: -0.09109090947
+dr_stage3_ic0019_tfce_corrp_tstat1 absolute activation difference score: 0.09109090947
+
+dr_stage3_ic0020_tfce_corrp_tstat1 mean activation/voxel within template is 0.0736999992514
+dr_stage3_ic0020_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0772391486465
+dr_stage3_ic0020_tfce_corrp_tstat1 activation difference score: -0.00353914939511
+dr_stage3_ic0020_tfce_corrp_tstat1 absolute activation difference score: 0.00353914939511
+
+dr_stage3_ic0021_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0021_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0425853656048
+dr_stage3_ic0021_tfce_corrp_tstat1 activation difference score: -0.0425853656048
+dr_stage3_ic0021_tfce_corrp_tstat1 absolute activation difference score: 0.0425853656048
+
+dr_stage3_ic0022_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0022_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.120292875837
+dr_stage3_ic0022_tfce_corrp_tstat1 activation difference score: -0.120292875837
+dr_stage3_ic0022_tfce_corrp_tstat1 absolute activation difference score: 0.120292875837
+
+dr_stage3_ic0023_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0023_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0107380953601
+dr_stage3_ic0023_tfce_corrp_tstat1 activation difference score: -0.0107380953601
+dr_stage3_ic0023_tfce_corrp_tstat1 absolute activation difference score: 0.0107380953601
+
+dr_stage3_ic0024_tfce_corrp_tstat1 mean activation/voxel within template is 0.00669767453638
+dr_stage3_ic0024_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0274407815368
+dr_stage3_ic0024_tfce_corrp_tstat1 activation difference score: -0.0207431070004
+dr_stage3_ic0024_tfce_corrp_tstat1 absolute activation difference score: 0.0207431070004
+
+dr_stage3_ic0002_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0002_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0805460328665
+dr_stage3_ic0002_tfce_corrp_tstat1 activation difference score: -0.0805460328665
+dr_stage3_ic0002_tfce_corrp_tstat1 absolute activation difference score: 0.0805460328665
+
+dr_stage3_ic0003_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0003_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.057658375019
+dr_stage3_ic0003_tfce_corrp_tstat1 activation difference score: -0.057658375019
+dr_stage3_ic0003_tfce_corrp_tstat1 absolute activation difference score: 0.057658375019
+
+dr_stage3_ic0004_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0004_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.0758764480239
+dr_stage3_ic0004_tfce_corrp_tstat1 activation difference score: -0.0758764480239
+dr_stage3_ic0004_tfce_corrp_tstat1 absolute activation difference score: 0.0758764480239
+
+dr_stage3_ic0005_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0005_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.122536870031
+dr_stage3_ic0005_tfce_corrp_tstat1 activation difference score: -0.122536870031
+dr_stage3_ic0005_tfce_corrp_tstat1 absolute activation difference score: 0.122536870031
+
+dr_stage3_ic0006_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0006_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.104112254522
+dr_stage3_ic0006_tfce_corrp_tstat1 activation difference score: -0.104112254522
+dr_stage3_ic0006_tfce_corrp_tstat1 absolute activation difference score: 0.104112254522
+
+dr_stage3_ic0007_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0007_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.147500856233
+dr_stage3_ic0007_tfce_corrp_tstat1 activation difference score: -0.147500856233
+dr_stage3_ic0007_tfce_corrp_tstat1 absolute activation difference score: 0.147500856233
+
+dr_stage3_ic0008_tfce_corrp_tstat1 does not have voxels with activation within template.
+dr_stage3_ic0008_tfce_corrp_tstat1 mean activation/voxel outside of template is 0.163799998401
+dr_stage3_ic0008_tfce_corrp_tstat1 activation difference score: -0.163799998401
+dr_stage3_ic0008_tfce_corrp_tstat1 absolute activation difference score: 0.163799998401
+
+Top matches for /home/vanessa/Desktop/next_update/test/gm_wm_input_p05.nii are:
+    1) dr_stage3_ic0001_tfce_corrp_tstat1.nii.gz
+    2) dr_stage3_ic0000_tfce_corrp_tstat1.nii.gz
+    3) dr_stage3_ic0008_tfce_corrp_tstat1.nii.gz
+Full results printed to: /home/vanessa/Desktop/NYUALL/DATA/match/gm_wm_input_p05_beststats.txt
+Image list printed to: /home/vanessa/Desktop/NYUALL/DATA/match/gm_wm_input_p05_bestcomps.txt
+
+
