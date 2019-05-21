@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 12.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 51448)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" [
+	<!ENTITY ns_svg "http://www.w3.org/2000/svg">
+	<!ENTITY ns_xlink "http://www.w3.org/1999/xlink">
+]>
+<svg  version="1.1" id="DuTrack_1_" xmlns="&ns_svg;" xmlns:xlink="&ns_xlink;" width="324" height="90" viewBox="0 0 324 90"
+	 overflow="visible" enable-background="new 0 0 324 90" xml:space="preserve">
+<defs>
+	<rect id="XMLID_1_" width="324" height="90"/>
+</defs>
+<clipPath id="XMLID_7_">
+	<use xlink:href="#XMLID_1_" />
+</clipPath>
+<rect x="80.5" y="62.999" clip-path="url(#XMLID_7_)" fill="#06246F" width="7.5" height="13.501"/>
+<rect x="41.5" y="63.416" clip-path="url(#XMLID_7_)" fill="#06246F" width="7.5" height="13.084"/>
+<g clip-path="url(#XMLID_7_)">
+	<rect x="73.5" y="29.5" fill="none" width="238.5" height="71"/>
+	<text transform="matrix(1 0 0 1 100.1514 62.3496)" fill="#06246F" font-family="'Colaborate-Bold'" font-size="50">DuTrack</text>
+</g>
+<path display="none" clip-path="url(#XMLID_7_)" fill="#FFFFFF" d="M183,41v0.334c0,3.021-1.116,5.781-2.959,7.891
+	c-2.2,2.519-5.435,4.109-9.041,4.109h-14.333c-3.566,0-6.769-1.556-8.967-4.025c-1.887-2.12-3.033-4.914-3.033-7.975V39
+	c0-3.067,1.15-5.865,3.043-7.986c2.198-2.463,5.396-4.014,8.957-4.014H171c3.313,0,6.312,1.342,8.483,3.513
+	C181.656,32.685,183,35.686,183,39V41z"/>
+<path clip-path="url(#XMLID_7_)" fill="#FFFFFF" d="M92.25,40.875"/>
+<path clip-path="url(#XMLID_7_)" fill="#FFFFFF" d="M77.167,23.75"/>
+<path clip-path="url(#XMLID_7_)" fill="#FFFFFF" d="M75.708,21.75"/>
+<path clip-path="url(#XMLID_7_)" fill="#FFFFFF" d="M74.583,49.167"/>
+<path clip-path="url(#XMLID_7_)" fill="#06246F" d="M79.75,46c0-3.313-2.519-6-5.625-6l0,0c-3.106,0-5.625,2.687-5.625,6v4
+	c0,3.313,2.519,6,5.625,6l0,0c3.106,0,5.625-2.687,5.625-6V46z"/>
+<path clip-path="url(#XMLID_7_)" fill="#06246F" d="M79,15.75H51c-6.627,0-12,5.373-12,12v28c0,6.627,5.373,12,12,12h28
+	c6.627,0,12-5.373,12-12v-28C91,21.123,85.627,15.75,79,15.75z M85.106,62.75H44.894c-0.77,0-1.394-0.588-1.394-1.313
+	s0.624-1.313,1.394-1.313h40.213c0.77,0,1.394,0.588,1.394,1.313S85.876,62.75,85.106,62.75z M47.625,56.375
+	c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5s-1.119,2.5-2.5,2.5S47.625,57.756,47.625,56.375z M76.875,56.375
+	c0-1.381,1.119-2.5,2.5-2.5s2.5,1.119,2.5,2.5s-1.119,2.5-2.5,2.5S76.875,57.756,76.875,56.375z M86.5,39.375
+	c0,6.627-5.42,12-12.106,12H55.606c-6.686,0-12.106-5.373-12.106-12v-7c0-6.627,5.42-12,12.106-12h18.788
+	c6.686,0,12.106,5.373,12.106,12V39.375z"/>
+<ellipse clip-path="url(#XMLID_7_)" fill="#FFFFFF" cx="74.083" cy="37.625" rx="3.833" ry="3.625"/>
+<circle clip-path="url(#XMLID_7_)" fill="#06246F" cx="74.125" cy="36.708" r="3.875"/>
+</svg>
